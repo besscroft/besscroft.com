@@ -1,0 +1,146 @@
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    fixed: true,
+	preload: 'none',
+    autoplay: false,
+    audio: [
+    {
+        name: "I Always Wanna Die",
+        artist: 'The 1975',
+        url: 'https://upyun.52bess.com/music/I%20Always%20Wanna%20Die%20(Sometimes).mp3',
+        cover: 'https://upyun.52bess.com/images/I%20Always%20Wanna%20Die.png',
+      },
+	{
+        name: 'I Shall Rise',
+        artist: 'Karen O',
+        url: 'https://upyun.52bess.com/music/I%20Shall%20Rise.mp3',
+        cover: 'https://upyun.52bess.com/images/I%20Shall%20Rise.png',
+      },
+    {
+        name: '平凡之路',
+        artist: '朴树',
+        url: 'https://upyun.52bess.com/music/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3',
+        cover: 'https://upyun.52bess.com/images/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.png',
+      },
+	{
+	    name: '你在看孤独的风景',
+	    artist: '本兮',
+	    url: 'https://upyun.52bess.com/music/%E4%BD%A0%E5%9C%A8%E7%9C%8B%E5%AD%A4%E7%8B%AC%E7%9A%84%E9%A3%8E%E6%99%AF.mp3',
+	    cover: 'https://upyun.52bess.com/images/%E4%BD%A0%E5%9C%A8%E7%9C%8B%E5%AD%A4%E7%8B%AC%E7%9A%84%E9%A3%8E%E6%99%AF.png',
+	  },
+	{
+        name: '星月神话',
+        artist: '金莎',
+        url: 'https://upyun.52bess.com/music/%E6%98%9F%E6%9C%88%E7%A5%9E%E8%AF%9D.mp3',
+        cover: 'https://upyun.52bess.com/images/%E6%98%9F%E6%9C%88%E7%A5%9E%E8%AF%9D.png',
+      },
+    {
+        name: "Dawn of a New Time",
+        artist: 'Johan Skugge',
+        url: 'https://upyun.52bess.com/music/Dawn%20of%20a%20New%20Time.mp3',
+        cover: 'https://upyun.52bess.com/images/Dawn%20of%20a%20New%20Time.png',
+      },
+    {
+        name: "Walk Through the Fire",
+        artist: 'Zayde Wølf,Ruelle',
+        url: 'https://upyun.52bess.com/music/Walk%20Through%20the%20Fire.mp3',
+        cover: 'https://upyun.52bess.com/images/Walk%20Through%20the%20Fire.png',
+      },
+    {
+        name: "Gallows",
+        artist: 'Katie Garfield',
+        url: 'https://upyun.52bess.com/music/Gallows.mp3',
+        cover: 'https://upyun.52bess.com/images/Gallows.png',
+      },
+    {
+        name: "美丽的神话",
+        artist: '胡歌,白冰',
+        url: 'https://upyun.52bess.com/music/%E7%BE%8E%E4%B8%BD%E7%9A%84%E7%A5%9E%E8%AF%9D.mp3',
+        cover: 'https://upyun.52bess.com/images/%E7%BE%8E%E4%B8%BD%E7%9A%84%E7%A5%9E%E8%AF%9D.png',
+      },
+    {
+        name: "黑暗森林",
+        artist: '雲翼星辰',
+        url: 'https://upyun.52bess.com/music/%E9%BB%91%E6%9A%97%E6%A3%AE%E6%9E%97%EF%BC%88%E5%8E%9F%E6%9B%B2%EF%BC%9ASchwarzer%20Regen%EF%BC%89.mp3',
+        cover: 'https://upyun.52bess.com/images/%E9%BB%91%E6%9A%97%E6%A3%AE%E6%9E%97.png',
+      },
+    {
+        name: "Boom Clap",
+        artist: 'Charli XCX',
+        url: 'https://upyun.52bess.com/music/Boom%20Clap.mp3',
+        cover: 'https://upyun.52bess.com/images/Boom%20Clap.png',
+      },
+    {
+        name: "此生不换",
+        artist: '青鸟飞鱼',
+        url: 'https://upyun.52bess.com/music/%E6%AD%A4%E7%94%9F%E4%B8%8D%E6%8D%A2.mp3',
+        cover: 'https://upyun.52bess.com/images/%E6%AD%A4%E7%94%9F%E4%B8%8D%E6%8D%A2.png',
+      },
+    {
+        name: "Carry You",
+        artist: 'Ruelle / Fleurie',
+        url: 'https://upyun.52bess.com/music/Carry%20You.mp3',
+        cover: 'https://upyun.52bess.com/images/Carry%20You.png',
+      },
+    {
+        name: "Somebody Else(Explicit)",
+        artist: 'The 1975',
+        url: 'https://upyun.52bess.com/music/Somebody%20Else(Explicit).mp3',
+        cover: 'https://upyun.52bess.com/images/Somebody%20Else.png',
+      },
+    {
+        name: "一眼万年",
+        artist: 'S.H.E',
+        url: 'https://upyun.52bess.com/music/%E4%B8%80%E7%9C%BC%E4%B8%87%E5%B9%B4.mp3',
+        cover: 'https://upyun.52bess.com/images/%E4%B8%80%E7%9C%BC%E4%B8%87%E5%B9%B4.png',
+      },
+    {
+        name: "你就不要想起我",
+        artist: '田馥甄',
+        url: 'https://upyun.52bess.com/music/%E4%BD%A0%E5%B0%B1%E4%B8%8D%E8%A6%81%E6%83%B3%E8%B5%B7%E6%88%91.mp3',
+        cover: 'https://upyun.52bess.com/images/%E4%BD%A0%E5%B0%B1%E4%B8%8D%E8%A6%81%E6%83%B3%E8%B5%B7%E6%88%91.png',
+      },
+    {
+        name: "你是我的眼",
+        artist: '林宥嘉',
+        url: 'https://upyun.52bess.com/music/%E4%BD%A0%E6%98%AF%E6%88%91%E7%9A%84%E7%9C%BC.mp3',
+        cover: 'https://upyun.52bess.com/images/%E4%BD%A0%E6%98%AF%E6%88%91%E7%9A%84%E7%9C%BC.png',
+      },
+    {
+        name: "夜空中最亮的星",
+        artist: '逃跑计划',
+        url: 'https://upyun.52bess.com/music/%E5%A4%9C%E7%A9%BA%E4%B8%AD%E6%9C%80%E4%BA%AE%E7%9A%84%E6%98%9F.mp3',
+        cover: 'https://upyun.52bess.com/images/%E5%A4%9C%E7%A9%BA%E4%B8%AD%E6%9C%80%E4%BA%AE%E7%9A%84%E6%98%9F.png',
+      },
+    {
+        name: "无尽的爱",
+        artist: '成龙 / 金喜善 (김희선)',
+        url: 'https://upyun.52bess.com/music/%E6%97%A0%E5%B0%BD%E7%9A%84%E7%88%B1.mp3',
+        cover: 'https://upyun.52bess.com/images/%E6%97%A0%E5%B0%BD%E7%9A%84%E7%88%B1.png',
+      },
+    {
+        name: "明天会更好",
+        artist: '华语群星',
+        url: 'https://upyun.52bess.com/music/%E6%98%8E%E5%A4%A9%E4%BC%9A%E6%9B%B4%E5%A5%BD.mp3',
+        cover: 'https://upyun.52bess.com/images/%E6%98%8E%E5%A4%A9%E4%BC%9A%E6%9B%B4%E5%A5%BD.png',
+      },
+    {
+        name: "永夜",
+        artist: '石岩',
+        url: 'https://upyun.52bess.com/music/%E6%B0%B8%E5%A4%9C.m4a',
+        cover: 'https://upyun.52bess.com/images/%E6%B0%B8%E5%A4%9C.png',
+      },
+    {
+        name: "烟火里的尘埃",
+        artist: '华晨宇',
+        url: 'https://upyun.52bess.com/music/%E7%83%9F%E7%81%AB%E9%87%8C%E7%9A%84%E5%B0%98%E5%9F%83.mp3',
+        cover: 'https://upyun.52bess.com/images/%E7%83%9F%E7%81%AB%E9%87%8C%E7%9A%84%E5%B0%98%E5%9F%83.png',
+      },
+    {
+        name: "逍遥叹",
+        artist: '胡歌',
+        url: 'https://upyun.52bess.com/music/%E9%80%8D%E9%81%A5%E5%8F%B9.mp3',
+        cover: 'https://upyun.52bess.com/images/%E9%80%8D%E9%81%A5%E5%8F%B9.png',
+      }
+    ]
+});

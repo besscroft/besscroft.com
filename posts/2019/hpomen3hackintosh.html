@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-24x24-astronaut.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-astronaut.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-astronaut.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.52bess.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+<script data-ad-client="ca-pub-1837014247459400" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="description" content="闲暇之余，又一次给暗影精灵3，装上了黑苹果(MacOS 10.14.6)。实现完美电源管理，以及不插电开机(暗影精灵系列的朋友，装过黑苹果的应该知道意味着什么)。并将efi以及补丁发布出来，以便相同的笔记本可以安装。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HP暗影精灵3黑苹果基本完工">
+<meta property="og:url" content="https://blog.52bess.com/posts/2019/hpomen3hackintosh.html">
+<meta property="og:site_name" content="Bess&#39;s Blog">
+<meta property="og:description" content="闲暇之余，又一次给暗影精灵3，装上了黑苹果(MacOS 10.14.6)。实现完美电源管理，以及不插电开机(暗影精灵系列的朋友，装过黑苹果的应该知道意味着什么)。并将efi以及补丁发布出来，以便相同的笔记本可以安装。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg">
+<meta property="article:published_time" content="2019-07-17T09:42:47.000Z">
+<meta property="article:modified_time" content="2020-03-22T13:37:56.681Z">
+<meta property="article:author" content="Bess Croft">
+<meta property="article:tag" content="黑苹果">
+<meta property="article:tag" content="暗影精灵3">
+<meta property="article:tag" content="HP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg">
+
+<link rel="canonical" href="https://blog.52bess.com/posts/2019/hpomen3hackintosh.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>HP暗影精灵3黑苹果基本完工 | Bess's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Bess's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+<script type="text/javascript" src="/js/none.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/besscroft/cdn@4.0/css/APlayer.min.css">
+	<div id="aplayer"></div>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/besscroft/cdn@4.0/js/APlayer.min.js"></script>
+	<script type="text/javascript" src="/dist/music.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/css/DPlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/js/DPlayer.min.js"></script>
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Bess's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">武汉加油！中国加油！</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/links/" rel="section"><i class="link fa-fw"></i>友链</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-books">
+
+    <a href="/books/" rel="section"><i class="book fa-fw"></i>读书</a>
+
+  </li>
+        <li class="menu-item menu-item-movies">
+
+    <a href="/movies/" rel="section"><i class="video-camera fa-fw"></i>电影</a>
+
+  </li>
+        <li class="menu-item menu-item-games">
+
+    <a href="/games/" rel="section"><i class="gamepad fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="camera-retro fa-fw"></i>美好时光</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+      
+    </header>
+    <div id="dplayer"></div>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main class="main">
+  	
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.52bess.com/posts/2019/hpomen3hackintosh.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://www.52bess.com/uploads/avatar.png">
+      <meta itemprop="name" content="Bess Croft">
+      <meta itemprop="description" content="热爱网络技术和开源软件的极客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bess's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HP暗影精灵3黑苹果基本完工
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-07-17 17:42:47" itemprop="dateCreated datePublished" datetime="2019-07-17T17:42:47+08:00">2019-07-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-22 21:37:56" itemprop="dateModified" datetime="2020-03-22T21:37:56+08:00">2020-03-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%BB%91%E8%8B%B9%E6%9E%9C/" itemprop="url" rel="index"><span itemprop="name">黑苹果</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/2019/hpomen3hackintosh.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/2019/hpomen3hackintosh.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>闲暇之余，又一次给暗影精灵3，装上了黑苹果(MacOS 10.14.6)。实现完美电源管理，以及不插电开机(暗影精灵系列的朋友，装过黑苹果的应该知道意味着什么)。并将efi以及补丁发布出来，以便相同的笔记本可以安装。</p>
+<a id="more"></a>
+
+<p><img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="hpomen3hackintosh/img01.jpg" alt></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><table>
+<thead>
+<tr>
+<th>产品名称暗影精灵3</th>
+<th>OMEN by HP Laptop 15-ce0xx</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BIOS</td>
+<td>F.20 Rev.A</td>
+</tr>
+<tr>
+<td>处理器</td>
+<td>Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</td>
+</tr>
+<tr>
+<td>独立显卡</td>
+<td>NVIDIA GeForce GTX 1050</td>
+</tr>
+<tr>
+<td>显卡</td>
+<td>Intel(R) HD Graphics 630</td>
+</tr>
+<tr>
+<td>声卡</td>
+<td>ALC295</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>HP SSD EX950 512G、HGST 1T</td>
+</tr>
+</tbody></table>
+<ul>
+<li><h3 id="没问题的"><a href="#没问题的" class="headerlink" title="没问题的"></a>没问题的</h3><ul>
+<li>声卡正常，键盘可以调声音</li>
+<li>摄像头正常</li>
+<li>触摸板正常</li>
+<li>睡眠和唤醒正常，合上盖子再打开也正常，我不知道白苹果是怎样的，但是我试了很多次，没发现问题。</li>
+<li>电池正常</li>
+<li>有线网卡正常</li>
+<li>亮度正常，但是不能用键盘调整，在设置里面可以调整（我得再去爪巴帖子了😓</li>
+</ul>
+<h3 id="无效功能"><a href="#无效功能" class="headerlink" title="无效功能"></a>无效功能</h3><ul>
+<li>独显因为不能驱动，所以屏蔽</li>
+<li>蓝牙</li>
+<li>WiFi  :(</li>
+</ul>
+</li>
+</ul>
+<h3 id="一些参考教程"><a href="#一些参考教程" class="headerlink" title="一些参考教程"></a>一些参考教程</h3><p><a href="https://blog.52bess.com/clover.html">黑苹果教程</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3Mvb1BBd3lSOVdhZkJjZzBOLXJhUFdZdw==">HP暗影精灵3安装 macOS 10.14.3 Mojave 记录<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3Mvc3Q3ZmVOLXlIZkRjdkNFbmd2YklFdw==">macOS Mojave黑苹果教程！<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmRhbGlhbnNreS5uZXQvbWFjT1MtTW9qYXZlLTEwLjE0LjYtMThHODctUmVsZWFzZS12ZXJzaW9uLXdpdGgtQ2xvdmVyLTUwMzMtb3JpZ2luYWwtaW1hZ2UuaHRtbA==">【黑果小兵】macOS Mojave 10.14.6 18G87 正式版 with Clover 5050原版镜像[双EFI双平台终极版]<i class="fa fa-external-link-alt"></i></span></p>
+<p>远景论坛<span class="exturl" data-url="aHR0cDovL2Jicy5wY2JldGEuY29tL3ZpZXd0aHJlYWQtMTc3ODQ5OS0xLTEuaHRtbA==">修改dsdt实现电量显示方法（整理修改已有帖子）<i class="fa fa-external-link-alt"></i></span></p>
+<p>tonymacx86<span class="exturl" data-url="aHR0cHM6Ly93d3cudG9ueW1hY3g4Ni5jb20vdGhyZWFkcy9zb2x2ZWQtaHAtb21lbi0xNS1kYy1iYXR0ZXJ5LWVycm9yLjI2MzgxNC8jcG9zdC0xODQxMDIz">HP OMEN 15-dc电池错误<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cudG9ueW1hY3g4Ni5jb20vdGhyZWFkcy9ndWlkZS1ob3ctdG8tcGF0Y2gtZHNkdC1mb3Itd29ya2luZy1iYXR0ZXJ5LXN0YXR1cy4xMTYxMDIv">[指南]如何修补DSDT的工作电池状态<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="下载链接-镜像同步上传中"><a href="#下载链接-镜像同步上传中" class="headerlink" title="下载链接 镜像同步上传中"></a>下载链接 镜像同步上传中</h3><p>👍<strong>镜像来自于@黑果小兵的博客找的链接，我自己用的也是这个镜像！</strong></p>
+<p>迅雷离线下载：[<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLmR0b3BzLmNjL2lzby9NYWNPUy8xMC4xNC9kYWxpYW5za3lfbWFjb3MvbWFjT1MlMjBNb2phdmUlMjAxMC4xNC42JTI4MThHODQlMjklMjBJbnN0YWxsZXIlMjB3aXRoJTIwQ2xvdmVyJTIwNTAyNy5kbWc=">请点击下载<i class="fa fa-external-link-alt"></i></span>] 感谢<code>@难忘情怀</code>提供下载资源</p>
+<p>http下载链接:<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLmR0b3BzLmNjL2lzby9NYWNPUy9kYWxpYW5za3lfbWFjb3Mv">请点击下载<i class="fa fa-external-link-alt"></i></span> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<p>百毒云：链接: <span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMXl4N0Ffd2xmZXBwNnliVENSY3o0Y2c=">https://pan.baidu.com/s/1yx7A_wlfepp6ybTCRcz4cg<i class="fa fa-external-link-alt"></i></span> 提取码: <code>qrwt</code></p>
+<p>MD5 (macOS Mojave 10.14.6(18G84) Installer with Clover 5027.dmg) = af934738cd02c4cefacf527d23532289</p>
+<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><ul>
+<li>感谢各位大佬的开源。</li>
+<li>感谢远景论坛的各位大佬提供的教程，以及<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RhbGlhbnNreQ==">黑果小兵<i class="fa fa-external-link-alt"></i></span>的镜像。</li>
+</ul>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p><strong>Q:如何进入BIOS或者设置启动项？</strong></p>
+<p>A:开机后按下ESC键，然后根据指引选择</p>
+<p><strong>Q:抹盘时失败</strong></p>
+<p>A:看看是不是EFI的分区给的太小了，一般建议200M以上。这里尤其注意，有的人抹盘失败会导致Windows10进不去，我不知道原因是什么，但是建议在安装之前，多去看看别人怎么操作的，避免一些误区，同时：<strong>记得提前备份！！！记得提前备份！！！记得提前备份！！！</strong></p>
+<p><strong>Q:安装时提示这个“安装 macOS xxxx”应用程序副本已损坏，不能用来安装macOS</strong></p>
+<p>A:原因是旧版macOS 安装镜像中的证书过期，并且苹果没有更新证书日期。你打开终端，改一下时间就好了：<code>date 0201010116</code></p>
+<h3 id="🔊如果扬声器无法使用的解决方案"><a href="#🔊如果扬声器无法使用的解决方案" class="headerlink" title="🔊如果扬声器无法使用的解决方案"></a>🔊如果扬声器无法使用的解决方案</h3><p>暗影精灵3的声卡是ALC295，找到我在repo中提供的<code>VoodooHDA-295.pkg</code>，并安装它。我很懒，只提供了这一种方案，Google给您提供了更好的方案，只是看您怎么选了！</p>
+<h3 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h3><p>Email：631908942#qq.com</p>
+<p>QQ群：821557332</p>
+<p>如果大家有一些建议，也欢迎反馈！</p>
+<p>👉GitHub:<strong><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdC9IUC1PTUVOLTMtSGFja2ludG9zaA==">HP-OMEN-3-Hackintosh<i class="fa fa-external-link-alt"></i></span></strong></p>
+
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+    
+    
+    
+        <div class="reward-container">
+  <div>请我喝杯咖啡吧！</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="/images/wechatpay.png" alt="Bess Croft 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="/images/alipay.jpg" alt="Bess Croft 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Bess Croft
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.52bess.com/posts/2019/hpomen3hackintosh.html" title="HP暗影精灵3黑苹果基本完工">https://blog.52bess.com/posts/2019/hpomen3hackintosh.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道哦！</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="/images/wechat_channel.jpg" width="100px" height="100px" />
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/RSS.png">
+            <img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="/images/RSS.png" width="100px" height="100px" />
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/" rel="tag"><i class="fa fa-tag"></i> 黑苹果</a>
+              <a href="/tags/%E6%9A%97%E5%BD%B1%E7%B2%BE%E7%81%B53/" rel="tag"><i class="fa fa-tag"></i> 暗影精灵3</a>
+              <a href="/tags/HP/" rel="tag"><i class="fa fa-tag"></i> HP</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/2019/win10kill.html" rel="prev" title="彻底关闭Windows10系统更新！">
+      <i class="fa fa-chevron-left"></i> 彻底关闭Windows10系统更新！
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/2019/ubuntu.html" rel="next" title="Ubuntu安装记录">
+      Ubuntu安装记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#没问题的"><span class="nav-number">2.</span> <span class="nav-text">没问题的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无效功能"><span class="nav-number">3.</span> <span class="nav-text">无效功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些参考教程"><span class="nav-number">4.</span> <span class="nav-text">一些参考教程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载链接-镜像同步上传中"><span class="nav-number">5.</span> <span class="nav-text">下载链接 镜像同步上传中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#致谢"><span class="nav-number">6.</span> <span class="nav-text">致谢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见问题"><span class="nav-number">7.</span> <span class="nav-text">常见问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🔊如果扬声器无法使用的解决方案"><span class="nav-number">8.</span> <span class="nav-text">🔊如果扬声器无法使用的解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联系我"><span class="nav-number">9.</span> <span class="nav-text">联系我</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a href="/">
+    <img class="site-author-image" itemprop="image" alt="Bess Croft"
+      src="https://www.52bess.com/uploads/avatar.png">
+  </a>
+  <p class="site-author-name" itemprop="name">Bess Croft</p>
+  <div class="site-description" itemprop="description">热爱网络技术和开源软件的极客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;besscroft"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmJlc3Njcm9mdEBmb3htYWlsLmNvbQ==" title="E-Mail → mailto:besscroft@foxmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="globe fa-fw"></i>
+      一些♂链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly81MmJlc3MuY29t" title="https:&#x2F;&#x2F;52bess.com">主站</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.52bess.com/about/" title="https:&#x2F;&#x2F;blog.52bess.com&#x2F;about&#x2F;">关于此博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yZXN1bWUuNTJiZXNzLmNvbS9wdWJsaWMv" title="https:&#x2F;&#x2F;resume.52bess.com&#x2F;public&#x2F;">简历</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLjUyYmVzcy5jb20v" title="https:&#x2F;&#x2F;mirrors.52bess.com&#x2F;">神奇海螺镜像站</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.52bess.com/" title="https:&#x2F;&#x2F;blog.52bess.com">博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9iZXNzY2xvdWQuY2Y=" title="https:&#x2F;&#x2F;besscloud.cf">海螺小店</span>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+<!-- 文件位置：~/blog/themes/next/layout/_custom/sidebar.swig -->
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("10/08/2018 10:00:00");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i) {
+    if (i<10) {
+        i="0" + i
+    };
+    return i;
+}
+show_date_time();
+</script>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><span class="exturl" data-url="aHR0cDovL3d3dy5iZWlhbi5taWl0Lmdvdi5jbg==">鄂ICP备18028478号-4 </span>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bess Croft</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==">BessCroft</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">NexT 7.8.0.</span> 强力驱动
+  </div>
+<div class="footer-end">
+	<div class="footer-end1">
+		<a href="https://www.jsdelivr.com/" target="_blank" alt="Free CDN" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/img/icon/JsDelivr.png" alt="jsDelivr" style="height: 2em; max-height: 2em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://github.com/" target="_blank" alt="Github" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/img/icon/Github.png" alt="github" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://www.netlify.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/img/icon/netlify.png" alt="netlify" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://cloud.google.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/img/icon/google-cloud.png" alt="googlecloud" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://www.aliyun.com" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/img/icon/aliyun.png" alt="aliyun" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+  <div class="footer-end1">
+		<a href="https://www.upyun.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.1/img/icon/%E5%8F%88%E6%8B%8D%E4%BA%91_logo5.png" alt="upyun" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+  <div class="footer-end1">
+		<a href="https://vercel.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@4.0.2/img/icon/Vercel.png" alt="Vercel" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+  <div class="footer-end1">
+		<a href="https://nextjs.org/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://ae01.alicdn.com/kf/Hbeac22ce6e5840728e7c1875ddd3bfeea.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn@4.0.2/img/icon/Next.png" alt="Next" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+</div>
+
+        
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1278139383&web_id=1278139383"></script>
+  </div>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  <script src="//code.tidio.co/ooy0sel3mgcojgqg8pgqtafsc3i9jtjd.js"></script>
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : false,
+      appId      : 'pcvL1JhE0y29EMcEdiYXL0t8-MdYXbMMI',
+      appKey     : 'l1NnWuPVxr54hge6jHS2KEKj',
+      placeholder: "说点儿什么吧~ o(*￣▽￣*)o，记得留下邮箱，方便我及时回复！也可以加群：821557332 一起交流！",
+      avatar     : 'wavatar',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+
+
+<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/js/fireworks.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/besscroft/cdn@3.0/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+
+
+
+
+
