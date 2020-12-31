@@ -58,6 +58,178 @@
       </tags>
   </entry>
   <entry>
+    <title>在VirtualBox上安装Android-X86</title>
+    <url>/posts/2019/android-for-virtualbox.html</url>
+    <content><![CDATA[<p>对于<code>Android</code>开发来说，尤其是新手(没错，我自己就是<code>noob</code>😥)，有很多种开发调试的方案。比如<code>Genymotion+VirtualBox</code>搭配方案(在我的笔记本上这种方案性能最低，可能因配置而异)、直接用<code>VirtualBox</code>安装<code>Android-X86</code>的<code>iso</code>，或者是直接在<code>Android Studio</code>里面调试等等。本文介绍的是直接用<code>VirtualBox</code>安装<code>Android-X86</code>，虽然是在虚拟机中安装，但是也会有很多不可避免的坑！！！</p>
+<a id="more"></a>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox025.png" alt></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，我们要准备<code>VirtualBox</code>：</p>
+<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cudmlydHVhbGJveC5vcmcvd2lraS9Eb3dubG9hZHM=">https://www.virtualbox.org/wiki/Downloads<i class="fa fa-external-link-alt"></i></span></p>
+<p>然后下载<code>Android-X86</code>的<code>iso</code>，这是一个将<span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2UuYW5kcm9pZC5jb20v">Android开源项目<i class="fa fa-external-link-alt"></i></span>移植到x86平台的项目：</p>
+<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2Rvd25sb2Fk">https://www.android-x86.org/download<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>注：本文章同样适用于PhoenixOS系统！</strong></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>准备好之后，我们安装完并打开<code>VirtualBox</code>，找到如图所示的<code>新建</code>按钮(不同版本可能界面稍有不同，但是明白要干什么就行了):</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox001.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox002.png" alt></p>
+<p>然后设置相应的信息，注意文件夹就是虚拟机文件存放位置，建议不要用默认的。名称随便取，类型选<code>Linux</code>，版本选<code>Other Linux</code>，至于是<code>32位</code>还是<code>64位</code>，就看你下载的<code>iso</code>是多少位的了。然后点击下一步。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox003.png" alt></p>
+<p>然后分配内存，这个看电脑本身的内存多大再酌情配置，然后点击下一步。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox004.png" alt></p>
+<p>然后选择<code>现在创建虚拟硬盘</code>。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox005.png" alt></p>
+<p>然后选择VDI，点击下一步。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox006.png" alt></p>
+<p>选择动态分配，然后点击下一步(当然，硬盘空间大的请随意)。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox007.png" alt></p>
+<p>根据实际情况来配置虚拟硬盘的大小，硬盘空间大的请随意，然后点击创建。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox008.png" alt></p>
+<p>然后找到我们刚才创建好的<code>Android_test</code>，点击设置。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox009.png" alt></p>
+<p>然后点击显示-调整显存大小-启用硬件加速里面的3D加速。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox010.png" alt></p>
+<p>选择存储-点击盘片-分配一个光驱，就是把你下载的<code>Android-X86</code>的<code>iso</code>添加进去。然后点击ok。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>当鼠标进入虚拟机窗口移不出来时，按下键盘右边的Ctrl(唱、跳、Rap、篮球😀)即可，vm虚拟机是Ctrl+Alt。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox011.png" alt></p>
+<p>双击我们创建好的虚拟机。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox012.png" alt></p>
+<p>选择<code>Advanced options...</code>，然后</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox013.png" alt></p>
+<p>选择<code>Auto_Installation</code>，这里为什么建议大家选择自动安装呢？因为我们再“这个”虚拟机中只分配了一个虚拟硬盘，而且并不大，所以没必要分区。而且这样也最快，能保证新手在不太了解的情况下不出错。选择这一项之后，按下回车键。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox014.png" alt></p>
+<p>选择yes！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox015.png" alt></p>
+<p>耐心等待！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox016.png" alt></p>
+<p>选择Reboot以重启。</p>
+<h2 id="划重点"><a href="#划重点" class="headerlink" title="划重点"></a>划重点</h2><p>在重启之后，会回到开始的位置</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox017.png" alt></p>
+<p>然后我们将其强制退出！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox018.png" alt></p>
+<p>然后在设置里面，把iso的盘片移除，免得开机时加载盘片去了。然后再重新双击启动！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox019.png" alt></p>
+<p>然后选择<code>Android-x86 8.1-r2</code>，<strong>千万别手贱按了回车</strong>，通过下面的帮助信息得知，我们要按下<code>E键</code>，进入编辑页面.</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox020.png" alt></p>
+<p>然后在<code>kernel</code>哪里，同样的按下<code>E键</code>，进入编辑页面</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox021.png" alt></p>
+<p>移动光标，找到图中的<code>quiet</code>这个词。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox022.png" alt></p>
+<p>把<code>quiet</code>改为<code>nomodeset xforcevesa</code>，然后按下回车键，再按下键盘上的<code>B键</code>。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox023.png" alt></p>
+<p>然后你就会看到Android的字母了，慢慢等待即可！后面的就不说了，等到了“开机”，应该就自己会玩了，跟用手机也区别不大！</p>
+<p><strong>注：每次开机都需要这一步操作，如果你不想这么做，请自行Google！</strong></p>
+<h2 id="问题详解"><a href="#问题详解" class="headerlink" title="问题详解"></a>问题详解</h2><p>这时候来给大家解释一下，为什么刚才在进入系统之前要修改某些参数！转化成问题，也就是：为什么部分电脑或者虚拟机无法启动Android-x86系统的图形界面？</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox024.png" alt></p>
+<p>先来看一张图，我们知道，它是基于Linux内核的，就跟大多数人安装Linux时需要禁用独显一样，你在安装Android-x86时，需要告诉内核，不要设置图形分辨率。</p>
+<p>那么，刚才的三个步骤，分别是在干什么呢？</p>
+<ul>
+<li>删除<code>quiet</code>，删除之后可以查看内核消息。</li>
+<li>添加<code>nomodeset</code>参数，禁用“内核模式设置”(告诉内核不要设置图形分辨率，让X代替)。</li>
+<li>添加<code>xforcevesa</code>参数，强制使用X的VESA驱动程序。</li>
+</ul>
+<p><strong>VESA</strong>是一个支持大部分显卡的通用驱动，但不提供任何2D和3D加速功能。要充分发挥显卡性能，需安装<strong>相应的厂商驱动程序</strong>。</p>
+<p>nVidia用户，可以参考ArchLinux的内核模式设置:<span class="exturl" data-url="aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvaW5kZXgucGhwL0tlcm5lbF9tb2RlX3NldHRpbmc=">https://wiki.archlinux.org/index.php/Kernel_mode_setting<i class="fa fa-external-link-alt"></i></span></p>
+<p>同时，你可以了解HybridGraphics:<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLnVidW50dS5jb20vY29tbXVuaXR5L0h5YnJpZEdyYXBoaWNz">https://help.ubuntu.com/community/HybridGraphics<i class="fa fa-external-link-alt"></i></span></p>
+<p>然后查看项目官方的wiki(必要的):<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2RvY3VtZW50YXRpb24vZ3JhcGhpY19jYXJkLmh0bWw=">https://www.android-x86.org/documentation/graphic_card.html<i class="fa fa-external-link-alt"></i></span></p>
+<p>以及issues:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29wZW50aG9zL3N5c3RlbS1hbmFseXNpcy9pc3N1ZXMvMjM=">https://github.com/openthos/system-analysis/issues/23<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Playing CSO2 on your computer！</title>
+    <url>/posts/2019/cso2.html</url>
+    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>反恐精英Online2，英文名：Counter-Strike Online2，粉丝们称为蛋拐兔2。世纪天成公司于2013年9月5日正式宣布代理《反恐精英Online2》，国服于2015年2月5日起源首测，3月5号二测，4月22号正式公测。然而不辛的是，在2018年5月18日，国服（世纪天成代理）正式停止运营。</p>
+<a id="more"></a>
+
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>嗯，反正我是在停服之前的一段时间，就已经没玩了。因为我害怕，害怕前一天还玩了，第二天就进不去游戏了，这并不是我想要的。在我的印象中，每年的圣诞节，是蛋拐兔最好玩的时候，人多，氛围也好。而18年的圣诞节，只能听听bgm艰难度日，到后来，当我得知有私服之后，我便又重新燃起了激情！！！</p>
+<h2 id="Gaming"><a href="#Gaming" class="headerlink" title="Gaming"></a>Gaming</h2><h3 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h3><p>蛋拐兔2关服了，你是否还在苦恼呢？其实不少小伙伴们都知道有私服的，虽然不是我的，但是我也想借此机<br>会来推广，好让喜欢的朋友玩。我知道的私服都是免费的，都是公益性质的，搭建私服的大佬们完全是为了能<br>让大家接着玩，而且还免费。我录制视频和写教程，不出于任何形式的盈利目的，完全是基于一个热爱的老<br>玩家心态，告知和帮助那些跟我一样，曾经喜欢玩蛋拐兔的玩家，能够重新玩这款游戏。</p>
+<center>不管你玩不玩，但是请记得，你的青春里有过它！！！</center>
+
+<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>首先，让我们感谢Ochii大神写的CSO2的主服务器和客户端启动程序，并且已经开源了！<br>还有“I’m Not MentaL”大神的GUI启动器。<br>同时也感谢国内的几个小团队，自己搭建了国内的私服，并在此基础上优化了服务端和启动端，让大家<br>不仅免费也更容易地van这款游戏，而且是联机的！谢谢你们做出的努力！感谢！</p>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- Microsoft .NET Framework 4.5.2及以上</span><br><span class="line">- NodeJS（如果你玩国内的联机私服，则不需要安装）</span><br><span class="line">- 一些必要的游戏运行环境，如果你是平常玩游戏，那么我相信你的电脑上也已经有了</span><br></pre></td></tr></table></figure>
+
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 安装包，版本可选，看你想玩那种的。国内私服的话，也是有它们自己稍做了修改的版本的。</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;15qVLo7jrJxG6r-kZBqqEdQ   提取码：1h7v </span><br><span class="line">- 主服务器 </span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;166igd4lFMR1R776ATMKN5w   提取码：h0ka </span><br><span class="line">- 客户端启动程序</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1OeDIVXhbfgvDljVLdYxVfA   提取码：iwso </span><br><span class="line">- GUI启动器</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1A8rh44NzJ8MSXU8edJqIwQ   提取码：czup </span><br><span class="line">- node.js（版本10或更高版本）</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><p>我们先假设，你已经安装了<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>，然后，在你的电脑硬盘里面，随便找一个盘。我放在E盘了，比如我的游戏路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\Counter-Strike Online 2</span><br></pre></td></tr></table></figure>
+
+<p>然后创建<code>Game</code>文件夹和<code>Server</code>文件夹，如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs001.png" alt></p>
+<p>然后，将游戏的压缩包解压到<code>Game</code>文件夹，解压完之后，应该是这样：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs002.png" alt></p>
+<p>接着将主服务器的压缩包，解压至<code>Server</code>文件夹，解压完之后，应为：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs003.png" alt></p>
+<p>然后，将下载的2个客户端启动程序，解压至<code>Counter-Strike Online 2\Game\Bin</code>文件夹。解压完成后，再将GUI启动器压缩包，解压至<code>Counter-Strike Online 2</code>根目录下。然后，基本上就完成一大半了。正常的，这个时候你的游戏根目录下应该为这样：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs004.png" alt></p>
+<h2 id="构建游戏"><a href="#构建游戏" class="headerlink" title="构建游戏"></a>构建游戏</h2><p>下一步我们要做的，就是让游戏跑起来！</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>这一步是最开始的方法，但是也最复杂，不建议大家使用，请跳至下一步！</p>
+<p>要运行服务器，您需要：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>（版本10或更高版本）;</li>
+<li>搭建服务器，也就是我们下载的主服务器。</li>
+</ul>
+<p>然后，在服务器目录内的终端实例中，执行以下操作：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --only &#x3D; production ＃安装所需的依赖项（最小依赖项） </span><br><span class="line">npm run start ＃启动预构建服务器</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，服务器<strong>会询问您要侦听的网络接口</strong>。</p>
+<h4 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h4><p>下载源代码后，转到源代码目录中的终端实例，然后：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install ＃安装所需的依赖项 </span><br><span class="line">npm run build ＃ builds服务器 </span><br><span class="line">npm run start ＃启动新服务器构建</span><br></pre></td></tr></table></figure>
+
+<h4 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h4><p>选项：</p>
+<ul>
+<li><code>-i, --ip-address [ip]</code>（<em>可选</em>）要侦听的IP地址（默认值：自动检测）</li>
+<li><code>-p, --port-master [port]</code>（<em>可选</em>）服务器的（TCP）端口（默认值：30001）</li>
+<li><code>-P, --port-holepunch [port]</code>（<em>可选</em>）服务器的打孔（UDP）端口（默认值：30002）</li>
+<li><code>-l, --log-packets</code>（<em>可选</em>）记录传入和传出的数据包</li>
+</ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在开始之前，你必须允许launcher.exe在防火墙和端口转发端口27015到27020或打开路由器的NAT，以便与其他人一起玩。</p>
+<p>如果您举办房间比赛，其他客户将知道您的IP。</p>
+<p>如果您加入主持人的房间比赛，主人将知道您的IP。</p>
+<p>一旦开发了专用服务器启动器，这可能在将来可以避免。</p>
+<h4 id="开始游戏"><a href="#开始游戏" class="headerlink" title="开始游戏"></a>开始游戏</h4><p>基本上就是挂载到一个大服务器，然后玩家们进来。由配置和网络比较好的玩家开启房间当房主，然后其他人加入游戏。同时，房主卡，其他人跟着卡，房主推出房间，其他人也会掉。虽然目前只能这样，但是我觉得有得玩我就很高兴了😂</p>
+<h4 id="对于启动器"><a href="#对于启动器" class="headerlink" title="对于启动器"></a>对于启动器</h4><ul>
+<li><code>-lang [some language]</code>- 将游戏的语言设置为<em>某种语言</em>（考虑到您拥有语言文件）</li>
+<li><code>-masterip [some ip]</code>- 将主服务器的IP地址设置为<em>某个IP</em></li>
+<li><code>-masterport [some port]</code>- 将主服务器的端口号设置为<em>某个端口</em></li>
+<li><code>-decryptedfiles</code> - 告诉游戏将每个游戏文件视为已解密</li>
+<li><code>-enablecustom</code>- 允许在<code>custom</code>游戏文件的根目录中使用自定义目录</li>
+<li><code>-username [your username]</code> - 指定登录用户名，以跳过登录屏幕。<strong>必须</strong>使用<code>-password</code></li>
+<li><code>-password [your password]</code> - 指定登录密码，以跳过登录屏幕。<strong>必须</strong>使用<code>-username</code></li>
+</ul>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>直接运行游戏根目录下的<code>PlayCSO2.exe</code>,如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs005.png" alt></p>
+<p>然后点击游戏设定，分别如下面的图片所示，自己视情况设定选项：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs006.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs007.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs008.png" alt></p>
+<p>然后点击保存，如果询问你是都要构建服务器之类的，或者是其它的，直接允许即可！然后根据你的网络情况，可以选择本地启动游戏，或者是连接到其它服务器加入游戏！开始游玩吧！</p>
+<p>运行成功之后，会有cso2_launcher.ini，这个文件里面有登陆账号和密码，是你不联网的情况下，在本地使用的。</p>
+<h3 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h3><p><del>这个其它方法嘛，就是各个搭建私服的工作组，给大家介绍的玩他们的私服的方法，略有不同，具体的自己去看看呢！</del>建议有条件玩外(私)服，国内的私服。。。</p>
+<h2 id="再次鸣谢"><a href="#再次鸣谢" class="headerlink" title="再次鸣谢"></a>再次鸣谢</h2><p>感谢Ochii，主服务器GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbWFzdGVyLXNlcnZlcg==">地址<i class="fa fa-external-link-alt"></i></span>，客户端启动程序GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbGF1bmNoZXIv">地址<i class="fa fa-external-link-alt"></i></span>，感谢！均有MIT许可证许可！</p>
+<p>感谢“I’m Not MentaL”大神的GUI启动器，他的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vcG9zdHMvY291bnRlci1zdHJpa2UtMi0yNDU5NzQ1Nj9mYmNsaWQ9SXdBUjI1VUJERXltMldoWWlzaFJjYkZVdFVEN1VSbTFaNHBoUU9sOUFzVUdzZTduRVJQMGRGT3kxRHdoZw==">Patreon<i class="fa fa-external-link-alt"></i></span>！感谢！</p>
+<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0Lw==">网站<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
+<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0L2ZvcnVtLw==">论坛<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
+<p>感谢<del>你们</del>国外大神所做出的努力！</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><iframe width="680" height="360" src="https://www.youtube-nocookie.com/embed/4qsRxFNMuL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>视频链接👉<span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS80cXNSeEZOTXVMMA==">https://youtu.be/4qsRxFNMuL0<i class="fa fa-external-link-alt"></i></span></p>
+<p>有什么问题或建议，欢迎留言或者发邮箱。<del>这里没有商业合作，每一个团队需要宣传都欢迎联系我！</del>感谢无私帮助玩家们的开发者们，你们辛苦了！~~感谢国外的几个大神！</p>
+]]></content>
+      <categories>
+        <category>CSO2</category>
+      </categories>
+      <tags>
+        <tag>CSO2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>黑苹果教程</title>
     <url>/posts/2019/clover.html</url>
     <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="clover/c001.png" alt></p>
@@ -264,129 +436,31 @@
       </tags>
   </entry>
   <entry>
-    <title>在VirtualBox上安装Android-X86</title>
-    <url>/posts/2019/android-for-virtualbox.html</url>
-    <content><![CDATA[<p>对于<code>Android</code>开发来说，尤其是新手(没错，我自己就是<code>noob</code>😥)，有很多种开发调试的方案。比如<code>Genymotion+VirtualBox</code>搭配方案(在我的笔记本上这种方案性能最低，可能因配置而异)、直接用<code>VirtualBox</code>安装<code>Android-X86</code>的<code>iso</code>，或者是直接在<code>Android Studio</code>里面调试等等。本文介绍的是直接用<code>VirtualBox</code>安装<code>Android-X86</code>，虽然是在虚拟机中安装，但是也会有很多不可避免的坑！！！</p>
+    <title>更换为Google Fonts思源宋体！</title>
+    <url>/posts/2019/fonts.html</url>
+    <content><![CDATA[<p>对于中文书籍来说，宋体一直是正文印刷的标准字体，而不是目前电子显示屏上普遍的黑体，因为<strong>宋体的衬线更适合长时间阅读</strong>。</p>
+<p>本文是针对Hexo博客的NexT主题来设置的，不是这个的小伙伴们也可以参照着来看！</p>
 <a id="more"></a>
 
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox025.png" alt></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，我们要准备<code>VirtualBox</code>：</p>
-<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cudmlydHVhbGJveC5vcmcvd2lraS9Eb3dubG9hZHM=">https://www.virtualbox.org/wiki/Downloads<i class="fa fa-external-link-alt"></i></span></p>
-<p>然后下载<code>Android-X86</code>的<code>iso</code>，这是一个将<span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2UuYW5kcm9pZC5jb20v">Android开源项目<i class="fa fa-external-link-alt"></i></span>移植到x86平台的项目：</p>
-<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2Rvd25sb2Fk">https://www.android-x86.org/download<i class="fa fa-external-link-alt"></i></span></p>
-<p><strong>注：本文章同样适用于PhoenixOS系统！</strong></p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>准备好之后，我们安装完并打开<code>VirtualBox</code>，找到如图所示的<code>新建</code>按钮(不同版本可能界面稍有不同，但是明白要干什么就行了):</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox001.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox002.png" alt></p>
-<p>然后设置相应的信息，注意文件夹就是虚拟机文件存放位置，建议不要用默认的。名称随便取，类型选<code>Linux</code>，版本选<code>Other Linux</code>，至于是<code>32位</code>还是<code>64位</code>，就看你下载的<code>iso</code>是多少位的了。然后点击下一步。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox003.png" alt></p>
-<p>然后分配内存，这个看电脑本身的内存多大再酌情配置，然后点击下一步。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox004.png" alt></p>
-<p>然后选择<code>现在创建虚拟硬盘</code>。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox005.png" alt></p>
-<p>然后选择VDI，点击下一步。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox006.png" alt></p>
-<p>选择动态分配，然后点击下一步(当然，硬盘空间大的请随意)。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox007.png" alt></p>
-<p>根据实际情况来配置虚拟硬盘的大小，硬盘空间大的请随意，然后点击创建。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox008.png" alt></p>
-<p>然后找到我们刚才创建好的<code>Android_test</code>，点击设置。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox009.png" alt></p>
-<p>然后点击显示-调整显存大小-启用硬件加速里面的3D加速。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox010.png" alt></p>
-<p>选择存储-点击盘片-分配一个光驱，就是把你下载的<code>Android-X86</code>的<code>iso</code>添加进去。然后点击ok。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>当鼠标进入虚拟机窗口移不出来时，按下键盘右边的Ctrl(唱、跳、Rap、篮球😀)即可，vm虚拟机是Ctrl+Alt。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox011.png" alt></p>
-<p>双击我们创建好的虚拟机。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox012.png" alt></p>
-<p>选择<code>Advanced options...</code>，然后</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox013.png" alt></p>
-<p>选择<code>Auto_Installation</code>，这里为什么建议大家选择自动安装呢？因为我们再“这个”虚拟机中只分配了一个虚拟硬盘，而且并不大，所以没必要分区。而且这样也最快，能保证新手在不太了解的情况下不出错。选择这一项之后，按下回车键。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox014.png" alt></p>
-<p>选择yes！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox015.png" alt></p>
-<p>耐心等待！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox016.png" alt></p>
-<p>选择Reboot以重启。</p>
-<h2 id="划重点"><a href="#划重点" class="headerlink" title="划重点"></a>划重点</h2><p>在重启之后，会回到开始的位置</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox017.png" alt></p>
-<p>然后我们将其强制退出！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox018.png" alt></p>
-<p>然后在设置里面，把iso的盘片移除，免得开机时加载盘片去了。然后再重新双击启动！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox019.png" alt></p>
-<p>然后选择<code>Android-x86 8.1-r2</code>，<strong>千万别手贱按了回车</strong>，通过下面的帮助信息得知，我们要按下<code>E键</code>，进入编辑页面.</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox020.png" alt></p>
-<p>然后在<code>kernel</code>哪里，同样的按下<code>E键</code>，进入编辑页面</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox021.png" alt></p>
-<p>移动光标，找到图中的<code>quiet</code>这个词。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox022.png" alt></p>
-<p>把<code>quiet</code>改为<code>nomodeset xforcevesa</code>，然后按下回车键，再按下键盘上的<code>B键</code>。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox023.png" alt></p>
-<p>然后你就会看到Android的字母了，慢慢等待即可！后面的就不说了，等到了“开机”，应该就自己会玩了，跟用手机也区别不大！</p>
-<p><strong>注：每次开机都需要这一步操作，如果你不想这么做，请自行Google！</strong></p>
-<h2 id="问题详解"><a href="#问题详解" class="headerlink" title="问题详解"></a>问题详解</h2><p>这时候来给大家解释一下，为什么刚才在进入系统之前要修改某些参数！转化成问题，也就是：为什么部分电脑或者虚拟机无法启动Android-x86系统的图形界面？</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox024.png" alt></p>
-<p>先来看一张图，我们知道，它是基于Linux内核的，就跟大多数人安装Linux时需要禁用独显一样，你在安装Android-x86时，需要告诉内核，不要设置图形分辨率。</p>
-<p>那么，刚才的三个步骤，分别是在干什么呢？</p>
-<ul>
-<li>删除<code>quiet</code>，删除之后可以查看内核消息。</li>
-<li>添加<code>nomodeset</code>参数，禁用“内核模式设置”(告诉内核不要设置图形分辨率，让X代替)。</li>
-<li>添加<code>xforcevesa</code>参数，强制使用X的VESA驱动程序。</li>
-</ul>
-<p><strong>VESA</strong>是一个支持大部分显卡的通用驱动，但不提供任何2D和3D加速功能。要充分发挥显卡性能，需安装<strong>相应的厂商驱动程序</strong>。</p>
-<p>nVidia用户，可以参考ArchLinux的内核模式设置:<span class="exturl" data-url="aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvaW5kZXgucGhwL0tlcm5lbF9tb2RlX3NldHRpbmc=">https://wiki.archlinux.org/index.php/Kernel_mode_setting<i class="fa fa-external-link-alt"></i></span></p>
-<p>同时，你可以了解HybridGraphics:<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLnVidW50dS5jb20vY29tbXVuaXR5L0h5YnJpZEdyYXBoaWNz">https://help.ubuntu.com/community/HybridGraphics<i class="fa fa-external-link-alt"></i></span></p>
-<p>然后查看项目官方的wiki(必要的):<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2RvY3VtZW50YXRpb24vZ3JhcGhpY19jYXJkLmh0bWw=">https://www.android-x86.org/documentation/graphic_card.html<i class="fa fa-external-link-alt"></i></span></p>
-<p>以及issues:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29wZW50aG9zL3N5c3RlbS1hbmFseXNpcy9pc3N1ZXMvMjM=">https://github.com/openthos/system-analysis/issues/23<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
+<h3 id="修改字体"><a href="#修改字体" class="headerlink" title="修改字体"></a>修改字体</h3><h4 id="修改配置文件中的参数"><a href="#修改配置文件中的参数" class="headerlink" title="修改配置文件中的参数"></a>修改配置文件中的参数</h4><p>修改配置文件<code>_config.yml</code> ，找到<code>font</code>将下列代码中红色的部分修改成绿色的部分即可。可以根据实际情况稍作修改！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line"></span><br><span class="line">  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).</span><br><span class="line">  # Uri字体主机，例如//fonts.googleapis.com（默认）。</span><br><span class="line"><span class="addition">+ host: https://fonts.loli.net</span></span><br><span class="line"></span><br><span class="line">  # Font options:字体选项：</span><br><span class="line">  # `external: true` will load this font family from `host` above.</span><br><span class="line">  # `family: Times New Roman`. Without any quotes.</span><br><span class="line">  # `size: xx`. Use `px` as unit.</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  # 用于&lt;body&gt;中所有元素的全局字体设置。</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # 标题的字体设置（H1，H2，H3，H4，H5，H6）。</span><br><span class="line">  # Fallback to `global` font settings.</span><br><span class="line">  # 回退到`global`字体设置。</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.帖子的字体设置</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.LOGO的字体设置。</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>找到主题的<code>base.styl</code>文件，具体位置为<code>~/blog/themes/next/source/css/_variables/base.styl</code>,然后修改相关数据！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="deletion">-$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = consolas, Menlo, $font-family-base, monospace</span></span><br><span class="line"><span class="deletion">-$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-chinese, monospace if get_font_family('codes')</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-base, monospace if get_font_family('codes')</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义项目"><a href="#自定义项目" class="headerlink" title="自定义项目"></a>自定义项目</h3><h4 id="设置字体大小"><a href="#设置字体大小" class="headerlink" title="设置字体大小"></a>设置字体大小</h4><p>如果你看不习惯默认(原来)的字体大小的话，你可以尝试修改它！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = 14px	//改成你想要的即可！</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置字体颜色"><a href="#设置字体颜色" class="headerlink" title="设置字体颜色"></a>设置字体颜色</h4><p>没错，你甚至可以设置不同的颜色！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_custom/custom.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">//修改字体颜色</span><br><span class="line">body &#123;</span><br><span class="line">    color: &lt;在这里填上你想要的颜色，如：#000&gt;;	//别漏了分号！</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note warning"><p>本文参考自reuixiy的<span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS90ZWNoL25vdG8tc2VyaWYtc2MtYWRkZWQtb24tZ29vZ2xlLWZvbnRzLmh0bWwjbWFpbg==">Google Fonts已支持思源宋体！<i class="fa fa-external-link-alt"></i></span>点击即可访问！</p></div>]]></content>
       <categories>
-        <category>Android</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FTP的搭建和使用</title>
-    <url>/posts/2019/ftp.html</url>
-    <content><![CDATA[<p>去年再阿里买的学生价的服务器，在使用的过程中用到了FTP，故将使用方法记录下来，也方便自己之后查阅。</p>
-<a id="more"></a>
-
-<h2 id="What’s-FTP"><a href="#What’s-FTP" class="headerlink" title="What’s FTP?"></a>What’s FTP?</h2><p>FTP 是File Transfer Protocol（文件传输协议）的英文简称，而中文简称为“文传协议”。用于Internet上的控制文件的双向传输。同时，它也是一个应用程序（Application）。基于不同的操作系统有不同的FTP应用程序，而所有这些应用程序都遵守同一种协议以传输文件。互联网上提供文件存储和访问服务的计算机，他们依照的是FTP协议提供服务！支持FTP协议的服务器就是FTP服务器！FTP协议提供存储和传输服务的一套协议。下载”（Download）和”上传”（Upload）。”下载”文件就是从远程主机拷贝文件至自己的计算机上；”上传”文件就是将文件从自己的计算机中拷贝至远程主机上。用Internet语言来说，用户可通过客户机程序向（从）远程主机上传（下载）文件。</p>
-<h2 id="FTP的安装与配置"><a href="#FTP的安装与配置" class="headerlink" title="FTP的安装与配置"></a>FTP的安装与配置</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先我们肯定得安装vsftpd，如果不知道这是啥，Google查一查吧，但是会看这篇文章的人，应该没有不知道的😁在用<span class="exturl" data-url="aHR0cDovL3d3dy5wdXR0eS5vcmcv">putty<i class="fa fa-external-link-alt"></i></span>连上你的服务器之后，直接用<code>yum</code>安装就好了,输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
-
-<p>如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp001.png" alt></p>
-<p>出现下图表示安装成功：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp002.png" alt></p>
-<p>如果你像我的一样，已经安装了的话，会这样显示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp003.png" alt></p>
-<p>它会告诉你已经安装了最新的软件安装包，这时候它无事可做了😂</p>
-<h3 id="相关配置文件"><a href="#相关配置文件" class="headerlink" title="相关配置文件"></a>相关配置文件</h3><p>输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;etc&#x2F;vsftpd</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
-
-<p>如图所示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp004.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf 	&#x2F;&#x2F;主配置文件，核心配置文件</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;ftpusers 	    &#x2F;&#x2F;黑名单，这个里面的用户不允许访问FTP服务器</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;user_list 		&#x2F;&#x2F;白名单，允许访问FTP服务器的用户列表</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>同样的，输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vsftpd.service 	&#x2F;&#x2F;设置开机自启动</span><br><span class="line">systemctl start vsftpd.service 		&#x2F;&#x2F;启动ftp服务</span><br><span class="line">netstat -antup | grep ftp 			&#x2F;&#x2F;查看ftp服务端口</span><br></pre></td></tr></table></figure>
-
-<p>输出情况如图所示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp005.png" alt></p>
-<p>由于我是在阿里云买的服务器，所以去阿里云的控制台添加一条防火墙规则，如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp006.png" alt></p>
-<p>登录轻量服务器控制台，单击 <strong>服务器运维</strong> &gt; <strong>防火墙</strong> &gt; <strong>添加规则</strong>。</p>
-<p>然后登陆FTP服务器：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp007.png" alt></p>
-<h2 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h2><p>如果你是刚接触ftp，出于安全考虑，不建议你使用匿名FTP上传文件，或者进行创建目录等操作。vsftpd在默认情况下也是不允许用户匿名的，若是执意要这样，可以修改vsftpd.conf配置文件的选项，可以赋予匿名ftp更多的权限。更高的进阶操作，欢迎大家自行Google，若有不足之处，欢迎指出！</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>FTP</tag>
+        <tag>Hexo</tag>
+        <tag>Google Fonts</tag>
       </tags>
   </entry>
   <entry>
@@ -489,272 +563,46 @@
       </tags>
   </entry>
   <entry>
-    <title>Playing CSO2 on your computer！</title>
-    <url>/posts/2019/cso2.html</url>
-    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>反恐精英Online2，英文名：Counter-Strike Online2，粉丝们称为蛋拐兔2。世纪天成公司于2013年9月5日正式宣布代理《反恐精英Online2》，国服于2015年2月5日起源首测，3月5号二测，4月22号正式公测。然而不辛的是，在2018年5月18日，国服（世纪天成代理）正式停止运营。</p>
+    <title>FTP的搭建和使用</title>
+    <url>/posts/2019/ftp.html</url>
+    <content><![CDATA[<p>去年再阿里买的学生价的服务器，在使用的过程中用到了FTP，故将使用方法记录下来，也方便自己之后查阅。</p>
 <a id="more"></a>
 
-<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>嗯，反正我是在停服之前的一段时间，就已经没玩了。因为我害怕，害怕前一天还玩了，第二天就进不去游戏了，这并不是我想要的。在我的印象中，每年的圣诞节，是蛋拐兔最好玩的时候，人多，氛围也好。而18年的圣诞节，只能听听bgm艰难度日，到后来，当我得知有私服之后，我便又重新燃起了激情！！！</p>
-<h2 id="Gaming"><a href="#Gaming" class="headerlink" title="Gaming"></a>Gaming</h2><h3 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h3><p>蛋拐兔2关服了，你是否还在苦恼呢？其实不少小伙伴们都知道有私服的，虽然不是我的，但是我也想借此机<br>会来推广，好让喜欢的朋友玩。我知道的私服都是免费的，都是公益性质的，搭建私服的大佬们完全是为了能<br>让大家接着玩，而且还免费。我录制视频和写教程，不出于任何形式的盈利目的，完全是基于一个热爱的老<br>玩家心态，告知和帮助那些跟我一样，曾经喜欢玩蛋拐兔的玩家，能够重新玩这款游戏。</p>
-<center>不管你玩不玩，但是请记得，你的青春里有过它！！！</center>
+<h2 id="What’s-FTP"><a href="#What’s-FTP" class="headerlink" title="What’s FTP?"></a>What’s FTP?</h2><p>FTP 是File Transfer Protocol（文件传输协议）的英文简称，而中文简称为“文传协议”。用于Internet上的控制文件的双向传输。同时，它也是一个应用程序（Application）。基于不同的操作系统有不同的FTP应用程序，而所有这些应用程序都遵守同一种协议以传输文件。互联网上提供文件存储和访问服务的计算机，他们依照的是FTP协议提供服务！支持FTP协议的服务器就是FTP服务器！FTP协议提供存储和传输服务的一套协议。下载”（Download）和”上传”（Upload）。”下载”文件就是从远程主机拷贝文件至自己的计算机上；”上传”文件就是将文件从自己的计算机中拷贝至远程主机上。用Internet语言来说，用户可通过客户机程序向（从）远程主机上传（下载）文件。</p>
+<h2 id="FTP的安装与配置"><a href="#FTP的安装与配置" class="headerlink" title="FTP的安装与配置"></a>FTP的安装与配置</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先我们肯定得安装vsftpd，如果不知道这是啥，Google查一查吧，但是会看这篇文章的人，应该没有不知道的😁在用<span class="exturl" data-url="aHR0cDovL3d3dy5wdXR0eS5vcmcv">putty<i class="fa fa-external-link-alt"></i></span>连上你的服务器之后，直接用<code>yum</code>安装就好了,输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
 
-<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>首先，让我们感谢Ochii大神写的CSO2的主服务器和客户端启动程序，并且已经开源了！<br>还有“I’m Not MentaL”大神的GUI启动器。<br>同时也感谢国内的几个小团队，自己搭建了国内的私服，并在此基础上优化了服务端和启动端，让大家<br>不仅免费也更容易地van这款游戏，而且是联机的！谢谢你们做出的努力！感谢！</p>
-<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- Microsoft .NET Framework 4.5.2及以上</span><br><span class="line">- NodeJS（如果你玩国内的联机私服，则不需要安装）</span><br><span class="line">- 一些必要的游戏运行环境，如果你是平常玩游戏，那么我相信你的电脑上也已经有了</span><br></pre></td></tr></table></figure>
+<p>如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp001.png" alt></p>
+<p>出现下图表示安装成功：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp002.png" alt></p>
+<p>如果你像我的一样，已经安装了的话，会这样显示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp003.png" alt></p>
+<p>它会告诉你已经安装了最新的软件安装包，这时候它无事可做了😂</p>
+<h3 id="相关配置文件"><a href="#相关配置文件" class="headerlink" title="相关配置文件"></a>相关配置文件</h3><p>输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;etc&#x2F;vsftpd</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
 
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 安装包，版本可选，看你想玩那种的。国内私服的话，也是有它们自己稍做了修改的版本的。</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;15qVLo7jrJxG6r-kZBqqEdQ   提取码：1h7v </span><br><span class="line">- 主服务器 </span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;166igd4lFMR1R776ATMKN5w   提取码：h0ka </span><br><span class="line">- 客户端启动程序</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1OeDIVXhbfgvDljVLdYxVfA   提取码：iwso </span><br><span class="line">- GUI启动器</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1A8rh44NzJ8MSXU8edJqIwQ   提取码：czup </span><br><span class="line">- node.js（版本10或更高版本）</span><br></pre></td></tr></table></figure>
+<p>如图所示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp004.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf 	&#x2F;&#x2F;主配置文件，核心配置文件</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;ftpusers 	    &#x2F;&#x2F;黑名单，这个里面的用户不允许访问FTP服务器</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;user_list 		&#x2F;&#x2F;白名单，允许访问FTP服务器的用户列表</span><br></pre></td></tr></table></figure>
 
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>同样的，输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vsftpd.service 	&#x2F;&#x2F;设置开机自启动</span><br><span class="line">systemctl start vsftpd.service 		&#x2F;&#x2F;启动ftp服务</span><br><span class="line">netstat -antup | grep ftp 			&#x2F;&#x2F;查看ftp服务端口</span><br></pre></td></tr></table></figure>
 
-
-<h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><p>我们先假设，你已经安装了<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>，然后，在你的电脑硬盘里面，随便找一个盘。我放在E盘了，比如我的游戏路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\Counter-Strike Online 2</span><br></pre></td></tr></table></figure>
-
-<p>然后创建<code>Game</code>文件夹和<code>Server</code>文件夹，如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs001.png" alt></p>
-<p>然后，将游戏的压缩包解压到<code>Game</code>文件夹，解压完之后，应该是这样：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs002.png" alt></p>
-<p>接着将主服务器的压缩包，解压至<code>Server</code>文件夹，解压完之后，应为：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs003.png" alt></p>
-<p>然后，将下载的2个客户端启动程序，解压至<code>Counter-Strike Online 2\Game\Bin</code>文件夹。解压完成后，再将GUI启动器压缩包，解压至<code>Counter-Strike Online 2</code>根目录下。然后，基本上就完成一大半了。正常的，这个时候你的游戏根目录下应该为这样：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs004.png" alt></p>
-<h2 id="构建游戏"><a href="#构建游戏" class="headerlink" title="构建游戏"></a>构建游戏</h2><p>下一步我们要做的，就是让游戏跑起来！</p>
-<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>这一步是最开始的方法，但是也最复杂，不建议大家使用，请跳至下一步！</p>
-<p>要运行服务器，您需要：</p>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>（版本10或更高版本）;</li>
-<li>搭建服务器，也就是我们下载的主服务器。</li>
-</ul>
-<p>然后，在服务器目录内的终端实例中，执行以下操作：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --only &#x3D; production ＃安装所需的依赖项（最小依赖项） </span><br><span class="line">npm run start ＃启动预构建服务器</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下，服务器<strong>会询问您要侦听的网络接口</strong>。</p>
-<h4 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h4><p>下载源代码后，转到源代码目录中的终端实例，然后：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install ＃安装所需的依赖项 </span><br><span class="line">npm run build ＃ builds服务器 </span><br><span class="line">npm run start ＃启动新服务器构建</span><br></pre></td></tr></table></figure>
-
-<h4 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h4><p>选项：</p>
-<ul>
-<li><code>-i, --ip-address [ip]</code>（<em>可选</em>）要侦听的IP地址（默认值：自动检测）</li>
-<li><code>-p, --port-master [port]</code>（<em>可选</em>）服务器的（TCP）端口（默认值：30001）</li>
-<li><code>-P, --port-holepunch [port]</code>（<em>可选</em>）服务器的打孔（UDP）端口（默认值：30002）</li>
-<li><code>-l, --log-packets</code>（<em>可选</em>）记录传入和传出的数据包</li>
-</ul>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在开始之前，你必须允许launcher.exe在防火墙和端口转发端口27015到27020或打开路由器的NAT，以便与其他人一起玩。</p>
-<p>如果您举办房间比赛，其他客户将知道您的IP。</p>
-<p>如果您加入主持人的房间比赛，主人将知道您的IP。</p>
-<p>一旦开发了专用服务器启动器，这可能在将来可以避免。</p>
-<h4 id="开始游戏"><a href="#开始游戏" class="headerlink" title="开始游戏"></a>开始游戏</h4><p>基本上就是挂载到一个大服务器，然后玩家们进来。由配置和网络比较好的玩家开启房间当房主，然后其他人加入游戏。同时，房主卡，其他人跟着卡，房主推出房间，其他人也会掉。虽然目前只能这样，但是我觉得有得玩我就很高兴了😂</p>
-<h4 id="对于启动器"><a href="#对于启动器" class="headerlink" title="对于启动器"></a>对于启动器</h4><ul>
-<li><code>-lang [some language]</code>- 将游戏的语言设置为<em>某种语言</em>（考虑到您拥有语言文件）</li>
-<li><code>-masterip [some ip]</code>- 将主服务器的IP地址设置为<em>某个IP</em></li>
-<li><code>-masterport [some port]</code>- 将主服务器的端口号设置为<em>某个端口</em></li>
-<li><code>-decryptedfiles</code> - 告诉游戏将每个游戏文件视为已解密</li>
-<li><code>-enablecustom</code>- 允许在<code>custom</code>游戏文件的根目录中使用自定义目录</li>
-<li><code>-username [your username]</code> - 指定登录用户名，以跳过登录屏幕。<strong>必须</strong>使用<code>-password</code></li>
-<li><code>-password [your password]</code> - 指定登录密码，以跳过登录屏幕。<strong>必须</strong>使用<code>-username</code></li>
-</ul>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>直接运行游戏根目录下的<code>PlayCSO2.exe</code>,如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs005.png" alt></p>
-<p>然后点击游戏设定，分别如下面的图片所示，自己视情况设定选项：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs006.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs007.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs008.png" alt></p>
-<p>然后点击保存，如果询问你是都要构建服务器之类的，或者是其它的，直接允许即可！然后根据你的网络情况，可以选择本地启动游戏，或者是连接到其它服务器加入游戏！开始游玩吧！</p>
-<p>运行成功之后，会有cso2_launcher.ini，这个文件里面有登陆账号和密码，是你不联网的情况下，在本地使用的。</p>
-<h3 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h3><p><del>这个其它方法嘛，就是各个搭建私服的工作组，给大家介绍的玩他们的私服的方法，略有不同，具体的自己去看看呢！</del>建议有条件玩外(私)服，国内的私服。。。</p>
-<h2 id="再次鸣谢"><a href="#再次鸣谢" class="headerlink" title="再次鸣谢"></a>再次鸣谢</h2><p>感谢Ochii，主服务器GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbWFzdGVyLXNlcnZlcg==">地址<i class="fa fa-external-link-alt"></i></span>，客户端启动程序GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbGF1bmNoZXIv">地址<i class="fa fa-external-link-alt"></i></span>，感谢！均有MIT许可证许可！</p>
-<p>感谢“I’m Not MentaL”大神的GUI启动器，他的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vcG9zdHMvY291bnRlci1zdHJpa2UtMi0yNDU5NzQ1Nj9mYmNsaWQ9SXdBUjI1VUJERXltMldoWWlzaFJjYkZVdFVEN1VSbTFaNHBoUU9sOUFzVUdzZTduRVJQMGRGT3kxRHdoZw==">Patreon<i class="fa fa-external-link-alt"></i></span>！感谢！</p>
-<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0Lw==">网站<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
-<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0L2ZvcnVtLw==">论坛<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
-<p>感谢<del>你们</del>国外大神所做出的努力！</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><iframe width="680" height="360" src="https://www.youtube-nocookie.com/embed/4qsRxFNMuL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>视频链接👉<span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS80cXNSeEZOTXVMMA==">https://youtu.be/4qsRxFNMuL0<i class="fa fa-external-link-alt"></i></span></p>
-<p>有什么问题或建议，欢迎留言或者发邮箱。<del>这里没有商业合作，每一个团队需要宣传都欢迎联系我！</del>感谢无私帮助玩家们的开发者们，你们辛苦了！~~感谢国外的几个大神！</p>
+<p>输出情况如图所示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp005.png" alt></p>
+<p>由于我是在阿里云买的服务器，所以去阿里云的控制台添加一条防火墙规则，如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp006.png" alt></p>
+<p>登录轻量服务器控制台，单击 <strong>服务器运维</strong> &gt; <strong>防火墙</strong> &gt; <strong>添加规则</strong>。</p>
+<p>然后登陆FTP服务器：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp007.png" alt></p>
+<h2 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h2><p>如果你是刚接触ftp，出于安全考虑，不建议你使用匿名FTP上传文件，或者进行创建目录等操作。vsftpd在默认情况下也是不允许用户匿名的，若是执意要这样，可以修改vsftpd.conf配置文件的选项，可以赋予匿名ftp更多的权限。更高的进阶操作，欢迎大家自行Google，若有不足之处，欢迎指出！</p>
 ]]></content>
       <categories>
-        <category>CSO2</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>CSO2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更换为Google Fonts思源宋体！</title>
-    <url>/posts/2019/fonts.html</url>
-    <content><![CDATA[<p>对于中文书籍来说，宋体一直是正文印刷的标准字体，而不是目前电子显示屏上普遍的黑体，因为<strong>宋体的衬线更适合长时间阅读</strong>。</p>
-<p>本文是针对Hexo博客的NexT主题来设置的，不是这个的小伙伴们也可以参照着来看！</p>
-<a id="more"></a>
-
-<h3 id="修改字体"><a href="#修改字体" class="headerlink" title="修改字体"></a>修改字体</h3><h4 id="修改配置文件中的参数"><a href="#修改配置文件中的参数" class="headerlink" title="修改配置文件中的参数"></a>修改配置文件中的参数</h4><p>修改配置文件<code>_config.yml</code> ，找到<code>font</code>将下列代码中红色的部分修改成绿色的部分即可。可以根据实际情况稍作修改！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line"></span><br><span class="line">  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).</span><br><span class="line">  # Uri字体主机，例如//fonts.googleapis.com（默认）。</span><br><span class="line"><span class="addition">+ host: https://fonts.loli.net</span></span><br><span class="line"></span><br><span class="line">  # Font options:字体选项：</span><br><span class="line">  # `external: true` will load this font family from `host` above.</span><br><span class="line">  # `family: Times New Roman`. Without any quotes.</span><br><span class="line">  # `size: xx`. Use `px` as unit.</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  # 用于&lt;body&gt;中所有元素的全局字体设置。</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # 标题的字体设置（H1，H2，H3，H4，H5，H6）。</span><br><span class="line">  # Fallback to `global` font settings.</span><br><span class="line">  # 回退到`global`字体设置。</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.帖子的字体设置</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.LOGO的字体设置。</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>找到主题的<code>base.styl</code>文件，具体位置为<code>~/blog/themes/next/source/css/_variables/base.styl</code>,然后修改相关数据！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="deletion">-$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = consolas, Menlo, $font-family-base, monospace</span></span><br><span class="line"><span class="deletion">-$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-chinese, monospace if get_font_family('codes')</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-base, monospace if get_font_family('codes')</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="自定义项目"><a href="#自定义项目" class="headerlink" title="自定义项目"></a>自定义项目</h3><h4 id="设置字体大小"><a href="#设置字体大小" class="headerlink" title="设置字体大小"></a>设置字体大小</h4><p>如果你看不习惯默认(原来)的字体大小的话，你可以尝试修改它！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = 14px	//改成你想要的即可！</span><br></pre></td></tr></table></figure>
-
-<h4 id="设置字体颜色"><a href="#设置字体颜色" class="headerlink" title="设置字体颜色"></a>设置字体颜色</h4><p>没错，你甚至可以设置不同的颜色！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_custom/custom.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">//修改字体颜色</span><br><span class="line">body &#123;</span><br><span class="line">    color: &lt;在这里填上你想要的颜色，如：#000&gt;;	//别漏了分号！</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note warning"><p>本文参考自reuixiy的<span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS90ZWNoL25vdG8tc2VyaWYtc2MtYWRkZWQtb24tZ29vZ2xlLWZvbnRzLmh0bWwjbWFpbg==">Google Fonts已支持思源宋体！<i class="fa fa-external-link-alt"></i></span>点击即可访问！</p></div>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Google Fonts</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git本地文件到GitHub仓库</title>
-    <url>/posts/2019/gitgo.html</url>
-    <content><![CDATA[<p>这是一个简单使用的教程，如果你刚接触<code>git</code>和<code>GitHub</code>，那么，这篇文章再适合你不过了！首先，没有接触过版本控制概念的同学们也可以轻松入门；其次，通过这篇博文，你将学会本地构建仓库、远程克隆仓库、上传本地仓库等魔法操作(语言上可能组织不太好😅)，值得你一看。</p>
-<a id="more"></a>
-
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>首先，我们得弄清楚工作区和暂存区的是怎么回事，不然当你看到这些文件夹，可能一脸问号。</p>
-<h4 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h4><p>工作区（Working Directory）,是一个你在电脑里能够看到的目录，存放的就是你的本地文件，一般指的是你的仓库根目录下。</p>
-<h4 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h4><p>版本库（Repository），在你的工作区，细心的小伙伴可能会发现，有一个隐藏的目录，名叫<code>.git</code>,这个就是我们常说的版本库了。版本库里面存放了很多东西，其中最重要的是称为<code>stage</code>的暂存区(或者叫<code>index</code>)和git为我们创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个叫<code>HEAD</code>的指针。</p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="绑定用户"><a href="#绑定用户" class="headerlink" title="绑定用户"></a>绑定用户</h4><p>首先，我们得将电脑和GitHub账号进行绑定才行，打开GIt Bash，输入以下命令（用户和邮箱为你GitHub注册的账号和邮箱）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;github用户名称&quot;</span><br><span class="line">$ git config --global user.email &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p>比如我这样：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;besscroft&quot;</span><br><span class="line">$ git config --global user.email &quot;631908942@qq.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h4><p>首先创建一下自己的SSH Key。如果已经有了请跳过：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p>然后可能要按下几次回车，具体几次我也没数，默认就行了，如果你觉得有必要，可以自己设置密码。如果一切顺利的话，你可以在你的系统用户主目录里找到<code>.ssh</code>目录，一般路径为：<code>C:\Users\这里是你的计算机用户名啦\.ssh</code>，然后里面会有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，你告诉别人也没事儿。</p>
-<p>你甚至能自己检查一下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;,ssh</span><br><span class="line">$ ls    &#x2F;&#x2F;这个s前面的是lmn的l，不同字体下显示很容易看错成i的大写或者数字1</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加SHH-Key"><a href="#添加SHH-Key" class="headerlink" title="添加SHH Key"></a>添加SHH Key</h4><p>然后我们需要去GitHub添加<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvZ2luP3JldHVybl90bz1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZzZXR0aW5ncyUyRmtleXM=">SSH Key<i class="fa fa-external-link-alt"></i></span>，如果左边的链接挂掉了，直接去你自己的GitHub页面打开设置，找到<code>SSH and GPG keys</code>,然后<code>New SSH key</code>,然后将<code>id_rsa.pub</code>文件的所有内容拷贝到<code>Add key</code>的框框里面。</p>
-<p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
-<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p>我们假设你现在要折腾一个新的项目，那么，你可以先去GitHub新建好仓库，或者现在本地把项目做一点、甚至做完，然后再上传都可以。但是，最终我们肯定是要让GitHub上的仓库和本地的仓库进行同步的。这样子你的GitHub即成为了网盘、也可以跟他人一起来协作，真香。</p>
-<p>首先要确保远程和本地的仓库名字一样，再GitHub上创建新仓库之后，这个仓库肯定是空的。在下面会有GitHub的提示，然后在本地仓库下运行如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
-
-<p>如果不小心关联了别人的仓库，不要紧，反正你是推送不上去的🤣，因为他人的账户中没有你的<code>SSH key</code>公钥。关联之后，远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库的啦！</p>
-<h4 id="上传README文件"><a href="#上传README文件" class="headerlink" title="上传README文件"></a>上传README文件</h4><p>如果在创建 <code>Github</code> 仓库时没有勾选创建 <code>README.md</code> 文件，则要先创建 <code>README.md</code> 文件，不然上传文件会报错。如果已经勾选，可以跳过此步骤。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ touch README.md</span><br><span class="line">$ git add README.md</span><br><span class="line">$ git commit -m &#39;first_commit&#39;</span><br><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-
-<h4 id="推送到远程库"><a href="#推送到远程库" class="headerlink" title="推送到远程库"></a>推送到远程库</h4><p>我们输入以下指令，把本地库的所有内容推送到远程库上：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br><span class="line">$ git push -u origin master  &#x2F;&#x2F;如果你是第一次，可以用这个</span><br></pre></td></tr></table></figure>
-
-<p>我们知道，把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以不用这样啦！</p>
-<p>也就是说，从第二次起，只要本地作了提交，就可以通过命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>那么，把本地<code>master</code>分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！开始你的创造吧！</p>
-<h4 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h4><p>假设我们这时候买了台新电脑，或者是把电脑重置了，那么最好的方式就是从远程库克隆。我们现在本地创建仓库，注意本地仓库的名字要跟远程一样哦。然后再本地仓库根目录下，输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-
-<p>初始化完毕后，我们要跟踪项目文件夹中的所有文件和文件夹，也就是将文件添加到暂存区，输入以下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是，“ . ”的意思是文件夹下的所有文件。这时候我们本地仓库是没有东西的，那么：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git pull --rebase origin master</span><br></pre></td></tr></table></figure>
-
-<p>获取远程库与本地同步合并，你可以理解为将远程仓库克隆下来。或者是使用以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
-
-<h4 id="推送到远程库基本步骤"><a href="#推送到远程库基本步骤" class="headerlink" title="推送到远程库基本步骤"></a>推送到远程库基本步骤</h4><p>每次将本地仓库推送到GitHub时，需要先将文件添加到暂存区：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
-
-<p>然后附上提交说明：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;引号之间存放提交说明&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这是为了告诉git ，把文件提交到仓库。</p>
-<p>关联远程仓库：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
-
-<p>如果这一步你的关联出现错误的话<code>fatal: remote origin already exists</code>，那么可以执行以下语句进行关联：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
-
-<p>然后再次执行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
-
-<p>然后我们再把本地仓库推送上去：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>如果在推送时出现错误 <code>error:failed to push som refs to.......</code>，则执行下列语句：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
-
-<p>将远程仓库 <code>Github</code> 上的文件拉下来合并之后重新推送上去：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-<h3 id="更改username"><a href="#更改username" class="headerlink" title="更改username"></a>更改username</h3><p>如果你更改了当前的username，会带来些麻烦，你可能需要解决一些问题！</p>
-<ul>
-<li>你的旧的个人资料页面不会被重定向(需要手动更改)</li>
-<li>你的Pages网站设置不会被重定向(需要手动更改)</li>
-<li>你的远程存储库会自动重定向，无须更改</li>
-<li>你的本地存储库需要手动更改！！！</li>
-</ul>
-<h4 id="更改本地repo的远程repo的URL"><a href="#更改本地repo的远程repo的URL" class="headerlink" title="更改本地repo的远程repo的URL"></a>更改本地repo的远程repo的URL</h4><p>一般的，使用<code>git remote set-url</code>命令更改现有的远程存储卡URL。</p>
-<ul>
-<li>如果您要更新为使用HTTPS，则URL可能类似于：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
-<li>如果您要更新为使用SSH，则您的URL可能如下所示：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
-<h4 id="将远程URL从SSH切换到HTTPS"><a href="#将远程URL从SSH切换到HTTPS" class="headerlink" title="将远程URL从SSH切换到HTTPS"></a>将远程URL从SSH切换到HTTPS</h4></li>
-<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
-<li>使用<code>git remote set-url</code>命令将远程URL从SSH更改为HTTPS</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
-<ul>
-<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
-在你下次使用<code>git fetch</code>，<code>git pull</code>或<code>git push</code>访问远程存储库时，系统将要求你重新提供GitHub用户名和密码<h4 id="将远程URL从HTTPS切换到SSH"><a href="#将远程URL从HTTPS切换到SSH" class="headerlink" title="将远程URL从HTTPS切换到SSH"></a>将远程URL从HTTPS切换到SSH</h4></li>
-<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
-<li>使用<code>git remote set-url</code>命令将远程URL从HTTPS更改为SSH<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
-<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
-<h4 id="错误排解"><a href="#错误排解" class="headerlink" title="错误排解"></a>错误排解</h4>出现以下错误，表示URL不存在：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url sofake https:&#x2F;&#x2F;github.com&#x2F;octocat&#x2F;Spoon-Knife</span><br><span class="line">&gt; fatal: No such remote &#39;sofake&#39;</span><br></pre></td></tr></table></figure>
-更多请访问<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vZ2l0aHViL3VzaW5nLWdpdC9jaGFuZ2luZy1hLXJlbW90ZXMtdXJs">官方Wiki<i class="fa fa-external-link-alt"></i></span>！<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3></li>
-</ul>
-<p>每次推送的话，基本上就是下面这么回事儿：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 第一步</span><br><span class="line">$  git add .</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第二步</span><br><span class="line">$ git commit -m &quot;更新日志&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第三步</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Git</category>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Google sitemap不允许的网址解决办法</title>
-    <url>/posts/2019/googlesitemap.html</url>
-    <content><![CDATA[<p>搭建好自己的博客之后，当然得做收录。要想让别人在Google看到我的文章，就得添加站点地图。但是我在提交到Google的时候就给我报了错，不允许的网址。本文所说的方法只是众多解决方法中的一个，这个问题的原因也是有很多的，可以参考👉<span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vd2VibWFzdGVycy9hbnN3ZXIvNzQ1MTAwMT9obD16aC1IYW5zJnJlZl90b3BpYz03NDQwMDA2">站点地图报告<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在我提交之后，是这样显示的：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google001.png" alt></p>
-<p>所以说，得找到错误。最开始我根本没意识到错误在哪里，也就是选择性眼瞎。。。但是仔细观察图片，发现网址不对，怎么能是http://&lt;yoursite.com&gt;(这里一看就不对)/***.html呢？于是恍然大悟！</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>综上所述，在我的站点文件<code>sitemap.xml</code>里面，也肯定都是错误的网址。可以看到地址都是错的，都是<code>yoursite.com</code>开头，这很明显不是我的网址啊😥所以说肯定是我某个地方没有修改，应该是默认值。然后检查我的<code>_config.yml</code>文件，一看果然是的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;yoursite.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
-
-<p>可以看到<code>url</code>这一项是默认值，压根就没改！因为之前不影响使用，我就没管。然后这时候更正它：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;www.zhuimeng.online</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
-
-<p>然后<code>hexo g -d</code>更新网站，再在 Google Search Console 重新提交一次 sitemap 就可以了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google002.png" alt></p>
-<p>nice!大功告成啦！😄</p>
-]]></content>
-      <categories>
-        <category>Google Search Console</category>
-      </categories>
-      <tags>
-        <tag>Google Search Console</tag>
+        <tag>FTP</tag>
       </tags>
   </entry>
   <entry>
@@ -952,6 +800,158 @@
       </tags>
   </entry>
   <entry>
+    <title>Git本地文件到GitHub仓库</title>
+    <url>/posts/2019/gitgo.html</url>
+    <content><![CDATA[<p>这是一个简单使用的教程，如果你刚接触<code>git</code>和<code>GitHub</code>，那么，这篇文章再适合你不过了！首先，没有接触过版本控制概念的同学们也可以轻松入门；其次，通过这篇博文，你将学会本地构建仓库、远程克隆仓库、上传本地仓库等魔法操作(语言上可能组织不太好😅)，值得你一看。</p>
+<a id="more"></a>
+
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>首先，我们得弄清楚工作区和暂存区的是怎么回事，不然当你看到这些文件夹，可能一脸问号。</p>
+<h4 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h4><p>工作区（Working Directory）,是一个你在电脑里能够看到的目录，存放的就是你的本地文件，一般指的是你的仓库根目录下。</p>
+<h4 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h4><p>版本库（Repository），在你的工作区，细心的小伙伴可能会发现，有一个隐藏的目录，名叫<code>.git</code>,这个就是我们常说的版本库了。版本库里面存放了很多东西，其中最重要的是称为<code>stage</code>的暂存区(或者叫<code>index</code>)和git为我们创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个叫<code>HEAD</code>的指针。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="绑定用户"><a href="#绑定用户" class="headerlink" title="绑定用户"></a>绑定用户</h4><p>首先，我们得将电脑和GitHub账号进行绑定才行，打开GIt Bash，输入以下命令（用户和邮箱为你GitHub注册的账号和邮箱）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;github用户名称&quot;</span><br><span class="line">$ git config --global user.email &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>比如我这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;besscroft&quot;</span><br><span class="line">$ git config --global user.email &quot;631908942@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h4><p>首先创建一下自己的SSH Key。如果已经有了请跳过：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后可能要按下几次回车，具体几次我也没数，默认就行了，如果你觉得有必要，可以自己设置密码。如果一切顺利的话，你可以在你的系统用户主目录里找到<code>.ssh</code>目录，一般路径为：<code>C:\Users\这里是你的计算机用户名啦\.ssh</code>，然后里面会有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，你告诉别人也没事儿。</p>
+<p>你甚至能自己检查一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;,ssh</span><br><span class="line">$ ls    &#x2F;&#x2F;这个s前面的是lmn的l，不同字体下显示很容易看错成i的大写或者数字1</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加SHH-Key"><a href="#添加SHH-Key" class="headerlink" title="添加SHH Key"></a>添加SHH Key</h4><p>然后我们需要去GitHub添加<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvZ2luP3JldHVybl90bz1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZzZXR0aW5ncyUyRmtleXM=">SSH Key<i class="fa fa-external-link-alt"></i></span>，如果左边的链接挂掉了，直接去你自己的GitHub页面打开设置，找到<code>SSH and GPG keys</code>,然后<code>New SSH key</code>,然后将<code>id_rsa.pub</code>文件的所有内容拷贝到<code>Add key</code>的框框里面。</p>
+<p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p>我们假设你现在要折腾一个新的项目，那么，你可以先去GitHub新建好仓库，或者现在本地把项目做一点、甚至做完，然后再上传都可以。但是，最终我们肯定是要让GitHub上的仓库和本地的仓库进行同步的。这样子你的GitHub即成为了网盘、也可以跟他人一起来协作，真香。</p>
+<p>首先要确保远程和本地的仓库名字一样，再GitHub上创建新仓库之后，这个仓库肯定是空的。在下面会有GitHub的提示，然后在本地仓库下运行如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>如果不小心关联了别人的仓库，不要紧，反正你是推送不上去的🤣，因为他人的账户中没有你的<code>SSH key</code>公钥。关联之后，远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库的啦！</p>
+<h4 id="上传README文件"><a href="#上传README文件" class="headerlink" title="上传README文件"></a>上传README文件</h4><p>如果在创建 <code>Github</code> 仓库时没有勾选创建 <code>README.md</code> 文件，则要先创建 <code>README.md</code> 文件，不然上传文件会报错。如果已经勾选，可以跳过此步骤。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ touch README.md</span><br><span class="line">$ git add README.md</span><br><span class="line">$ git commit -m &#39;first_commit&#39;</span><br><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<h4 id="推送到远程库"><a href="#推送到远程库" class="headerlink" title="推送到远程库"></a>推送到远程库</h4><p>我们输入以下指令，把本地库的所有内容推送到远程库上：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br><span class="line">$ git push -u origin master  &#x2F;&#x2F;如果你是第一次，可以用这个</span><br></pre></td></tr></table></figure>
+
+<p>我们知道，把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以不用这样啦！</p>
+<p>也就是说，从第二次起，只要本地作了提交，就可以通过命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>那么，把本地<code>master</code>分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！开始你的创造吧！</p>
+<h4 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h4><p>假设我们这时候买了台新电脑，或者是把电脑重置了，那么最好的方式就是从远程库克隆。我们现在本地创建仓库，注意本地仓库的名字要跟远程一样哦。然后再本地仓库根目录下，输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+
+<p>初始化完毕后，我们要跟踪项目文件夹中的所有文件和文件夹，也就是将文件添加到暂存区，输入以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，“ . ”的意思是文件夹下的所有文件。这时候我们本地仓库是没有东西的，那么：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+
+<p>获取远程库与本地同步合并，你可以理解为将远程仓库克隆下来。或者是使用以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<h4 id="推送到远程库基本步骤"><a href="#推送到远程库基本步骤" class="headerlink" title="推送到远程库基本步骤"></a>推送到远程库基本步骤</h4><p>每次将本地仓库推送到GitHub时，需要先将文件添加到暂存区：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+
+<p>然后附上提交说明：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;引号之间存放提交说明&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这是为了告诉git ，把文件提交到仓库。</p>
+<p>关联远程仓库：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>如果这一步你的关联出现错误的话<code>fatal: remote origin already exists</code>，那么可以执行以下语句进行关联：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>然后再次执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>然后我们再把本地仓库推送上去：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>如果在推送时出现错误 <code>error:failed to push som refs to.......</code>，则执行下列语句：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p>将远程仓库 <code>Github</code> 上的文件拉下来合并之后重新推送上去：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<h3 id="更改username"><a href="#更改username" class="headerlink" title="更改username"></a>更改username</h3><p>如果你更改了当前的username，会带来些麻烦，你可能需要解决一些问题！</p>
+<ul>
+<li>你的旧的个人资料页面不会被重定向(需要手动更改)</li>
+<li>你的Pages网站设置不会被重定向(需要手动更改)</li>
+<li>你的远程存储库会自动重定向，无须更改</li>
+<li>你的本地存储库需要手动更改！！！</li>
+</ul>
+<h4 id="更改本地repo的远程repo的URL"><a href="#更改本地repo的远程repo的URL" class="headerlink" title="更改本地repo的远程repo的URL"></a>更改本地repo的远程repo的URL</h4><p>一般的，使用<code>git remote set-url</code>命令更改现有的远程存储卡URL。</p>
+<ul>
+<li>如果您要更新为使用HTTPS，则URL可能类似于：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
+<li>如果您要更新为使用SSH，则您的URL可能如下所示：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
+<h4 id="将远程URL从SSH切换到HTTPS"><a href="#将远程URL从SSH切换到HTTPS" class="headerlink" title="将远程URL从SSH切换到HTTPS"></a>将远程URL从SSH切换到HTTPS</h4></li>
+<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>git remote set-url</code>命令将远程URL从SSH更改为HTTPS</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
+在你下次使用<code>git fetch</code>，<code>git pull</code>或<code>git push</code>访问远程存储库时，系统将要求你重新提供GitHub用户名和密码<h4 id="将远程URL从HTTPS切换到SSH"><a href="#将远程URL从HTTPS切换到SSH" class="headerlink" title="将远程URL从HTTPS切换到SSH"></a>将远程URL从HTTPS切换到SSH</h4></li>
+<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>git remote set-url</code>命令将远程URL从HTTPS更改为SSH<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
+<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
+<h4 id="错误排解"><a href="#错误排解" class="headerlink" title="错误排解"></a>错误排解</h4>出现以下错误，表示URL不存在：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url sofake https:&#x2F;&#x2F;github.com&#x2F;octocat&#x2F;Spoon-Knife</span><br><span class="line">&gt; fatal: No such remote &#39;sofake&#39;</span><br></pre></td></tr></table></figure>
+更多请访问<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vZ2l0aHViL3VzaW5nLWdpdC9jaGFuZ2luZy1hLXJlbW90ZXMtdXJs">官方Wiki<i class="fa fa-external-link-alt"></i></span>！<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3></li>
+</ul>
+<p>每次推送的话，基本上就是下面这么回事儿：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 第一步</span><br><span class="line">$  git add .</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第二步</span><br><span class="line">$ git commit -m &quot;更新日志&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第三步</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google sitemap不允许的网址解决办法</title>
+    <url>/posts/2019/googlesitemap.html</url>
+    <content><![CDATA[<p>搭建好自己的博客之后，当然得做收录。要想让别人在Google看到我的文章，就得添加站点地图。但是我在提交到Google的时候就给我报了错，不允许的网址。本文所说的方法只是众多解决方法中的一个，这个问题的原因也是有很多的，可以参考👉<span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vd2VibWFzdGVycy9hbnN3ZXIvNzQ1MTAwMT9obD16aC1IYW5zJnJlZl90b3BpYz03NDQwMDA2">站点地图报告<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在我提交之后，是这样显示的：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google001.png" alt></p>
+<p>所以说，得找到错误。最开始我根本没意识到错误在哪里，也就是选择性眼瞎。。。但是仔细观察图片，发现网址不对，怎么能是http://&lt;yoursite.com&gt;(这里一看就不对)/***.html呢？于是恍然大悟！</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>综上所述，在我的站点文件<code>sitemap.xml</code>里面，也肯定都是错误的网址。可以看到地址都是错的，都是<code>yoursite.com</code>开头，这很明显不是我的网址啊😥所以说肯定是我某个地方没有修改，应该是默认值。然后检查我的<code>_config.yml</code>文件，一看果然是的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;yoursite.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<p>可以看到<code>url</code>这一项是默认值，压根就没改！因为之前不影响使用，我就没管。然后这时候更正它：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;www.zhuimeng.online</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<p>然后<code>hexo g -d</code>更新网站，再在 Google Search Console 重新提交一次 sitemap 就可以了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google002.png" alt></p>
+<p>nice!大功告成啦！😄</p>
+]]></content>
+      <categories>
+        <category>Google Search Console</category>
+      </categories>
+      <tags>
+        <tag>Google Search Console</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HP暗影精灵3黑苹果基本完工</title>
     <url>/posts/2019/hpomen3hackintosh.html</url>
     <content><![CDATA[<p>闲暇之余，又一次给暗影精灵3，装上了黑苹果(MacOS 10.14.6)。实现完美电源管理，以及不插电开机(暗影精灵系列的朋友，装过黑苹果的应该知道意味着什么)。并将efi以及补丁发布出来，以便相同的笔记本可以安装。</p>
@@ -1095,6 +1095,18 @@
       </tags>
   </entry>
   <entry>
+    <title>MarkDown写作的艺术</title>
+    <url>/posts/2019/markdown.html</url>
+    <content><![CDATA[<p>先鸽🕊着…</p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浅谈：强大的Hexo</title>
     <url>/posts/2019/my-first-post.html</url>
     <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/h001.png" alt></p>
@@ -1126,18 +1138,6 @@
 ]]></content>
       <tags>
         <tag>Hello Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MarkDown写作的艺术</title>
-    <url>/posts/2019/markdown.html</url>
-    <content><![CDATA[<p>先鸽🕊着…</p>
-]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1451,176 +1451,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu安装记录</title>
-    <url>/posts/2019/ubuntu.html</url>
-    <content><![CDATA[<p>一直以来，都是在虚拟机里面使用Linux系统，但随着使用需求的增加，于是直接在笔记本中安装Ubuntu。基本上就是Windows 10 + Ubuntu18.04LTS双系统共存模式！</p>
-<a id="more"></a>
-
-<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>很多同学在虚拟机中安装Linux(实际上不仅限于Ubuntu)，都会觉得安装很简单，基本上就是一直点下一步之类的，当然了，ArchLinux之流除外哈。不是说ArchLinux不好用(我觉得过渡动画还比较流畅，速度也很快)，而是它的安装过程，感觉就是个过滤用户的阴谋😂</p>
-<p>既然要直接在笔记本上安装，那么，肯定会有不少坑的，而且还是双系统共存。最常见的就是分区和假死了吧(卡死在某一界面)。其它的诸如制作镜像，装驱动出现问题，点击现在重启卡死等。我在刚买我的暗影精灵3的时候，就尝试过双系统，然后，你懂的。我直接就留下了心里阴影，因为那时候没做备份，后来我备份的好习惯就是这么被逼出来的🙃</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h3><p>先介绍下我的电脑配置吧。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">产品名称 : OMEN by HP Laptop 15-ce0xx</span><br><span class="line">BIOS : F.18-11&#x2F;09&#x2F;2018</span><br><span class="line">内存总量 : 16 GB</span><br><span class="line">处理器名称 : Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</span><br><span class="line">BIOS模式 : UEFI</span><br><span class="line">当前系统 : Windows 10 家庭中文版 1903 版本18632</span><br><span class="line">显卡 : NVIDIA GeForce GTX 1050</span><br></pre></td></tr></table></figure>
-
-<h3 id="制作镜像"><a href="#制作镜像" class="headerlink" title="制作镜像"></a>制作镜像</h3><p>在哪里下，应该就不用我废话了，我个人更喜欢👍<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuLw==">清华大学开源软件镜像站<i class="fa fa-external-link-alt"></i></span>，大家没下载的可以在这里下。如果是要像我一样，想当作主力系统来用的，就下Ubuntu 18.04.02LTS版本，LTS是官方长期维护的版本，更稳定，一直维护到2023年4月。如果你跟我一样，喜欢最新的事务，那么，Ubuntu 19.04是你不错的选择，自带的UI变漂亮了许多，但遗憾的是，它的支持生命周期只到2020年1月😥</p>
-<p>镜像制作工具，推荐<span class="exturl" data-url="aHR0cDovL3J1ZnVzLmllLw==">Rufus<i class="fa fa-external-link-alt"></i></span>吧，简单制作个镜像而已，必须要花里胡哨的功能，而且差不多就1M大小，免安装！！！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu01.png" alt></p>
-<p>选项基本跟我保持一致即可，尤其是簇大小，大家都习惯默认的，但是部分奇葩的U盘，默认分配单元大小是16K或者32K，可能会导致安装系统过程中，出现一些不必要的问题。</p>
-<p><strong>然后，在Windows下分一个给Ubuntu用的分区出来，确保为为分配状态！！！</strong></p>
-<h3 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h3><h4 id="BIOS设置"><a href="#BIOS设置" class="headerlink" title="BIOS设置"></a>BIOS设置</h4><p>开机进入BIOS，hp暗影精灵是开机按F10，其它品牌请自行Google！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu02.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu03.png" alt></p>
-<p>如图，你需要将传统模式和安全启动模式(Secure Boot)都设置为禁用，然后把U盘的启动顺序调整到操作系统管理员的前面。如果你不禁用Secure Boot的话，Ubuntu系统将无法运行，不明白为什么的同学，自行Google！</p>
-<h4 id="禁用N卡"><a href="#禁用N卡" class="headerlink" title="禁用N卡"></a>禁用N卡</h4><p>然后重点来了！！！你这时候应该进入引导界面了，但是不要着急！！！把光标移到<code>Install Ubuntu</code>，先别着急敲下回车键。先按下键盘上的字母键E，然后将<code>quiet splash ---</code>更改为 <code>quiet splash nouveau.modeset=0</code>，如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu04.png" alt="ubuntu04"></p>
-<p>改为：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu05.png" alt="ubuntu05"></p>
-<p>我在安装时忘记拍照了，这是在虚拟机中截的图，不过影响不大，只是用来参考的。改完之后，按下Ctrl+X或者F10，具体的那个界面下面会有显示的。</p>
-<div class="note warning"><p>为什么要大家这么做呢？因为自己安装过的朋友，遇到过最头疼的问题应该就是安装过程中卡死了，我曾经也遇到过！没错，就是从你开始安装，直到安装完毕进入Ubuntu的桌面为止，随时都有可能卡死。但是在虚拟机中并不会这样，我去Google查了一下，很多解释差不多是这个意思：Ubuntu是开源系统，但是Nvidia并没有将显卡驱动开源，所以Ubuntu内核中自带的Nvidia显卡驱动版本就没有特别新，就导致安装过程中会卡死。所以进行上面的设置后，禁止Ubuntu加载自带的N卡驱动，问题就解决了。玩过黑苹果的朋友门，应该也碰到过相同的问题吧。</p></div>
-
-<h4 id="安装选项"><a href="#安装选项" class="headerlink" title="安装选项"></a>安装选项</h4><p>只强调2件事，如果禁用N卡驱动之后，窗口变大的话，部分窗口被挤出屏幕，导致鼠标点不到按钮，可以按住Alt键然后用鼠标拖动窗口。其次，建议不要选择最小安装，这样以后你使用是，会少部分依赖库，给你造成麻烦(精通Linux的大神当我没说！)😋</p>
-<h4 id="分区挂载"><a href="#分区挂载" class="headerlink" title="分区挂载"></a>分区挂载</h4><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu06.png" alt></p>
-<p>千万不要偷懒，一定要选择其它选项。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu07.png" alt="ubuntu07"></p>
-<p>挂载分区，因为是UEFI启动模式，所以只少要4个分区，以我的为例，我分了100个G给Ubuntu，且我的运行内存为16G。</p>
-<table>
-<thead>
-<tr>
-<th>分区类型</th>
-<th>挂载点</th>
-<th>大小</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>efi</td>
-<td>efi</td>
-<td>2046MB</td>
-<td>用于安装efi</td>
-</tr>
-<tr>
-<td>swap</td>
-<td>swap</td>
-<td>16386MB</td>
-<td>交换分区</td>
-</tr>
-<tr>
-<td>ext4</td>
-<td>/home</td>
-<td>42859MB</td>
-<td>主目录</td>
-</tr>
-<tr>
-<td>ext4</td>
-<td>/</td>
-<td>46080MB</td>
-<td>根目录</td>
-</tr>
-</tbody></table>
-<p>传统的Boot为主分区，UEFI模式就选择逻辑分区，efi分区用来存储引导器，系统的启动文件等。我分配了2G，硬盘不大的400M左右也可以。</p>
-<p>swap分区选择主分区，这个交换分区就相当于是虚拟内存，一般设置为你的内存大小的同等大小，或者内存的2倍。</p>
-<p><code>/home</code>即主目录，也叫用户的宿主目录。用户登录系统后，所处的位置就是/home，通常用来保存用户文件。没错，什么图片啊、视频啊、你下载的东西啊，都是存在这里的，给多少自己看着办吧。</p>
-<p><code>/</code>即根目录，不要给太小，如果一共就四五十个G，至少也得给15G左右。</p>
-<p>最后，在下面的<code>安装启动引导器的设备</code>那里，<strong>选择你刚才分出来的那个efi分区</strong>(划重点，要考)，然后再点击<code>现在安装</code>。然后后面的一堆设置可以按需求设置，然后，慢慢等。</p>
-<h4 id="重点来了"><a href="#重点来了" class="headerlink" title="重点来了"></a>重点来了</h4><p>这一步很重要，因为实际上整个安装过程并没有结束，你还是得提防Ubuntu有没有搞你。在安装完成之后，系统会提示<code>已安装完成，是否重启</code>，这不废话吗，当然得选择<code>现在重启</code>了(逃)。。。😐</p>
-<p>点击重启之后，拔掉U盘，然后<strong>在开机的品牌logo出现后，按一下、按一下、只按一下键盘左上角的ESC键</strong>。开机的时候，都会出现品牌logo的吧？你看到它之后，按一下就行了。为了防止某些同学说他电脑开机不显示品牌logo，那好，你插上鼠标，等重启后屏幕亮了之后(屏幕是黑色时也有亮的情况，别跟我杠这些)，然后看着你的鼠标，鼠标等亮了之后，按一下ESC键。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu08.png" alt="ubuntu08"></p>
-<p><center>(图片来源于互联网，我没拍照，不过都差不多)</center></p>
-
-<p>这时候出现的画面，就是<code>GRUB</code>引导器，键盘选中<code>Ubuntu</code>这一项，然后按下键盘字母<code>E</code>键，是不是觉得刚才做过这步？是的，按下E之后，一样的操作。</p>
-<p>把光标移到<code>Install Ubuntu</code>，先别着急敲下回车键。先按下键盘上的字母键E，然后将<code>quiet splash ---</code>更改为 <code>quiet splash nouveau.modeset=0</code>，如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu04.png" alt="ubuntu04"></p>
-<p>改为：(只要让那一串代码变成下图这样，这串代码前面和后面不变，你不用管它是什么)</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu05.png" alt="ubuntu05"></p>
-<p>到这里，应该就可以正常地进入系统了。</p>
-<h2 id="安装之后"><a href="#安装之后" class="headerlink" title="安装之后"></a>安装之后</h2><h3 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h3><p>由于一系列总所周知的原因，我们需要更换镜像源为国内的源，我推荐使用<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2hlbHAvdWJ1bnR1Lw==">清华大学的镜像源<i class="fa fa-external-link-alt"></i></span>，其它源也可以用类似的方法添加。</p>
-<p><strong>先备份好习惯！</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo cp &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak</span><br></pre></td></tr></table></figure>
-
-<p>打开编辑源列表：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo gedit &#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure>
-
-<p>将文件内所有文件清空，然后将下列清华源全部copy进去：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"># 预发布软件源，不建议启用</span><br><span class="line"># deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-
-<p>然后用清华源更新一下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
-
-<p>如果你不知道这两条命令干嘛的，请自行Google，按理说应该知道的！</p>
-<h3 id="安装nVidia驱动"><a href="#安装nVidia驱动" class="headerlink" title="安装nVidia驱动"></a>安装nVidia驱动</h3><h4 id="自动安装"><a href="#自动安装" class="headerlink" title="自动安装"></a>自动安装</h4><p>推荐使用标准的Ubuntu仓库进行自动化安装，虽然版本不是最新的，但是<strong>更稳定</strong>！！！又不打游戏，用Linux一大原因不就是图个稳定嘛！</p>
-<p>删除现有的系统自带N卡驱动以及相关的所有配置文件等：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get --purge remove nvidia*</span><br></pre></td></tr></table></figure>
-
-<p>查看显卡设备，并显示系统推荐的驱动版本：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ubuntu-drivers devices</span><br></pre></td></tr></table></figure>
-
-<p>安装系统推荐的驱动：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ubuntu-drivers autoinstall</span><br></pre></td></tr></table></figure>
-
-<h4 id="其它方案"><a href="#其它方案" class="headerlink" title="其它方案"></a>其它方案</h4><p>自行Google好嘛，只让你看最稳定的方式，要追求刺激，可以自己去追求，我怕出了问题要来怪我！</p>
-<p>安装完之后，开机就不用再去设置了(重启后生效！)</p>
-<h2 id="配置优化"><a href="#配置优化" class="headerlink" title="配置优化"></a>配置优化</h2><p>到这里基本上就结束了，其它的使用，我可以给一些建议！</p>
-<ul>
-<li><p>安装中文输入法，如：<code>搜狗</code>。</p>
-</li>
-<li><p>安装浏览器，如：<code>chrome</code>。</p>
-</li>
-<li><p>彻底卸载办公软件Libreoffice，改用WPS等。</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt remove libreoffice-calc	&#x2F;&#x2F;卸载libreoffice表格</span><br><span class="line">sudo apt remove libreoffice-draw	&#x2F;&#x2F;卸载libreoffice绘图</span><br><span class="line">sudo apt remove libreoffice-impress &#x2F;&#x2F;卸载libreoffice幻灯片</span><br><span class="line">sudo apt remove libreoffice-writer  &#x2F;&#x2F;卸载libreoffice文档</span><br><span class="line">sudo apt remove libreoffice*		&#x2F;&#x2F;清理所有libreoffice相关</span><br><span class="line">sudo apt purge libreoffice*			&#x2F;&#x2F;清理libreoffice配置文件</span><br><span class="line">sudo apt autoremove					&#x2F;&#x2F;清理libreoffice配置文件</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装思源宋体等好看的字体</li>
-<li>UI透明化，配置终端(这个很重要)等。</li>
-<li>安装Steam，开始白给。</li>
-<li>安装一个好看的主题。</li>
-<li>安装网易云音乐等。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>彻底关闭Windows10系统更新！</title>
-    <url>/posts/2019/win10kill.html</url>
-    <content><![CDATA[<p>对于很多Windows10家庭版的朋友们来说，如何彻底关闭系统更新，是一件让人很头痛的问题。今天就来给大家介绍一个<strong>开源程序</strong>，来帮助你关闭系统更新，当然，任何事情都是有两面性的！</p>
-<a id="more"></a>
-
-<div class="note warning"><p>注意：我在实机和虚拟机都测试过，可正常使用，且用火热杀毒检测无毒。毕竟是开源软件，还是可以放心的，没有哪个笨蛋会把自己的病毒暴露在阳光之下的！</p></div>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill001.png" alt></p>
-<h3 id="你需要权衡什么？"><a href="#你需要权衡什么？" class="headerlink" title="你需要权衡什么？"></a>你需要权衡什么？</h3><p>如果您需要SKYPE，MARKET，XBOX APP，WMR或任何其他具有互联网功能的MICROSOFT应用程序，请不要安装DWS！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill002.png" alt></p>
-<h3 id="它能干什么？"><a href="#它能干什么？" class="headerlink" title="它能干什么？"></a>它能干什么？</h3><ul>
-<li>删除所有间谍软件模块</li>
-<li>删除间谍应用程序</li>
-<li>将间谍域添加到主机文件！</li>
-<li>删除间谍服务</li>
-<li>删除Windows 10 Metro Apps</li>
-<li>支持Windows 7/8 / 8.1 / 10和Server 2008-2012 R2 （对于这些平台，请使用2.2.2.2版）</li>
-<li>删除Office 2016遥测</li>
-<li>开源！</li>
-</ul>
-<p>有了它，你甚至可以删除Windows的监控模块(这个程序本身就是为了这个才产生的)。</p>
-<p><strong>由于是开源软件，在这里贴出作者的GitHub：</strong></p>
-<ul>
-<li>原作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL051bW1lci9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Nummer/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
-<li>现作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Wohlstand/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<p>截至目前，最新的发行版本的下载链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5nL3JlbGVhc2VzL2Rvd25sb2FkLzIuMi4yLjIuMjcvRFdTLWJ1aWxkLVdpbjc4ODEtMi4yLjIuMi4yNy56aXA=">https://github.com/Wohlstand/Destroy-Windows-10-Spying/releases/download/2.2.2.2.27/DWS-build-Win7881-2.2.2.2.27.zip<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>Windows10</category>
-      </categories>
-      <tags>
-        <tag>Windows10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>神器Termux的使用记录</title>
     <url>/posts/2019/termux.html</url>
     <content><![CDATA[<p>Termux是一个Android终端模拟器和Linux环境应用程序，可以直接使用，无需root或设置。自动安装最小基本系统 - 使用APT包管理器可以使用其他软件包。</p>
@@ -1828,34 +1658,173 @@
       </tags>
   </entry>
   <entry>
-    <title>愉快的五一假期</title>
-    <url>/posts/2019/wuyi.html</url>
-    <content><![CDATA[<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>这篇文章，是在五一假期结束之后写的，毕竟五一还是有点忙的！抽了2天时间来重构Hexo的代码，解决了很多未知的问题，每天都忙到凌晨，相信有过共同经历的人会明白的🤣总会有些花里胡哨的瑕疵，反正我是忍不了。😅</p>
+    <title>彻底关闭Windows10系统更新！</title>
+    <url>/posts/2019/win10kill.html</url>
+    <content><![CDATA[<p>对于很多Windows10家庭版的朋友们来说，如何彻底关闭系统更新，是一件让人很头痛的问题。今天就来给大家介绍一个<strong>开源程序</strong>，来帮助你关闭系统更新，当然，任何事情都是有两面性的！</p>
 <a id="more"></a>
 
-<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>我原先是采取的<code>GitHub</code>+<code>coding</code>方案，后来删掉了<code>coding</code>的仓库，只保留了<code>GitHub Pages</code>。最主要的还是用不习惯，虽然在某些地区访问的话，速度会更快。但是想必大多数用<code>Hexo</code>搭建博客，而且托管在<code>GitHub</code>的同学，是不在意只有少部分人来访博客的。因为需要大量的人访问，或者有这种需求的人，都会买云服务器。</p>
-<p>正好<code>coding</code>的仓库空出来了，我就把<code>GitHub</code>的先放着，在<code>coding</code>上从头开始搭建、调试。等一切准备好了之后，在推送到<code>GitHub</code>上来，这样也不容易出问题。</p>
-<h3 id="煎熬的过程"><a href="#煎熬的过程" class="headerlink" title="煎熬的过程"></a>煎熬的过程</h3><p>环境在电脑上已经有了，于是到<code>G</code>盘创建了一个新文件夹，用于<del>安装</del>初始化<code>Hexo</code>，然后安装推送插件之后直接推送到coding上。确定搭建完成了最基本的之后，就在本地慢慢调试。主题依旧用<code>NexT</code>主题，只不过换成了<code>NexT.Muse</code>，然后照着几个不同的、比较知名的博客的样式，做出了一些修改，也就是你们现在看到的样子。虽然不是很漂亮，但是也够看了😁都说程序猿的审美不行，我觉得程序猿们要大胆的说：不！给他们看看，我们不只有格子衫😎</p>
-<div class="note warning"><p>注意一定要按时备份！</p></div>
+<div class="note warning"><p>注意：我在实机和虚拟机都测试过，可正常使用，且用火热杀毒检测无毒。毕竟是开源软件，还是可以放心的，没有哪个笨蛋会把自己的病毒暴露在阳光之下的！</p></div>
 
-<p>设计整个页面的过程，是基于chrome的，一般来说现在的新浏览器都算是支持比较好的。虽然个人比较喜欢后端，但至少前端知识好歹是知道一点的，也不至于无从上手🤣许多CSS样式，都是放在了<code>custom.styl</code>文件中。经过了这次折磨之后，现在可算是知道了以前期末的时候，都是老师留情了的。没有个几百上千行的CSS代码，怎么好意思及格呢。。。</p>
-<p>在快完成的时候，也是遇到了一些小挫折的。。。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi001.png" alt></p>
-<p>嗯~ o(<em>￣▽￣</em>)o，控制台不报错，压根都不知道问题出在哪儿了。去Google查了查，重新安装了所有的相关依赖包也依旧没有解决问题。没错，绝望的我，又重新开始了一遍，但是因为相关文件都已经配置好了，基本上就是复制粘贴了一遍。最后熬了2天夜，终于还是弄完了。</p>
-<p>对于想直接要博客的整份源码的同学，我只能说，没有人会给的啦，原因很简单！这不应该是一个索取和给予的过程，而应该是一个讨论交流的过程。也就是说，你问我博客的任何东西是怎么实现的，我都会告诉你(后面也会抽时间写相关的文章)，但是你直接要我当然不会给啊，毕竟也是自己的心血！</p>
-<p>博客重构前后，源码从原先的200多M变成了40多M(包含了public文件夹)，但是东西一样不少，博客反而更美观，功能更强大。。。这个问题一直没想通，这多出来的100多M到底是啥！</p>
-<h2 id="爱你三千遍"><a href="#爱你三千遍" class="headerlink" title="爱你三千遍"></a>爱你三千遍</h2><p>五一去影院看了<span class="exturl" data-url="aHR0cHM6Ly9tb3ZpZS5kb3ViYW4uY29tL3N1YmplY3QvMjYxMDA5NTgvP2Zyb209c2hvd2luZw==">《复仇者联盟4》<i class="fa fa-external-link-alt"></i></span>，不知道为啥，竟然有点心疼灭霸😥最好笑的镜头</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi002.jpg" alt></p>
-<h2 id="♂friend"><a href="#♂friend" class="headerlink" title="♂friend"></a>♂friend</h2><p>五一还去了同学家吃饭，来了一些初中同学，大家都在聊以前初中时的沙雕欢乐的事情（。＾▽＾）</p>
-<p>嗯~ o(<em>￣▽￣</em>)o至于这个菜嘛，虽然我没参与，但是是大家一起努力弄出来的：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi003.png" alt></p>
-<p>哈哈，卖相不好，味道倒是还凑合！越长越大，就越是让人怀恋以前读书时的美(sha)好(diao)日子呢！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill001.png" alt></p>
+<h3 id="你需要权衡什么？"><a href="#你需要权衡什么？" class="headerlink" title="你需要权衡什么？"></a>你需要权衡什么？</h3><p>如果您需要SKYPE，MARKET，XBOX APP，WMR或任何其他具有互联网功能的MICROSOFT应用程序，请不要安装DWS！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill002.png" alt></p>
+<h3 id="它能干什么？"><a href="#它能干什么？" class="headerlink" title="它能干什么？"></a>它能干什么？</h3><ul>
+<li>删除所有间谍软件模块</li>
+<li>删除间谍应用程序</li>
+<li>将间谍域添加到主机文件！</li>
+<li>删除间谍服务</li>
+<li>删除Windows 10 Metro Apps</li>
+<li>支持Windows 7/8 / 8.1 / 10和Server 2008-2012 R2 （对于这些平台，请使用2.2.2.2版）</li>
+<li>删除Office 2016遥测</li>
+<li>开源！</li>
+</ul>
+<p>有了它，你甚至可以删除Windows的监控模块(这个程序本身就是为了这个才产生的)。</p>
+<p><strong>由于是开源软件，在这里贴出作者的GitHub：</strong></p>
+<ul>
+<li>原作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL051bW1lci9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Nummer/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
+<li>现作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Wohlstand/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>截至目前，最新的发行版本的下载链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5nL3JlbGVhc2VzL2Rvd25sb2FkLzIuMi4yLjIuMjcvRFdTLWJ1aWxkLVdpbjc4ODEtMi4yLjIuMi4yNy56aXA=">https://github.com/Wohlstand/Destroy-Windows-10-Spying/releases/download/2.2.2.2.27/DWS-build-Win7881-2.2.2.2.27.zip<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
-        <category>生活</category>
+        <category>Windows10</category>
       </categories>
       <tags>
-        <tag>生活</tag>
+        <tag>Windows10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu安装记录</title>
+    <url>/posts/2019/ubuntu.html</url>
+    <content><![CDATA[<p>一直以来，都是在虚拟机里面使用Linux系统，但随着使用需求的增加，于是直接在笔记本中安装Ubuntu。基本上就是Windows 10 + Ubuntu18.04LTS双系统共存模式！</p>
+<a id="more"></a>
+
+<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>很多同学在虚拟机中安装Linux(实际上不仅限于Ubuntu)，都会觉得安装很简单，基本上就是一直点下一步之类的，当然了，ArchLinux之流除外哈。不是说ArchLinux不好用(我觉得过渡动画还比较流畅，速度也很快)，而是它的安装过程，感觉就是个过滤用户的阴谋😂</p>
+<p>既然要直接在笔记本上安装，那么，肯定会有不少坑的，而且还是双系统共存。最常见的就是分区和假死了吧(卡死在某一界面)。其它的诸如制作镜像，装驱动出现问题，点击现在重启卡死等。我在刚买我的暗影精灵3的时候，就尝试过双系统，然后，你懂的。我直接就留下了心里阴影，因为那时候没做备份，后来我备份的好习惯就是这么被逼出来的🙃</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h3><p>先介绍下我的电脑配置吧。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">产品名称 : OMEN by HP Laptop 15-ce0xx</span><br><span class="line">BIOS : F.18-11&#x2F;09&#x2F;2018</span><br><span class="line">内存总量 : 16 GB</span><br><span class="line">处理器名称 : Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</span><br><span class="line">BIOS模式 : UEFI</span><br><span class="line">当前系统 : Windows 10 家庭中文版 1903 版本18632</span><br><span class="line">显卡 : NVIDIA GeForce GTX 1050</span><br></pre></td></tr></table></figure>
+
+<h3 id="制作镜像"><a href="#制作镜像" class="headerlink" title="制作镜像"></a>制作镜像</h3><p>在哪里下，应该就不用我废话了，我个人更喜欢👍<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuLw==">清华大学开源软件镜像站<i class="fa fa-external-link-alt"></i></span>，大家没下载的可以在这里下。如果是要像我一样，想当作主力系统来用的，就下Ubuntu 18.04.02LTS版本，LTS是官方长期维护的版本，更稳定，一直维护到2023年4月。如果你跟我一样，喜欢最新的事务，那么，Ubuntu 19.04是你不错的选择，自带的UI变漂亮了许多，但遗憾的是，它的支持生命周期只到2020年1月😥</p>
+<p>镜像制作工具，推荐<span class="exturl" data-url="aHR0cDovL3J1ZnVzLmllLw==">Rufus<i class="fa fa-external-link-alt"></i></span>吧，简单制作个镜像而已，必须要花里胡哨的功能，而且差不多就1M大小，免安装！！！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu01.png" alt></p>
+<p>选项基本跟我保持一致即可，尤其是簇大小，大家都习惯默认的，但是部分奇葩的U盘，默认分配单元大小是16K或者32K，可能会导致安装系统过程中，出现一些不必要的问题。</p>
+<p><strong>然后，在Windows下分一个给Ubuntu用的分区出来，确保为为分配状态！！！</strong></p>
+<h3 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h3><h4 id="BIOS设置"><a href="#BIOS设置" class="headerlink" title="BIOS设置"></a>BIOS设置</h4><p>开机进入BIOS，hp暗影精灵是开机按F10，其它品牌请自行Google！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu02.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu03.png" alt></p>
+<p>如图，你需要将传统模式和安全启动模式(Secure Boot)都设置为禁用，然后把U盘的启动顺序调整到操作系统管理员的前面。如果你不禁用Secure Boot的话，Ubuntu系统将无法运行，不明白为什么的同学，自行Google！</p>
+<h4 id="禁用N卡"><a href="#禁用N卡" class="headerlink" title="禁用N卡"></a>禁用N卡</h4><p>然后重点来了！！！你这时候应该进入引导界面了，但是不要着急！！！把光标移到<code>Install Ubuntu</code>，先别着急敲下回车键。先按下键盘上的字母键E，然后将<code>quiet splash ---</code>更改为 <code>quiet splash nouveau.modeset=0</code>，如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu04.png" alt="ubuntu04"></p>
+<p>改为：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu05.png" alt="ubuntu05"></p>
+<p>我在安装时忘记拍照了，这是在虚拟机中截的图，不过影响不大，只是用来参考的。改完之后，按下Ctrl+X或者F10，具体的那个界面下面会有显示的。</p>
+<div class="note warning"><p>为什么要大家这么做呢？因为自己安装过的朋友，遇到过最头疼的问题应该就是安装过程中卡死了，我曾经也遇到过！没错，就是从你开始安装，直到安装完毕进入Ubuntu的桌面为止，随时都有可能卡死。但是在虚拟机中并不会这样，我去Google查了一下，很多解释差不多是这个意思：Ubuntu是开源系统，但是Nvidia并没有将显卡驱动开源，所以Ubuntu内核中自带的Nvidia显卡驱动版本就没有特别新，就导致安装过程中会卡死。所以进行上面的设置后，禁止Ubuntu加载自带的N卡驱动，问题就解决了。玩过黑苹果的朋友门，应该也碰到过相同的问题吧。</p></div>
+
+<h4 id="安装选项"><a href="#安装选项" class="headerlink" title="安装选项"></a>安装选项</h4><p>只强调2件事，如果禁用N卡驱动之后，窗口变大的话，部分窗口被挤出屏幕，导致鼠标点不到按钮，可以按住Alt键然后用鼠标拖动窗口。其次，建议不要选择最小安装，这样以后你使用是，会少部分依赖库，给你造成麻烦(精通Linux的大神当我没说！)😋</p>
+<h4 id="分区挂载"><a href="#分区挂载" class="headerlink" title="分区挂载"></a>分区挂载</h4><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu06.png" alt></p>
+<p>千万不要偷懒，一定要选择其它选项。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu07.png" alt="ubuntu07"></p>
+<p>挂载分区，因为是UEFI启动模式，所以只少要4个分区，以我的为例，我分了100个G给Ubuntu，且我的运行内存为16G。</p>
+<table>
+<thead>
+<tr>
+<th>分区类型</th>
+<th>挂载点</th>
+<th>大小</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>efi</td>
+<td>efi</td>
+<td>2046MB</td>
+<td>用于安装efi</td>
+</tr>
+<tr>
+<td>swap</td>
+<td>swap</td>
+<td>16386MB</td>
+<td>交换分区</td>
+</tr>
+<tr>
+<td>ext4</td>
+<td>/home</td>
+<td>42859MB</td>
+<td>主目录</td>
+</tr>
+<tr>
+<td>ext4</td>
+<td>/</td>
+<td>46080MB</td>
+<td>根目录</td>
+</tr>
+</tbody></table>
+<p>传统的Boot为主分区，UEFI模式就选择逻辑分区，efi分区用来存储引导器，系统的启动文件等。我分配了2G，硬盘不大的400M左右也可以。</p>
+<p>swap分区选择主分区，这个交换分区就相当于是虚拟内存，一般设置为你的内存大小的同等大小，或者内存的2倍。</p>
+<p><code>/home</code>即主目录，也叫用户的宿主目录。用户登录系统后，所处的位置就是/home，通常用来保存用户文件。没错，什么图片啊、视频啊、你下载的东西啊，都是存在这里的，给多少自己看着办吧。</p>
+<p><code>/</code>即根目录，不要给太小，如果一共就四五十个G，至少也得给15G左右。</p>
+<p>最后，在下面的<code>安装启动引导器的设备</code>那里，<strong>选择你刚才分出来的那个efi分区</strong>(划重点，要考)，然后再点击<code>现在安装</code>。然后后面的一堆设置可以按需求设置，然后，慢慢等。</p>
+<h4 id="重点来了"><a href="#重点来了" class="headerlink" title="重点来了"></a>重点来了</h4><p>这一步很重要，因为实际上整个安装过程并没有结束，你还是得提防Ubuntu有没有搞你。在安装完成之后，系统会提示<code>已安装完成，是否重启</code>，这不废话吗，当然得选择<code>现在重启</code>了(逃)。。。😐</p>
+<p>点击重启之后，拔掉U盘，然后<strong>在开机的品牌logo出现后，按一下、按一下、只按一下键盘左上角的ESC键</strong>。开机的时候，都会出现品牌logo的吧？你看到它之后，按一下就行了。为了防止某些同学说他电脑开机不显示品牌logo，那好，你插上鼠标，等重启后屏幕亮了之后(屏幕是黑色时也有亮的情况，别跟我杠这些)，然后看着你的鼠标，鼠标等亮了之后，按一下ESC键。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu08.png" alt="ubuntu08"></p>
+<p><center>(图片来源于互联网，我没拍照，不过都差不多)</center></p>
+
+<p>这时候出现的画面，就是<code>GRUB</code>引导器，键盘选中<code>Ubuntu</code>这一项，然后按下键盘字母<code>E</code>键，是不是觉得刚才做过这步？是的，按下E之后，一样的操作。</p>
+<p>把光标移到<code>Install Ubuntu</code>，先别着急敲下回车键。先按下键盘上的字母键E，然后将<code>quiet splash ---</code>更改为 <code>quiet splash nouveau.modeset=0</code>，如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu04.png" alt="ubuntu04"></p>
+<p>改为：(只要让那一串代码变成下图这样，这串代码前面和后面不变，你不用管它是什么)</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ubuntu/ubuntu05.png" alt="ubuntu05"></p>
+<p>到这里，应该就可以正常地进入系统了。</p>
+<h2 id="安装之后"><a href="#安装之后" class="headerlink" title="安装之后"></a>安装之后</h2><h3 id="更换镜像源"><a href="#更换镜像源" class="headerlink" title="更换镜像源"></a>更换镜像源</h3><p>由于一系列总所周知的原因，我们需要更换镜像源为国内的源，我推荐使用<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2hlbHAvdWJ1bnR1Lw==">清华大学的镜像源<i class="fa fa-external-link-alt"></i></span>，其它源也可以用类似的方法添加。</p>
+<p><strong>先备份好习惯！</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo cp &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak</span><br></pre></td></tr></table></figure>
+
+<p>打开编辑源列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo gedit &#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure>
+
+<p>将文件内所有文件清空，然后将下列清华源全部copy进去：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"># 预发布软件源，不建议启用</span><br><span class="line"># deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<p>然后用清华源更新一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+<p>如果你不知道这两条命令干嘛的，请自行Google，按理说应该知道的！</p>
+<h3 id="安装nVidia驱动"><a href="#安装nVidia驱动" class="headerlink" title="安装nVidia驱动"></a>安装nVidia驱动</h3><h4 id="自动安装"><a href="#自动安装" class="headerlink" title="自动安装"></a>自动安装</h4><p>推荐使用标准的Ubuntu仓库进行自动化安装，虽然版本不是最新的，但是<strong>更稳定</strong>！！！又不打游戏，用Linux一大原因不就是图个稳定嘛！</p>
+<p>删除现有的系统自带N卡驱动以及相关的所有配置文件等：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get --purge remove nvidia*</span><br></pre></td></tr></table></figure>
+
+<p>查看显卡设备，并显示系统推荐的驱动版本：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ubuntu-drivers devices</span><br></pre></td></tr></table></figure>
+
+<p>安装系统推荐的驱动：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ubuntu-drivers autoinstall</span><br></pre></td></tr></table></figure>
+
+<h4 id="其它方案"><a href="#其它方案" class="headerlink" title="其它方案"></a>其它方案</h4><p>自行Google好嘛，只让你看最稳定的方式，要追求刺激，可以自己去追求，我怕出了问题要来怪我！</p>
+<p>安装完之后，开机就不用再去设置了(重启后生效！)</p>
+<h2 id="配置优化"><a href="#配置优化" class="headerlink" title="配置优化"></a>配置优化</h2><p>到这里基本上就结束了，其它的使用，我可以给一些建议！</p>
+<ul>
+<li><p>安装中文输入法，如：<code>搜狗</code>。</p>
+</li>
+<li><p>安装浏览器，如：<code>chrome</code>。</p>
+</li>
+<li><p>彻底卸载办公软件Libreoffice，改用WPS等。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt remove libreoffice-calc	&#x2F;&#x2F;卸载libreoffice表格</span><br><span class="line">sudo apt remove libreoffice-draw	&#x2F;&#x2F;卸载libreoffice绘图</span><br><span class="line">sudo apt remove libreoffice-impress &#x2F;&#x2F;卸载libreoffice幻灯片</span><br><span class="line">sudo apt remove libreoffice-writer  &#x2F;&#x2F;卸载libreoffice文档</span><br><span class="line">sudo apt remove libreoffice*		&#x2F;&#x2F;清理所有libreoffice相关</span><br><span class="line">sudo apt purge libreoffice*			&#x2F;&#x2F;清理libreoffice配置文件</span><br><span class="line">sudo apt autoremove					&#x2F;&#x2F;清理libreoffice配置文件</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装思源宋体等好看的字体</li>
+<li>UI透明化，配置终端(这个很重要)等。</li>
+<li>安装Steam，开始白给。</li>
+<li>安装一个好看的主题。</li>
+<li>安装网易云音乐等。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2027,6 +1996,210 @@
         <tag>Linux</tag>
         <tag>CentOS</tag>
         <tag>BBR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愉快的五一假期</title>
+    <url>/posts/2019/wuyi.html</url>
+    <content><![CDATA[<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>这篇文章，是在五一假期结束之后写的，毕竟五一还是有点忙的！抽了2天时间来重构Hexo的代码，解决了很多未知的问题，每天都忙到凌晨，相信有过共同经历的人会明白的🤣总会有些花里胡哨的瑕疵，反正我是忍不了。😅</p>
+<a id="more"></a>
+
+<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>我原先是采取的<code>GitHub</code>+<code>coding</code>方案，后来删掉了<code>coding</code>的仓库，只保留了<code>GitHub Pages</code>。最主要的还是用不习惯，虽然在某些地区访问的话，速度会更快。但是想必大多数用<code>Hexo</code>搭建博客，而且托管在<code>GitHub</code>的同学，是不在意只有少部分人来访博客的。因为需要大量的人访问，或者有这种需求的人，都会买云服务器。</p>
+<p>正好<code>coding</code>的仓库空出来了，我就把<code>GitHub</code>的先放着，在<code>coding</code>上从头开始搭建、调试。等一切准备好了之后，在推送到<code>GitHub</code>上来，这样也不容易出问题。</p>
+<h3 id="煎熬的过程"><a href="#煎熬的过程" class="headerlink" title="煎熬的过程"></a>煎熬的过程</h3><p>环境在电脑上已经有了，于是到<code>G</code>盘创建了一个新文件夹，用于<del>安装</del>初始化<code>Hexo</code>，然后安装推送插件之后直接推送到coding上。确定搭建完成了最基本的之后，就在本地慢慢调试。主题依旧用<code>NexT</code>主题，只不过换成了<code>NexT.Muse</code>，然后照着几个不同的、比较知名的博客的样式，做出了一些修改，也就是你们现在看到的样子。虽然不是很漂亮，但是也够看了😁都说程序猿的审美不行，我觉得程序猿们要大胆的说：不！给他们看看，我们不只有格子衫😎</p>
+<div class="note warning"><p>注意一定要按时备份！</p></div>
+
+<p>设计整个页面的过程，是基于chrome的，一般来说现在的新浏览器都算是支持比较好的。虽然个人比较喜欢后端，但至少前端知识好歹是知道一点的，也不至于无从上手🤣许多CSS样式，都是放在了<code>custom.styl</code>文件中。经过了这次折磨之后，现在可算是知道了以前期末的时候，都是老师留情了的。没有个几百上千行的CSS代码，怎么好意思及格呢。。。</p>
+<p>在快完成的时候，也是遇到了一些小挫折的。。。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi001.png" alt></p>
+<p>嗯~ o(<em>￣▽￣</em>)o，控制台不报错，压根都不知道问题出在哪儿了。去Google查了查，重新安装了所有的相关依赖包也依旧没有解决问题。没错，绝望的我，又重新开始了一遍，但是因为相关文件都已经配置好了，基本上就是复制粘贴了一遍。最后熬了2天夜，终于还是弄完了。</p>
+<p>对于想直接要博客的整份源码的同学，我只能说，没有人会给的啦，原因很简单！这不应该是一个索取和给予的过程，而应该是一个讨论交流的过程。也就是说，你问我博客的任何东西是怎么实现的，我都会告诉你(后面也会抽时间写相关的文章)，但是你直接要我当然不会给啊，毕竟也是自己的心血！</p>
+<p>博客重构前后，源码从原先的200多M变成了40多M(包含了public文件夹)，但是东西一样不少，博客反而更美观，功能更强大。。。这个问题一直没想通，这多出来的100多M到底是啥！</p>
+<h2 id="爱你三千遍"><a href="#爱你三千遍" class="headerlink" title="爱你三千遍"></a>爱你三千遍</h2><p>五一去影院看了<span class="exturl" data-url="aHR0cHM6Ly9tb3ZpZS5kb3ViYW4uY29tL3N1YmplY3QvMjYxMDA5NTgvP2Zyb209c2hvd2luZw==">《复仇者联盟4》<i class="fa fa-external-link-alt"></i></span>，不知道为啥，竟然有点心疼灭霸😥最好笑的镜头</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi002.jpg" alt></p>
+<h2 id="♂friend"><a href="#♂friend" class="headerlink" title="♂friend"></a>♂friend</h2><p>五一还去了同学家吃饭，来了一些初中同学，大家都在聊以前初中时的沙雕欢乐的事情（。＾▽＾）</p>
+<p>嗯~ o(<em>￣▽￣</em>)o至于这个菜嘛，虽然我没参与，但是是大家一起努力弄出来的：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi003.png" alt></p>
+<p>哈哈，卖相不好，味道倒是还凑合！越长越大，就越是让人怀恋以前读书时的美(sha)好(diao)日子呢！</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GPG与在GitHub上使用GPG</title>
+    <url>/posts/2020/gpg.html</url>
+    <content><![CDATA[<h2 id="GPG与在GitHub上使用GPG"><a href="#GPG与在GitHub上使用GPG" class="headerlink" title="GPG与在GitHub上使用GPG"></a>GPG与在GitHub上使用GPG</h2><h3 id="基本过程"><a href="#基本过程" class="headerlink" title="基本过程"></a>基本过程</h3><ul>
+<li>生成自己的<code>GPG</code>密钥</li>
+<li>关联<code>GPG</code>公钥与<code>Github</code>账户</li>
+<li>设置利用<code>GPG</code>私钥对<code>commit</code>进行签名</li>
+<li>可选步骤：信任<code>Github</code>的<code>GPG</code>密钥</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>使用<code>GitHub</code>的话，当然得用<code>Git</code>了。我主要<code>在Windows10</code>系统中使用<code>GitHub</code>，而在<code>openSUSE</code>中，很少使用。而在<code>Windows</code>平台的<code>Git</code>发行版中，自带了<code>GPG</code>。打开<code>Git Bash</code>，在终端输入<code>pgp --version</code>，就可以看到一些版本信息了：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --version</span></span><br><span class="line"></span><br><span class="line">gpg (GnuPG) 2.2.19-unknown</span><br><span class="line">libgcrypt 1.8.5</span><br><span class="line">Copyright (C) 2019 Free Software Foundation, Inc.</span><br></pre></td></tr></table></figure>
+<p><strong>但是！！！GPG是有多个版本的，你可以去查询相关的<span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWFuX3BhZ2U=">Wiki<i class="fa fa-external-link-alt"></i></span>，不同版本的GPG，可能密钥生成命令是不同的！</strong></p>
+<h3 id="生成GPG密钥密钥对"><a href="#生成GPG密钥密钥对" class="headerlink" title="生成GPG密钥密钥对"></a>生成GPG密钥密钥对</h3><ul>
+<li><p>如果使用的是 2.1.17 或更高版本，复制以下命令粘贴到Git终端以生成 GPG 密钥对。(我的是2.2.19版本)：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --full-generate-key</span></span><br></pre></td></tr></table></figure></li>
+<li><p>如果你的版本没有达到2.1.17或更高版本，那么这个命令可能是无效的。请参考<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vY24vZ2l0aHViL2F1dGhlbnRpY2F0aW5nLXRvLWdpdGh1Yi9nZW5lcmF0aW5nLWEtbmV3LWdwZy1rZXk=">官方文档<i class="fa fa-external-link-alt"></i></span>！</p>
+</li>
+<li><p>在看到提示时，你可以指定要生成的密钥类型，或按 Enter 键接受默认的 RSA and RSA。</p>
+</li>
+</ul>
+<blockquote>
+<p>GitHub有支持的GPG密钥算法如下：</p>
+<ul>
+<li>RSA</li>
+<li>ElGamal</li>
+<li>DSA数字签名算法</li>
+<li>ECDH</li>
+<li>ECDSA</li>
+<li>EdDSA</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>然后输入所需的密钥长度。 Your key must be at least 4096 bits.</p>
+</li>
+<li><p>输入密钥的有效时长。 按 Enter 键将指定默认选择，表示该密钥不会过期。</p>
+<blockquote>
+<p>这一步的Enter和数字0都表示不会过期。输入其它数字表示天数，字母w表示星期，m表示月份，y表示年份。如3m表示有效期3个月，依此类推，我英语不太好，希望我没说错！</p>
+</blockquote>
+</li>
+<li><p>输完之后，会让你确认一遍。</p>
+</li>
+<li><p>然后会让你输入三项东西</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Real name: 这里填个人信息(随便填</span><br><span class="line">Email address: 这里必须填 GitHub 帐户的经过验证的电子邮件地址</span><br><span class="line">Comment: 随便填，如：mygpg</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>按下回车之后，就会让你设置GPG的安全密码了，先别说密码复不复杂，自己先给记住了哈！</p>
+</li>
+<li><p>最后会输出一些信息，记得保存，不过，你也可以使用如下命令来查看：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --list-secret-keys --keyid-format LONG</span></span><br></pre></td></tr></table></figure></li>
+<li><p>为了方便，这里引用官方的案例，GPG密钥ID <code>3AA5C34371567BD2</code>：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --list-secret-keys --keyid-format LONG</span></span><br><span class="line">/Users/hubot/.gnupg/secring.gpg</span><br><span class="line">------------------------------------</span><br><span class="line">sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]</span><br><span class="line">uid                          Hubot </span><br><span class="line">ssb   4096R/42B317FD4BA89E7A 2016-03-10</span><br></pre></td></tr></table></figure></li>
+<li><p>粘贴下面的文本（替换为您要使用的 GPG 密钥 ID）。 在此例中，GPG 密钥 ID 是 <code>3AA5C34371567BD2</code>：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --armor --<span class="built_in">export</span> 3AA5C34371567BD2</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 以 ASCII 封装格式打印 GPG 密钥 ID</span></span><br></pre></td></tr></table></figure></li>
+<li><p>复制 GPG 密钥，从 <code>-----BEGIN PGP PUBLIC KEY BLOCK-----</code> 开始，到 <code>-----END PGP PUBLIC KEY BLOCK-----</code> 结束。</p>
+</li>
+<li><p>最后，将GPG密钥添加到GitHub账户。</p>
+<h3 id="将GPG密钥添加到GitHub账户"><a href="#将GPG密钥添加到GitHub账户" class="headerlink" title="将GPG密钥添加到GitHub账户"></a>将GPG密钥添加到GitHub账户</h3><p>打开GitHub的设置，找到SSH and GPG keys这一项，添加一个新的GPG密钥，并将你刚才复制的密钥粘贴进去。</p>
+</li>
+</ul>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="gpg/gpg01.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="gpg/gpg02.png" alt></p>
+<p>然后就大功告成啦！</p>
+<h3 id="利用GPG私钥对Git-commit进行签名"><a href="#利用GPG私钥对Git-commit进行签名" class="headerlink" title="利用GPG私钥对Git commit进行签名"></a>利用GPG私钥对Git commit进行签名</h3><p>首先，需要让Git知道签名所用的GPG密钥ID：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.signingkey &#123;key_id&#125;</span><br></pre></td></tr></table></figure>
+<p>然后，在每次commit的时候，加上-S参数，表示这次提交需要用GPG密钥进行签名：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit -S -m &quot;...&quot;</span><br></pre></td></tr></table></figure>
+<p>如果你觉得每次都需要手动加上-S有些麻烦，可以设置Git为每次commit自动要求签名：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global commit.gpgsign true</span><br></pre></td></tr></table></figure>
+<p>但不论是否需要手动加上-S，commit时都会弹出对话框，需要你输入该密钥的密码，以判断是否为本人操作。<br>至于其它的进阶玩法，自行Google去吧！</p>
+]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
+        <tag>GPG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
+    <url>/posts/2020/lighthouse.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
+<a id="more"></a>
+
+<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
+<li>这里是文档上的介绍，让我们先了解下！</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
+<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
+<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
+<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
+<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
+<ul>
+<li>更新系统和软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装一些软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装BT面板</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
+<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
+<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
+<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
+<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
+<p>然后等待安装就行了。</p>
+<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
+<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
+<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
+<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
+<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
+<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
+<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
+<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
+<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
+<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
+<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
+<p>点击【现在就开始】，进入下一步！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
+<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
+<p>进行安装！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
+<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
+<p>成功之后，登录就能进到后台啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
+<p>然后就自己去探索功能吧！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
+<p>至此，动态网站已经搭建完成！</p>
+<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
+<p>主要的应用场景：</p>
+<ul>
+<li>网站搭建</li>
+<li>Web 应用服务</li>
+<li>快速搭建开发测试环境</li>
+<li>云端学习环境</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>玩转腾讯云</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -2359,179 +2532,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GPG与在GitHub上使用GPG</title>
-    <url>/posts/2020/gpg.html</url>
-    <content><![CDATA[<h2 id="GPG与在GitHub上使用GPG"><a href="#GPG与在GitHub上使用GPG" class="headerlink" title="GPG与在GitHub上使用GPG"></a>GPG与在GitHub上使用GPG</h2><h3 id="基本过程"><a href="#基本过程" class="headerlink" title="基本过程"></a>基本过程</h3><ul>
-<li>生成自己的<code>GPG</code>密钥</li>
-<li>关联<code>GPG</code>公钥与<code>Github</code>账户</li>
-<li>设置利用<code>GPG</code>私钥对<code>commit</code>进行签名</li>
-<li>可选步骤：信任<code>Github</code>的<code>GPG</code>密钥</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>使用<code>GitHub</code>的话，当然得用<code>Git</code>了。我主要<code>在Windows10</code>系统中使用<code>GitHub</code>，而在<code>openSUSE</code>中，很少使用。而在<code>Windows</code>平台的<code>Git</code>发行版中，自带了<code>GPG</code>。打开<code>Git Bash</code>，在终端输入<code>pgp --version</code>，就可以看到一些版本信息了：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --version</span></span><br><span class="line"></span><br><span class="line">gpg (GnuPG) 2.2.19-unknown</span><br><span class="line">libgcrypt 1.8.5</span><br><span class="line">Copyright (C) 2019 Free Software Foundation, Inc.</span><br></pre></td></tr></table></figure>
-<p><strong>但是！！！GPG是有多个版本的，你可以去查询相关的<span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWFuX3BhZ2U=">Wiki<i class="fa fa-external-link-alt"></i></span>，不同版本的GPG，可能密钥生成命令是不同的！</strong></p>
-<h3 id="生成GPG密钥密钥对"><a href="#生成GPG密钥密钥对" class="headerlink" title="生成GPG密钥密钥对"></a>生成GPG密钥密钥对</h3><ul>
-<li><p>如果使用的是 2.1.17 或更高版本，复制以下命令粘贴到Git终端以生成 GPG 密钥对。(我的是2.2.19版本)：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --full-generate-key</span></span><br></pre></td></tr></table></figure></li>
-<li><p>如果你的版本没有达到2.1.17或更高版本，那么这个命令可能是无效的。请参考<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vY24vZ2l0aHViL2F1dGhlbnRpY2F0aW5nLXRvLWdpdGh1Yi9nZW5lcmF0aW5nLWEtbmV3LWdwZy1rZXk=">官方文档<i class="fa fa-external-link-alt"></i></span>！</p>
-</li>
-<li><p>在看到提示时，你可以指定要生成的密钥类型，或按 Enter 键接受默认的 RSA and RSA。</p>
-</li>
-</ul>
-<blockquote>
-<p>GitHub有支持的GPG密钥算法如下：</p>
-<ul>
-<li>RSA</li>
-<li>ElGamal</li>
-<li>DSA数字签名算法</li>
-<li>ECDH</li>
-<li>ECDSA</li>
-<li>EdDSA</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>然后输入所需的密钥长度。 Your key must be at least 4096 bits.</p>
-</li>
-<li><p>输入密钥的有效时长。 按 Enter 键将指定默认选择，表示该密钥不会过期。</p>
-<blockquote>
-<p>这一步的Enter和数字0都表示不会过期。输入其它数字表示天数，字母w表示星期，m表示月份，y表示年份。如3m表示有效期3个月，依此类推，我英语不太好，希望我没说错！</p>
-</blockquote>
-</li>
-<li><p>输完之后，会让你确认一遍。</p>
-</li>
-<li><p>然后会让你输入三项东西</p>
-</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Real name: 这里填个人信息(随便填</span><br><span class="line">Email address: 这里必须填 GitHub 帐户的经过验证的电子邮件地址</span><br><span class="line">Comment: 随便填，如：mygpg</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>按下回车之后，就会让你设置GPG的安全密码了，先别说密码复不复杂，自己先给记住了哈！</p>
-</li>
-<li><p>最后会输出一些信息，记得保存，不过，你也可以使用如下命令来查看：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --list-secret-keys --keyid-format LONG</span></span><br></pre></td></tr></table></figure></li>
-<li><p>为了方便，这里引用官方的案例，GPG密钥ID <code>3AA5C34371567BD2</code>：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --list-secret-keys --keyid-format LONG</span></span><br><span class="line">/Users/hubot/.gnupg/secring.gpg</span><br><span class="line">------------------------------------</span><br><span class="line">sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]</span><br><span class="line">uid                          Hubot </span><br><span class="line">ssb   4096R/42B317FD4BA89E7A 2016-03-10</span><br></pre></td></tr></table></figure></li>
-<li><p>粘贴下面的文本（替换为您要使用的 GPG 密钥 ID）。 在此例中，GPG 密钥 ID 是 <code>3AA5C34371567BD2</code>：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gpg --armor --<span class="built_in">export</span> 3AA5C34371567BD2</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 以 ASCII 封装格式打印 GPG 密钥 ID</span></span><br></pre></td></tr></table></figure></li>
-<li><p>复制 GPG 密钥，从 <code>-----BEGIN PGP PUBLIC KEY BLOCK-----</code> 开始，到 <code>-----END PGP PUBLIC KEY BLOCK-----</code> 结束。</p>
-</li>
-<li><p>最后，将GPG密钥添加到GitHub账户。</p>
-<h3 id="将GPG密钥添加到GitHub账户"><a href="#将GPG密钥添加到GitHub账户" class="headerlink" title="将GPG密钥添加到GitHub账户"></a>将GPG密钥添加到GitHub账户</h3><p>打开GitHub的设置，找到SSH and GPG keys这一项，添加一个新的GPG密钥，并将你刚才复制的密钥粘贴进去。</p>
-</li>
-</ul>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="gpg/gpg01.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="gpg/gpg02.png" alt></p>
-<p>然后就大功告成啦！</p>
-<h3 id="利用GPG私钥对Git-commit进行签名"><a href="#利用GPG私钥对Git-commit进行签名" class="headerlink" title="利用GPG私钥对Git commit进行签名"></a>利用GPG私钥对Git commit进行签名</h3><p>首先，需要让Git知道签名所用的GPG密钥ID：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.signingkey &#123;key_id&#125;</span><br></pre></td></tr></table></figure>
-<p>然后，在每次commit的时候，加上-S参数，表示这次提交需要用GPG密钥进行签名：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit -S -m &quot;...&quot;</span><br></pre></td></tr></table></figure>
-<p>如果你觉得每次都需要手动加上-S有些麻烦，可以设置Git为每次commit自动要求签名：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global commit.gpgsign true</span><br></pre></td></tr></table></figure>
-<p>但不论是否需要手动加上-S，commit时都会弹出对话框，需要你输入该密钥的密码，以判断是否为本人操作。<br>至于其它的进阶玩法，自行Google去吧！</p>
-]]></content>
-      <categories>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-        <tag>GPG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
-    <url>/posts/2020/lighthouse.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
-<a id="more"></a>
-
-<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
-<li>这里是文档上的介绍，让我们先了解下！</li>
-</ul>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
-<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
-<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
-<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
-<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
-<ul>
-<li>更新系统和软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装一些软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装BT面板</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
-<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
-<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
-<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
-<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
-<p>然后等待安装就行了。</p>
-<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
-<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
-<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
-<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
-<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
-<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
-<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
-<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
-<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
-<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
-<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
-<p>点击【现在就开始】，进入下一步！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
-<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
-<p>进行安装！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
-<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
-<p>成功之后，登录就能进到后台啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
-<p>然后就自己去探索功能吧！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
-<p>至此，动态网站已经搭建完成！</p>
-<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
-<p>主要的应用场景：</p>
-<ul>
-<li>网站搭建</li>
-<li>Web 应用服务</li>
-<li>快速搭建开发测试环境</li>
-<li>云端学习环境</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>玩转腾讯云</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我和我的博客的过去、现在与未来</title>
     <url>/posts/2020/newblog.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>博客原来的样式，是去年五一晚上熬夜搞出来的，当时觉得蛮漂亮，但是看久了，就觉得乏了！但这还不是我要重构的原因，博客代码冗余、加载速度慢、载入资源多等等，迫使我对整个博客进行了重构和魔改！</p>
@@ -2650,73 +2650,6 @@
       </tags>
   </entry>
   <entry>
-    <title>再见，我的2020</title>
-    <url>/posts/2021/end2020hello2021.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</blockquote>
-
-<a id="more"></a>
-
-<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>没想到2020就这么平凡的结束了，但这也是不平凡的一年。</p>
-<p>先看看去年的计划：</p>
-<ul>
-<li><input checked disabled type="checkbox"> 学好Java，以及相关的一些技术。（不知道“好”怎么定义，但今年确实技术提升不少）</li>
-<li><input disabled type="checkbox"> 找一份自己喜欢的编程工作！</li>
-<li><input disabled type="checkbox"> 少玩游戏少熬夜（游戏确实玩的少了，但是熬夜真没办法）</li>
-<li><input disabled type="checkbox"> 坚持健身。</li>
-<li><input checked disabled type="checkbox"> 继续坚持做笔记。（虽然没怎么发博客，但是笔记做得还是非常丰富的）</li>
-<li><input checked disabled type="checkbox"> 精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
-<li><input disabled type="checkbox"> 写一款自己的主题或web项目（一言难尽）</li>
-<li><input checked disabled type="checkbox"> 积极的拥抱开源。</li>
-<li><input checked disabled type="checkbox"> 学习或了解一项新技术</li>
-<li><input checked disabled type="checkbox"> 成立自己的小团队，或者找到一群有共同理想目标的人</li>
-<li><input disabled type="checkbox"> 完成以上所有的计划，最好能脱单！</li>
-</ul>
-<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>不可否认，这一年，我的编程水平确实提升不少，但是，这仅仅是<code>能力的渐进</code>，而非<code>能力的跃迁</code>。也就是说，我花了这么多时间去学习，这只是应有的收获，但它还不够！首先，技术确实可以应对我目前在公司日常开发的大部分场景，但是却无法形成体系。怎么说呢，一个项目/软件的整个生命周期，我无法全部兼顾，尤其是技术这一块，有不少自己的短板。很多时候，感觉自己只是个API调用工程师，虽然是在写业务/功能，但是很多时候会思考：</p>
-<ul>
-<li>我为什么要用这个东西？</li>
-<li>它是怎么实现的？</li>
-<li>有没有更好的解决方案？</li>
-<li>如果断网/不看文档，我还能不能写出来？</li>
-<li>真正碰到困难了，没有套路可以照搬，我该怎么办？</li>
-</ul>
-<blockquote>
-<p>所以，我希望2021能沉下心来多读书，避免直接照搬别人的答案，而应该结合书本中成体系的知识，通过自己的独立思考得出自己的答案。<strong>对编程保持足够的热情、足够的动力、足够的耐心，最重要的是坚持下去！</strong></p>
-</blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>先结合工作聊聊，在工作中，跟不少同事平常的聊天可以看出不少东西。虽然他们的技术知识面不一定有我的广（脸红😛），甚至很多东西都仅仅是听说过而已。但是呢，做项目的时候，总是会有一些刁钻的问题和让人摸不着头脑的bug，这时我自己尝试的时间过多的话，就会去问，避免项目进度停滞。而他们总是会说：“小伙子没事，你还年轻”，来避免尴尬。但是这确实是我经验不足，技术研究不够深入，不能很好的运用到项目中。所以我就会想，是不是我以前一直尝试的方向有些偏差。在过去，虽然我本身技术并不算好，但是也经常帮助朋友和同学解决问题，也许你能够猜到我为什么要这么做，因为你也可以这么做。</p>
-<blockquote>
-<p><code>工作年限</code>不等于<code>工作经验</code>，同理，<code>工作经验</code>也不能等于<code>综合能力</code>。</p>
-</blockquote>
-<p>再聊聊开源，我最喜欢的两个作者：<code>@Evan You</code>和<code>@DIYgod</code>，虽然没见过真人，对他们也了解不太多。但是透过他们的作品可以发现，<strong>他们总是在自己喜欢/擅长的领域，认真的在写代码，写到世界充满爱！</strong>也就是说，一名程序员，并不需要什么都懂，不求广但求精。至少对于现阶段的我来说打好基础，弄清原理才是最重要的。编程本身就是强耦合性的复杂领域，而越是依赖关系很复杂的领域，越是需要通过【系统性学习】才能搞定它。<strong>知人者智，自知者明；胜人者有力，自胜者强。</strong></p>
-<blockquote>
-<p>我今年遇到了一本书，叫《如何阅读一本书》，怎么说呢，确实有点相遇恨晚的感觉。</p>
-</blockquote>
-<h3 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h3><p>又到了立flag的时间了，希望2021能将这些小目标一个个完成💪</p>
-<ul>
-<li>Java，本职工作，可以针对集合、多线程、IO、jvm等作为切入点深入学习。</li>
-<li>深入学习Spring、SpringCloud、MySQL、Redis和Elasticsearch（看着有点多😅）。</li>
-<li>入坑Rust或Go。</li>
-<li>Vue/JavaScript/CSS的学习，起码得能写点有模有样的东西，虽然是Java程序员，但是前端不会点还是不太行。</li>
-<li>坚持锻炼身体（以跑步为主）。</li>
-<li>leetcode坚持刷题，希望不要碰到困难就停住了。</li>
-<li>不仅要有输入，也要有持续的输出。</li>
-<li>写一款自己的主题或web项目。</li>
-<li>成立一个小的开源开发团队，虽然技术目前不算好，但是一步一步走，总有一天会变好！</li>
-</ul>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
-<p>送大家一句话：任何一个傻瓜都能写出计算机可以理解的代码。唯有写出人类容易理解的代码，才是优秀的程序员。——马丁·福勒 (Martin Fowler)</p>
-</blockquote>
-<p>每个人都有自己的人生，我不必羡慕他人，只需要走好自己的路，希望以后的生活会越来越好！</p>
-<center><b>I shall rise oh well rise again and agian.</b></center>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	System.out.println(<span class="string">"你好，2020!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>年终总结</category>
-      </categories>
-      <tags>
-        <tag>年终总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>给vue-admin-template添加TagsView</title>
     <url>/posts/2020/vue-add-tagsview.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前规划着做一做自己的比较正式一点的项目，基于SpringBoot开发的前后端分离项目，但是自己本身只是Java后端为主的，所以前端功底并不好。于是就采用了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4=">vue-element-admin<i class="fa fa-external-link-alt"></i></span>的基础模板<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWFkbWluLXRlbXBsYXRl">vue-admin-template<i class="fa fa-external-link-alt"></i></span>来进行开发。同时也可以基于自己的需要，增加很多组件上去。</p>
@@ -2803,6 +2736,73 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再见，我的2020</title>
+    <url>/posts/2021/end2020hello2021.html</url>
+    <content><![CDATA[<center><B>非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</B></center>
+
+<a id="more"></a>
+
+<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>没想到2020就这么平凡的结束了，但这也是不平凡的一年。</p>
+<p>先看看去年的计划：</p>
+<ul>
+<li><input checked disabled type="checkbox"> 学好Java，以及相关的一些技术。（不知道“好”怎么定义，但今年确实技术提升不少）</li>
+<li><input disabled type="checkbox"> 找一份自己喜欢的编程工作！</li>
+<li><input disabled type="checkbox"> 少玩游戏少熬夜（游戏确实玩的少了，但是熬夜真没办法）</li>
+<li><input disabled type="checkbox"> 坚持健身。</li>
+<li><input checked disabled type="checkbox"> 继续坚持做笔记。（虽然没怎么发博客，但是笔记做得还是非常丰富的）</li>
+<li><input checked disabled type="checkbox"> 精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
+<li><input disabled type="checkbox"> 写一款自己的主题或web项目（一言难尽）</li>
+<li><input checked disabled type="checkbox"> 积极的拥抱开源。</li>
+<li><input checked disabled type="checkbox"> 学习或了解一项新技术</li>
+<li><input checked disabled type="checkbox"> 成立自己的小团队，或者找到一群有共同理想目标的人</li>
+<li><input disabled type="checkbox"> 完成以上所有的计划，最好能脱单！</li>
+</ul>
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>不可否认，这一年，我的编程水平确实提升不少，但是，这仅仅是<code>能力的渐进</code>，而非<code>能力的跃迁</code>。也就是说，我花了这么多时间去学习，这只是应有的收获，但它还不够！首先，技术确实可以应对我目前在公司日常开发的大部分场景，但是却无法形成体系。怎么说呢，一个项目/软件的整个生命周期，我无法全部兼顾，尤其是技术这一块，有不少自己的短板。很多时候，感觉自己只是个API调用工程师，虽然是在写业务/功能，但是很多时候会思考：</p>
+<ul>
+<li>我为什么要用这个东西？</li>
+<li>它是怎么实现的？</li>
+<li>有没有更好的解决方案？</li>
+<li>如果断网/不看文档，我还能不能写出来？</li>
+<li>真正碰到困难了，没有套路可以照搬，我该怎么办？</li>
+</ul>
+<blockquote>
+<p>所以，我希望2021能沉下心来多读书，避免直接照搬别人的答案，而应该结合书本中成体系的知识，通过自己的独立思考得出自己的答案。<strong>对编程保持足够的热情、足够的动力、足够的耐心，最重要的是坚持下去！</strong></p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>先结合工作聊聊，在工作中，跟不少同事平常的聊天可以看出不少东西。虽然他们的技术知识面不一定有我的广（脸红😛），甚至很多东西都仅仅是听说过而已。但是呢，做项目的时候，总是会有一些刁钻的问题和让人摸不着头脑的bug，这时我自己尝试的时间过多的话，就会去问，避免项目进度停滞。而他们总是会说：“小伙子没事，你还年轻”，来避免尴尬。但是这确实是我经验不足，技术研究不够深入，不能很好的运用到项目中。所以我就会想，是不是我以前一直尝试的方向有些偏差。在过去，虽然我本身技术并不算好，但是也经常帮助朋友和同学解决问题，也许你能够猜到我为什么要这么做，因为你也可以这么做。</p>
+<blockquote>
+<p><code>工作年限</code>不等于<code>工作经验</code>，同理，<code>工作经验</code>也不能等于<code>综合能力</code>。</p>
+</blockquote>
+<p>再聊聊开源，我最喜欢的两个作者：<code>@Evan You</code>和<code>@DIYgod</code>，虽然没见过真人，对他们也了解不太多。但是透过他们的作品可以发现，<strong>他们总是在自己喜欢/擅长的领域，认真的在写代码，写到世界充满爱！</strong>也就是说，一名程序员，并不需要什么都懂，不求广但求精。至少对于现阶段的我来说打好基础，弄清原理才是最重要的。编程本身就是强耦合性的复杂领域，而越是依赖关系很复杂的领域，越是需要通过【系统性学习】才能搞定它。<strong>知人者智，自知者明；胜人者有力，自胜者强。</strong></p>
+<blockquote>
+<p>我今年遇到了一本书，叫《如何阅读一本书》，怎么说呢，确实有点相遇恨晚的感觉。</p>
+</blockquote>
+<h3 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h3><p>又到了立flag的时间了，希望2021能将这些小目标一个个完成💪</p>
+<ul>
+<li>Java，本职工作，可以针对集合、多线程、IO、jvm等作为切入点深入学习。</li>
+<li>深入学习Spring、SpringCloud、MySQL、Redis和Elasticsearch（看着有点多😅）。</li>
+<li>入坑Rust或Go。</li>
+<li>Vue/JavaScript/CSS的学习，起码得能写点有模有样的东西，虽然是Java程序员，但是前端不会点还是不太行。</li>
+<li>坚持锻炼身体（以跑步为主）。</li>
+<li>leetcode坚持刷题，希望不要碰到困难就停住了。</li>
+<li>不仅要有输入，也要有持续的输出。</li>
+<li>写一款自己的主题或web项目。</li>
+<li>成立一个小的开源开发团队，虽然技术目前不算好，但是一步一步走，总有一天会变好！</li>
+</ul>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
+<p>送大家一句话：任何一个傻瓜都能写出计算机可以理解的代码。唯有写出人类容易理解的代码，才是优秀的程序员。——马丁·福勒 (Martin Fowler)</p>
+</blockquote>
+<p>每个人都有自己的人生，我不必羡慕他人，只需要走好自己的路，希望以后的生活会越来越好！</p>
+<center><b>I shall rise oh well rise again and agian.</b></center>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	System.out.println(<span class="string">"你好，2020!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>年终总结</category>
+      </categories>
+      <tags>
+        <tag>年终总结</tag>
       </tags>
   </entry>
 </search>
