@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.52bess.com/"/>
-  <updated>2020-12-12T11:54:09.598Z</updated>
+  <updated>2020-12-31T15:55:43.599Z</updated>
   <id>https://blog.52bess.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>再见，我的2020</title>
+    <link href="https://blog.52bess.com/posts/2021/end2020hello2021.html"/>
+    <id>https://blog.52bess.com/posts/2021/end2020hello2021.html</id>
+    <published>2020-12-31T17:01:01.000Z</published>
+    <updated>2020-12-31T15:55:43.599Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote class="blockquote-center">非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</blockquote><h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>没想到2020就这么平凡的结束了，但这也是不平凡的一年。</p><p>先看看去年的计划：</p><ul><li><input checked disabled type="checkbox"> 学好Java，以及相关的一些技术。（不知道“好”怎么定义，但今年确实技术提升不少）</li><li><input disabled type="checkbox"> 找一份自己喜欢的编程工作！</li><li><input disabled type="checkbox"> 少玩游戏少熬夜（游戏确实玩的少了，但是熬夜真没办法）</li><li><input disabled type="checkbox"> 坚持健身。</li><li><input checked disabled type="checkbox"> 继续坚持做笔记。（虽然没怎么发博客，但是笔记做得还是非常丰富的）</li><li><input checked disabled type="checkbox"> 精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li><li><input disabled type="checkbox"> 写一款自己的主题或web项目（一言难尽）</li><li><input checked disabled type="checkbox"> 积极的拥抱开源。</li><li><input checked disabled type="checkbox"> 学习或了解一项新技术</li><li><input checked disabled type="checkbox"> 成立自己的小团队，或者找到一群有共同理想目标的人</li><li><input disabled type="checkbox"> 完成以上所有的计划，最好能脱单！</li></ul><h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>不可否认，这一年，我的编程水平确实提升不少，但是，这仅仅是<code>能力的渐进</code>，而非<code>能力的跃迁</code>。也就是说，我花了这么多时间去学习，这只是应有的收获，但它还不够！首先，技术确实可以应对我目前在公司日常开发的大部分场景，但是却无法形成体系。怎么说呢，一个项目/软件的整个生命周期，我无法全部兼顾，尤其是技术这一块，有不少自己的短板。很多时候，感觉自己只是个API调用工程师，虽然是在写业务/功能，但是很多时候会思考：</p><ul><li>我为什么要用这个东西？</li><li>它是怎么实现的？</li><li>有没有更好的解决方案？</li><li>如果断网/不看文档，我还能不能写出来？</li><li>真正碰到困难了，没有套路可以照搬，我该怎么办？</li></ul><blockquote><p>所以，我希望2021能沉下心来多读书，避免直接照搬别人的答案，而应该结合书本中成体系的知识，通过自己的独立思考得出自己的答案。<strong>对编程保持足够的热情、足够的动力、足够的耐心，最重要的是坚持下去！</strong></p></blockquote><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>先结合工作聊聊，在工作中，跟不少同事平常的聊天可以看出不少东西。虽然他们的技术知识面不一定有我的广（脸红😛），甚至很多东西都仅仅是听说过而已。但是呢，做项目的时候，总是会有一些刁钻的问题和让人摸不着头脑的bug，这时我自己尝试的时间过多的话，就会去问，避免项目进度停滞。而他们总是会说：“小伙子没事，你还年轻”，来避免尴尬。但是这确实是我经验不足，技术研究不够深入，不能很好的运用到项目中。所以我就会想，是不是我以前一直尝试的方向有些偏差。在过去，虽然我本身技术并不算好，但是也经常帮助朋友和同学解决问题，也许你能够猜到我为什么要这么做，因为你也可以这么做。</p><blockquote><p><code>工作年限</code>不等于<code>工作经验</code>，同理，<code>工作经验</code>也不能等于<code>综合能力</code>。</p></blockquote><p>再聊聊开源，我最喜欢的两个作者：<code>@Evan You</code>和<code>@DIYgod</code>，虽然没见过真人，对他们也了解不太多。但是透过他们的作品可以发现，<strong>他们总是在自己喜欢/擅长的领域，认真的在写代码，写到世界充满爱！</strong>也就是说，一名程序员，并不需要什么都懂，不求广但求精。至少对于现阶段的我来说打好基础，弄清原理才是最重要的。编程本身就是强耦合性的复杂领域，而越是依赖关系很复杂的领域，越是需要通过【系统性学习】才能搞定它。<strong>知人者智，自知者明；胜人者有力，自胜者强。</strong></p><blockquote><p>我今年遇到了一本书，叫《如何阅读一本书》，怎么说呢，确实有点相遇恨晚的感觉。</p></blockquote><h3 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h3><p>又到了立flag的时间了，希望2021能将这些小目标一个个完成💪</p><ul><li>Java，本职工作，可以针对集合、多线程、IO、jvm等作为切入点深入学习。</li><li>深入学习Spring、SpringCloud、MySQL、Redis和Elasticsearch（看着有点多😅）。</li><li>入坑Rust或Go。</li><li>Vue/JavaScript/CSS的学习，起码得能写点有模有样的东西，虽然是Java程序员，但是前端不会点还是不太行。</li><li>坚持锻炼身体（以跑步为主）。</li><li>leetcode坚持刷题，希望不要碰到困难就停住了。</li><li>不仅要有输入，也要有持续的输出。</li><li>写一款自己的主题或web项目。</li><li>成立一个小的开源开发团队，虽然技术目前不算好，但是一步一步走，总有一天会变好！</li></ul><h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote><p>送大家一句话：任何一个傻瓜都能写出计算机可以理解的代码。唯有写出人类容易理解的代码，才是优秀的程序员。——马丁·福勒 (Martin Fowler)</p></blockquote><p>每个人都有自己的人生，我不必羡慕他人，只需要走好自己的路，希望以后的生活会越来越好！</p><center><b>I shall rise oh well rise again and agian.</b></center><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"你好，2020!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote class=&quot;blockquote-center&quot;&gt;非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;过去&quot;&gt;&lt;a href=&quot;#过去&quot; class=&quot;headerlink&quot; title=&quot;过去&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+    
+      <category term="年终总结" scheme="https://blog.52bess.com/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="年终总结" scheme="https://blog.52bess.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>给vue-admin-template添加TagsView</title>
@@ -85,9 +113,9 @@
       <category term="Blog" scheme="https://blog.52bess.com/categories/Blog/"/>
     
     
-      <category term="Blog" scheme="https://blog.52bess.com/tags/Blog/"/>
-    
       <category term="Hexo" scheme="https://blog.52bess.com/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="https://blog.52bess.com/tags/Blog/"/>
     
       <category term="NexT" scheme="https://blog.52bess.com/tags/NexT/"/>
     
@@ -208,11 +236,11 @@
       <category term="GitHub" scheme="https://blog.52bess.com/categories/GitHub/"/>
     
     
-      <category term="GPG" scheme="https://blog.52bess.com/tags/GPG/"/>
+      <category term="Git" scheme="https://blog.52bess.com/tags/Git/"/>
     
       <category term="GitHub" scheme="https://blog.52bess.com/tags/GitHub/"/>
     
-      <category term="Git" scheme="https://blog.52bess.com/tags/Git/"/>
+      <category term="GPG" scheme="https://blog.52bess.com/tags/GPG/"/>
     
   </entry>
   
@@ -504,29 +532,6 @@
     
     
       <category term="Google Search Console" scheme="https://blog.52bess.com/tags/Google-Search-Console/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Playing CSO2 on your computer！</title>
-    <link href="https://blog.52bess.com/posts/2019/cso2.html"/>
-    <id>https://blog.52bess.com/posts/2019/cso2.html</id>
-    <published>2019-04-03T13:55:50.000Z</published>
-    <updated>2020-03-30T07:09:02.774Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>反恐精英Online2，英文名：Counter-Strike Online2，粉丝们称为蛋拐兔2。世纪天成公司于2013年9月5日正式宣布代理《反恐精英Online2》，国服于2015年2月5日起源首测，3月5号二测，4月22号正式公测。然而不辛的是，在2018年5月18日，国服（世纪天成代理）正式停止运营。</p><a id="more"></a><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>嗯，反正我是在停服之前的一段时间，就已经没玩了。因为我害怕，害怕前一天还玩了，第二天就进不去游戏了，这并不是我想要的。在我的印象中，每年的圣诞节，是蛋拐兔最好玩的时候，人多，氛围也好。而18年的圣诞节，只能听听bgm艰难度日，到后来，当我得知有私服之后，我便又重新燃起了激情！！！</p><h2 id="Gaming"><a href="#Gaming" class="headerlink" title="Gaming"></a>Gaming</h2><h3 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h3><p>蛋拐兔2关服了，你是否还在苦恼呢？其实不少小伙伴们都知道有私服的，虽然不是我的，但是我也想借此机<br>会来推广，好让喜欢的朋友玩。我知道的私服都是免费的，都是公益性质的，搭建私服的大佬们完全是为了能<br>让大家接着玩，而且还免费。我录制视频和写教程，不出于任何形式的盈利目的，完全是基于一个热爱的老<br>玩家心态，告知和帮助那些跟我一样，曾经喜欢玩蛋拐兔的玩家，能够重新玩这款游戏。</p><center>不管你玩不玩，但是请记得，你的青春里有过它！！！</center><h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>首先，让我们感谢Ochii大神写的CSO2的主服务器和客户端启动程序，并且已经开源了！<br>还有“I’m Not MentaL”大神的GUI启动器。<br>同时也感谢国内的几个小团队，自己搭建了国内的私服，并在此基础上优化了服务端和启动端，让大家<br>不仅免费也更容易地van这款游戏，而且是联机的！谢谢你们做出的努力！感谢！</p><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- Microsoft .NET Framework 4.5.2及以上</span><br><span class="line">- NodeJS（如果你玩国内的联机私服，则不需要安装）</span><br><span class="line">- 一些必要的游戏运行环境，如果你是平常玩游戏，那么我相信你的电脑上也已经有了</span><br></pre></td></tr></table></figure><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- 安装包，版本可选，看你想玩那种的。国内私服的话，也是有它们自己稍做了修改的版本的。</span><br><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;15qVLo7jrJxG6r-kZBqqEdQ   提取码：1h7v </span><br><span class="line">- 主服务器 </span><br><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;166igd4lFMR1R776ATMKN5w   提取码：h0ka </span><br><span class="line">- 客户端启动程序</span><br><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1OeDIVXhbfgvDljVLdYxVfA   提取码：iwso </span><br><span class="line">- GUI启动器</span><br><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1A8rh44NzJ8MSXU8edJqIwQ   提取码：czup </span><br><span class="line">- node.js（版本10或更高版本）</span><br></pre></td></tr></table></figure><h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><p>我们先假设，你已经安装了<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>，然后，在你的电脑硬盘里面，随便找一个盘。我放在E盘了，比如我的游戏路径</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\Counter-Strike Online 2</span><br></pre></td></tr></table></figure><p>然后创建<code>Game</code>文件夹和<code>Server</code>文件夹，如图：</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs001.png" alt></p><p>然后，将游戏的压缩包解压到<code>Game</code>文件夹，解压完之后，应该是这样：</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs002.png" alt></p><p>接着将主服务器的压缩包，解压至<code>Server</code>文件夹，解压完之后，应为：</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs003.png" alt></p><p>然后，将下载的2个客户端启动程序，解压至<code>Counter-Strike Online 2\Game\Bin</code>文件夹。解压完成后，再将GUI启动器压缩包，解压至<code>Counter-Strike Online 2</code>根目录下。然后，基本上就完成一大半了。正常的，这个时候你的游戏根目录下应该为这样：</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs004.png" alt></p><h2 id="构建游戏"><a href="#构建游戏" class="headerlink" title="构建游戏"></a>构建游戏</h2><p>下一步我们要做的，就是让游戏跑起来！</p><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>这一步是最开始的方法，但是也最复杂，不建议大家使用，请跳至下一步！</p><p>要运行服务器，您需要：</p><ul><li><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>（版本10或更高版本）;</li><li>搭建服务器，也就是我们下载的主服务器。</li></ul><p>然后，在服务器目录内的终端实例中，执行以下操作：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --only &#x3D; production ＃安装所需的依赖项（最小依赖项） </span><br><span class="line">npm run start ＃启动预构建服务器</span><br></pre></td></tr></table></figure><p>默认情况下，服务器<strong>会询问您要侦听的网络接口</strong>。</p><h4 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h4><p>下载源代码后，转到源代码目录中的终端实例，然后：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install ＃安装所需的依赖项 </span><br><span class="line">npm run build ＃ builds服务器 </span><br><span class="line">npm run start ＃启动新服务器构建</span><br></pre></td></tr></table></figure><h4 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h4><p>选项：</p><ul><li><code>-i, --ip-address [ip]</code>（<em>可选</em>）要侦听的IP地址（默认值：自动检测）</li><li><code>-p, --port-master [port]</code>（<em>可选</em>）服务器的（TCP）端口（默认值：30001）</li><li><code>-P, --port-holepunch [port]</code>（<em>可选</em>）服务器的打孔（UDP）端口（默认值：30002）</li><li><code>-l, --log-packets</code>（<em>可选</em>）记录传入和传出的数据包</li></ul><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在开始之前，你必须允许launcher.exe在防火墙和端口转发端口27015到27020或打开路由器的NAT，以便与其他人一起玩。</p><p>如果您举办房间比赛，其他客户将知道您的IP。</p><p>如果您加入主持人的房间比赛，主人将知道您的IP。</p><p>一旦开发了专用服务器启动器，这可能在将来可以避免。</p><h4 id="开始游戏"><a href="#开始游戏" class="headerlink" title="开始游戏"></a>开始游戏</h4><p>基本上就是挂载到一个大服务器，然后玩家们进来。由配置和网络比较好的玩家开启房间当房主，然后其他人加入游戏。同时，房主卡，其他人跟着卡，房主推出房间，其他人也会掉。虽然目前只能这样，但是我觉得有得玩我就很高兴了😂</p><h4 id="对于启动器"><a href="#对于启动器" class="headerlink" title="对于启动器"></a>对于启动器</h4><ul><li><code>-lang [some language]</code>- 将游戏的语言设置为<em>某种语言</em>（考虑到您拥有语言文件）</li><li><code>-masterip [some ip]</code>- 将主服务器的IP地址设置为<em>某个IP</em></li><li><code>-masterport [some port]</code>- 将主服务器的端口号设置为<em>某个端口</em></li><li><code>-decryptedfiles</code> - 告诉游戏将每个游戏文件视为已解密</li><li><code>-enablecustom</code>- 允许在<code>custom</code>游戏文件的根目录中使用自定义目录</li><li><code>-username [your username]</code> - 指定登录用户名，以跳过登录屏幕。<strong>必须</strong>使用<code>-password</code></li><li><code>-password [your password]</code> - 指定登录密码，以跳过登录屏幕。<strong>必须</strong>使用<code>-username</code></li></ul><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>直接运行游戏根目录下的<code>PlayCSO2.exe</code>,如图：</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs005.png" alt></p><p>然后点击游戏设定，分别如下面的图片所示，自己视情况设定选项：</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs006.png" alt></p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs007.png" alt></p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs008.png" alt></p><p>然后点击保存，如果询问你是都要构建服务器之类的，或者是其它的，直接允许即可！然后根据你的网络情况，可以选择本地启动游戏，或者是连接到其它服务器加入游戏！开始游玩吧！</p><p>运行成功之后，会有cso2_launcher.ini，这个文件里面有登陆账号和密码，是你不联网的情况下，在本地使用的。</p><h3 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h3><p><del>这个其它方法嘛，就是各个搭建私服的工作组，给大家介绍的玩他们的私服的方法，略有不同，具体的自己去看看呢！</del>建议有条件玩外(私)服，国内的私服。。。</p><h2 id="再次鸣谢"><a href="#再次鸣谢" class="headerlink" title="再次鸣谢"></a>再次鸣谢</h2><p>感谢Ochii，主服务器GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbWFzdGVyLXNlcnZlcg==">地址<i class="fa fa-external-link-alt"></i></span>，客户端启动程序GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbGF1bmNoZXIv">地址<i class="fa fa-external-link-alt"></i></span>，感谢！均有MIT许可证许可！</p><p>感谢“I’m Not MentaL”大神的GUI启动器，他的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vcG9zdHMvY291bnRlci1zdHJpa2UtMi0yNDU5NzQ1Nj9mYmNsaWQ9SXdBUjI1VUJERXltMldoWWlzaFJjYkZVdFVEN1VSbTFaNHBoUU9sOUFzVUdzZTduRVJQMGRGT3kxRHdoZw==">Patreon<i class="fa fa-external-link-alt"></i></span>！感谢！</p><p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0Lw==">网站<i class="fa fa-external-link-alt"></i></span>，感谢！</p><p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0L2ZvcnVtLw==">论坛<i class="fa fa-external-link-alt"></i></span>，感谢！</p><p>感谢<del>你们</del>国外大神所做出的努力！</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><iframe width="680" height="360" src="https://www.youtube-nocookie.com/embed/4qsRxFNMuL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>视频链接👉<span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS80cXNSeEZOTXVMMA==">https://youtu.be/4qsRxFNMuL0<i class="fa fa-external-link-alt"></i></span></p><p>有什么问题或建议，欢迎留言或者发邮箱。<del>这里没有商业合作，每一个团队需要宣传都欢迎联系我！</del>感谢无私帮助玩家们的开发者们，你们辛苦了！~~感谢国外的几个大神！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;反恐精英Online2，英文名：Counter-Strike Online2，粉丝们称为蛋拐兔2。世纪天成公司于2013年9月5日正式宣布代理《反恐精英Online2》，国服于2015年2月5日起源首测，3月5号二测，4月22号正式公测。然而不辛的是，在2018年5月18日，国服（世纪天成代理）正式停止运营。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="CSO2" scheme="https://blog.52bess.com/categories/CSO2/"/>
-    
-    
-      <category term="CSO2" scheme="https://blog.52bess.com/tags/CSO2/"/>
     
   </entry>
   
