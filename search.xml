@@ -606,6 +606,204 @@
       </tags>
   </entry>
   <entry>
+    <title>Git本地文件到GitHub仓库</title>
+    <url>/posts/2019/gitgo.html</url>
+    <content><![CDATA[<p>这是一个简单使用的教程，如果你刚接触<code>git</code>和<code>GitHub</code>，那么，这篇文章再适合你不过了！首先，没有接触过版本控制概念的同学们也可以轻松入门；其次，通过这篇博文，你将学会本地构建仓库、远程克隆仓库、上传本地仓库等魔法操作(语言上可能组织不太好😅)，值得你一看。</p>
+<a id="more"></a>
+
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>首先，我们得弄清楚工作区和暂存区的是怎么回事，不然当你看到这些文件夹，可能一脸问号。</p>
+<h4 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h4><p>工作区（Working Directory）,是一个你在电脑里能够看到的目录，存放的就是你的本地文件，一般指的是你的仓库根目录下。</p>
+<h4 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h4><p>版本库（Repository），在你的工作区，细心的小伙伴可能会发现，有一个隐藏的目录，名叫<code>.git</code>,这个就是我们常说的版本库了。版本库里面存放了很多东西，其中最重要的是称为<code>stage</code>的暂存区(或者叫<code>index</code>)和git为我们创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个叫<code>HEAD</code>的指针。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="绑定用户"><a href="#绑定用户" class="headerlink" title="绑定用户"></a>绑定用户</h4><p>首先，我们得将电脑和GitHub账号进行绑定才行，打开GIt Bash，输入以下命令（用户和邮箱为你GitHub注册的账号和邮箱）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;github用户名称&quot;</span><br><span class="line">$ git config --global user.email &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>比如我这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;besscroft&quot;</span><br><span class="line">$ git config --global user.email &quot;631908942@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h4><p>首先创建一下自己的SSH Key。如果已经有了请跳过：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后可能要按下几次回车，具体几次我也没数，默认就行了，如果你觉得有必要，可以自己设置密码。如果一切顺利的话，你可以在你的系统用户主目录里找到<code>.ssh</code>目录，一般路径为：<code>C:\Users\这里是你的计算机用户名啦\.ssh</code>，然后里面会有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，你告诉别人也没事儿。</p>
+<p>你甚至能自己检查一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;,ssh</span><br><span class="line">$ ls    &#x2F;&#x2F;这个s前面的是lmn的l，不同字体下显示很容易看错成i的大写或者数字1</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加SHH-Key"><a href="#添加SHH-Key" class="headerlink" title="添加SHH Key"></a>添加SHH Key</h4><p>然后我们需要去GitHub添加<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvZ2luP3JldHVybl90bz1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZzZXR0aW5ncyUyRmtleXM=">SSH Key<i class="fa fa-external-link-alt"></i></span>，如果左边的链接挂掉了，直接去你自己的GitHub页面打开设置，找到<code>SSH and GPG keys</code>,然后<code>New SSH key</code>,然后将<code>id_rsa.pub</code>文件的所有内容拷贝到<code>Add key</code>的框框里面。</p>
+<p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p>我们假设你现在要折腾一个新的项目，那么，你可以先去GitHub新建好仓库，或者现在本地把项目做一点、甚至做完，然后再上传都可以。但是，最终我们肯定是要让GitHub上的仓库和本地的仓库进行同步的。这样子你的GitHub即成为了网盘、也可以跟他人一起来协作，真香。</p>
+<p>首先要确保远程和本地的仓库名字一样，再GitHub上创建新仓库之后，这个仓库肯定是空的。在下面会有GitHub的提示，然后在本地仓库下运行如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>如果不小心关联了别人的仓库，不要紧，反正你是推送不上去的🤣，因为他人的账户中没有你的<code>SSH key</code>公钥。关联之后，远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库的啦！</p>
+<h4 id="上传README文件"><a href="#上传README文件" class="headerlink" title="上传README文件"></a>上传README文件</h4><p>如果在创建 <code>Github</code> 仓库时没有勾选创建 <code>README.md</code> 文件，则要先创建 <code>README.md</code> 文件，不然上传文件会报错。如果已经勾选，可以跳过此步骤。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ touch README.md</span><br><span class="line">$ git add README.md</span><br><span class="line">$ git commit -m &#39;first_commit&#39;</span><br><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<h4 id="推送到远程库"><a href="#推送到远程库" class="headerlink" title="推送到远程库"></a>推送到远程库</h4><p>我们输入以下指令，把本地库的所有内容推送到远程库上：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br><span class="line">$ git push -u origin master  &#x2F;&#x2F;如果你是第一次，可以用这个</span><br></pre></td></tr></table></figure>
+
+<p>我们知道，把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以不用这样啦！</p>
+<p>也就是说，从第二次起，只要本地作了提交，就可以通过命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>那么，把本地<code>master</code>分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！开始你的创造吧！</p>
+<h4 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h4><p>假设我们这时候买了台新电脑，或者是把电脑重置了，那么最好的方式就是从远程库克隆。我们现在本地创建仓库，注意本地仓库的名字要跟远程一样哦。然后再本地仓库根目录下，输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+
+<p>初始化完毕后，我们要跟踪项目文件夹中的所有文件和文件夹，也就是将文件添加到暂存区，输入以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，“ . ”的意思是文件夹下的所有文件。这时候我们本地仓库是没有东西的，那么：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+
+<p>获取远程库与本地同步合并，你可以理解为将远程仓库克隆下来。或者是使用以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<h4 id="推送到远程库基本步骤"><a href="#推送到远程库基本步骤" class="headerlink" title="推送到远程库基本步骤"></a>推送到远程库基本步骤</h4><p>每次将本地仓库推送到GitHub时，需要先将文件添加到暂存区：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
+
+<p>然后附上提交说明：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;引号之间存放提交说明&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这是为了告诉git ，把文件提交到仓库。</p>
+<p>关联远程仓库：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>如果这一步你的关联出现错误的话<code>fatal: remote origin already exists</code>，那么可以执行以下语句进行关联：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>然后再次执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>然后我们再把本地仓库推送上去：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>如果在推送时出现错误 <code>error:failed to push som refs to.......</code>，则执行下列语句：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p>将远程仓库 <code>Github</code> 上的文件拉下来合并之后重新推送上去：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<h3 id="更改username"><a href="#更改username" class="headerlink" title="更改username"></a>更改username</h3><p>如果你更改了当前的username，会带来些麻烦，你可能需要解决一些问题！</p>
+<ul>
+<li>你的旧的个人资料页面不会被重定向(需要手动更改)</li>
+<li>你的Pages网站设置不会被重定向(需要手动更改)</li>
+<li>你的远程存储库会自动重定向，无须更改</li>
+<li>你的本地存储库需要手动更改！！！</li>
+</ul>
+<h4 id="更改本地repo的远程repo的URL"><a href="#更改本地repo的远程repo的URL" class="headerlink" title="更改本地repo的远程repo的URL"></a>更改本地repo的远程repo的URL</h4><p>一般的，使用<code>git remote set-url</code>命令更改现有的远程存储卡URL。</p>
+<ul>
+<li>如果您要更新为使用HTTPS，则URL可能类似于：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
+<li>如果您要更新为使用SSH，则您的URL可能如下所示：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
+<h4 id="将远程URL从SSH切换到HTTPS"><a href="#将远程URL从SSH切换到HTTPS" class="headerlink" title="将远程URL从SSH切换到HTTPS"></a>将远程URL从SSH切换到HTTPS</h4></li>
+<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>git remote set-url</code>命令将远程URL从SSH更改为HTTPS</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
+在你下次使用<code>git fetch</code>，<code>git pull</code>或<code>git push</code>访问远程存储库时，系统将要求你重新提供GitHub用户名和密码<h4 id="将远程URL从HTTPS切换到SSH"><a href="#将远程URL从HTTPS切换到SSH" class="headerlink" title="将远程URL从HTTPS切换到SSH"></a>将远程URL从HTTPS切换到SSH</h4></li>
+<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
+<li>使用<code>git remote set-url</code>命令将远程URL从HTTPS更改为SSH<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
+<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
+<h4 id="错误排解"><a href="#错误排解" class="headerlink" title="错误排解"></a>错误排解</h4>出现以下错误，表示URL不存在：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url sofake https:&#x2F;&#x2F;github.com&#x2F;octocat&#x2F;Spoon-Knife</span><br><span class="line">&gt; fatal: No such remote &#39;sofake&#39;</span><br></pre></td></tr></table></figure>
+更多请访问<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vZ2l0aHViL3VzaW5nLWdpdC9jaGFuZ2luZy1hLXJlbW90ZXMtdXJs">官方Wiki<i class="fa fa-external-link-alt"></i></span>！<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3></li>
+</ul>
+<p>每次推送的话，基本上就是下面这么回事儿：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 第一步</span><br><span class="line">$  git add .</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第二步</span><br><span class="line">$ git commit -m &quot;更新日志&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第三步</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google sitemap不允许的网址解决办法</title>
+    <url>/posts/2019/googlesitemap.html</url>
+    <content><![CDATA[<p>搭建好自己的博客之后，当然得做收录。要想让别人在Google看到我的文章，就得添加站点地图。但是我在提交到Google的时候就给我报了错，不允许的网址。本文所说的方法只是众多解决方法中的一个，这个问题的原因也是有很多的，可以参考👉<span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vd2VibWFzdGVycy9hbnN3ZXIvNzQ1MTAwMT9obD16aC1IYW5zJnJlZl90b3BpYz03NDQwMDA2">站点地图报告<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在我提交之后，是这样显示的：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google001.png" alt></p>
+<p>所以说，得找到错误。最开始我根本没意识到错误在哪里，也就是选择性眼瞎。。。但是仔细观察图片，发现网址不对，怎么能是http://&lt;yoursite.com&gt;(这里一看就不对)/***.html呢？于是恍然大悟！</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>综上所述，在我的站点文件<code>sitemap.xml</code>里面，也肯定都是错误的网址。可以看到地址都是错的，都是<code>yoursite.com</code>开头，这很明显不是我的网址啊😥所以说肯定是我某个地方没有修改，应该是默认值。然后检查我的<code>_config.yml</code>文件，一看果然是的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;yoursite.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<p>可以看到<code>url</code>这一项是默认值，压根就没改！因为之前不影响使用，我就没管。然后这时候更正它：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;www.zhuimeng.online</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<p>然后<code>hexo g -d</code>更新网站，再在 Google Search Console 重新提交一次 sitemap 就可以了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google002.png" alt></p>
+<p>nice!大功告成啦！😄</p>
+]]></content>
+      <categories>
+        <category>Google Search Console</category>
+      </categories>
+      <tags>
+        <tag>Google Search Console</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈：强大的Hexo</title>
+    <url>/posts/2019/my-first-post.html</url>
+    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/h001.png" alt></p>
+<h3 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<a id="more"></a>
+
+<h3 id="为什么要使用Hexo？"><a href="#为什么要使用Hexo？" class="headerlink" title="为什么要使用Hexo？"></a>为什么要使用Hexo？</h3><ul>
+<li><p>买个服务器太贵，目前的服务器在阿里云，这配置，学生价便宜，那么以后呢？</p>
+</li>
+<li><p>学习一下新东西，折腾折腾。主要还是学一学Git和GitHub的使用。</p>
+</li>
+</ul>
+<h3 id="怎么搭建的？"><a href="#怎么搭建的？" class="headerlink" title="怎么搭建的？"></a>怎么搭建的？</h3><ol>
+<li><p>GithubPages</p>
+</li>
+<li><p>GithubPages + 域名</p>
+<p>这个方案当然更好，好的域名方便记忆，买个便宜点的域名第一年也就10来块钱，一年换一个经济便宜，如果想长期做，那就一次性来个5年。</p>
+</li>
+<li><p>CodingPages + 域名</p>
+<p>GithubPages 在国内较慢，百度不收录，而CodingPages 在国内外都比较快。</p>
+</li>
+<li><p>GithubPages + CodingPages + 域名</p>
+<p>嗯。我采用的是方案四，这样可以保证更多的不同网络环境下都能访问，即使可能根本没人看。。。</p>
+</li>
+</ol>
+<h3 id="难吗？"><a href="#难吗？" class="headerlink" title="难吗？"></a>难吗？</h3><p>这个我不好说，毕竟每一个人不一样。但是我可以保证的是，只要你愿意折腾，哪怕你没有代码基础，你也能搭建出来。我目前接触了2种搭建博客的方式，第一种是阿里云买服务器，基于CentOS搭建的WordPress，是动态的。第二种就是这个由Hexo驱动的静态了，但是省钱啊，每年只用出域名的钱，你说香不香，但是优化还是要花费一番功夫的。当然第二种更简单。。。</p>
+<p>自己买服务器搭建你可能要接触到CentOS、Apache、PHP、MySql、WordPress等等。使用Pages的话，可能要接触Node.js、Git、GitHub、Hexo。最好还是有一点前端基础，并不是说没有就弄不出来了，有的话可以节省你很多时间，更多的时候可能不至于让你的心态爆炸。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>Hexo 提供了快速方便的一键部署功能，让你只需要一条命令就能将网站部署到服务器上。如果有人愿意看的话，我会在后面的文章中详细讲述我是如何搭建的，从零到搭建完成的每一个详细步骤，争取让不懂的你，也能拥有一个自己的博客！还会总结一些我在使用过程中遇到的坑，以免大家掉进去。</p>
+]]></content>
+      <tags>
+        <tag>Hello Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MarkDown写作的艺术</title>
+    <url>/posts/2019/markdown.html</url>
+    <content><![CDATA[<p>先鸽🕊着…</p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客搭建</title>
     <url>/posts/2019/hexo.html</url>
     <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/h001.png" alt></p>
@@ -800,155 +998,97 @@
       </tags>
   </entry>
   <entry>
-    <title>Git本地文件到GitHub仓库</title>
-    <url>/posts/2019/gitgo.html</url>
-    <content><![CDATA[<p>这是一个简单使用的教程，如果你刚接触<code>git</code>和<code>GitHub</code>，那么，这篇文章再适合你不过了！首先，没有接触过版本控制概念的同学们也可以轻松入门；其次，通过这篇博文，你将学会本地构建仓库、远程克隆仓库、上传本地仓库等魔法操作(语言上可能组织不太好😅)，值得你一看。</p>
+    <title>Hexo多端同步</title>
+    <url>/posts/2019/remote.html</url>
+    <content><![CDATA[<p>假设你换了一台电脑，或者是把电脑重置了，那么，要怎样才能接着跟原来一样配置好Hexo，然后继续写文章呢？毕竟你不是从头、从零开始配置的，很多文件都已经有了，但是，怎么保证不出问题的继续运行呢?</p>
 <a id="more"></a>
 
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>首先，我们得弄清楚工作区和暂存区的是怎么回事，不然当你看到这些文件夹，可能一脸问号。</p>
-<h4 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h4><p>工作区（Working Directory）,是一个你在电脑里能够看到的目录，存放的就是你的本地文件，一般指的是你的仓库根目录下。</p>
-<h4 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h4><p>版本库（Repository），在你的工作区，细心的小伙伴可能会发现，有一个隐藏的目录，名叫<code>.git</code>,这个就是我们常说的版本库了。版本库里面存放了很多东西，其中最重要的是称为<code>stage</code>的暂存区(或者叫<code>index</code>)和git为我们创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个叫<code>HEAD</code>的指针。</p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="绑定用户"><a href="#绑定用户" class="headerlink" title="绑定用户"></a>绑定用户</h4><p>首先，我们得将电脑和GitHub账号进行绑定才行，打开GIt Bash，输入以下命令（用户和邮箱为你GitHub注册的账号和邮箱）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;github用户名称&quot;</span><br><span class="line">$ git config --global user.email &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>多台电脑同步博客源码，首先要把最新的源码上传到git上，然后在其它电脑上搭建Hexo环境后同步博客源码。 前提是两台电脑都能连上git，主要是都配置了 <code>git ssh</code>密钥连接。这个方法同样适用与误删文件的你，但是我建议平时尽量多做好备份！！！</p>
+<h2 id="同步博客源码到你的GitHub"><a href="#同步博客源码到你的GitHub" class="headerlink" title="同步博客源码到你的GitHub"></a>同步博客源码到你的GitHub</h2><p>在你打算上传的最新博客源码的基础上，按照下面的魔法操作：</p>
+<h3 id="编辑-gitignore文件"><a href="#编辑-gitignore文件" class="headerlink" title="编辑.gitignore文件"></a>编辑.gitignore文件</h3><p><code>.gitignore</code>文件作用是声明不被git记录的文件，blog根目录下的 <code>.gitignore</code>是hexo初始化是创建的，可以直接编辑，建议.gitignore文件包括以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.DS_Store      </span><br><span class="line">Thumbs.db      </span><br><span class="line">db.json      </span><br><span class="line">*.log      </span><br><span class="line">node_modules&#x2F;      </span><br><span class="line">public&#x2F;      </span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
 
-<p>比如我这样：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;besscroft&quot;</span><br><span class="line">$ git config --global user.email &quot;631908942@qq.com&quot;</span><br></pre></td></tr></table></figure>
+<p>说明：public内的文件可以根据source文件夹内容自动生成的，不需要备份。其他日志log、压缩、数据库Thumbs.db等文件也都是调试等使用，也不需要备份。</p>
+<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git # 将本地仓库映射到托管服务器的仓库</span><br></pre></td></tr></table></figure>
 
-<h4 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h4><p>首先创建一下自己的SSH Key。如果已经有了请跳过：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;github注册时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>server是仓库的在线目录地址，可以从git上直接复制过来，origin是本地分支，remote add会将本地仓库映射到托管服务器的仓库上。</p>
+<h3 id="同步到git"><a href="#同步到git" class="headerlink" title="同步到git"></a>同步到git</h3><p>添加你的本地文件到仓库，并同步到GitHub上</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add . #添加blog目录下所有文件，注意有个&#39;.&#39;(.gitignore里面声明的文件不在此内)    </span><br><span class="line">git commit -m &quot;hexo source first add&quot; #添加更新说明    </span><br><span class="line">git push -u origin master  #推送更新到git上</span><br></pre></td></tr></table></figure>
 
-<p>然后可能要按下几次回车，具体几次我也没数，默认就行了，如果你觉得有必要，可以自己设置密码。如果一切顺利的话，你可以在你的系统用户主目录里找到<code>.ssh</code>目录，一般路径为：<code>C:\Users\这里是你的计算机用户名啦\.ssh</code>，然后里面会有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，你告诉别人也没事儿。</p>
-<p>你甚至能自己检查一下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd ~&#x2F;,ssh</span><br><span class="line">$ ls    &#x2F;&#x2F;这个s前面的是lmn的l，不同字体下显示很容易看错成i的大写或者数字1</span><br></pre></td></tr></table></figure>
+<h2 id="将git的内容同步到另一台电脑"><a href="#将git的内容同步到另一台电脑" class="headerlink" title="将git的内容同步到另一台电脑"></a>将git的内容同步到另一台电脑</h2><p>之前的操作主要类似于备份，而这里开始，就基本上是你在新电脑、或者是重置电脑之后的操作啦！假设我们这时候已经将blog源码内容备份到了GitHub上，现在准备在新电脑上同步源码内容。</p>
+<h3 id="搭建hexo的环境"><a href="#搭建hexo的环境" class="headerlink" title="搭建hexo的环境"></a>搭建hexo的环境</h3><p>这时候在你的新电脑上，肯定是必须要搭建环境的呢，没有环境，Hexo也无法运行呀不是。没错，又是熟悉的配方：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init &lt;folder&gt;         #用hexo创建一个博客目录</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
-<h4 id="添加SHH-Key"><a href="#添加SHH-Key" class="headerlink" title="添加SHH Key"></a>添加SHH Key</h4><p>然后我们需要去GitHub添加<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvZ2luP3JldHVybl90bz1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZzZXR0aW5ncyUyRmtleXM=">SSH Key<i class="fa fa-external-link-alt"></i></span>，如果左边的链接挂掉了，直接去你自己的GitHub页面打开设置，找到<code>SSH and GPG keys</code>,然后<code>New SSH key</code>,然后将<code>id_rsa.pub</code>文件的所有内容拷贝到<code>Add key</code>的框框里面。</p>
-<p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
-<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p>我们假设你现在要折腾一个新的项目，那么，你可以先去GitHub新建好仓库，或者现在本地把项目做一点、甚至做完，然后再上传都可以。但是，最终我们肯定是要让GitHub上的仓库和本地的仓库进行同步的。这样子你的GitHub即成为了网盘、也可以跟他人一起来协作，真香。</p>
-<p>首先要确保远程和本地的仓库名字一样，再GitHub上创建新仓库之后，这个仓库肯定是空的。在下面会有GitHub的提示，然后在本地仓库下运行如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
+<p>&lt;folder&gt;还是一样地填上博客文件夹地名字，比如说我的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init hexo         #用hexo创建一个博客目录</span><br><span class="line">cd hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
-<p>如果不小心关联了别人的仓库，不要紧，反正你是推送不上去的🤣，因为他人的账户中没有你的<code>SSH key</code>公钥。关联之后，远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库的啦！</p>
-<h4 id="上传README文件"><a href="#上传README文件" class="headerlink" title="上传README文件"></a>上传README文件</h4><p>如果在创建 <code>Github</code> 仓库时没有勾选创建 <code>README.md</code> 文件，则要先创建 <code>README.md</code> 文件，不然上传文件会报错。如果已经勾选，可以跳过此步骤。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ touch README.md</span><br><span class="line">$ git add README.md</span><br><span class="line">$ git commit -m &#39;first_commit&#39;</span><br><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<h3 id="拉取源代码"><a href="#拉取源代码" class="headerlink" title="拉取源代码"></a>拉取源代码</h3><p>在建好的环境的主目录运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init       #将目录添加到版本控制系统中    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git </span><br><span class="line">#将本地仓库映射到托管服务器的仓库上    </span><br><span class="line">git fetch --all  #将git上所有文件拉取到本地    </span><br><span class="line">git reset --hard origin&#x2F;master  #强制将本地内容指向刚刚同步git云端内容,用远端文件覆盖本地相同文件</span><br></pre></td></tr></table></figure>
 
-<h4 id="推送到远程库"><a href="#推送到远程库" class="headerlink" title="推送到远程库"></a>推送到远程库</h4><p>我们输入以下指令，把本地库的所有内容推送到远程库上：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br><span class="line">$ git push -u origin master  &#x2F;&#x2F;如果你是第一次，可以用这个</span><br></pre></td></tr></table></figure>
+<p>reset对所拉取的文件不做任何处理，此处不用pull是因为本地尚有许多文件，使用pull会有一些版本冲突，解决起来也麻烦，而本地的文件都是初始化生成的文件，较拉取的库里面的文件而言基本无用，所以直接丢弃。</p>
+<h4 id="发布内容到GitHub"><a href="#发布内容到GitHub" class="headerlink" title="发布内容到GitHub"></a>发布内容到GitHub</h4><p>要将新电脑上的最新的文章更新到git。在本地文件中运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status #查看本地文件的状态。</span><br><span class="line">git add . #将所有更新的本地文件添加到版本控制系统中</span><br><span class="line"></span><br><span class="line">git commit -m &#39;更新信息说明&#39; </span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 
-<p>我们知道，把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以不用这样啦！</p>
-<p>也就是说，从第二次起，只要本地作了提交，就可以通过命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+<h4 id="同步文章"><a href="#同步文章" class="headerlink" title="同步文章"></a>同步文章</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
 
-<p>那么，把本地<code>master</code>分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！开始你的创造吧！</p>
-<h4 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h4><p>假设我们这时候买了台新电脑，或者是把电脑重置了，那么最好的方式就是从远程库克隆。我们现在本地创建仓库，注意本地仓库的名字要跟远程一样哦。然后再本地仓库根目录下，输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-
-<p>初始化完毕后，我们要跟踪项目文件夹中的所有文件和文件夹，也就是将文件添加到暂存区，输入以下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是，“ . ”的意思是文件夹下的所有文件。这时候我们本地仓库是没有东西的，那么：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br><span class="line">$ git pull --rebase origin master</span><br></pre></td></tr></table></figure>
-
-<p>获取远程库与本地同步合并，你可以理解为将远程仓库克隆下来。或者是使用以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
-
-<h4 id="推送到远程库基本步骤"><a href="#推送到远程库基本步骤" class="headerlink" title="推送到远程库基本步骤"></a>推送到远程库基本步骤</h4><p>每次将本地仓库推送到GitHub时，需要先将文件添加到暂存区：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure>
-
-<p>然后附上提交说明：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;引号之间存放提交说明&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这是为了告诉git ，把文件提交到仓库。</p>
-<p>关联远程仓库：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
-
-<p>如果这一步你的关联出现错误的话<code>fatal: remote origin already exists</code>，那么可以执行以下语句进行关联：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
-
-<p>然后再次执行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github仓库名称&gt;.git</span><br></pre></td></tr></table></figure>
-
-<p>然后我们再把本地仓库推送上去：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>如果在推送时出现错误 <code>error:failed to push som refs to.......</code>，则执行下列语句：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
-
-<p>将远程仓库 <code>Github</code> 上的文件拉下来合并之后重新推送上去：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-<h3 id="更改username"><a href="#更改username" class="headerlink" title="更改username"></a>更改username</h3><p>如果你更改了当前的username，会带来些麻烦，你可能需要解决一些问题！</p>
-<ul>
-<li>你的旧的个人资料页面不会被重定向(需要手动更改)</li>
-<li>你的Pages网站设置不会被重定向(需要手动更改)</li>
-<li>你的远程存储库会自动重定向，无须更改</li>
-<li>你的本地存储库需要手动更改！！！</li>
-</ul>
-<h4 id="更改本地repo的远程repo的URL"><a href="#更改本地repo的远程repo的URL" class="headerlink" title="更改本地repo的远程repo的URL"></a>更改本地repo的远程repo的URL</h4><p>一般的，使用<code>git remote set-url</code>命令更改现有的远程存储卡URL。</p>
-<ul>
-<li>如果您要更新为使用HTTPS，则URL可能类似于：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
-<li>如果您要更新为使用SSH，则您的URL可能如下所示：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
-<h4 id="将远程URL从SSH切换到HTTPS"><a href="#将远程URL从SSH切换到HTTPS" class="headerlink" title="将远程URL从SSH切换到HTTPS"></a>将远程URL从SSH切换到HTTPS</h4></li>
-<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
-<li>使用<code>git remote set-url</code>命令将远程URL从SSH更改为HTTPS</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure>
-<ul>
-<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
-在你下次使用<code>git fetch</code>，<code>git pull</code>或<code>git push</code>访问远程存储库时，系统将要求你重新提供GitHub用户名和密码<h4 id="将远程URL从HTTPS切换到SSH"><a href="#将远程URL从HTTPS切换到SSH" class="headerlink" title="将远程URL从HTTPS切换到SSH"></a>将远程URL从HTTPS切换到SSH</h4></li>
-<li>列出现有的URL:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  https:&#x2F;&#x2F;github.com&#x2F;USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure></li>
-<li>使用<code>git remote set-url</code>命令将远程URL从HTTPS更改为SSH<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url origin git@github.com:USERNAME&#x2F;REPOSITORY.git</span><br></pre></td></tr></table></figure></li>
-<li>验证远程URL是否已更改<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># 下面是新的 URL</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (fetch)</span><br><span class="line">&gt; origin  git@github.com:USERNAME&#x2F;REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
-<h4 id="错误排解"><a href="#错误排解" class="headerlink" title="错误排解"></a>错误排解</h4>出现以下错误，表示URL不存在：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote set-url sofake https:&#x2F;&#x2F;github.com&#x2F;octocat&#x2F;Spoon-Knife</span><br><span class="line">&gt; fatal: No such remote &#39;sofake&#39;</span><br></pre></td></tr></table></figure>
-更多请访问<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vZ2l0aHViL3VzaW5nLWdpdC9jaGFuZ2luZy1hLXJlbW90ZXMtdXJs">官方Wiki<i class="fa fa-external-link-alt"></i></span>！<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3></li>
-</ul>
-<p>每次推送的话，基本上就是下面这么回事儿：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 第一步</span><br><span class="line">$  git add .</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第二步</span><br><span class="line">$ git commit -m &quot;更新日志&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 第三步</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>获取的源码即为最新文件</p>
+<hr>
 ]]></content>
       <categories>
-        <category>Git</category>
-        <category>GitHub</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
+        <tag>同步</tag>
       </tags>
   </entry>
   <entry>
-    <title>Google sitemap不允许的网址解决办法</title>
-    <url>/posts/2019/googlesitemap.html</url>
-    <content><![CDATA[<p>搭建好自己的博客之后，当然得做收录。要想让别人在Google看到我的文章，就得添加站点地图。但是我在提交到Google的时候就给我报了错，不允许的网址。本文所说的方法只是众多解决方法中的一个，这个问题的原因也是有很多的，可以参考👉<span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vd2VibWFzdGVycy9hbnN3ZXIvNzQ1MTAwMT9obD16aC1IYW5zJnJlZl90b3BpYz03NDQwMDA2">站点地图报告<i class="fa fa-external-link-alt"></i></span></p>
+    <title>萌萌哒二次元看板娘</title>
+    <url>/posts/2019/live2d.html</url>
+    <content><![CDATA[<p>已弃用live2d插件，太长时间没更新了，且功能单一。现已改为开源项目<strong>live2d-widget</strong>，地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3N0ZXZlbmpvZXpoYW5nL2xpdmUyZC13aWRnZXQ=">https://github.com/stevenjoezhang/live2d-widget<i class="fa fa-external-link-alt"></i></span></p>
+<p>不少同学应该都发现了，许多人的博客都有类似萌萌哒、看板娘的东西。这个其实是一个名叫<code>hexo-helper-live2d</code>的插件，那么，我们一起来向Hexo里放上一只萌萌哒二次元看板娘吧！</p>
 <a id="more"></a>
 
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在我提交之后，是这样显示的：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google001.png" alt></p>
-<p>所以说，得找到错误。最开始我根本没意识到错误在哪里，也就是选择性眼瞎。。。但是仔细观察图片，发现网址不对，怎么能是http://&lt;yoursite.com&gt;(这里一看就不对)/***.html呢？于是恍然大悟！</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>综上所述，在我的站点文件<code>sitemap.xml</code>里面，也肯定都是错误的网址。可以看到地址都是错的，都是<code>yoursite.com</code>开头，这很明显不是我的网址啊😥所以说肯定是我某个地方没有修改，应该是默认值。然后检查我的<code>_config.yml</code>文件，一看果然是的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;yoursite.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先，在<code>Hexo</code>博客根目录下运行<code>git</code>,然后再命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
 
-<p>可以看到<code>url</code>这一项是默认值，压根就没改！因为之前不影响使用，我就没管。然后这时候更正它：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;www.zhuimeng.online</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+<p>当然也可以以标签模式运行，但是不建议这样，容易带来不必要的麻烦。目前最新的插件版本应该是<code>+ hexo-helper-live2d@3.1.0</code></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h3><p>在安装好插件之后，我们可以向Hexo的或者主题的<code>_config.yml</code>文件中添加配置，但是我建议你添加到Hexo的<code>_config.yml</code>中，而不是主题的配置文件中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true		#默认开启</span><br><span class="line">  scriptFrom: local		# 默认</span><br><span class="line">  pluginRootPath: live2dw&#x2F;	# 插件在站点上的根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib&#x2F;       # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets&#x2F;	# 模型文件相对与插件根目录路径</span><br><span class="line">  tagMode: false		# 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br><span class="line">  debug: false  		# 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu	#当前使用的模型</span><br><span class="line">  display:</span><br><span class="line">    position: right		#显示位置：左或右</span><br><span class="line">    width: 150			#画布的宽度，显示模型画布的长度</span><br><span class="line">    height: 300			#画布高度显示模型画布的高度</span><br><span class="line">  mobile:</span><br><span class="line">    show: true		#是否在移动设备上显示，默认为true</span><br></pre></td></tr></table></figure>
 
-<p>然后<code>hexo g -d</code>更新网站，再在 Google Search Console 重新提交一次 sitemap 就可以了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google002.png" alt></p>
-<p>nice!大功告成啦！😄</p>
+<p>请注意，如果你不想手机端显示，请把<code>mobile</code>下的<code>show</code>的值改为<code>false</code>，大多数情况下会遮挡视线。我最开始没注意，但是好多人跟我说手机端影响阅读体验了，然后我发现是得取消。</p>
+<h3 id="详细的设置"><a href="#详细的设置" class="headerlink" title="详细的设置"></a>详细的设置</h3><p>详细设置其实不愿意折腾的同学可以不用管，但是你想按照自己的意愿来，还是可以尝试的。按照官方文档的说法：<strong>设置分为<code>helper</code>特有的和公共的, 你需要把他们合并放到 <code>_config.yml</code> 中</strong>。以下是<code>helper</code>特有：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https:&#x2F;&#x2F;github.com&#x2F;EYHN&#x2F;hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  # enable: false</span><br><span class="line">  scriptFrom: local # 默认</span><br><span class="line">  pluginRootPath: live2dw&#x2F; # 插件在站点上的根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib&#x2F; # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets&#x2F; # 模型文件相对与插件根目录路径</span><br><span class="line">  # scriptFrom: jsdelivr # jsdelivr CDN</span><br><span class="line">  # scriptFrom: unpkg # unpkg CDN</span><br><span class="line">  # scriptFrom: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;live2d-widget@3.x&#x2F;lib&#x2F;L2Dwidget.min.js # 你的自定义 url</span><br><span class="line">  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br><span class="line">  debug: false # 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko # npm-module package name</span><br><span class="line">    # use: wanko # 博客根目录&#x2F;live2d_models&#x2F; 下的目录名</span><br><span class="line">    # use: .&#x2F;wives&#x2F;wanko # 相对于博客根目录的路径</span><br><span class="line">    # use: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;live2d-widget-model-wanko@1.0.5&#x2F;assets&#x2F;wanko.model.json # 你的自定义 url</span><br></pre></td></tr></table></figure>
+
+<h3 id="General-Settings"><a href="#General-Settings" class="headerlink" title="General Settings"></a>General Settings</h3><p>这里具体的设置，以及你想要的更多，可以参考官方<span class="exturl" data-url="aHR0cHM6Ly9sMmR3aWRnZXQuanMub3JnL2RvY3MvY2xhc3Mvc3JjL2luZGV4LmpzfkwyRHdpZGdldC5odG1sI2luc3RhbmNlLW1ldGhvZC1pbml0">API文档<i class="fa fa-external-link-alt"></i></span></p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https:&#x2F;&#x2F;github.com&#x2F;xiazeyu&#x2F;live2d-widget.js</span><br><span class="line">## https:&#x2F;&#x2F;l2dwidget.js.org&#x2F;docs&#x2F;class&#x2F;src&#x2F;index.js~L2Dwidget.html#instance-method-init</span><br><span class="line">live2d:</span><br><span class="line">  model:</span><br><span class="line">    scale: 1			#模型与canvas的缩放</span><br><span class="line">    hHeadPos: 0.5		#模型头部横坐标</span><br><span class="line">    vHeadPos: 0.618		#模型头部纵坐标</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2		#超采样等级</span><br><span class="line">    width: 150			#画布的宽度，显示模型画布的长度</span><br><span class="line">    height: 300			#画布高度显示模型画布的高度</span><br><span class="line">    position: right		#显示位置：左或右</span><br><span class="line">    hOffset: 0			#水平偏移</span><br><span class="line">    vOffset: -20		#垂直偏移</span><br><span class="line">  mobile:</span><br><span class="line">    show: true		#是否在移动设备上显示</span><br><span class="line">    scale: 0.5		#移动设备上的缩放</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7		#默认透明度</span><br><span class="line">    opacityOnHover: 0.2		#鼠标移上透明度</span><br></pre></td></tr></table></figure>
+
+<h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><p>有许多方法来使用不同的模型，这里来介绍我设置的方法：</p>
+<ol>
+<li>在Hexo跟目录下新建文件夹<code>live2d_models</code></li>
+<li>然后在<code>live2d_models</code>下建文件夹<code>&lt;你要安装的模型的名字&gt;</code></li>
+<li>然后在<code>&lt;你要安装的模型的名字&gt;</code>下新建json文件：&lt;你要安装的模型的名字&gt;.model.json</li>
+</ol>
+<p>可以参考我的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hexo</span><br><span class="line">│</span><br><span class="line">├──live2d_models</span><br><span class="line">│          └── koharu</span><br><span class="line">				└──koharu.model.json</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装模型"><a href="#安装模型" class="headerlink" title="安装模型"></a>安装模型</h4><p>在git的命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-&lt;你要安装的模型的名字&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如我的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-koharu</span><br></pre></td></tr></table></figure>
+
+<p>然后你就可以通过向 <code>model.use</code> 键入包名 (<code>live2d-widget-model-wanko</code>) 来使用了。当然，你也可以去官方发布寻找<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYXpleXUvbGl2ZTJkLXdpZGdldC1tb2RlbHM=">live2d小模型<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>嗯，如果你是没有CDN会死星人,直接将 <code>.model.json</code> 的url地址输入 <code>model.use</code>。祝你成功！</p>
+<h2 id="我的配置参数"><a href="#我的配置参数" class="headerlink" title="我的配置参数"></a>我的配置参数</h2><p>这里贴上我的配置参数吧，希望能帮到大家！我是放在<code>Hexo</code>的<code>_config.yml</code>中的，而不是主题的<code>_config.yml</code>中:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">    hOffset: 0</span><br><span class="line">    vOffset: -20</span><br><span class="line">  mobile:</span><br><span class="line">    show: false</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>Google Search Console</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Google Search Console</tag>
+        <tag>萌萌哒</tag>
       </tags>
   </entry>
   <entry>
@@ -1042,223 +1182,6 @@
         <tag>黑苹果</tag>
         <tag>暗影精灵3</tag>
         <tag>HP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>萌萌哒二次元看板娘</title>
-    <url>/posts/2019/live2d.html</url>
-    <content><![CDATA[<p>已弃用live2d插件，太长时间没更新了，且功能单一。现已改为开源项目<strong>live2d-widget</strong>，地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3N0ZXZlbmpvZXpoYW5nL2xpdmUyZC13aWRnZXQ=">https://github.com/stevenjoezhang/live2d-widget<i class="fa fa-external-link-alt"></i></span></p>
-<p>不少同学应该都发现了，许多人的博客都有类似萌萌哒、看板娘的东西。这个其实是一个名叫<code>hexo-helper-live2d</code>的插件，那么，我们一起来向Hexo里放上一只萌萌哒二次元看板娘吧！</p>
-<a id="more"></a>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先，在<code>Hexo</code>博客根目录下运行<code>git</code>,然后再命令行输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<p>当然也可以以标签模式运行，但是不建议这样，容易带来不必要的麻烦。目前最新的插件版本应该是<code>+ hexo-helper-live2d@3.1.0</code></p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h3><p>在安装好插件之后，我们可以向Hexo的或者主题的<code>_config.yml</code>文件中添加配置，但是我建议你添加到Hexo的<code>_config.yml</code>中，而不是主题的配置文件中。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true		#默认开启</span><br><span class="line">  scriptFrom: local		# 默认</span><br><span class="line">  pluginRootPath: live2dw&#x2F;	# 插件在站点上的根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib&#x2F;       # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets&#x2F;	# 模型文件相对与插件根目录路径</span><br><span class="line">  tagMode: false		# 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br><span class="line">  debug: false  		# 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu	#当前使用的模型</span><br><span class="line">  display:</span><br><span class="line">    position: right		#显示位置：左或右</span><br><span class="line">    width: 150			#画布的宽度，显示模型画布的长度</span><br><span class="line">    height: 300			#画布高度显示模型画布的高度</span><br><span class="line">  mobile:</span><br><span class="line">    show: true		#是否在移动设备上显示，默认为true</span><br></pre></td></tr></table></figure>
-
-<p>请注意，如果你不想手机端显示，请把<code>mobile</code>下的<code>show</code>的值改为<code>false</code>，大多数情况下会遮挡视线。我最开始没注意，但是好多人跟我说手机端影响阅读体验了，然后我发现是得取消。</p>
-<h3 id="详细的设置"><a href="#详细的设置" class="headerlink" title="详细的设置"></a>详细的设置</h3><p>详细设置其实不愿意折腾的同学可以不用管，但是你想按照自己的意愿来，还是可以尝试的。按照官方文档的说法：<strong>设置分为<code>helper</code>特有的和公共的, 你需要把他们合并放到 <code>_config.yml</code> 中</strong>。以下是<code>helper</code>特有：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https:&#x2F;&#x2F;github.com&#x2F;EYHN&#x2F;hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  # enable: false</span><br><span class="line">  scriptFrom: local # 默认</span><br><span class="line">  pluginRootPath: live2dw&#x2F; # 插件在站点上的根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib&#x2F; # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets&#x2F; # 模型文件相对与插件根目录路径</span><br><span class="line">  # scriptFrom: jsdelivr # jsdelivr CDN</span><br><span class="line">  # scriptFrom: unpkg # unpkg CDN</span><br><span class="line">  # scriptFrom: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;live2d-widget@3.x&#x2F;lib&#x2F;L2Dwidget.min.js # 你的自定义 url</span><br><span class="line">  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br><span class="line">  debug: false # 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko # npm-module package name</span><br><span class="line">    # use: wanko # 博客根目录&#x2F;live2d_models&#x2F; 下的目录名</span><br><span class="line">    # use: .&#x2F;wives&#x2F;wanko # 相对于博客根目录的路径</span><br><span class="line">    # use: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;live2d-widget-model-wanko@1.0.5&#x2F;assets&#x2F;wanko.model.json # 你的自定义 url</span><br></pre></td></tr></table></figure>
-
-<h3 id="General-Settings"><a href="#General-Settings" class="headerlink" title="General Settings"></a>General Settings</h3><p>这里具体的设置，以及你想要的更多，可以参考官方<span class="exturl" data-url="aHR0cHM6Ly9sMmR3aWRnZXQuanMub3JnL2RvY3MvY2xhc3Mvc3JjL2luZGV4LmpzfkwyRHdpZGdldC5odG1sI2luc3RhbmNlLW1ldGhvZC1pbml0">API文档<i class="fa fa-external-link-alt"></i></span></p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https:&#x2F;&#x2F;github.com&#x2F;xiazeyu&#x2F;live2d-widget.js</span><br><span class="line">## https:&#x2F;&#x2F;l2dwidget.js.org&#x2F;docs&#x2F;class&#x2F;src&#x2F;index.js~L2Dwidget.html#instance-method-init</span><br><span class="line">live2d:</span><br><span class="line">  model:</span><br><span class="line">    scale: 1			#模型与canvas的缩放</span><br><span class="line">    hHeadPos: 0.5		#模型头部横坐标</span><br><span class="line">    vHeadPos: 0.618		#模型头部纵坐标</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2		#超采样等级</span><br><span class="line">    width: 150			#画布的宽度，显示模型画布的长度</span><br><span class="line">    height: 300			#画布高度显示模型画布的高度</span><br><span class="line">    position: right		#显示位置：左或右</span><br><span class="line">    hOffset: 0			#水平偏移</span><br><span class="line">    vOffset: -20		#垂直偏移</span><br><span class="line">  mobile:</span><br><span class="line">    show: true		#是否在移动设备上显示</span><br><span class="line">    scale: 0.5		#移动设备上的缩放</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7		#默认透明度</span><br><span class="line">    opacityOnHover: 0.2		#鼠标移上透明度</span><br></pre></td></tr></table></figure>
-
-<h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><p>有许多方法来使用不同的模型，这里来介绍我设置的方法：</p>
-<ol>
-<li>在Hexo跟目录下新建文件夹<code>live2d_models</code></li>
-<li>然后在<code>live2d_models</code>下建文件夹<code>&lt;你要安装的模型的名字&gt;</code></li>
-<li>然后在<code>&lt;你要安装的模型的名字&gt;</code>下新建json文件：&lt;你要安装的模型的名字&gt;.model.json</li>
-</ol>
-<p>可以参考我的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hexo</span><br><span class="line">│</span><br><span class="line">├──live2d_models</span><br><span class="line">│          └── koharu</span><br><span class="line">				└──koharu.model.json</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装模型"><a href="#安装模型" class="headerlink" title="安装模型"></a>安装模型</h4><p>在git的命令行输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-&lt;你要安装的模型的名字&gt;</span><br></pre></td></tr></table></figure>
-
-<p>比如我的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-koharu</span><br></pre></td></tr></table></figure>
-
-<p>然后你就可以通过向 <code>model.use</code> 键入包名 (<code>live2d-widget-model-wanko</code>) 来使用了。当然，你也可以去官方发布寻找<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYXpleXUvbGl2ZTJkLXdpZGdldC1tb2RlbHM=">live2d小模型<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>嗯，如果你是没有CDN会死星人,直接将 <code>.model.json</code> 的url地址输入 <code>model.use</code>。祝你成功！</p>
-<h2 id="我的配置参数"><a href="#我的配置参数" class="headerlink" title="我的配置参数"></a>我的配置参数</h2><p>这里贴上我的配置参数吧，希望能帮到大家！我是放在<code>Hexo</code>的<code>_config.yml</code>中的，而不是主题的<code>_config.yml</code>中:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">    hOffset: 0</span><br><span class="line">    vOffset: -20</span><br><span class="line">  mobile:</span><br><span class="line">    show: false</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>萌萌哒</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MarkDown写作的艺术</title>
-    <url>/posts/2019/markdown.html</url>
-    <content><![CDATA[<p>先鸽🕊着…</p>
-]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅谈：强大的Hexo</title>
-    <url>/posts/2019/my-first-post.html</url>
-    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/h001.png" alt></p>
-<h3 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<a id="more"></a>
-
-<h3 id="为什么要使用Hexo？"><a href="#为什么要使用Hexo？" class="headerlink" title="为什么要使用Hexo？"></a>为什么要使用Hexo？</h3><ul>
-<li><p>买个服务器太贵，目前的服务器在阿里云，这配置，学生价便宜，那么以后呢？</p>
-</li>
-<li><p>学习一下新东西，折腾折腾。主要还是学一学Git和GitHub的使用。</p>
-</li>
-</ul>
-<h3 id="怎么搭建的？"><a href="#怎么搭建的？" class="headerlink" title="怎么搭建的？"></a>怎么搭建的？</h3><ol>
-<li><p>GithubPages</p>
-</li>
-<li><p>GithubPages + 域名</p>
-<p>这个方案当然更好，好的域名方便记忆，买个便宜点的域名第一年也就10来块钱，一年换一个经济便宜，如果想长期做，那就一次性来个5年。</p>
-</li>
-<li><p>CodingPages + 域名</p>
-<p>GithubPages 在国内较慢，百度不收录，而CodingPages 在国内外都比较快。</p>
-</li>
-<li><p>GithubPages + CodingPages + 域名</p>
-<p>嗯。我采用的是方案四，这样可以保证更多的不同网络环境下都能访问，即使可能根本没人看。。。</p>
-</li>
-</ol>
-<h3 id="难吗？"><a href="#难吗？" class="headerlink" title="难吗？"></a>难吗？</h3><p>这个我不好说，毕竟每一个人不一样。但是我可以保证的是，只要你愿意折腾，哪怕你没有代码基础，你也能搭建出来。我目前接触了2种搭建博客的方式，第一种是阿里云买服务器，基于CentOS搭建的WordPress，是动态的。第二种就是这个由Hexo驱动的静态了，但是省钱啊，每年只用出域名的钱，你说香不香，但是优化还是要花费一番功夫的。当然第二种更简单。。。</p>
-<p>自己买服务器搭建你可能要接触到CentOS、Apache、PHP、MySql、WordPress等等。使用Pages的话，可能要接触Node.js、Git、GitHub、Hexo。最好还是有一点前端基础，并不是说没有就弄不出来了，有的话可以节省你很多时间，更多的时候可能不至于让你的心态爆炸。</p>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>Hexo 提供了快速方便的一键部署功能，让你只需要一条命令就能将网站部署到服务器上。如果有人愿意看的话，我会在后面的文章中详细讲述我是如何搭建的，从零到搭建完成的每一个详细步骤，争取让不懂的你，也能拥有一个自己的博客！还会总结一些我在使用过程中遇到的坑，以免大家掉进去。</p>
-]]></content>
-      <tags>
-        <tag>Hello Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NexT主题个性定制与深度优化</title>
-    <url>/posts/2019/next.html</url>
-    <content><![CDATA[<blockquote><p>给岁月以文明，而不是给文明以岁月.</p>
-<footer><strong>刘慈欣</strong><cite>三体</cite></footer></blockquote>
-
-<p>“互联网精神”即：开放、平等、协作、快速、分享。感谢我的生命之中有互联网，让我脑海中的开源共享有了实现的可能。能拥有自己的博客，不仅记录自己，还能分享他人！</p>
-<a id="more"></a>
-
-<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="容我先bb几句"><a href="#容我先bb几句" class="headerlink" title="容我先bb几句"></a>容我先bb几句</h3><p>首先肯定是感谢各位大佬的文章，我一个小白，靠着Google搭建了自己的博客……如果你是一个和我一样的小白，而且对我的博客感觉还蛮满意的话，恭喜你！看完这篇文章，你自己也可以拥有一个<del>可能不太</del>漂亮<del>的</del>博客啦！</p>
-<p>这篇文章主要是写给跟我一样的小白们看的，当然也方便自己以后忘记了来查阅。如果各位大佬不慎看到，如有不足之处还欢迎指出来哦，还请见谅！我在搭建博客的时候，看到很多博客，写了一些比较好的文章，但是有时候却忘记收藏了。别告诉我只有我一个人设置的关闭浏览器时自动清理的……许多时候还是挺后悔的，为什么当时没收藏。因为这种文章，肯定是比某度随便一搜索找到的教程要准确的多的，毕竟人家博主可能真的是有在认真的写。</p>
-<h3 id="我的本地环境"><a href="#我的本地环境" class="headerlink" title="我的本地环境"></a>我的本地环境</h3><p>有时候出问题的原因可能会有很多，如果你决定用我的这篇文章来做参考的话，那么我就把我的环境给你参考。因为可能大家一样的操作的话，并不一定实现的结果都是相同的。嗯~ o(<em>￣▽￣</em>)o，没错，我有时候Google按照流程来，结果疯狂报错。。。</p>
-<p>大家都知道，外星人阻断了我们与Google的链接，导致无法访问，不过估计能看到这篇文章的人，应该是具有了访问Google的能力了。如果你是在是无法访问，可以去全球最大的同性交友社区GitHub看看呢，附上大神的开源项目<span class="exturl" data-url="aHR0cHM6Ly9sYW9kLmNuL3dwLWNvbnRlbnQvdGhlbWVzL2JlZ2luL3RvLnBocD91cmw9YUhSMGNITTZMeTluYVhSb2RXSXVZMjl0TDJkdmIyZHNaV2h2YzNSekwyaHZjM1J6">入口<i class="fa fa-external-link-alt"></i></span>👉</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* 调试用的浏览器 *&#x2F;</span><br><span class="line">Google Chrome Version 73.0.3683.75（Official version）（64-bit）</span><br><span class="line">QQ Browser 10.4(3341) Chromium70.0.3538.25\IE11.379.17763.0</span><br><span class="line">Microsoft Edge 44.17763.1.0</span><br><span class="line">Internet Explorer 11.379.17763.0</span><br><span class="line">&#x2F;&#x2F;IE8及以下版本无法正常显示</span><br><span class="line"></span><br><span class="line">&#x2F;* 版本信息 *&#x2F;</span><br><span class="line">$ hexo version</span><br><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17763 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;* 依赖包 *&#x2F;</span><br><span class="line">$ cat package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;3.8.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^3.8.0&quot;,</span><br><span class="line">    &quot;hexo-asset-image&quot;: &quot;0.0.3&quot;, &#x2F;* 图片显示 *&#x2F;</span><br><span class="line">    &quot;hexo-blog-encrypt&quot;: &quot;^2.1.1&quot;,</span><br><span class="line">    &quot;hexo-deployer-git&quot;: &quot;^1.0.0&quot;, &#x2F;* Git 部署工具 *&#x2F;</span><br><span class="line">    &quot;hexo-douban&quot;: &quot;^1.1.3&quot;, &#x2F;* 豆瓣页面生成 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.5&quot;,</span><br><span class="line">    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.6&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-feed&quot;: &quot;^1.2.2&quot;, &#x2F;* RSS *&#x2F;</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^0.2.1&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-sitemap&quot;: &quot;^1.2.0&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.2.0&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-helper-live2d&quot;: &quot;^3.1.1&quot;, &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.3.1&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.3.3&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^0.3.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-symbols-count-time&quot;: &quot;^0.4.4&quot;,</span><br><span class="line">    &quot;hexo-tag-aplayer&quot;: &quot;^3.0.4&quot;, &#x2F;* 音乐播放插件，支持歌词 *&#x2F;</span><br><span class="line">    &quot;hexo-tag-dplayer&quot;: &quot;^0.3.3&quot;, &#x2F;* 视频播放插件，支持弹幕 *&#x2F;</span><br><span class="line">    &quot;hexo-wordcount&quot;: &quot;^6.0.1&quot;, &#x2F;* 字数统计 *&#x2F;</span><br><span class="line">    &quot;live2d-widget-model-koharu&quot;: &quot;^1.0.5&quot; &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 主题NexT版本 *&#x2F;</span><br><span class="line">NexT.Muse v7.1.0</span><br><span class="line"></span><br><span class="line">&#x2F;* 优化主题NexT的设计版式 *&#x2F;</span><br><span class="line">Muse</span><br></pre></td></tr></table></figure>
-
-<p>样式还是看自己选择吧，我觉得都能设计的挺好看的，主要是看你想呈现出一个怎样的界面出来！</p>
-<h3 id="注意！"><a href="#注意！" class="headerlink" title="注意！"></a>注意！</h3><p>站点配置文件和主题配置文件，名字都叫<code>_config.yml</code>，容易乱，这一点我在其它文章也不止一次的提过了。</p>
-<ul>
-<li>站点配置文件，位于站点文件夹根目录内：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>主题配置文件，位于主题文件夹根目录内：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;themes&#x2F;&lt;你的主题&gt;&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
-
-<h2 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h2><h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><p>进入正题啦！由于我以及写过了，不知道为什么这时候有一种偷完懒之后的感觉，真香~😂</p>
-<p>好吧，附上快速访问链接👉<a href="https://blog.52bess.com/hexo.html">Hexo博客搭建</a></p>
-<p>建议大家一定要看一看官方文档哦，毕竟是👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv">官方文档<i class="fa fa-external-link-alt"></i></span></p>
-<p>当然了，你如果对GitHub提供的Pages服务不太满意的话，也可以选择搭建在自己的(Linux)服务器上，只不过会增加些开销！！！</p>
-<h3 id="What-is-GiyHub-Pages"><a href="#What-is-GiyHub-Pages" class="headerlink" title="What is GiyHub Pages?"></a>What is GiyHub Pages?</h3><p>GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。这里附上GitHub Pages的网址👉<span class="exturl" data-url="aHR0cHM6Ly9wYWdlcy5naXRodWIuY29tLw==">你好，世界<i class="fa fa-external-link-alt"></i></span></p>
-<table>
-<thead>
-<tr>
-<th><strong>问题</strong></th>
-<th>解答</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Why is GitHub Pages?</td>
-<td>首先免费，其次省心，最后可以学习使用 GitHub。</td>
-</tr>
-<tr>
-<td>GitHub Pages有使用限制吗？</td>
-<td>GitHub Pages源存储库的建议限制为1GB，每月100G流量，每小时大约能更新10次版本。超出配额后，可能会收到礼貌的邮件</td>
-</tr>
-<tr>
-<td>超出限制的容量、或者是流量怎么办？</td>
-<td>建议平常就使用国内各大云服务提供商，如<span class="exturl" data-url="aHR0cHM6Ly93d3cucWluaXUuY29tL3Byb2R1Y3RzL2tvZG8=">七牛云KODO<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuYWxpeXVuLmNvbS9wcm9kdWN0L29zcw==">阿里云OSS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2Nvcw==">腾讯云COS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vcHJvZHVjdC9ib3MuaHRtbA==">百度云BOS<i class="fa fa-external-link-alt"></i></span>等提供的对象存储上。甚至还可以设置<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vd29yZHBvd2VyLzQ1MjQ3Ni0xLmh0bWw=">镜像回源<i class="fa fa-external-link-alt"></i></span>。</td>
-</tr>
-<tr>
-<td>国内访问速度不行，有必要同时部署在 <span class="exturl" data-url="aHR0cHM6Ly9jb2RpbmcubmV0Lw==">Coding<i class="fa fa-external-link-alt"></i></span>上吗？</td>
-<td>可以，但没必要。我原来是同时部署的，但是经常502，说来也巧，放弃Coding后，再也不502了。但是，Coding是部署在香港的服务器的哦！但是Coding经常被上有服务上暂停服务。。。</td>
-</tr>
-<tr>
-<td>我可以用自己的域名吗？</td>
-<td>可以，并且支持https。</td>
-</tr>
-<tr>
-<td>可以用作商业用途吗？</td>
-<td>GitHub Pages不适用于或不允许用作免费的网络托管服务来运行您的在线业务，电子商务网站或任何其他主要针对促进商业交易或提供商业软件即服务的网站（SaaS）</td>
-</tr>
-</tbody></table>
-<p>如果你要去七牛云使用对象存储服务的话，不妨使用我的👉<span class="exturl" data-url="aHR0cHM6Ly9wb3J0YWwucWluaXUuY29tL3NpZ251cD9jb2RlPTNsY3FweXJjNGR5NnE=">邀请链接<i class="fa fa-external-link-alt"></i></span>，那样我就会获得5 GB/月 CDN 免费下载流量等奖励👌</p>
-<h3 id="可能遇到的错误"><a href="#可能遇到的错误" class="headerlink" title="可能遇到的错误"></a>可能遇到的错误</h3><p>强制执行GitHub Pages的https，可能会遇到一些混合内容的问题。</p>
-<p>如果您为自己的网站启用了HTTPS，并且您网站的HTML仍然通过HTTP引用了图片，CSS或JavaScript，那么您的网站就会提供混合内容，并且您可能无法加载资源。提供混合内容也会降低您网站的安全性。</p>
-<p>要删除网站的混合内容，提高网站的安全性，并解决与加载混合内容相关的问题，修改网站的HTML文件并进行更改<code>http://</code>，<code>https://</code>以便通过HTTPS提供所有资源。</p>
-<p>更多详情👉<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vYXJ0aWNsZXMvc2VjdXJpbmcteW91ci1naXRodWItcGFnZXMtc2l0ZS13aXRoLWh0dHBzI3Jlc29sdmluZy1wcm9ibGVtcy13aXRoLW1peGVkLWNvbnRlbnQ=">入口<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>默认的主题感觉不是很好看的样子，但是别的主题就不一样啦！😁我选的是<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lpc3NuYW4vaGV4by10aGVtZS1uZXh0">NexT主题<i class="fa fa-external-link-alt"></i></span>，简洁美观、功能也算完善。这里附上官方的👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">主题库链接<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="站点文件配置"><a href="#站点文件配置" class="headerlink" title="站点文件配置"></a>站点文件配置</h3><p>可以先去看看👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbi5odG1s">官方文档<i class="fa fa-external-link-alt"></i></span>是怎么介绍的，然后可以参考参考我的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuNTJiZXNzLmNvbS96aGFuZGlhbi5odG1s">站点文件基本配置<i class="fa fa-external-link-alt"></i></span>，需要更多的操作，可以自己去Google看看呢！</p>
-<h3 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h3><p>没错，还是建议你先看NexT主题的👉<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tLw==">官方文档<i class="fa fa-external-link-alt"></i></span>，一定要养成这个好习惯！啥都不说了，把我的贴出来大家参考吧！</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Theme Core Configuration Settings</span><br><span class="line"># See: https:&#x2F;&#x2F;theme-next.org&#x2F;docs&#x2F;theme-settings&#x2F;</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># 更新相关，参考：</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&#x2F;issues&#x2F;328</span><br><span class="line">override: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Site Information Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 站点图标直接去 https:&#x2F;&#x2F;realfavicongenerator.net 下载</span><br><span class="line"># 建议放在 hexo-site&#x2F;source&#x2F;images&#x2F; 里（没有自己建）</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon-16x16-dog.png</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon-32x32-dog.png</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;logo.svg</span><br><span class="line"># 修改图片名字保持一致即可！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rss: &#x2F;atom.xml</span><br><span class="line"></span><br><span class="line">footer:		# 页脚配置</span><br><span class="line">  since: 2018   # 这里填入你的建站年份</span><br><span class="line"></span><br><span class="line">  icon:</span><br><span class="line">    # 年份后面的图标，为 Font Awesome 图标</span><br><span class="line">	# 去挑一个吧！ https:&#x2F;&#x2F;fontawesome.com&#x2F;v4.7.0&#x2F;</span><br><span class="line">    name: fas fa-heartbeat	  # 图标名字</span><br><span class="line">    animated: true		  # 让你的图标跳动起来！</span><br><span class="line">    color: &quot;#ff0000&quot;      #看到我博客页脚的跳动着的红色爱心了吗？</span><br><span class="line">  copyright:</span><br><span class="line">  # -------------------------------------------------------------</span><br><span class="line">  powered:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 你不想页脚显示 由 Hexo 强力驱动 v3.8.0，可以关闭！</span><br><span class="line">  theme:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 同理，你不想页脚显示 主题 – NexT.Muse v7.1.0，可以关闭！</span><br><span class="line">    </span><br><span class="line">    beian:</span><br><span class="line">    enable: false</span><br><span class="line">    icp: </span><br><span class="line">    # 同理，如果你有备案信息，也可以放在这里</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># SEO Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">canonical: true</span><br><span class="line"></span><br><span class="line">seo: false</span><br><span class="line"></span><br><span class="line"># If true, will add site-subtitle to index page, added in main hexo config.</span><br><span class="line"># subtitle: Subtitle</span><br><span class="line">index_with_subtitle: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Menu Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 菜单设置 || 菜单图标设置（图标上面说了，不重复）</span><br><span class="line"># 项目换行可以更改显示顺序</span><br><span class="line"># 如果这个项前会显示 .menu</span><br><span class="line"># 解决方法：编辑 ~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;languages 下的相应文件</span><br><span class="line"># 比如添加一个「留言」菜单，站点配置文件的 language 是 zh-CN</span><br><span class="line"># 则编辑 zh-CN.yml，在 menu: 项内添加一行 留言: 留言</span><br><span class="line"># 注意空格，且符号 : 为英文字符！</span><br><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  books: &#x2F;books&#x2F; || book  </span><br><span class="line">  movies: &#x2F;movies&#x2F; || video-camera  </span><br><span class="line">  games: &#x2F;games&#x2F; || gamepad</span><br><span class="line"></span><br><span class="line"># Enable&#x2F;Disable menu icons.</span><br><span class="line"># 是否开启菜单图标</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 设计板式，都长啥样，去 README 里面的链接里看看</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next#live-preview</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">site_state: true</span><br><span class="line"></span><br><span class="line"># 侧栏社交链接设置，与上面菜单差不多，要生效记得把前面的 # 去掉</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;besscroft || github</span><br><span class="line">  E-Mail: mailto:631908942@gmail.com || envelope</span><br><span class="line">  </span><br><span class="line"># 侧栏社交链接图标设置</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  icons_only: false</span><br><span class="line">  transition: false</span><br><span class="line">  </span><br><span class="line"># 侧栏友链设置</span><br><span class="line">links_icon: globe</span><br><span class="line">links_title: 友♂链</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">  关于此博客: https:&#x2F;&#x2F;blog.52bess.com&#x2F;about&#x2F;</span><br><span class="line">  </span><br><span class="line">avatar:</span><br><span class="line"> # 侧栏头像设置</span><br><span class="line">  url: https:&#x2F;&#x2F;*****.com&#x2F;avatar.png</span><br><span class="line">  rounded: false</span><br><span class="line">  opacity: 1</span><br><span class="line">  rotated: false</span><br><span class="line">  </span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  number: true</span><br><span class="line"></span><br><span class="line">  wrap: false</span><br><span class="line"># 开启后可能要在 custom.styl 里加代码</span><br><span class="line">  max_depth: 6</span><br><span class="line">  </span><br><span class="line">sidebar:</span><br><span class="line">  # 侧栏的位置，left或right</span><br><span class="line">  position: left</span><br><span class="line">  </span><br><span class="line">  display: post   # 样式我的是默认的post</span><br><span class="line">  # 只对 Pisces 和 Gemini 设计版式有效！</span><br><span class="line">  offset: 12</span><br><span class="line">  # 只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  onmobile: false</span><br><span class="line">  # 移动端显示侧栏，只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  dimmer: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Post Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 点击 [Read More]，页面自动滚动到 &lt;!-- more --&gt; 标记处</span><br><span class="line">scroll_to_more: false</span><br><span class="line"></span><br><span class="line"># 用 cookies 保存浏览的位置信息，意味着重新打开这个页面后</span><br><span class="line"># 页面就会自动滚动到上次的位置，除非读者清理浏览器 cookies</span><br><span class="line">save_scroll: false</span><br><span class="line"></span><br><span class="line"># 将每篇文章 Front-matter 里 description 的文字作为页面显示的文章摘要</span><br><span class="line">excerpt_description: false</span><br><span class="line"></span><br><span class="line"># 按字数自动加入 [Read More]，不建议！</span><br><span class="line"># 建议在文章中加入 &lt;!-- more --&gt;</span><br><span class="line"># 自定义 [Read More] 按钮之前要显示的内容！</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line"># 文章顶部显示的文章元数据设置</span><br><span class="line">post_meta:</span><br><span class="line">  item_text: true # 显示文字说明</span><br><span class="line">  created_at: true # 显示文章创建时间</span><br><span class="line">  updated_at:</span><br><span class="line">    enable: true # 隐藏文章修改时间</span><br><span class="line">    another_day: true # 只有当修改时间和创建时间不是同一天的时候才显示</span><br><span class="line">  categories: true # 隐藏分类信息</span><br><span class="line"></span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;willin&#x2F;hexo-wordcount</span><br><span class="line"># 显示统计字数和估计阅读时长</span><br><span class="line"># 注意：这个要安装插件，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-wordcount --save</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line"></span><br><span class="line"># Wechat Subscriber</span><br><span class="line">wechat_subscriber:</span><br><span class="line">  enable: true</span><br><span class="line">  qcode: &#x2F;uploads&#x2F;wechat-qcode.jpg</span><br><span class="line">  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</span><br><span class="line">  </span><br><span class="line"># Reward</span><br><span class="line">reward:</span><br><span class="line">  wechatpay: &#x2F;images&#x2F;wechatpay.jpg</span><br><span class="line">  </span><br><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  # enable: false</span><br><span class="line">  # license: CC BY-NC-SA 3.0</span><br><span class="line">  # license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br><span class="line">  # 版权信息</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Misc Theme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 移动端把页面两边留白去除</span><br><span class="line"># Reduce padding &#x2F; margin indents on devices with narrow width.</span><br><span class="line">mobile_layout_economy: false</span><br><span class="line"></span><br><span class="line"># Android 上 Chrome 浏览器顶部颜色设置</span><br><span class="line">android_chrome_color: &quot;#222&quot;</span><br><span class="line"># Android 端 QQ浏览器，很多配置都无法显示出来。。。</span><br><span class="line"></span><br><span class="line"># Custom Logo</span><br><span class="line"># Do not support Scheme Mist currently.</span><br><span class="line">custom_logo:</span><br><span class="line">  enable: false</span><br><span class="line">  image: #&#x2F;uploads&#x2F;custom-logo.jpg</span><br><span class="line">  </span><br><span class="line"># Available value:</span><br><span class="line">#    normal | night | night eighties | night blue | night bright</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;chriskempson&#x2F;tomorrow-theme</span><br><span class="line"># 代码高亮主题设置</span><br><span class="line"># 都长啥样自己点开上面的链接查看</span><br><span class="line">highlight_theme: normal</span><br><span class="line"></span><br><span class="line"># 字体设置</span><br><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # 外链字体库地址，例如 &#x2F;&#x2F;fonts.googleapis.com (默认值)</span><br><span class="line">  host: https:&#x2F;&#x2F;fonts.loli.net</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for &lt;code&gt; and code blocks.</span><br><span class="line">  codes:</span><br><span class="line">    external: true</span><br><span class="line">    family:</span><br><span class="line">    size:</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Third Party Services Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Math Equations Render Support</span><br><span class="line">math:</span><br><span class="line">  enable: false</span><br><span class="line">  per_page: true</span><br><span class="line"></span><br><span class="line">  engine: mathjax</span><br><span class="line">  #engine: katex</span><br><span class="line"></span><br><span class="line">  mathjax:</span><br><span class="line">    cdn: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@2.7.1&#x2F;MathJax.js?config&#x3D;TeX-AMS-MML_HTMLorMML</span><br><span class="line"> # 这一大串都是默认的，还有一些不列举了，感觉会水贴</span><br><span class="line"> </span><br><span class="line"># Han Support docs: https:&#x2F;&#x2F;hanzi.pro&#x2F;</span><br><span class="line"># 汉字标准格式，没用过暂时不了解</span><br><span class="line">han: false</span><br><span class="line"></span><br><span class="line"># 评论系统，当然id和key我就不提供了，这个可以自己去注册</span><br><span class="line"># leancloud网址：https:&#x2F;&#x2F;leancloud.cn&#x2F;dashboard&#x2F;login.html#&#x2F;signup</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否开启</span><br><span class="line">  appid:  # 你的leancloud应用appid</span><br><span class="line">  appkey:  # 你的leancloud应用appkey</span><br><span class="line">  notify: false # mail notifier, See: https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: true </span><br><span class="line">  placeholder: 说点儿什么吧o(*￣▽￣*)o </span><br><span class="line">  avatar: mm </span><br><span class="line">  guest_info: nick,mail,link r</span><br><span class="line">  pageSize: 10 </span><br><span class="line">  visitor: false </span><br><span class="line">  comment_count: true </span><br><span class="line"></span><br><span class="line"># 不蒜子统计，用于在页脚显示总访客数和总浏览量，将 false 改为 true 就能直接使用</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br><span class="line"></span><br><span class="line"># 要安装插件才能使用，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-generator-searchdb --save</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Tags Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 主题的标签样式，有 simple、note、label、tabs 四种</span><br><span class="line">note:</span><br><span class="line">  style: simple</span><br><span class="line">  icons: false</span><br><span class="line">  border_radius: 3</span><br><span class="line">  light_bg_offset: 0</span><br><span class="line">  </span><br><span class="line"># 标签</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: false</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br><span class="line">  </span><br><span class="line"># Use velocity to animate everything.</span><br><span class="line">motion:</span><br><span class="line">  enable: true</span><br><span class="line">  async: false</span><br><span class="line">  transition:</span><br><span class="line">    post_block: fadeIn</span><br><span class="line">    post_header: slideDownIn</span><br><span class="line">    post_body: slideDownIn</span><br><span class="line">    coll_header: slideLeftIn</span><br><span class="line">    sidebar: slideUpIn</span><br><span class="line"></span><br><span class="line"># 动态背景，但是我觉得放一张好看的图片更好</span><br><span class="line">canvas_nest:</span><br><span class="line">  enable: false</span><br><span class="line">  onmobile: true # display on mobile or not</span><br><span class="line">  color: &#39;0,0,255&#39; # RGB values, use &#39;,&#39; to separate</span><br><span class="line">  opacity: 0.5 # the opacity of line: 0~1</span><br><span class="line">  zIndex: -1 # z-index property of the background</span><br><span class="line">  count: 99 # the number of lines</span><br><span class="line"># JavaScript 3D library.</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-three</span><br><span class="line"># three_waves</span><br><span class="line">three_waves: false</span><br><span class="line"># canvas_lines</span><br><span class="line">canvas_lines: false</span><br><span class="line"># canvas_sphere</span><br><span class="line">canvas_sphere: false</span><br><span class="line"></span><br><span class="line">vendors:</span><br><span class="line">  # Internal path prefix. Please do not edit it.</span><br><span class="line">  _internal: lib</span><br><span class="line">  # 这个下面的东西就不贴出来了，建议大家按需使用，同时找一个好一点的CDN，不然速度感人啊！！！</span><br><span class="line">  </span><br><span class="line"># Assets</span><br><span class="line">css: css</span><br><span class="line">js: js</span><br><span class="line">images: images</span><br><span class="line"></span><br><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: </span><br><span class="line"></span><br><span class="line">nav:</span><br><span class="line">  home: &#x2F;</span><br><span class="line">  about: &#x2F;about</span><br><span class="line">  tags: &#x2F;tags</span><br><span class="line">  categories: &#x2F;categories</span><br><span class="line"></span><br><span class="line">cache:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># window woblle</span><br><span class="line">wobble:</span><br><span class="line">  enable: true  # 是否开启边缘波动效果</span><br><span class="line">  radius: 50  # 波动半径</span><br><span class="line">  sidebar: true  # 开启侧边栏边缘摆动</span><br><span class="line">  header: true  # 开启头部边缘摆动</span><br><span class="line">  footer: true  # 开启脚部边缘摆动</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># typing effect</span><br><span class="line">typing_effect:</span><br><span class="line">  colorful: true  # 礼花特效</span><br><span class="line">  shake: false  # 震动特效</span><br><span class="line">  </span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line">  </span><br><span class="line"># Theme version</span><br><span class="line">version: 7.1.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="自定义网页布局"><a href="#自定义网页布局" class="headerlink" title="自定义网页布局"></a>自定义网页布局</h2><p>我觉得这个对于学过前端三🗡客的同学们来说还是比较简单的，不做多解释。但是对于没学的同学，强烈建议去看看这篇大佬的文章👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuY2R1eXpoLmNvbS9oZXhvLXNldHRpbmdzLTMv">这里<i class="fa fa-external-link-alt"></i></span>，看完之后，你基本就明白在哪个文件修改了，一些基本的步骤也能掌握！</p>
-<p>主要是修改<code>/blog/themes/next/source/css/_custom/custom.styl</code>，那么数据去哪里找呢？当然是浏览器按F12进行调试啊。如果是计算机专业，期末做过作品的你，没少受过折磨吧？</p>
-<p><code>hexo s</code>后可以直接本地调试，也就是更改文件保存后，Hexo 后台会自动重新渲染文件，所以只要稍等片刻，浏览器刷新一下就能看到效果。</p>
-<p>我建议你使用Google浏览器进行调试，可以先看看，嗯~ o(<em>￣▽￣</em>)o，没错👉<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy8=">Google 开发者工具<i class="fa fa-external-link-alt"></i></span>，记得给文档5颗星星支持一下下！</p>
-<h2 id="自定义鼠标点击效果"><a href="#自定义鼠标点击效果" class="headerlink" title="自定义鼠标点击效果"></a>自定义鼠标点击效果</h2><h3 id="爱心效果"><a href="#爱心效果" class="headerlink" title="爱心效果"></a>爱心效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>clicklove.js</code>，并添加如下代码</p>
-<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/clicklove.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a>代码过长，在文章里面不太好排版，毕竟不是IDE，所以点击之后复制即可！</p>
-<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小心心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="字体效果"><a href="#字体效果" class="headerlink" title="字体效果"></a>字体效果</h3><p>嗯，我们以社会主义核心价值观为例，当然，实际的使用场景，也可以改成别的。</p>
-<p>在<code>/themes/next/source/js/src</code>新建文件<code>click_show_text.js</code>，并添加如下代码</p>
-<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/click_show_text.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
-<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--单击显示文字--&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;click_show_text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="烟花爆炸效果"><a href="#烟花爆炸效果" class="headerlink" title="烟花爆炸效果"></a>烟花爆炸效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>fireworks.js</code>，并添加如下代码</p>
-<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/fireworks.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
-<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">&lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加文章结束语"><a href="#添加文章结束语" class="headerlink" title="添加文章结束语"></a>添加文章结束语</h2><p>在<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件，添加代码至该文件中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class&#x3D;&quot;fa fa-paw&quot;&gt;&lt;&#x2F;i&gt;感谢您的阅读-------------&lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>大小自己看着调整，毕竟每个人喜欢的不一样。</p>
-<p>打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code>后，<code>post-footer</code>前，添加下面内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include &#39;passage-end-tag.swig&#39; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>打开主题配置文件<code>_config.yml</code>,在末尾添加：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置文章背景"><a href="#设置文章背景" class="headerlink" title="设置文章背景"></a>设置文章背景</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*设置博文背景*&#x2F;</span><br><span class="line">.main-inner &#123;</span><br><span class="line">    background: #fff;</span><br><span class="line">    opacity: 0.9;</span><br></pre></td></tr></table></figure>
-
-<p>background后为rgb颜色代码，百度来一个rgb色值粘贴即可替换博文背景颜色（替换了也很丑）<br>opacity后数值为博文背景透明度，可设置0.0-1.0数值，值越小透明度越高。</p>
-<h2 id="为主页文章添加阴影效果"><a href="#为主页文章添加阴影效果" class="headerlink" title="为主页文章添加阴影效果"></a>为主页文章添加阴影效果</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 主页文章添加阴影效果</span><br><span class="line">.post &#123;</span><br><span class="line">  background: #fff;</span><br><span class="line">  opacity: 1;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>background和上面设置文章背景一样，为文章背景颜色；opacity透明度；margin-top上边距；margin-bottom下边距；padding框间距；webkit-box-shadow和moz-box-shadow为阴影长宽设置。</p>
-<h2 id="后续更新中。。。"><a href="#后续更新中。。。" class="headerlink" title="后续更新中。。。"></a>后续更新中。。。</h2><h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>感谢<code>reuixiy</code>大佬的👉<span class="exturl" data-url="aHR0cHM6Ly9yZXVpeGl5LmdpdGh1Yi5pby90ZWNobm9sb2d5L2NvbXB1dGVyL2NvbXB1dGVyLWFpZGVkLWFydC8yMDE3LzA2LzA5L2hleG8tbmV4dC1vcHRpbWl6YXRpb24uaHRtbA==">这篇文章<i class="fa fa-external-link-alt"></i></span>，在此基础上完善了一些，也删除了一些，毕竟版本也有些许区别了。学习到了很多，同时结合我自己的思路写了这篇文章！</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>个性</tag>
       </tags>
   </entry>
   <entry>
@@ -1404,50 +1327,6 @@
       </categories>
       <tags>
         <tag>魔法操作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo多端同步</title>
-    <url>/posts/2019/remote.html</url>
-    <content><![CDATA[<p>假设你换了一台电脑，或者是把电脑重置了，那么，要怎样才能接着跟原来一样配置好Hexo，然后继续写文章呢？毕竟你不是从头、从零开始配置的，很多文件都已经有了，但是，怎么保证不出问题的继续运行呢?</p>
-<a id="more"></a>
-
-<p>多台电脑同步博客源码，首先要把最新的源码上传到git上，然后在其它电脑上搭建Hexo环境后同步博客源码。 前提是两台电脑都能连上git，主要是都配置了 <code>git ssh</code>密钥连接。这个方法同样适用与误删文件的你，但是我建议平时尽量多做好备份！！！</p>
-<h2 id="同步博客源码到你的GitHub"><a href="#同步博客源码到你的GitHub" class="headerlink" title="同步博客源码到你的GitHub"></a>同步博客源码到你的GitHub</h2><p>在你打算上传的最新博客源码的基础上，按照下面的魔法操作：</p>
-<h3 id="编辑-gitignore文件"><a href="#编辑-gitignore文件" class="headerlink" title="编辑.gitignore文件"></a>编辑.gitignore文件</h3><p><code>.gitignore</code>文件作用是声明不被git记录的文件，blog根目录下的 <code>.gitignore</code>是hexo初始化是创建的，可以直接编辑，建议.gitignore文件包括以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.DS_Store      </span><br><span class="line">Thumbs.db      </span><br><span class="line">db.json      </span><br><span class="line">*.log      </span><br><span class="line">node_modules&#x2F;      </span><br><span class="line">public&#x2F;      </span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>说明：public内的文件可以根据source文件夹内容自动生成的，不需要备份。其他日志log、压缩、数据库Thumbs.db等文件也都是调试等使用，也不需要备份。</p>
-<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git # 将本地仓库映射到托管服务器的仓库</span><br></pre></td></tr></table></figure>
-
-<p>server是仓库的在线目录地址，可以从git上直接复制过来，origin是本地分支，remote add会将本地仓库映射到托管服务器的仓库上。</p>
-<h3 id="同步到git"><a href="#同步到git" class="headerlink" title="同步到git"></a>同步到git</h3><p>添加你的本地文件到仓库，并同步到GitHub上</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add . #添加blog目录下所有文件，注意有个&#39;.&#39;(.gitignore里面声明的文件不在此内)    </span><br><span class="line">git commit -m &quot;hexo source first add&quot; #添加更新说明    </span><br><span class="line">git push -u origin master  #推送更新到git上</span><br></pre></td></tr></table></figure>
-
-<h2 id="将git的内容同步到另一台电脑"><a href="#将git的内容同步到另一台电脑" class="headerlink" title="将git的内容同步到另一台电脑"></a>将git的内容同步到另一台电脑</h2><p>之前的操作主要类似于备份，而这里开始，就基本上是你在新电脑、或者是重置电脑之后的操作啦！假设我们这时候已经将blog源码内容备份到了GitHub上，现在准备在新电脑上同步源码内容。</p>
-<h3 id="搭建hexo的环境"><a href="#搭建hexo的环境" class="headerlink" title="搭建hexo的环境"></a>搭建hexo的环境</h3><p>这时候在你的新电脑上，肯定是必须要搭建环境的呢，没有环境，Hexo也无法运行呀不是。没错，又是熟悉的配方：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init &lt;folder&gt;         #用hexo创建一个博客目录</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>&lt;folder&gt;还是一样地填上博客文件夹地名字，比如说我的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init hexo         #用hexo创建一个博客目录</span><br><span class="line">cd hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<h3 id="拉取源代码"><a href="#拉取源代码" class="headerlink" title="拉取源代码"></a>拉取源代码</h3><p>在建好的环境的主目录运行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init       #将目录添加到版本控制系统中    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git </span><br><span class="line">#将本地仓库映射到托管服务器的仓库上    </span><br><span class="line">git fetch --all  #将git上所有文件拉取到本地    </span><br><span class="line">git reset --hard origin&#x2F;master  #强制将本地内容指向刚刚同步git云端内容,用远端文件覆盖本地相同文件</span><br></pre></td></tr></table></figure>
-
-<p>reset对所拉取的文件不做任何处理，此处不用pull是因为本地尚有许多文件，使用pull会有一些版本冲突，解决起来也麻烦，而本地的文件都是初始化生成的文件，较拉取的库里面的文件而言基本无用，所以直接丢弃。</p>
-<h4 id="发布内容到GitHub"><a href="#发布内容到GitHub" class="headerlink" title="发布内容到GitHub"></a>发布内容到GitHub</h4><p>要将新电脑上的最新的文章更新到git。在本地文件中运行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status #查看本地文件的状态。</span><br><span class="line">git add . #将所有更新的本地文件添加到版本控制系统中</span><br><span class="line"></span><br><span class="line">git commit -m &#39;更新信息说明&#39; </span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<h4 id="同步文章"><a href="#同步文章" class="headerlink" title="同步文章"></a>同步文章</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>获取的源码即为最新文件</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>同步</tag>
       </tags>
   </entry>
   <entry>
@@ -1658,42 +1537,6 @@
       </tags>
   </entry>
   <entry>
-    <title>彻底关闭Windows10系统更新！</title>
-    <url>/posts/2019/win10kill.html</url>
-    <content><![CDATA[<p>对于很多Windows10家庭版的朋友们来说，如何彻底关闭系统更新，是一件让人很头痛的问题。今天就来给大家介绍一个<strong>开源程序</strong>，来帮助你关闭系统更新，当然，任何事情都是有两面性的！</p>
-<a id="more"></a>
-
-<div class="note warning"><p>注意：我在实机和虚拟机都测试过，可正常使用，且用火热杀毒检测无毒。毕竟是开源软件，还是可以放心的，没有哪个笨蛋会把自己的病毒暴露在阳光之下的！</p></div>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill001.png" alt></p>
-<h3 id="你需要权衡什么？"><a href="#你需要权衡什么？" class="headerlink" title="你需要权衡什么？"></a>你需要权衡什么？</h3><p>如果您需要SKYPE，MARKET，XBOX APP，WMR或任何其他具有互联网功能的MICROSOFT应用程序，请不要安装DWS！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill002.png" alt></p>
-<h3 id="它能干什么？"><a href="#它能干什么？" class="headerlink" title="它能干什么？"></a>它能干什么？</h3><ul>
-<li>删除所有间谍软件模块</li>
-<li>删除间谍应用程序</li>
-<li>将间谍域添加到主机文件！</li>
-<li>删除间谍服务</li>
-<li>删除Windows 10 Metro Apps</li>
-<li>支持Windows 7/8 / 8.1 / 10和Server 2008-2012 R2 （对于这些平台，请使用2.2.2.2版）</li>
-<li>删除Office 2016遥测</li>
-<li>开源！</li>
-</ul>
-<p>有了它，你甚至可以删除Windows的监控模块(这个程序本身就是为了这个才产生的)。</p>
-<p><strong>由于是开源软件，在这里贴出作者的GitHub：</strong></p>
-<ul>
-<li>原作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL051bW1lci9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Nummer/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
-<li>现作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Wohlstand/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<p>截至目前，最新的发行版本的下载链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5nL3JlbGVhc2VzL2Rvd25sb2FkLzIuMi4yLjIuMjcvRFdTLWJ1aWxkLVdpbjc4ODEtMi4yLjIuMi4yNy56aXA=">https://github.com/Wohlstand/Destroy-Windows-10-Spying/releases/download/2.2.2.2.27/DWS-build-Win7881-2.2.2.2.27.zip<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>Windows10</category>
-      </categories>
-      <tags>
-        <tag>Windows10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu安装记录</title>
     <url>/posts/2019/ubuntu.html</url>
     <content><![CDATA[<p>一直以来，都是在虚拟机里面使用Linux系统，但随着使用需求的增加，于是直接在笔记本中安装Ubuntu。基本上就是Windows 10 + Ubuntu18.04LTS双系统共存模式！</p>
@@ -1825,6 +1668,194 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>彻底关闭Windows10系统更新！</title>
+    <url>/posts/2019/win10kill.html</url>
+    <content><![CDATA[<p>对于很多Windows10家庭版的朋友们来说，如何彻底关闭系统更新，是一件让人很头痛的问题。今天就来给大家介绍一个<strong>开源程序</strong>，来帮助你关闭系统更新，当然，任何事情都是有两面性的！</p>
+<a id="more"></a>
+
+<div class="note warning"><p>注意：我在实机和虚拟机都测试过，可正常使用，且用火热杀毒检测无毒。毕竟是开源软件，还是可以放心的，没有哪个笨蛋会把自己的病毒暴露在阳光之下的！</p></div>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill001.png" alt></p>
+<h3 id="你需要权衡什么？"><a href="#你需要权衡什么？" class="headerlink" title="你需要权衡什么？"></a>你需要权衡什么？</h3><p>如果您需要SKYPE，MARKET，XBOX APP，WMR或任何其他具有互联网功能的MICROSOFT应用程序，请不要安装DWS！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill002.png" alt></p>
+<h3 id="它能干什么？"><a href="#它能干什么？" class="headerlink" title="它能干什么？"></a>它能干什么？</h3><ul>
+<li>删除所有间谍软件模块</li>
+<li>删除间谍应用程序</li>
+<li>将间谍域添加到主机文件！</li>
+<li>删除间谍服务</li>
+<li>删除Windows 10 Metro Apps</li>
+<li>支持Windows 7/8 / 8.1 / 10和Server 2008-2012 R2 （对于这些平台，请使用2.2.2.2版）</li>
+<li>删除Office 2016遥测</li>
+<li>开源！</li>
+</ul>
+<p>有了它，你甚至可以删除Windows的监控模块(这个程序本身就是为了这个才产生的)。</p>
+<p><strong>由于是开源软件，在这里贴出作者的GitHub：</strong></p>
+<ul>
+<li>原作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL051bW1lci9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Nummer/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
+<li>现作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Wohlstand/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>截至目前，最新的发行版本的下载链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5nL3JlbGVhc2VzL2Rvd25sb2FkLzIuMi4yLjIuMjcvRFdTLWJ1aWxkLVdpbjc4ODEtMi4yLjIuMi4yNy56aXA=">https://github.com/Wohlstand/Destroy-Windows-10-Spying/releases/download/2.2.2.2.27/DWS-build-Win7881-2.2.2.2.27.zip<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>Windows10</category>
+      </categories>
+      <tags>
+        <tag>Windows10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT主题个性定制与深度优化</title>
+    <url>/posts/2019/next.html</url>
+    <content><![CDATA[<blockquote><p>给岁月以文明，而不是给文明以岁月.</p>
+<footer><strong>刘慈欣</strong><cite>三体</cite></footer></blockquote>
+
+<p>“互联网精神”即：开放、平等、协作、快速、分享。感谢我的生命之中有互联网，让我脑海中的开源共享有了实现的可能。能拥有自己的博客，不仅记录自己，还能分享他人！</p>
+<a id="more"></a>
+
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="容我先bb几句"><a href="#容我先bb几句" class="headerlink" title="容我先bb几句"></a>容我先bb几句</h3><p>首先肯定是感谢各位大佬的文章，我一个小白，靠着Google搭建了自己的博客……如果你是一个和我一样的小白，而且对我的博客感觉还蛮满意的话，恭喜你！看完这篇文章，你自己也可以拥有一个<del>可能不太</del>漂亮<del>的</del>博客啦！</p>
+<p>这篇文章主要是写给跟我一样的小白们看的，当然也方便自己以后忘记了来查阅。如果各位大佬不慎看到，如有不足之处还欢迎指出来哦，还请见谅！我在搭建博客的时候，看到很多博客，写了一些比较好的文章，但是有时候却忘记收藏了。别告诉我只有我一个人设置的关闭浏览器时自动清理的……许多时候还是挺后悔的，为什么当时没收藏。因为这种文章，肯定是比某度随便一搜索找到的教程要准确的多的，毕竟人家博主可能真的是有在认真的写。</p>
+<h3 id="我的本地环境"><a href="#我的本地环境" class="headerlink" title="我的本地环境"></a>我的本地环境</h3><p>有时候出问题的原因可能会有很多，如果你决定用我的这篇文章来做参考的话，那么我就把我的环境给你参考。因为可能大家一样的操作的话，并不一定实现的结果都是相同的。嗯~ o(<em>￣▽￣</em>)o，没错，我有时候Google按照流程来，结果疯狂报错。。。</p>
+<p>大家都知道，外星人阻断了我们与Google的链接，导致无法访问，不过估计能看到这篇文章的人，应该是具有了访问Google的能力了。如果你是在是无法访问，可以去全球最大的同性交友社区GitHub看看呢，附上大神的开源项目<span class="exturl" data-url="aHR0cHM6Ly9sYW9kLmNuL3dwLWNvbnRlbnQvdGhlbWVzL2JlZ2luL3RvLnBocD91cmw9YUhSMGNITTZMeTluYVhSb2RXSXVZMjl0TDJkdmIyZHNaV2h2YzNSekwyaHZjM1J6">入口<i class="fa fa-external-link-alt"></i></span>👉</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* 调试用的浏览器 *&#x2F;</span><br><span class="line">Google Chrome Version 73.0.3683.75（Official version）（64-bit）</span><br><span class="line">QQ Browser 10.4(3341) Chromium70.0.3538.25\IE11.379.17763.0</span><br><span class="line">Microsoft Edge 44.17763.1.0</span><br><span class="line">Internet Explorer 11.379.17763.0</span><br><span class="line">&#x2F;&#x2F;IE8及以下版本无法正常显示</span><br><span class="line"></span><br><span class="line">&#x2F;* 版本信息 *&#x2F;</span><br><span class="line">$ hexo version</span><br><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17763 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;* 依赖包 *&#x2F;</span><br><span class="line">$ cat package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;3.8.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^3.8.0&quot;,</span><br><span class="line">    &quot;hexo-asset-image&quot;: &quot;0.0.3&quot;, &#x2F;* 图片显示 *&#x2F;</span><br><span class="line">    &quot;hexo-blog-encrypt&quot;: &quot;^2.1.1&quot;,</span><br><span class="line">    &quot;hexo-deployer-git&quot;: &quot;^1.0.0&quot;, &#x2F;* Git 部署工具 *&#x2F;</span><br><span class="line">    &quot;hexo-douban&quot;: &quot;^1.1.3&quot;, &#x2F;* 豆瓣页面生成 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.5&quot;,</span><br><span class="line">    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.6&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-feed&quot;: &quot;^1.2.2&quot;, &#x2F;* RSS *&#x2F;</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^0.2.1&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-sitemap&quot;: &quot;^1.2.0&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.2.0&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-helper-live2d&quot;: &quot;^3.1.1&quot;, &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.3.1&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.3.3&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^0.3.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-symbols-count-time&quot;: &quot;^0.4.4&quot;,</span><br><span class="line">    &quot;hexo-tag-aplayer&quot;: &quot;^3.0.4&quot;, &#x2F;* 音乐播放插件，支持歌词 *&#x2F;</span><br><span class="line">    &quot;hexo-tag-dplayer&quot;: &quot;^0.3.3&quot;, &#x2F;* 视频播放插件，支持弹幕 *&#x2F;</span><br><span class="line">    &quot;hexo-wordcount&quot;: &quot;^6.0.1&quot;, &#x2F;* 字数统计 *&#x2F;</span><br><span class="line">    &quot;live2d-widget-model-koharu&quot;: &quot;^1.0.5&quot; &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 主题NexT版本 *&#x2F;</span><br><span class="line">NexT.Muse v7.1.0</span><br><span class="line"></span><br><span class="line">&#x2F;* 优化主题NexT的设计版式 *&#x2F;</span><br><span class="line">Muse</span><br></pre></td></tr></table></figure>
+
+<p>样式还是看自己选择吧，我觉得都能设计的挺好看的，主要是看你想呈现出一个怎样的界面出来！</p>
+<h3 id="注意！"><a href="#注意！" class="headerlink" title="注意！"></a>注意！</h3><p>站点配置文件和主题配置文件，名字都叫<code>_config.yml</code>，容易乱，这一点我在其它文章也不止一次的提过了。</p>
+<ul>
+<li>站点配置文件，位于站点文件夹根目录内：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>主题配置文件，位于主题文件夹根目录内：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;themes&#x2F;&lt;你的主题&gt;&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
+
+<h2 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h2><h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><p>进入正题啦！由于我以及写过了，不知道为什么这时候有一种偷完懒之后的感觉，真香~😂</p>
+<p>好吧，附上快速访问链接👉<a href="https://blog.52bess.com/hexo.html">Hexo博客搭建</a></p>
+<p>建议大家一定要看一看官方文档哦，毕竟是👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv">官方文档<i class="fa fa-external-link-alt"></i></span></p>
+<p>当然了，你如果对GitHub提供的Pages服务不太满意的话，也可以选择搭建在自己的(Linux)服务器上，只不过会增加些开销！！！</p>
+<h3 id="What-is-GiyHub-Pages"><a href="#What-is-GiyHub-Pages" class="headerlink" title="What is GiyHub Pages?"></a>What is GiyHub Pages?</h3><p>GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。这里附上GitHub Pages的网址👉<span class="exturl" data-url="aHR0cHM6Ly9wYWdlcy5naXRodWIuY29tLw==">你好，世界<i class="fa fa-external-link-alt"></i></span></p>
+<table>
+<thead>
+<tr>
+<th><strong>问题</strong></th>
+<th>解答</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Why is GitHub Pages?</td>
+<td>首先免费，其次省心，最后可以学习使用 GitHub。</td>
+</tr>
+<tr>
+<td>GitHub Pages有使用限制吗？</td>
+<td>GitHub Pages源存储库的建议限制为1GB，每月100G流量，每小时大约能更新10次版本。超出配额后，可能会收到礼貌的邮件</td>
+</tr>
+<tr>
+<td>超出限制的容量、或者是流量怎么办？</td>
+<td>建议平常就使用国内各大云服务提供商，如<span class="exturl" data-url="aHR0cHM6Ly93d3cucWluaXUuY29tL3Byb2R1Y3RzL2tvZG8=">七牛云KODO<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuYWxpeXVuLmNvbS9wcm9kdWN0L29zcw==">阿里云OSS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2Nvcw==">腾讯云COS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vcHJvZHVjdC9ib3MuaHRtbA==">百度云BOS<i class="fa fa-external-link-alt"></i></span>等提供的对象存储上。甚至还可以设置<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vd29yZHBvd2VyLzQ1MjQ3Ni0xLmh0bWw=">镜像回源<i class="fa fa-external-link-alt"></i></span>。</td>
+</tr>
+<tr>
+<td>国内访问速度不行，有必要同时部署在 <span class="exturl" data-url="aHR0cHM6Ly9jb2RpbmcubmV0Lw==">Coding<i class="fa fa-external-link-alt"></i></span>上吗？</td>
+<td>可以，但没必要。我原来是同时部署的，但是经常502，说来也巧，放弃Coding后，再也不502了。但是，Coding是部署在香港的服务器的哦！但是Coding经常被上有服务上暂停服务。。。</td>
+</tr>
+<tr>
+<td>我可以用自己的域名吗？</td>
+<td>可以，并且支持https。</td>
+</tr>
+<tr>
+<td>可以用作商业用途吗？</td>
+<td>GitHub Pages不适用于或不允许用作免费的网络托管服务来运行您的在线业务，电子商务网站或任何其他主要针对促进商业交易或提供商业软件即服务的网站（SaaS）</td>
+</tr>
+</tbody></table>
+<p>如果你要去七牛云使用对象存储服务的话，不妨使用我的👉<span class="exturl" data-url="aHR0cHM6Ly9wb3J0YWwucWluaXUuY29tL3NpZ251cD9jb2RlPTNsY3FweXJjNGR5NnE=">邀请链接<i class="fa fa-external-link-alt"></i></span>，那样我就会获得5 GB/月 CDN 免费下载流量等奖励👌</p>
+<h3 id="可能遇到的错误"><a href="#可能遇到的错误" class="headerlink" title="可能遇到的错误"></a>可能遇到的错误</h3><p>强制执行GitHub Pages的https，可能会遇到一些混合内容的问题。</p>
+<p>如果您为自己的网站启用了HTTPS，并且您网站的HTML仍然通过HTTP引用了图片，CSS或JavaScript，那么您的网站就会提供混合内容，并且您可能无法加载资源。提供混合内容也会降低您网站的安全性。</p>
+<p>要删除网站的混合内容，提高网站的安全性，并解决与加载混合内容相关的问题，修改网站的HTML文件并进行更改<code>http://</code>，<code>https://</code>以便通过HTTPS提供所有资源。</p>
+<p>更多详情👉<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vYXJ0aWNsZXMvc2VjdXJpbmcteW91ci1naXRodWItcGFnZXMtc2l0ZS13aXRoLWh0dHBzI3Jlc29sdmluZy1wcm9ibGVtcy13aXRoLW1peGVkLWNvbnRlbnQ=">入口<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>默认的主题感觉不是很好看的样子，但是别的主题就不一样啦！😁我选的是<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lpc3NuYW4vaGV4by10aGVtZS1uZXh0">NexT主题<i class="fa fa-external-link-alt"></i></span>，简洁美观、功能也算完善。这里附上官方的👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">主题库链接<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="站点文件配置"><a href="#站点文件配置" class="headerlink" title="站点文件配置"></a>站点文件配置</h3><p>可以先去看看👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbi5odG1s">官方文档<i class="fa fa-external-link-alt"></i></span>是怎么介绍的，然后可以参考参考我的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuNTJiZXNzLmNvbS96aGFuZGlhbi5odG1s">站点文件基本配置<i class="fa fa-external-link-alt"></i></span>，需要更多的操作，可以自己去Google看看呢！</p>
+<h3 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h3><p>没错，还是建议你先看NexT主题的👉<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tLw==">官方文档<i class="fa fa-external-link-alt"></i></span>，一定要养成这个好习惯！啥都不说了，把我的贴出来大家参考吧！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Theme Core Configuration Settings</span><br><span class="line"># See: https:&#x2F;&#x2F;theme-next.org&#x2F;docs&#x2F;theme-settings&#x2F;</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># 更新相关，参考：</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&#x2F;issues&#x2F;328</span><br><span class="line">override: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Site Information Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 站点图标直接去 https:&#x2F;&#x2F;realfavicongenerator.net 下载</span><br><span class="line"># 建议放在 hexo-site&#x2F;source&#x2F;images&#x2F; 里（没有自己建）</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon-16x16-dog.png</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon-32x32-dog.png</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;logo.svg</span><br><span class="line"># 修改图片名字保持一致即可！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rss: &#x2F;atom.xml</span><br><span class="line"></span><br><span class="line">footer:		# 页脚配置</span><br><span class="line">  since: 2018   # 这里填入你的建站年份</span><br><span class="line"></span><br><span class="line">  icon:</span><br><span class="line">    # 年份后面的图标，为 Font Awesome 图标</span><br><span class="line">	# 去挑一个吧！ https:&#x2F;&#x2F;fontawesome.com&#x2F;v4.7.0&#x2F;</span><br><span class="line">    name: fas fa-heartbeat	  # 图标名字</span><br><span class="line">    animated: true		  # 让你的图标跳动起来！</span><br><span class="line">    color: &quot;#ff0000&quot;      #看到我博客页脚的跳动着的红色爱心了吗？</span><br><span class="line">  copyright:</span><br><span class="line">  # -------------------------------------------------------------</span><br><span class="line">  powered:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 你不想页脚显示 由 Hexo 强力驱动 v3.8.0，可以关闭！</span><br><span class="line">  theme:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 同理，你不想页脚显示 主题 – NexT.Muse v7.1.0，可以关闭！</span><br><span class="line">    </span><br><span class="line">    beian:</span><br><span class="line">    enable: false</span><br><span class="line">    icp: </span><br><span class="line">    # 同理，如果你有备案信息，也可以放在这里</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># SEO Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">canonical: true</span><br><span class="line"></span><br><span class="line">seo: false</span><br><span class="line"></span><br><span class="line"># If true, will add site-subtitle to index page, added in main hexo config.</span><br><span class="line"># subtitle: Subtitle</span><br><span class="line">index_with_subtitle: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Menu Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 菜单设置 || 菜单图标设置（图标上面说了，不重复）</span><br><span class="line"># 项目换行可以更改显示顺序</span><br><span class="line"># 如果这个项前会显示 .menu</span><br><span class="line"># 解决方法：编辑 ~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;languages 下的相应文件</span><br><span class="line"># 比如添加一个「留言」菜单，站点配置文件的 language 是 zh-CN</span><br><span class="line"># 则编辑 zh-CN.yml，在 menu: 项内添加一行 留言: 留言</span><br><span class="line"># 注意空格，且符号 : 为英文字符！</span><br><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  books: &#x2F;books&#x2F; || book  </span><br><span class="line">  movies: &#x2F;movies&#x2F; || video-camera  </span><br><span class="line">  games: &#x2F;games&#x2F; || gamepad</span><br><span class="line"></span><br><span class="line"># Enable&#x2F;Disable menu icons.</span><br><span class="line"># 是否开启菜单图标</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 设计板式，都长啥样，去 README 里面的链接里看看</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next#live-preview</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">site_state: true</span><br><span class="line"></span><br><span class="line"># 侧栏社交链接设置，与上面菜单差不多，要生效记得把前面的 # 去掉</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;besscroft || github</span><br><span class="line">  E-Mail: mailto:631908942@gmail.com || envelope</span><br><span class="line">  </span><br><span class="line"># 侧栏社交链接图标设置</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  icons_only: false</span><br><span class="line">  transition: false</span><br><span class="line">  </span><br><span class="line"># 侧栏友链设置</span><br><span class="line">links_icon: globe</span><br><span class="line">links_title: 友♂链</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">  关于此博客: https:&#x2F;&#x2F;blog.52bess.com&#x2F;about&#x2F;</span><br><span class="line">  </span><br><span class="line">avatar:</span><br><span class="line"> # 侧栏头像设置</span><br><span class="line">  url: https:&#x2F;&#x2F;*****.com&#x2F;avatar.png</span><br><span class="line">  rounded: false</span><br><span class="line">  opacity: 1</span><br><span class="line">  rotated: false</span><br><span class="line">  </span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  number: true</span><br><span class="line"></span><br><span class="line">  wrap: false</span><br><span class="line"># 开启后可能要在 custom.styl 里加代码</span><br><span class="line">  max_depth: 6</span><br><span class="line">  </span><br><span class="line">sidebar:</span><br><span class="line">  # 侧栏的位置，left或right</span><br><span class="line">  position: left</span><br><span class="line">  </span><br><span class="line">  display: post   # 样式我的是默认的post</span><br><span class="line">  # 只对 Pisces 和 Gemini 设计版式有效！</span><br><span class="line">  offset: 12</span><br><span class="line">  # 只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  onmobile: false</span><br><span class="line">  # 移动端显示侧栏，只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  dimmer: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Post Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 点击 [Read More]，页面自动滚动到 &lt;!-- more --&gt; 标记处</span><br><span class="line">scroll_to_more: false</span><br><span class="line"></span><br><span class="line"># 用 cookies 保存浏览的位置信息，意味着重新打开这个页面后</span><br><span class="line"># 页面就会自动滚动到上次的位置，除非读者清理浏览器 cookies</span><br><span class="line">save_scroll: false</span><br><span class="line"></span><br><span class="line"># 将每篇文章 Front-matter 里 description 的文字作为页面显示的文章摘要</span><br><span class="line">excerpt_description: false</span><br><span class="line"></span><br><span class="line"># 按字数自动加入 [Read More]，不建议！</span><br><span class="line"># 建议在文章中加入 &lt;!-- more --&gt;</span><br><span class="line"># 自定义 [Read More] 按钮之前要显示的内容！</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line"># 文章顶部显示的文章元数据设置</span><br><span class="line">post_meta:</span><br><span class="line">  item_text: true # 显示文字说明</span><br><span class="line">  created_at: true # 显示文章创建时间</span><br><span class="line">  updated_at:</span><br><span class="line">    enable: true # 隐藏文章修改时间</span><br><span class="line">    another_day: true # 只有当修改时间和创建时间不是同一天的时候才显示</span><br><span class="line">  categories: true # 隐藏分类信息</span><br><span class="line"></span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;willin&#x2F;hexo-wordcount</span><br><span class="line"># 显示统计字数和估计阅读时长</span><br><span class="line"># 注意：这个要安装插件，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-wordcount --save</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line"></span><br><span class="line"># Wechat Subscriber</span><br><span class="line">wechat_subscriber:</span><br><span class="line">  enable: true</span><br><span class="line">  qcode: &#x2F;uploads&#x2F;wechat-qcode.jpg</span><br><span class="line">  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</span><br><span class="line">  </span><br><span class="line"># Reward</span><br><span class="line">reward:</span><br><span class="line">  wechatpay: &#x2F;images&#x2F;wechatpay.jpg</span><br><span class="line">  </span><br><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  # enable: false</span><br><span class="line">  # license: CC BY-NC-SA 3.0</span><br><span class="line">  # license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br><span class="line">  # 版权信息</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Misc Theme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 移动端把页面两边留白去除</span><br><span class="line"># Reduce padding &#x2F; margin indents on devices with narrow width.</span><br><span class="line">mobile_layout_economy: false</span><br><span class="line"></span><br><span class="line"># Android 上 Chrome 浏览器顶部颜色设置</span><br><span class="line">android_chrome_color: &quot;#222&quot;</span><br><span class="line"># Android 端 QQ浏览器，很多配置都无法显示出来。。。</span><br><span class="line"></span><br><span class="line"># Custom Logo</span><br><span class="line"># Do not support Scheme Mist currently.</span><br><span class="line">custom_logo:</span><br><span class="line">  enable: false</span><br><span class="line">  image: #&#x2F;uploads&#x2F;custom-logo.jpg</span><br><span class="line">  </span><br><span class="line"># Available value:</span><br><span class="line">#    normal | night | night eighties | night blue | night bright</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;chriskempson&#x2F;tomorrow-theme</span><br><span class="line"># 代码高亮主题设置</span><br><span class="line"># 都长啥样自己点开上面的链接查看</span><br><span class="line">highlight_theme: normal</span><br><span class="line"></span><br><span class="line"># 字体设置</span><br><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # 外链字体库地址，例如 &#x2F;&#x2F;fonts.googleapis.com (默认值)</span><br><span class="line">  host: https:&#x2F;&#x2F;fonts.loli.net</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for &lt;code&gt; and code blocks.</span><br><span class="line">  codes:</span><br><span class="line">    external: true</span><br><span class="line">    family:</span><br><span class="line">    size:</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Third Party Services Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Math Equations Render Support</span><br><span class="line">math:</span><br><span class="line">  enable: false</span><br><span class="line">  per_page: true</span><br><span class="line"></span><br><span class="line">  engine: mathjax</span><br><span class="line">  #engine: katex</span><br><span class="line"></span><br><span class="line">  mathjax:</span><br><span class="line">    cdn: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@2.7.1&#x2F;MathJax.js?config&#x3D;TeX-AMS-MML_HTMLorMML</span><br><span class="line"> # 这一大串都是默认的，还有一些不列举了，感觉会水贴</span><br><span class="line"> </span><br><span class="line"># Han Support docs: https:&#x2F;&#x2F;hanzi.pro&#x2F;</span><br><span class="line"># 汉字标准格式，没用过暂时不了解</span><br><span class="line">han: false</span><br><span class="line"></span><br><span class="line"># 评论系统，当然id和key我就不提供了，这个可以自己去注册</span><br><span class="line"># leancloud网址：https:&#x2F;&#x2F;leancloud.cn&#x2F;dashboard&#x2F;login.html#&#x2F;signup</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否开启</span><br><span class="line">  appid:  # 你的leancloud应用appid</span><br><span class="line">  appkey:  # 你的leancloud应用appkey</span><br><span class="line">  notify: false # mail notifier, See: https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: true </span><br><span class="line">  placeholder: 说点儿什么吧o(*￣▽￣*)o </span><br><span class="line">  avatar: mm </span><br><span class="line">  guest_info: nick,mail,link r</span><br><span class="line">  pageSize: 10 </span><br><span class="line">  visitor: false </span><br><span class="line">  comment_count: true </span><br><span class="line"></span><br><span class="line"># 不蒜子统计，用于在页脚显示总访客数和总浏览量，将 false 改为 true 就能直接使用</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br><span class="line"></span><br><span class="line"># 要安装插件才能使用，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-generator-searchdb --save</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Tags Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 主题的标签样式，有 simple、note、label、tabs 四种</span><br><span class="line">note:</span><br><span class="line">  style: simple</span><br><span class="line">  icons: false</span><br><span class="line">  border_radius: 3</span><br><span class="line">  light_bg_offset: 0</span><br><span class="line">  </span><br><span class="line"># 标签</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: false</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br><span class="line">  </span><br><span class="line"># Use velocity to animate everything.</span><br><span class="line">motion:</span><br><span class="line">  enable: true</span><br><span class="line">  async: false</span><br><span class="line">  transition:</span><br><span class="line">    post_block: fadeIn</span><br><span class="line">    post_header: slideDownIn</span><br><span class="line">    post_body: slideDownIn</span><br><span class="line">    coll_header: slideLeftIn</span><br><span class="line">    sidebar: slideUpIn</span><br><span class="line"></span><br><span class="line"># 动态背景，但是我觉得放一张好看的图片更好</span><br><span class="line">canvas_nest:</span><br><span class="line">  enable: false</span><br><span class="line">  onmobile: true # display on mobile or not</span><br><span class="line">  color: &#39;0,0,255&#39; # RGB values, use &#39;,&#39; to separate</span><br><span class="line">  opacity: 0.5 # the opacity of line: 0~1</span><br><span class="line">  zIndex: -1 # z-index property of the background</span><br><span class="line">  count: 99 # the number of lines</span><br><span class="line"># JavaScript 3D library.</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-three</span><br><span class="line"># three_waves</span><br><span class="line">three_waves: false</span><br><span class="line"># canvas_lines</span><br><span class="line">canvas_lines: false</span><br><span class="line"># canvas_sphere</span><br><span class="line">canvas_sphere: false</span><br><span class="line"></span><br><span class="line">vendors:</span><br><span class="line">  # Internal path prefix. Please do not edit it.</span><br><span class="line">  _internal: lib</span><br><span class="line">  # 这个下面的东西就不贴出来了，建议大家按需使用，同时找一个好一点的CDN，不然速度感人啊！！！</span><br><span class="line">  </span><br><span class="line"># Assets</span><br><span class="line">css: css</span><br><span class="line">js: js</span><br><span class="line">images: images</span><br><span class="line"></span><br><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: </span><br><span class="line"></span><br><span class="line">nav:</span><br><span class="line">  home: &#x2F;</span><br><span class="line">  about: &#x2F;about</span><br><span class="line">  tags: &#x2F;tags</span><br><span class="line">  categories: &#x2F;categories</span><br><span class="line"></span><br><span class="line">cache:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># window woblle</span><br><span class="line">wobble:</span><br><span class="line">  enable: true  # 是否开启边缘波动效果</span><br><span class="line">  radius: 50  # 波动半径</span><br><span class="line">  sidebar: true  # 开启侧边栏边缘摆动</span><br><span class="line">  header: true  # 开启头部边缘摆动</span><br><span class="line">  footer: true  # 开启脚部边缘摆动</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># typing effect</span><br><span class="line">typing_effect:</span><br><span class="line">  colorful: true  # 礼花特效</span><br><span class="line">  shake: false  # 震动特效</span><br><span class="line">  </span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line">  </span><br><span class="line"># Theme version</span><br><span class="line">version: 7.1.0</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义网页布局"><a href="#自定义网页布局" class="headerlink" title="自定义网页布局"></a>自定义网页布局</h2><p>我觉得这个对于学过前端三🗡客的同学们来说还是比较简单的，不做多解释。但是对于没学的同学，强烈建议去看看这篇大佬的文章👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuY2R1eXpoLmNvbS9oZXhvLXNldHRpbmdzLTMv">这里<i class="fa fa-external-link-alt"></i></span>，看完之后，你基本就明白在哪个文件修改了，一些基本的步骤也能掌握！</p>
+<p>主要是修改<code>/blog/themes/next/source/css/_custom/custom.styl</code>，那么数据去哪里找呢？当然是浏览器按F12进行调试啊。如果是计算机专业，期末做过作品的你，没少受过折磨吧？</p>
+<p><code>hexo s</code>后可以直接本地调试，也就是更改文件保存后，Hexo 后台会自动重新渲染文件，所以只要稍等片刻，浏览器刷新一下就能看到效果。</p>
+<p>我建议你使用Google浏览器进行调试，可以先看看，嗯~ o(<em>￣▽￣</em>)o，没错👉<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy8=">Google 开发者工具<i class="fa fa-external-link-alt"></i></span>，记得给文档5颗星星支持一下下！</p>
+<h2 id="自定义鼠标点击效果"><a href="#自定义鼠标点击效果" class="headerlink" title="自定义鼠标点击效果"></a>自定义鼠标点击效果</h2><h3 id="爱心效果"><a href="#爱心效果" class="headerlink" title="爱心效果"></a>爱心效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>clicklove.js</code>，并添加如下代码</p>
+<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/clicklove.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a>代码过长，在文章里面不太好排版，毕竟不是IDE，所以点击之后复制即可！</p>
+<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小心心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字体效果"><a href="#字体效果" class="headerlink" title="字体效果"></a>字体效果</h3><p>嗯，我们以社会主义核心价值观为例，当然，实际的使用场景，也可以改成别的。</p>
+<p>在<code>/themes/next/source/js/src</code>新建文件<code>click_show_text.js</code>，并添加如下代码</p>
+<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/click_show_text.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
+<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--单击显示文字--&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;click_show_text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="烟花爆炸效果"><a href="#烟花爆炸效果" class="headerlink" title="烟花爆炸效果"></a>烟花爆炸效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>fireworks.js</code>，并添加如下代码</p>
+<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/fireworks.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
+<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">&lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加文章结束语"><a href="#添加文章结束语" class="headerlink" title="添加文章结束语"></a>添加文章结束语</h2><p>在<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件，添加代码至该文件中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class&#x3D;&quot;fa fa-paw&quot;&gt;&lt;&#x2F;i&gt;感谢您的阅读-------------&lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>大小自己看着调整，毕竟每个人喜欢的不一样。</p>
+<p>打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code>后，<code>post-footer</code>前，添加下面内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include &#39;passage-end-tag.swig&#39; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>打开主题配置文件<code>_config.yml</code>,在末尾添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置文章背景"><a href="#设置文章背景" class="headerlink" title="设置文章背景"></a>设置文章背景</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*设置博文背景*&#x2F;</span><br><span class="line">.main-inner &#123;</span><br><span class="line">    background: #fff;</span><br><span class="line">    opacity: 0.9;</span><br></pre></td></tr></table></figure>
+
+<p>background后为rgb颜色代码，百度来一个rgb色值粘贴即可替换博文背景颜色（替换了也很丑）<br>opacity后数值为博文背景透明度，可设置0.0-1.0数值，值越小透明度越高。</p>
+<h2 id="为主页文章添加阴影效果"><a href="#为主页文章添加阴影效果" class="headerlink" title="为主页文章添加阴影效果"></a>为主页文章添加阴影效果</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 主页文章添加阴影效果</span><br><span class="line">.post &#123;</span><br><span class="line">  background: #fff;</span><br><span class="line">  opacity: 1;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>background和上面设置文章背景一样，为文章背景颜色；opacity透明度；margin-top上边距；margin-bottom下边距；padding框间距；webkit-box-shadow和moz-box-shadow为阴影长宽设置。</p>
+<h2 id="后续更新中。。。"><a href="#后续更新中。。。" class="headerlink" title="后续更新中。。。"></a>后续更新中。。。</h2><h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>感谢<code>reuixiy</code>大佬的👉<span class="exturl" data-url="aHR0cHM6Ly9yZXVpeGl5LmdpdGh1Yi5pby90ZWNobm9sb2d5L2NvbXB1dGVyL2NvbXB1dGVyLWFpZGVkLWFydC8yMDE3LzA2LzA5L2hleG8tbmV4dC1vcHRpbWl6YXRpb24uaHRtbA==">这篇文章<i class="fa fa-external-link-alt"></i></span>，在此基础上完善了一些，也删除了一些，毕竟版本也有些许区别了。学习到了很多，同时结合我自己的思路写了这篇文章！</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>个性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愉快的五一假期</title>
+    <url>/posts/2019/wuyi.html</url>
+    <content><![CDATA[<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>这篇文章，是在五一假期结束之后写的，毕竟五一还是有点忙的！抽了2天时间来重构Hexo的代码，解决了很多未知的问题，每天都忙到凌晨，相信有过共同经历的人会明白的🤣总会有些花里胡哨的瑕疵，反正我是忍不了。😅</p>
+<a id="more"></a>
+
+<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>我原先是采取的<code>GitHub</code>+<code>coding</code>方案，后来删掉了<code>coding</code>的仓库，只保留了<code>GitHub Pages</code>。最主要的还是用不习惯，虽然在某些地区访问的话，速度会更快。但是想必大多数用<code>Hexo</code>搭建博客，而且托管在<code>GitHub</code>的同学，是不在意只有少部分人来访博客的。因为需要大量的人访问，或者有这种需求的人，都会买云服务器。</p>
+<p>正好<code>coding</code>的仓库空出来了，我就把<code>GitHub</code>的先放着，在<code>coding</code>上从头开始搭建、调试。等一切准备好了之后，在推送到<code>GitHub</code>上来，这样也不容易出问题。</p>
+<h3 id="煎熬的过程"><a href="#煎熬的过程" class="headerlink" title="煎熬的过程"></a>煎熬的过程</h3><p>环境在电脑上已经有了，于是到<code>G</code>盘创建了一个新文件夹，用于<del>安装</del>初始化<code>Hexo</code>，然后安装推送插件之后直接推送到coding上。确定搭建完成了最基本的之后，就在本地慢慢调试。主题依旧用<code>NexT</code>主题，只不过换成了<code>NexT.Muse</code>，然后照着几个不同的、比较知名的博客的样式，做出了一些修改，也就是你们现在看到的样子。虽然不是很漂亮，但是也够看了😁都说程序猿的审美不行，我觉得程序猿们要大胆的说：不！给他们看看，我们不只有格子衫😎</p>
+<div class="note warning"><p>注意一定要按时备份！</p></div>
+
+<p>设计整个页面的过程，是基于chrome的，一般来说现在的新浏览器都算是支持比较好的。虽然个人比较喜欢后端，但至少前端知识好歹是知道一点的，也不至于无从上手🤣许多CSS样式，都是放在了<code>custom.styl</code>文件中。经过了这次折磨之后，现在可算是知道了以前期末的时候，都是老师留情了的。没有个几百上千行的CSS代码，怎么好意思及格呢。。。</p>
+<p>在快完成的时候，也是遇到了一些小挫折的。。。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi001.png" alt></p>
+<p>嗯~ o(<em>￣▽￣</em>)o，控制台不报错，压根都不知道问题出在哪儿了。去Google查了查，重新安装了所有的相关依赖包也依旧没有解决问题。没错，绝望的我，又重新开始了一遍，但是因为相关文件都已经配置好了，基本上就是复制粘贴了一遍。最后熬了2天夜，终于还是弄完了。</p>
+<p>对于想直接要博客的整份源码的同学，我只能说，没有人会给的啦，原因很简单！这不应该是一个索取和给予的过程，而应该是一个讨论交流的过程。也就是说，你问我博客的任何东西是怎么实现的，我都会告诉你(后面也会抽时间写相关的文章)，但是你直接要我当然不会给啊，毕竟也是自己的心血！</p>
+<p>博客重构前后，源码从原先的200多M变成了40多M(包含了public文件夹)，但是东西一样不少，博客反而更美观，功能更强大。。。这个问题一直没想通，这多出来的100多M到底是啥！</p>
+<h2 id="爱你三千遍"><a href="#爱你三千遍" class="headerlink" title="爱你三千遍"></a>爱你三千遍</h2><p>五一去影院看了<span class="exturl" data-url="aHR0cHM6Ly9tb3ZpZS5kb3ViYW4uY29tL3N1YmplY3QvMjYxMDA5NTgvP2Zyb209c2hvd2luZw==">《复仇者联盟4》<i class="fa fa-external-link-alt"></i></span>，不知道为啥，竟然有点心疼灭霸😥最好笑的镜头</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi002.jpg" alt></p>
+<h2 id="♂friend"><a href="#♂friend" class="headerlink" title="♂friend"></a>♂friend</h2><p>五一还去了同学家吃饭，来了一些初中同学，大家都在聊以前初中时的沙雕欢乐的事情（。＾▽＾）</p>
+<p>嗯~ o(<em>￣▽￣</em>)o至于这个菜嘛，虽然我没参与，但是是大家一起努力弄出来的：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi003.png" alt></p>
+<p>哈哈，卖相不好，味道倒是还凑合！越长越大，就越是让人怀恋以前读书时的美(sha)好(diao)日子呢！</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -1999,37 +2030,6 @@
       </tags>
   </entry>
   <entry>
-    <title>愉快的五一假期</title>
-    <url>/posts/2019/wuyi.html</url>
-    <content><![CDATA[<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>这篇文章，是在五一假期结束之后写的，毕竟五一还是有点忙的！抽了2天时间来重构Hexo的代码，解决了很多未知的问题，每天都忙到凌晨，相信有过共同经历的人会明白的🤣总会有些花里胡哨的瑕疵，反正我是忍不了。😅</p>
-<a id="more"></a>
-
-<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>我原先是采取的<code>GitHub</code>+<code>coding</code>方案，后来删掉了<code>coding</code>的仓库，只保留了<code>GitHub Pages</code>。最主要的还是用不习惯，虽然在某些地区访问的话，速度会更快。但是想必大多数用<code>Hexo</code>搭建博客，而且托管在<code>GitHub</code>的同学，是不在意只有少部分人来访博客的。因为需要大量的人访问，或者有这种需求的人，都会买云服务器。</p>
-<p>正好<code>coding</code>的仓库空出来了，我就把<code>GitHub</code>的先放着，在<code>coding</code>上从头开始搭建、调试。等一切准备好了之后，在推送到<code>GitHub</code>上来，这样也不容易出问题。</p>
-<h3 id="煎熬的过程"><a href="#煎熬的过程" class="headerlink" title="煎熬的过程"></a>煎熬的过程</h3><p>环境在电脑上已经有了，于是到<code>G</code>盘创建了一个新文件夹，用于<del>安装</del>初始化<code>Hexo</code>，然后安装推送插件之后直接推送到coding上。确定搭建完成了最基本的之后，就在本地慢慢调试。主题依旧用<code>NexT</code>主题，只不过换成了<code>NexT.Muse</code>，然后照着几个不同的、比较知名的博客的样式，做出了一些修改，也就是你们现在看到的样子。虽然不是很漂亮，但是也够看了😁都说程序猿的审美不行，我觉得程序猿们要大胆的说：不！给他们看看，我们不只有格子衫😎</p>
-<div class="note warning"><p>注意一定要按时备份！</p></div>
-
-<p>设计整个页面的过程，是基于chrome的，一般来说现在的新浏览器都算是支持比较好的。虽然个人比较喜欢后端，但至少前端知识好歹是知道一点的，也不至于无从上手🤣许多CSS样式，都是放在了<code>custom.styl</code>文件中。经过了这次折磨之后，现在可算是知道了以前期末的时候，都是老师留情了的。没有个几百上千行的CSS代码，怎么好意思及格呢。。。</p>
-<p>在快完成的时候，也是遇到了一些小挫折的。。。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi001.png" alt></p>
-<p>嗯~ o(<em>￣▽￣</em>)o，控制台不报错，压根都不知道问题出在哪儿了。去Google查了查，重新安装了所有的相关依赖包也依旧没有解决问题。没错，绝望的我，又重新开始了一遍，但是因为相关文件都已经配置好了，基本上就是复制粘贴了一遍。最后熬了2天夜，终于还是弄完了。</p>
-<p>对于想直接要博客的整份源码的同学，我只能说，没有人会给的啦，原因很简单！这不应该是一个索取和给予的过程，而应该是一个讨论交流的过程。也就是说，你问我博客的任何东西是怎么实现的，我都会告诉你(后面也会抽时间写相关的文章)，但是你直接要我当然不会给啊，毕竟也是自己的心血！</p>
-<p>博客重构前后，源码从原先的200多M变成了40多M(包含了public文件夹)，但是东西一样不少，博客反而更美观，功能更强大。。。这个问题一直没想通，这多出来的100多M到底是啥！</p>
-<h2 id="爱你三千遍"><a href="#爱你三千遍" class="headerlink" title="爱你三千遍"></a>爱你三千遍</h2><p>五一去影院看了<span class="exturl" data-url="aHR0cHM6Ly9tb3ZpZS5kb3ViYW4uY29tL3N1YmplY3QvMjYxMDA5NTgvP2Zyb209c2hvd2luZw==">《复仇者联盟4》<i class="fa fa-external-link-alt"></i></span>，不知道为啥，竟然有点心疼灭霸😥最好笑的镜头</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi002.jpg" alt></p>
-<h2 id="♂friend"><a href="#♂friend" class="headerlink" title="♂friend"></a>♂friend</h2><p>五一还去了同学家吃饭，来了一些初中同学，大家都在聊以前初中时的沙雕欢乐的事情（。＾▽＾）</p>
-<p>嗯~ o(<em>￣▽￣</em>)o至于这个菜嘛，虽然我没参与，但是是大家一起努力弄出来的：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi003.png" alt></p>
-<p>哈哈，卖相不好，味道倒是还凑合！越长越大，就越是让人怀恋以前读书时的美(sha)好(diao)日子呢！</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GPG与在GitHub上使用GPG</title>
     <url>/posts/2020/gpg.html</url>
     <content><![CDATA[<h2 id="GPG与在GitHub上使用GPG"><a href="#GPG与在GitHub上使用GPG" class="headerlink" title="GPG与在GitHub上使用GPG"></a>GPG与在GitHub上使用GPG</h2><h3 id="基本过程"><a href="#基本过程" class="headerlink" title="基本过程"></a>基本过程</h3><ul>
@@ -2106,100 +2106,9 @@
         <category>GitHub</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>Git</tag>
+        <tag>GitHub</tag>
         <tag>GPG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
-    <url>/posts/2020/lighthouse.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
-<a id="more"></a>
-
-<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
-<li>这里是文档上的介绍，让我们先了解下！</li>
-</ul>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
-<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
-<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
-<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
-<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
-<ul>
-<li>更新系统和软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装一些软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装BT面板</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
-<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
-<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
-<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
-<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
-<p>然后等待安装就行了。</p>
-<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
-<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
-<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
-<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
-<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
-<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
-<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
-<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
-<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
-<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
-<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
-<p>点击【现在就开始】，进入下一步！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
-<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
-<p>进行安装！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
-<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
-<p>成功之后，登录就能进到后台啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
-<p>然后就自己去探索功能吧！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
-<p>至此，动态网站已经搭建完成！</p>
-<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
-<p>主要的应用场景：</p>
-<ul>
-<li>网站搭建</li>
-<li>Web 应用服务</li>
-<li>快速搭建开发测试环境</li>
-<li>云端学习环境</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>玩转腾讯云</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -2532,6 +2441,97 @@
       </tags>
   </entry>
   <entry>
+    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
+    <url>/posts/2020/lighthouse.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
+<a id="more"></a>
+
+<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
+<li>这里是文档上的介绍，让我们先了解下！</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
+<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
+<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
+<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
+<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
+<ul>
+<li>更新系统和软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装一些软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装BT面板</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
+<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
+<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
+<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
+<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
+<p>然后等待安装就行了。</p>
+<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
+<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
+<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
+<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
+<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
+<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
+<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
+<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
+<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
+<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
+<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
+<p>点击【现在就开始】，进入下一步！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
+<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
+<p>进行安装！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
+<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
+<p>成功之后，登录就能进到后台啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
+<p>然后就自己去探索功能吧！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
+<p>至此，动态网站已经搭建完成！</p>
+<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
+<p>主要的应用场景：</p>
+<ul>
+<li>网站搭建</li>
+<li>Web 应用服务</li>
+<li>快速搭建开发测试环境</li>
+<li>云端学习环境</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>玩转腾讯云</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我和我的博客的过去、现在与未来</title>
     <url>/posts/2020/newblog.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>博客原来的样式，是去年五一晚上熬夜搞出来的，当时觉得蛮漂亮，但是看久了，就觉得乏了！但这还不是我要重构的原因，博客代码冗余、加载速度慢、载入资源多等等，迫使我对整个博客进行了重构和魔改！</p>
@@ -2558,6 +2558,73 @@
         <tag>Hexo</tag>
         <tag>Blog</tag>
         <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再见，我的2020</title>
+    <url>/posts/2021/end2020hello2021.html</url>
+    <content><![CDATA[<center><B>非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</B></center>
+
+<a id="more"></a>
+
+<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>没想到2020就这么平凡的结束了，但这也是不平凡的一年。</p>
+<p>先看看去年的计划：</p>
+<ul>
+<li><input checked disabled type="checkbox"> 学好Java，以及相关的一些技术。（不知道“好”怎么定义，但今年确实技术提升不少）</li>
+<li><input disabled type="checkbox"> 找一份自己喜欢的编程工作！</li>
+<li><input disabled type="checkbox"> 少玩游戏少熬夜（游戏确实玩的少了，但是熬夜真没办法）</li>
+<li><input disabled type="checkbox"> 坚持健身。</li>
+<li><input checked disabled type="checkbox"> 继续坚持做笔记。（虽然没怎么发博客，但是笔记做得还是非常丰富的）</li>
+<li><input checked disabled type="checkbox"> 精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
+<li><input disabled type="checkbox"> 写一款自己的主题或web项目（一言难尽）</li>
+<li><input checked disabled type="checkbox"> 积极的拥抱开源。</li>
+<li><input checked disabled type="checkbox"> 学习或了解一项新技术</li>
+<li><input checked disabled type="checkbox"> 成立自己的小团队，或者找到一群有共同理想目标的人</li>
+<li><input disabled type="checkbox"> 完成以上所有的计划，最好能脱单！</li>
+</ul>
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>不可否认，这一年，我的编程水平确实提升不少，但是，这仅仅是<code>能力的渐进</code>，而非<code>能力的跃迁</code>。也就是说，我花了这么多时间去学习，这只是应有的收获，但它还不够！首先，技术确实可以应对我目前在公司日常开发的大部分场景，但是却无法形成体系。怎么说呢，一个项目/软件的整个生命周期，我无法全部兼顾，尤其是技术这一块，有不少自己的短板。很多时候，感觉自己只是个API调用工程师，虽然是在写业务/功能，但是很多时候会思考：</p>
+<ul>
+<li>我为什么要用这个东西？</li>
+<li>它是怎么实现的？</li>
+<li>有没有更好的解决方案？</li>
+<li>如果断网/不看文档，我还能不能写出来？</li>
+<li>真正碰到困难了，没有套路可以照搬，我该怎么办？</li>
+</ul>
+<blockquote>
+<p>所以，我希望2021能沉下心来多读书，避免直接照搬别人的答案，而应该结合书本中成体系的知识，通过自己的独立思考得出自己的答案。<strong>对编程保持足够的热情、足够的动力、足够的耐心，最重要的是坚持下去！</strong></p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>先结合工作聊聊，在工作中，跟不少同事平常的聊天可以看出不少东西。虽然他们的技术知识面不一定有我的广（脸红😛），甚至很多东西都仅仅是听说过而已。但是呢，做项目的时候，总是会有一些刁钻的问题和让人摸不着头脑的bug，这时我自己尝试的时间过多的话，就会去问，避免项目进度停滞。而他们总是会说：“小伙子没事，你还年轻”，来避免尴尬。但是这确实是我经验不足，技术研究不够深入，不能很好的运用到项目中。所以我就会想，是不是我以前一直尝试的方向有些偏差。在过去，虽然我本身技术并不算好，但是也经常帮助朋友和同学解决问题，也许你能够猜到我为什么要这么做，因为你也可以这么做。</p>
+<blockquote>
+<p><code>工作年限</code>不等于<code>工作经验</code>，同理，<code>工作经验</code>也不能等于<code>综合能力</code>。</p>
+</blockquote>
+<p>再聊聊开源，我最喜欢的两个作者：<code>@Evan You</code>和<code>@DIYgod</code>，虽然没见过真人，对他们也了解不太多。但是透过他们的作品可以发现，<strong>他们总是在自己喜欢/擅长的领域，认真的在写代码，写到世界充满爱！</strong>也就是说，一名程序员，并不需要什么都懂，不求广但求精。至少对于现阶段的我来说打好基础，弄清原理才是最重要的。编程本身就是强耦合性的复杂领域，而越是依赖关系很复杂的领域，越是需要通过【系统性学习】才能搞定它。<strong>知人者智，自知者明；胜人者有力，自胜者强。</strong></p>
+<blockquote>
+<p>我今年遇到了一本书，叫《如何阅读一本书》，怎么说呢，确实有点相遇恨晚的感觉。</p>
+</blockquote>
+<h3 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h3><p>又到了立flag的时间了，希望2021能将这些小目标一个个完成💪</p>
+<ul>
+<li>Java，本职工作，可以针对集合、多线程、IO、jvm等作为切入点深入学习。</li>
+<li>深入学习Spring、SpringCloud、MySQL、Redis和Elasticsearch（看着有点多😅）。</li>
+<li>入坑Rust或Go。</li>
+<li>Vue/JavaScript/CSS的学习，起码得能写点有模有样的东西，虽然是Java程序员，但是前端不会点还是不太行。</li>
+<li>坚持锻炼身体（以跑步为主）。</li>
+<li>leetcode坚持刷题，希望不要碰到困难就停住了。</li>
+<li>不仅要有输入，也要有持续的输出。</li>
+<li>写一款自己的主题或web项目。</li>
+<li>成立一个小的开源开发团队，虽然技术目前不算好，但是一步一步走，总有一天会变好！</li>
+</ul>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
+<p>送大家一句话：任何一个傻瓜都能写出计算机可以理解的代码。唯有写出人类容易理解的代码，才是优秀的程序员。——马丁·福勒 (Martin Fowler)</p>
+</blockquote>
+<p>每个人都有自己的人生，我不必羡慕他人，只需要走好自己的路，希望以后的生活会越来越好！</p>
+<center><b>I shall rise oh well rise again and agian.</b></center>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	System.out.println(<span class="string">"你好，2021!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>年终总结</category>
+      </categories>
+      <tags>
+        <tag>年终总结</tag>
       </tags>
   </entry>
   <entry>
@@ -2736,73 +2803,6 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>再见，我的2020</title>
-    <url>/posts/2021/end2020hello2021.html</url>
-    <content><![CDATA[<center><B>非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</B></center>
-
-<a id="more"></a>
-
-<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>没想到2020就这么平凡的结束了，但这也是不平凡的一年。</p>
-<p>先看看去年的计划：</p>
-<ul>
-<li><input checked disabled type="checkbox"> 学好Java，以及相关的一些技术。（不知道“好”怎么定义，但今年确实技术提升不少）</li>
-<li><input disabled type="checkbox"> 找一份自己喜欢的编程工作！</li>
-<li><input disabled type="checkbox"> 少玩游戏少熬夜（游戏确实玩的少了，但是熬夜真没办法）</li>
-<li><input disabled type="checkbox"> 坚持健身。</li>
-<li><input checked disabled type="checkbox"> 继续坚持做笔记。（虽然没怎么发博客，但是笔记做得还是非常丰富的）</li>
-<li><input checked disabled type="checkbox"> 精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
-<li><input disabled type="checkbox"> 写一款自己的主题或web项目（一言难尽）</li>
-<li><input checked disabled type="checkbox"> 积极的拥抱开源。</li>
-<li><input checked disabled type="checkbox"> 学习或了解一项新技术</li>
-<li><input checked disabled type="checkbox"> 成立自己的小团队，或者找到一群有共同理想目标的人</li>
-<li><input disabled type="checkbox"> 完成以上所有的计划，最好能脱单！</li>
-</ul>
-<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>不可否认，这一年，我的编程水平确实提升不少，但是，这仅仅是<code>能力的渐进</code>，而非<code>能力的跃迁</code>。也就是说，我花了这么多时间去学习，这只是应有的收获，但它还不够！首先，技术确实可以应对我目前在公司日常开发的大部分场景，但是却无法形成体系。怎么说呢，一个项目/软件的整个生命周期，我无法全部兼顾，尤其是技术这一块，有不少自己的短板。很多时候，感觉自己只是个API调用工程师，虽然是在写业务/功能，但是很多时候会思考：</p>
-<ul>
-<li>我为什么要用这个东西？</li>
-<li>它是怎么实现的？</li>
-<li>有没有更好的解决方案？</li>
-<li>如果断网/不看文档，我还能不能写出来？</li>
-<li>真正碰到困难了，没有套路可以照搬，我该怎么办？</li>
-</ul>
-<blockquote>
-<p>所以，我希望2021能沉下心来多读书，避免直接照搬别人的答案，而应该结合书本中成体系的知识，通过自己的独立思考得出自己的答案。<strong>对编程保持足够的热情、足够的动力、足够的耐心，最重要的是坚持下去！</strong></p>
-</blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>先结合工作聊聊，在工作中，跟不少同事平常的聊天可以看出不少东西。虽然他们的技术知识面不一定有我的广（脸红😛），甚至很多东西都仅仅是听说过而已。但是呢，做项目的时候，总是会有一些刁钻的问题和让人摸不着头脑的bug，这时我自己尝试的时间过多的话，就会去问，避免项目进度停滞。而他们总是会说：“小伙子没事，你还年轻”，来避免尴尬。但是这确实是我经验不足，技术研究不够深入，不能很好的运用到项目中。所以我就会想，是不是我以前一直尝试的方向有些偏差。在过去，虽然我本身技术并不算好，但是也经常帮助朋友和同学解决问题，也许你能够猜到我为什么要这么做，因为你也可以这么做。</p>
-<blockquote>
-<p><code>工作年限</code>不等于<code>工作经验</code>，同理，<code>工作经验</code>也不能等于<code>综合能力</code>。</p>
-</blockquote>
-<p>再聊聊开源，我最喜欢的两个作者：<code>@Evan You</code>和<code>@DIYgod</code>，虽然没见过真人，对他们也了解不太多。但是透过他们的作品可以发现，<strong>他们总是在自己喜欢/擅长的领域，认真的在写代码，写到世界充满爱！</strong>也就是说，一名程序员，并不需要什么都懂，不求广但求精。至少对于现阶段的我来说打好基础，弄清原理才是最重要的。编程本身就是强耦合性的复杂领域，而越是依赖关系很复杂的领域，越是需要通过【系统性学习】才能搞定它。<strong>知人者智，自知者明；胜人者有力，自胜者强。</strong></p>
-<blockquote>
-<p>我今年遇到了一本书，叫《如何阅读一本书》，怎么说呢，确实有点相遇恨晚的感觉。</p>
-</blockquote>
-<h3 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h3><p>又到了立flag的时间了，希望2021能将这些小目标一个个完成💪</p>
-<ul>
-<li>Java，本职工作，可以针对集合、多线程、IO、jvm等作为切入点深入学习。</li>
-<li>深入学习Spring、SpringCloud、MySQL、Redis和Elasticsearch（看着有点多😅）。</li>
-<li>入坑Rust或Go。</li>
-<li>Vue/JavaScript/CSS的学习，起码得能写点有模有样的东西，虽然是Java程序员，但是前端不会点还是不太行。</li>
-<li>坚持锻炼身体（以跑步为主）。</li>
-<li>leetcode坚持刷题，希望不要碰到困难就停住了。</li>
-<li>不仅要有输入，也要有持续的输出。</li>
-<li>写一款自己的主题或web项目。</li>
-<li>成立一个小的开源开发团队，虽然技术目前不算好，但是一步一步走，总有一天会变好！</li>
-</ul>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
-<p>送大家一句话：任何一个傻瓜都能写出计算机可以理解的代码。唯有写出人类容易理解的代码，才是优秀的程序员。——马丁·福勒 (Martin Fowler)</p>
-</blockquote>
-<p>每个人都有自己的人生，我不必羡慕他人，只需要走好自己的路，希望以后的生活会越来越好！</p>
-<center><b>I shall rise oh well rise again and agian.</b></center>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	System.out.println(<span class="string">"你好，2020!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>年终总结</category>
-      </categories>
-      <tags>
-        <tag>年终总结</tag>
       </tags>
   </entry>
 </search>
