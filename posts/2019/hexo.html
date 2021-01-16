@@ -1,4 +1,626 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta name="generator" content="Hexo 4.2.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-24x24-astronaut.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-astronaut.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-astronaut.png"><link rel="mask-icon" href="/images/logo.svg" color="#222"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css"><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"blog.52bess.com",root:"/",scheme:"Mist",version:"7.8.0",exturl:!0,sidebar:{position:"left",display:"post",padding:18,offset:12,onmobile:!1},copycode:{enable:!0,show_result:!0,style:"mac"},back2top:{enable:!0,sidebar:!1,scrollpercent:!1},bookmark:{enable:!0,color:"#222",save:"auto"},fancybox:!0,lazyload:!1,pangu:!1,comments:{style:"tabs",active:null,storage:!0,lazyload:!1,nav:null},localsearch:{enable:!0,trigger:"auto",top_n_per_article:-1,unescape:!1,preload:!1},motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},path:"search.xml"}</script><script data-ad-client="ca-pub-1837014247459400" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><meta name="description" content="写在前面为什么网上这么多教程，我还要在这里写下一篇呢？主要是总结大家的经验和自己的操作过程，一来是方便自己看，二来是给大家提供一些参考。Google一下，你可以找到几乎所有你想看到的，但是能否为你带来实质性的解决方案，可能也是需要花时间的。而且，跟别人做一样的操作，可能就刚好是你出了问题。。。没错，说的就是我自己。写这篇文章，仅此以纪念从WordPress转到Hexo。"><meta property="og:type" content="article"><meta property="og:title" content="Hexo博客搭建"><meta property="og:url" content="https://blog.52bess.com/posts/2019/hexo.html"><meta property="og:site_name" content="Bess&#39;s Blog"><meta property="og:description" content="写在前面为什么网上这么多教程，我还要在这里写下一篇呢？主要是总结大家的经验和自己的操作过程，一来是方便自己看，二来是给大家提供一些参考。Google一下，你可以找到几乎所有你想看到的，但是能否为你带来实质性的解决方案，可能也是需要花时间的。而且，跟别人做一样的操作，可能就刚好是你出了问题。。。没错，说的就是我自己。写这篇文章，仅此以纪念从WordPress转到Hexo。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><meta property="article:published_time" content="2019-03-12T04:07:38.000Z"><meta property="article:modified_time" content="2020-03-22T13:37:40.652Z"><meta property="article:author" content="Bess Croft"><meta property="article:tag" content="Hexo"><meta property="article:tag" content="GitHub"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg"><link rel="canonical" href="https://blog.52bess.com/posts/2019/hexo.html"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0,lang:"zh-CN"}</script><title>Hexo博客搭建 | Bess's Blog</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript><link rel="alternate" href="/atom.xml" title="Bess's Blog" type="application/atom+xml"></head><body itemscope itemtype="http://schema.org/WebPage"><script type="text/javascript" src="/js/none.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/css/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/css/DPlayer.min.css"><script src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/DPlayer.min.js"></script><div class="container use-motion"><div class="headband"></div><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span><span class="toggle-line toggle-line-middle"></span><span class="toggle-line toggle-line-last"></span></div></div><div class="site-meta"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span><h1 class="site-title">Bess's Blog</h1><span class="logo-line-after"><i></i></span></a><p class="site-subtitle" itemprop="description">武汉加油！中国加油！</p></div><div class="site-nav-right"><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class="site-nav"><ul id="menu" class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i> 首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i> 标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i> 分类</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="link fa-fw"></i> 友链</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i> 归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i> 关于</a></li><li class="menu-item menu-item-books"><a href="/books/" rel="section"><i class="book fa-fw"></i> 读书</a></li><li class="menu-item menu-item-movies"><a href="/movies/" rel="section"><i class="video-camera fa-fw"></i> 电影</a></li><li class="menu-item menu-item-games"><a href="/games/" rel="section"><i class="gamepad fa-fw"></i> 游戏</a></li><li class="menu-item menu-item-photos"><a href="/photos/" rel="section"><i class="camera-retro fa-fw"></i> 美好时光</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i> 站点地图</a></li><li class="menu-item menu-item-search"><a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i> 搜索</a></li></ul></nav><div class="search-pop-overlay"><div class="popup search-popup"><div class="search-header"><span class="search-icon"><i class="fa fa-search"></i></span><div class="search-input-container"> <input autocomplete="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input"></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><div id="search-result"><div id="no-result"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div></div></div></div></header><div id="dplayer"></div><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span>0%</span></div><div class="reading-progress-bar"></div><a role="button" class="book-mark-link book-mark-link-fixed"></a> <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0 0 115 115 130 115 142 142 250 250 250 0Z"></path><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"></path><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4L133.7 101.6C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8Z" fill="currentColor" class="octo-body"></path></svg></span><main class="main"><div class="main-inner"><div class="content-wrap"><div class="content post posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://blog.52bess.com/posts/2019/hexo.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="https://www.52bess.com/uploads/avatar.png"><meta itemprop="name" content="Bess Croft"><meta itemprop="description" content="热爱网络技术和开源软件的极客"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="Bess's Blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> Hexo博客搭建</h1><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建时间：2019-03-12 12:07:38" itemprop="dateCreated datePublished" datetime="2019-03-12T12:07:38+08:00">2019-03-12</time></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-calendar-check"></i></span> <span class="post-meta-item-text">更新于</span> <time title="修改时间：2020-03-22 21:37:40" itemprop="dateModified" datetime="2020-03-22T21:37:40+08:00">2020-03-22</time></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-folder"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="far fa-comment"></i></span> <span class="post-meta-item-text">Valine：</span><a title="valine" href="/posts/2019/hexo.html#valine-comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/posts/2019/hexo.html" itemprop="commentCount"></span></a></span></div></header><div class="post-body" itemprop="articleBody"><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/h001.png" alt></p><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>为什么网上这么多教程，我还要在这里写下一篇呢？主要是总结大家的经验和自己的操作过程，一来是方便自己看，二来是给大家提供一些参考。Google一下，你可以找到几乎所有你想看到的，但是能否为你带来实质性的解决方案，可能也是需要花时间的。而且，跟别人做一样的操作，可能就刚好是你出了问题。。。没错，说的就是我自己。写这篇文章，仅此以纪念从WordPress转到Hexo。</p><a id="more"></a><h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><h3 id="适合哪些人呢？"><a href="#适合哪些人呢？" class="headerlink" title="适合哪些人呢？"></a>适合哪些人呢？</h3><ul><li>平常喜欢写作，尤其是Blog的人。有不少人通过Hexo发表文学类作品呢。</li><li>不害怕编程，且爱折腾的人</li><li>了解和能够使用版本控制Git和GitHub的人</li><li>熟悉基本的MarkDown语法，能够利用MarkDown和Typora写作的人</li></ul><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h4><ol><li><p><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>下载，并安装到您的计算机上。</p></li><li><p><span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS8=">Git<i class="fa fa-external-link-alt"></i></span>下载，并安装到您的计算机上。</p><p>不会下载安装？没关系，点击链接去它们的官网，有非常详细的安装教程。或者，我也可以抽时间写，但是感觉这样的文章质量并不高啊！</p></li></ol><h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>这时候我们需要利用npm来安装了。(直接打开Git Bash，或者任意位置鼠标右键选择打开)</p><p>运行如下命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>如果报错，出现</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! registry error parsing json</span><br></pre></td></tr></table></figure><p>的话，可能需要设置npm代理，执行如下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http:&#x2F;&#x2F;registry.cnpmjs.org</span><br></pre></td></tr></table></figure><p>然后删除刚才安装的npm目录，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo:command not found</span><br></pre></td></tr></table></figure><p>重新执行第一条命令安装Hexo，不过，这第一步都能报错，脸是有多黑啊！！！</p><h4 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h4><p>在命令行接着运行以下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;    &#x2F;&#x2F;初始化hexo文件夹,hexo会在目标文件夹建立网站所需要的所有文件</span><br><span class="line">$ cd &lt;folder&gt;      </span><br><span class="line">$ npm install    &#x2F;&#x2F;安装依赖包</span><br></pre></td></tr></table></figure><p>这里的<folder>是你自己指定的文件夹，比如说我的就是这样：</folder></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init G:hexo</span><br><span class="line">$ cd G:hexo</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure><p>这样说你应该更容易理解，这就相当于选择安装软件的位置。</p><h4 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h4><p>新建完成后，指定文件夹的目录如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure><p>在命令行执行如下命令，然后打开你的浏览器输入<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwL+WNs+WPr+afpeeci+OAgg==">http://localhost:4000/即可查看。<i class="fa fa-external-link-alt"></i></span></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g    #等同于hexo generate，生成静态文件到public文件夹</span><br><span class="line">hexo s    # 等同于hexo server，在本地服务器渲染运行</span><br></pre></td></tr></table></figure><p>到这一步，你的本地博客基本上就搭建起来了。我第一次搭建成功时，简直是兴奋的飞起了!</p><h4 id="注意事项详解"><a href="#注意事项详解" class="headerlink" title="注意事项详解"></a>注意事项详解</h4><ul><li>hexo相关命令均在<strong>站点目录</strong>下，用<strong>Git Bash</strong>运行。</li><li>_config.yml是站点的配置文件，用来存放网站的配置信息，可以在此配置大部分的参数。路径为：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;folder&gt;\_config.yml</span><br></pre></td></tr></table></figure><ul><li>也就是你的站点的根目录下。</li><li>还有个叫_config.yml的，是你的主题配置文件，千万别弄混了。路径为：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;folder&gt;\themes\&lt;主题文件夹&gt;\_config.yml</span><br></pre></td></tr></table></figure><p>​ 就存放在你的主题根目录下</p><ul><li>scaffolds是模板文件夹。当你新建文章的时候，Hexo 会根据 scaffold 来建立文件。</li><li>source是资源文件夹，是存放用户资源的地方。</li><li>themes，没错，就是存放主题的文件夹，今后你可能要无数次的打开它。</li></ul><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>将项目部署上去，你需要安装：<code>hexo-deployer-git</code>插件，不然会报错。在git运行如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h3 id="网站搭建实施方案"><a href="#网站搭建实施方案" class="headerlink" title="网站搭建实施方案"></a>网站搭建实施方案</h3><h4 id="GithubPages"><a href="#GithubPages" class="headerlink" title="GithubPages"></a>GithubPages</h4><ol><li><p>创建一个<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==">GitHub<i class="fa fa-external-link-alt"></i></span>账号，如果你有一个更好。</p></li><li><p>创建一个仓库，名字必须为：&lt;Github账号名称&gt;.github.io</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo001.png" alt></p><p>图中报错的细节就不要在意了，这个仓库只能创建一个，当时我创建的时候没有截图。为了方便理解，专门去打开了这个页面截了一张图。</p></li><li><p>将本地Hexo博客推送到GithubPages</p><p>3.1.安装hexo-deployer-git插件。在命令行（即Git Bash）运行以下命令即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>3.2.添加SSH Key</p><p>3.2.1.创建一个SSH Key。在命令行输入一下命令，密码为空，敲击三下回车：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure><p>3.2.2.把公钥添加到GitHub。复制密钥文件内容，路径形如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator(也就是你的账户名)\.ssh\id_rsa.pub</span><br></pre></td></tr></table></figure><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo002.png" alt></p><p>然后粘贴到<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvZ2luP3JldHVybl90bz1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZzZXR0aW5ncyUyRmtleXM=">SSH keys<i class="fa fa-external-link-alt"></i></span>即可。</p><p>3.2.3.测试是否添加成功。在命令行输入以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">$ yes</span><br></pre></td></tr></table></figure><p>返回“You’re successfully authenticated”,就说明你添加成功啦！</p><p>3.3.修改你的站点配置文件_config.yml(前面说过了在你的站点目录下)。文件末尾修改为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>仓库地址填写ssh地址，比如我的：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:besscroft&#x2F;besscroft.github.io.git</span><br><span class="line">  barnch: master</span><br></pre></td></tr></table></figure><p>3.4.然后我们要推送到GitHubPages。在命令行(即Git Bash)，输入以下命令，注意，这个命令请记下来。以后你会经常用到的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g	#等同于hexo generate，生成静态文件到public文件夹</span><br><span class="line">$ hexo d	# 等于hexo deploy 即，部署，可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure><p>如果返回：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Deploy done: git</span><br></pre></td></tr></table></figure><p>即推送成功啦！然后稍等片刻，浏览器访问地址：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;&lt;Github账号名称&gt;.github.io</span><br></pre></td></tr></table></figure><p>然后，嗯嗯~ o(<em>￣▽￣</em>)o，到这里就成功了啦，是不是很开心？</p></li></ol><h4 id="GithubPages-域名"><a href="#GithubPages-域名" class="headerlink" title="GithubPages + 域名"></a>GithubPages + 域名</h4><p>这一步最重要的就是买域名了，买个域名先！</p><ol><li><p>打开你的域名提供商的控制台，设置域名解析。</p><p>1.1.解析类型选择为CNAME；</p><p>1.2.主机记录，就是你的域名前缀，填写www即可；</p><p>1.3.记录值去复制你的&lt;Github账号名称&gt;.github.io填上去；</p><p>1.4.线路解析，就默认的就行了。</p></li><li><p>仓库设置</p><p>2.1.打开你的博客仓库设置，都到这一步了别告诉我你不知道在哪儿。</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo003.png" alt></p><p>然后再该页面中往下滑，找到图中的位置！</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo004.png" alt></p><p>我相信你看到页面上的提示，能够非常容易地添加自定义域名并开启 https 的！</p></li></ol><h4 id="GithubPages-CodingPages-域名"><a href="#GithubPages-CodingPages-域名" class="headerlink" title="GithubPages + CodingPages + 域名"></a>GithubPages + CodingPages + 域名</h4><p>你还可以在CodingPages上也搭建仓库，推送到仓库的时候2个仓库是同步推送的呢！</p><ol><li><p>创建你的<span class="exturl" data-url="aHR0cHM6Ly9jb2RpbmcubmV0Lw==">Coding<i class="fa fa-external-link-alt"></i></span>账号</p></li><li><p>一样要创建一个用来托管的仓库，而且仓库名为:&lt;Coding账号名称&gt;</p></li><li><p>将你的Hexo博客给推送到CodingPages</p><p>3.1.之前大家在创建GitHubPages时，我们是已经做过生成公钥这一步了。这时候找到它，复制内容，并粘贴到Coding的<span class="exturl" data-url="aHR0cHM6Ly9kZXYudGVuY2VudC5jb20vdXNlci9hY2NvdW50L3NldHRpbmcva2V5cw==">新增公钥<i class="fa fa-external-link-alt"></i></span>。</p><p>3.2.然后我们来测试以下成功了没有。在命令行依次输入如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@git.coding.net</span><br><span class="line">$ yes</span><br></pre></td></tr></table></figure><p>返回了“You’ve successfully authenticated”，就表示已经成功了！</p><p>3.3.修改你的站点配置文件_config.yml(前面说过了在你的站点目录下)。文件末尾修改为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: git@git.dev.tencent.com:&lt;Coding账号名称&gt;&#x2F;&lt;Coding账号名称&gt;.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure><p>按照之前的GitHub添加一样，在这里把coding的也添加上去，直接加到后面即可！</p><p>4.4.然后推送到你的Coding仓库，没错，又是这两条指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g	# 等于hexo generate # 生成静态文件</span><br><span class="line">$ hexo d	# 等于hexo deploy 即，部署，可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure></li><li><p>进入刚才创建的Coding项目，进入代码页面，你会看到有一项叫Pages服务，然后点击“一键开启静态Pages”。稍等片刻，美味就快好。。。不对，稍等片刻CodingPages即可部署成功！</p></li><li><p>域名解析</p><p>5.1.解析类型选择为CNAME；</p><p>5.2.主机记录，就是你的域名前缀，填写www即可；</p><p>5.3.记录值去复制你的&lt;Coding账号名称&gt;.coding.me填上去；</p><p>5.4.线路解析，就默认的就行了。</p></li><li><p>在你刚才开启Pages服务的地方，点击设置，进入它的设置页绑定你的自定义域名。</p></li><li><p>最后，到这里基本上就大功告成啦！~ o(<em>￣▽￣</em>)o</p></li></ol><h4 id="配置解析注意事项"><a href="#配置解析注意事项" class="headerlink" title="配置解析注意事项"></a>配置解析注意事项</h4><p>嗯，为什么要在两个托管平台都搭建起来呢？原因很简单：要实现国内外访问不同的服务，所以要分别托管并且分别设置解析。无论是腾讯云还是阿里云，他们的解析服务都能够很好地区分国内外的节点。我们需要将国内的CNAME设置到pages.coding.me，将国外的CNAME设置到pages.github.io，然后，魔法就出现了！</p><p>如果你不会的话，请参考图片中的设置即可！</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo005.png" alt></p><p>别跟我说这样不行，难道你平常逛的淘宝，就只有一台服务器嘛？🙃</p><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo006.png" alt></p><p>可以去看看阿里的部分云解析的<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzI5NzMwLmh0bWw/c3BtPWEyYzRnLjExMTg2NjIzLjYuNTc1LjRlYTA1YjljbG5zMmh2">文档<i class="fa fa-external-link-alt"></i></span>。</p><h3 id="Hexo命令行常用指令"><a href="#Hexo命令行常用指令" class="headerlink" title="Hexo命令行常用指令"></a>Hexo命令行常用指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo help	#查看帮助</span><br><span class="line">hexo init	#初始化一个目录</span><br><span class="line">hexo new &quot;postName&quot;		#新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; 	#新建页面</span><br><span class="line">hexo generate 	#生成网页，可以在 public 目录查看整个网站的文件</span><br><span class="line">hexo server 	#本地预览，&#39;Ctrl+C&#39;关闭</span><br><span class="line">hexo deploy 	#部署.deploy目录</span><br><span class="line">hexo clean 		# 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br></pre></td></tr></table></figure><p><strong>简写：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br></pre></td></tr></table></figure><p>如果你采用了静态资源压缩的话，每次同步到服务器就要多一条指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">gulp     &#x2F;&#x2F;没有用静态资源压缩，同步时不需要中间这条指令</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>部署成功时会返回这个：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[info] Deploy done: git</span><br></pre></td></tr></table></figure><p>执行<code>hexo clean &amp;&amp; hexo deploy</code>命令。前者清除站点文件，后者重新生成站点文件并将之推送到指定的库分支。（如果你的Hexo是局部安装，则需要执行<code>./node_modules/.bin/hexo clean &amp;&amp; ./node_modules/.bin/hexo deploy</code>。）</p><p>登入 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==">Github<i class="fa fa-external-link-alt"></i></span>/<span class="exturl" data-url="aHR0cHM6Ly9iaXRidWNrZXQub3JnLw==">BitBucket<i class="fa fa-external-link-alt"></i></span>/<span class="exturl" data-url="aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tLw==">Gitlab<i class="fa fa-external-link-alt"></i></span>，请在库设置（Repository Settings）中将默认分支设置为<code>_config.yml</code>配置中的分支名称。稍等片刻，你的站点就会显示在你的Github Pages中啦！</p><p>如果你是才接触，那么我建议你熟悉之后，再将Hexo部署到其它托管平台！比如👉<span class="exturl" data-url="aHR0cHM6Ly9kYXNoYm9hcmQuaGVyb2t1LmNvbQ==">Heroku<i class="fa fa-external-link-alt"></i></span>（蛮好用的）、👉<span class="exturl" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20v">Netlify<i class="fa fa-external-link-alt"></i></span>、👉<span class="exturl" data-url="aHR0cHM6Ly9yc3luYy5zYW1iYS5vcmcv">Rsync<i class="fa fa-external-link-alt"></i></span>、👉<span class="exturl" data-url="aHR0cHM6Ly93d3cub3BlbnNoaWZ0LmNvbS8=">OpenShift<i class="fa fa-external-link-alt"></i></span>、等等。具体的可以去阅读👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvZGVwbG95bWVudA==">官方文档<i class="fa fa-external-link-alt"></i></span></p><h3 id="Hexo使用"><a href="#Hexo使用" class="headerlink" title="Hexo使用"></a>Hexo使用</h3><h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .deploy       #需要部署的文件</span><br><span class="line">├── node_modules  #Hexo插件</span><br><span class="line">├── public        #生成的静态网页文件</span><br><span class="line">├── scaffolds     #模板</span><br><span class="line">├── source        #博客正文和其他源文件，404、favicon、CNAME 都应该放在这里</span><br><span class="line">|   ├── _drafts   #草稿</span><br><span class="line">|   └── _posts    #文章</span><br><span class="line">├── themes        #主题</span><br><span class="line">├── _config.yml   #全局配置文件</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure><h4 id="全局配置-config-yml"><a href="#全局配置-config-yml" class="headerlink" title="全局配置_config.yml"></a>全局配置_config.yml</h4><p>请看我的这篇👉<a href="http://blog.52bess.com/zhandian.html#more">文章</a></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>记得平时多做好备份，这是个好习惯。万一出现文件误删，丢失等，甚至GitHub你在某一天无法访问。</p><p>我的博客的评论系统是<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnLw==">Valine<i class="fa fa-external-link-alt"></i></span>我觉得还可以吧，其它的如：来比利、哦不是<span class="exturl" data-url="aHR0cHM6Ly93d3cubGl2ZXJlLmNvbS8=">来必力<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cDovL2NoYW5neWFuLmt1YWl6aGFuLmNvbS8=">畅言<i class="fa fa-external-link-alt"></i></span>等都是不错的。由于我只用了一个，优缺点就不说了，但是感觉Valine的UI更符合我的胃口。</p><p>博客右下角的被大家称为萌萌哒，也就是二次元看板娘，是使用<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0VZSE4vaGV4by1oZWxwZXItbGl2ZTJkL2Jsb2IvbWFzdGVyL1JFQURNRS56aC1DTi5tZA==">live-2d<i class="fa fa-external-link-alt"></i></span>实现的。</p><p>如果你的Hexo搭建成功，不妨跟大家分享以下你的快乐呢！</p></div><div><div><div style="text-align:center;color:#ccc;font-size:14px">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div></div></div><div class="reward-container"><div>请我喝杯咖啡吧！</div> <button onclick='var qr=document.getElementById("qr");qr.style.display="none"===qr.style.display?"block":"none"'> 打赏</button><div id="qr" style="display:none"><div style="display:inline-block"> <img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/wechatpay.png" alt="Bess Croft 微信支付"><p>微信支付</p></div><div style="display:inline-block"> <img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/alipay.jpg" alt="Bess Croft 支付宝"><p>支付宝</p></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"> <strong>本文作者：</strong> Bess Croft</li><li class="post-copyright-link"> <strong>本文链接：</strong> <a href="https://blog.52bess.com/posts/2019/hexo.html" title="Hexo博客搭建">https://blog.52bess.com/posts/2019/hexo.html</a></li><li class="post-copyright-license"> <strong>版权声明：</strong> 本博客所有文章除特别声明外，均采用<span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i> BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div><div class="followme"><p>欢迎关注我的其它发布渠道哦！</p><div class="social-list"><div class="social-item"> <a target="_blank" class="social-link" href="/images/wechat_channel.jpg"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/wechat_channel.jpg" width="100px" height="100px"><span class="icon"><i class="fab fa-weixin"></i></span> <span class="label">WeChat</span></a></div><div class="social-item"> <a target="_blank" class="social-link" href="/images/RSS.png"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/RSS.png" width="100px" height="100px"><span class="icon"><i class="fa fa-rss"></i></span> <span class="label">RSS</span></a></div></div></div><footer class="post-footer"><div class="post-tags"><a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a><a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a></div><div class="post-nav"><div class="post-nav-item"><a href="/posts/2019/clover.html" rel="prev" title="黑苹果教程"><i class="fa fa-chevron-left"></i> 黑苹果教程</a></div><div class="post-nav-item"> <a href="/posts/2019/my-first-post.html" rel="next" title="浅谈：强大的Hexo">浅谈：强大的Hexo<i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><div class="comments" id="valine-comments"></div><script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-24x24-astronaut.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-astronaut.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-astronaut.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.52bess.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+<script data-ad-client="ca-pub-1837014247459400" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="description" content="写在前面为什么网上这么多教程，我还要在这里写下一篇呢？主要是总结大家的经验和自己的操作过程，一来是方便自己看，二来是给大家提供一些参考。Google一下，你可以找到几乎所有你想看到的，但是能否为你带来实质性的解决方案，可能也是需要花时间的。而且，跟别人做一样的操作，可能就刚好是你出了问题。。。没错，说的就是我自己。写这篇文章，仅此以纪念从WordPress转到Hexo。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建">
+<meta property="og:url" content="https://blog.52bess.com/posts/2019/hexo.html">
+<meta property="og:site_name" content="Bess&#39;s Blog">
+<meta property="og:description" content="写在前面为什么网上这么多教程，我还要在这里写下一篇呢？主要是总结大家的经验和自己的操作过程，一来是方便自己看，二来是给大家提供一些参考。Google一下，你可以找到几乎所有你想看到的，但是能否为你带来实质性的解决方案，可能也是需要花时间的。而且，跟别人做一样的操作，可能就刚好是你出了问题。。。没错，说的就是我自己。写这篇文章，仅此以纪念从WordPress转到Hexo。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+<meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+<meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+<meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+<meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+<meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+<meta property="og:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+<meta property="article:published_time" content="2019-03-12T04:07:38.000Z">
+<meta property="article:modified_time" content="2020-03-22T13:37:40.652Z">
+<meta property="article:author" content="Bess Croft">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="GitHub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg">
+
+<link rel="canonical" href="https://blog.52bess.com/posts/2019/hexo.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo博客搭建 | Bess's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Bess's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+<script type="text/javascript" src="/js/none.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/css/APlayer.min.css">
+	<div id="aplayer"></div>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/APlayer.min.js"></script>
+	<script type="text/javascript" src="/dist/music.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/css/DPlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/DPlayer.min.js"></script>
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Bess's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">武汉加油！中国加油！</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/links/" rel="section"><i class="link fa-fw"></i>友链</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-books">
+
+    <a href="/books/" rel="section"><i class="book fa-fw"></i>读书</a>
+
+  </li>
+        <li class="menu-item menu-item-movies">
+
+    <a href="/movies/" rel="section"><i class="video-camera fa-fw"></i>电影</a>
+
+  </li>
+        <li class="menu-item menu-item-games">
+
+    <a href="/games/" rel="section"><i class="gamepad fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="camera-retro fa-fw"></i>美好时光</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+      
+    </header>
+    <div id="dplayer"></div>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main class="main">
+  	
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.52bess.com/posts/2019/hexo.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://www.52bess.com/uploads/avatar.png">
+      <meta itemprop="name" content="Bess Croft">
+      <meta itemprop="description" content="热爱网络技术和开源软件的极客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bess's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客搭建
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-12 12:07:38" itemprop="dateCreated datePublished" datetime="2019-03-12T12:07:38+08:00">2019-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-22 21:37:40" itemprop="dateModified" datetime="2020-03-22T21:37:40+08:00">2020-03-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/2019/hexo.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/2019/hexo.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/h001.png" alt></p>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>为什么网上这么多教程，我还要在这里写下一篇呢？主要是总结大家的经验和自己的操作过程，一来是方便自己看，二来是给大家提供一些参考。Google一下，你可以找到几乎所有你想看到的，但是能否为你带来实质性的解决方案，可能也是需要花时间的。而且，跟别人做一样的操作，可能就刚好是你出了问题。。。没错，说的就是我自己。写这篇文章，仅此以纪念从WordPress转到Hexo。</p>
+<a id="more"></a>
+<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><h3 id="适合哪些人呢？"><a href="#适合哪些人呢？" class="headerlink" title="适合哪些人呢？"></a>适合哪些人呢？</h3><ul>
+<li>平常喜欢写作，尤其是Blog的人。有不少人通过Hexo发表文学类作品呢。</li>
+<li>不害怕编程，且爱折腾的人</li>
+<li>了解和能够使用版本控制Git和GitHub的人</li>
+<li>熟悉基本的MarkDown语法，能够利用MarkDown和Typora写作的人</li>
+</ul>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h4><ol>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>下载，并安装到您的计算机上。</p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS8=">Git<i class="fa fa-external-link-alt"></i></span>下载，并安装到您的计算机上。</p>
+<p>不会下载安装？没关系，点击链接去它们的官网，有非常详细的安装教程。或者，我也可以抽时间写，但是感觉这样的文章质量并不高啊！</p>
+</li>
+</ol>
+<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>这时候我们需要利用npm来安装了。(直接打开Git Bash，或者任意位置鼠标右键选择打开)</p>
+<p>运行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>如果报错，出现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! registry error parsing json</span><br></pre></td></tr></table></figure>
+
+<p>的话，可能需要设置npm代理，执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http:&#x2F;&#x2F;registry.cnpmjs.org</span><br></pre></td></tr></table></figure>
+
+<p>然后删除刚才安装的npm目录，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo:command not found</span><br></pre></td></tr></table></figure>
+
+<p>重新执行第一条命令安装Hexo，不过，这第一步都能报错，脸是有多黑啊！！！</p>
+<h4 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h4><p>在命令行接着运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;    &#x2F;&#x2F;初始化hexo文件夹,hexo会在目标文件夹建立网站所需要的所有文件</span><br><span class="line">$ cd &lt;folder&gt;      </span><br><span class="line">$ npm install    &#x2F;&#x2F;安装依赖包</span><br></pre></td></tr></table></figure>
+
+<p>这里的<folder>是你自己指定的文件夹，比如说我的就是这样：</folder></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init G:hexo</span><br><span class="line">$ cd G:hexo</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<p>这样说你应该更容易理解，这就相当于选择安装软件的位置。</p>
+<h4 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h4><p>新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>在命令行执行如下命令，然后打开你的浏览器输入<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwL+WNs+WPr+afpeeci+OAgg==">http://localhost:4000/即可查看。<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g    #等同于hexo generate，生成静态文件到public文件夹</span><br><span class="line">hexo s    # 等同于hexo server，在本地服务器渲染运行</span><br></pre></td></tr></table></figure>
+
+<p>到这一步，你的本地博客基本上就搭建起来了。我第一次搭建成功时，简直是兴奋的飞起了!</p>
+<h4 id="注意事项详解"><a href="#注意事项详解" class="headerlink" title="注意事项详解"></a>注意事项详解</h4><ul>
+<li>hexo相关命令均在<strong>站点目录</strong>下，用<strong>Git Bash</strong>运行。</li>
+<li>_config.yml是站点的配置文件，用来存放网站的配置信息，可以在此配置大部分的参数。路径为：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;folder&gt;\_config.yml</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>也就是你的站点的根目录下。</li>
+<li>还有个叫_config.yml的，是你的主题配置文件，千万别弄混了。路径为：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;folder&gt;\themes\&lt;主题文件夹&gt;\_config.yml</span><br></pre></td></tr></table></figure>
+
+<p>​    就存放在你的主题根目录下</p>
+<ul>
+<li>scaffolds是模板文件夹。当你新建文章的时候，Hexo 会根据 scaffold 来建立文件。</li>
+<li>source是资源文件夹，是存放用户资源的地方。</li>
+<li>themes，没错，就是存放主题的文件夹，今后你可能要无数次的打开它。</li>
+</ul>
+<h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>将项目部署上去，你需要安装：<code>hexo-deployer-git</code>插件，不然会报错。在git运行如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="网站搭建实施方案"><a href="#网站搭建实施方案" class="headerlink" title="网站搭建实施方案"></a>网站搭建实施方案</h3><h4 id="GithubPages"><a href="#GithubPages" class="headerlink" title="GithubPages"></a>GithubPages</h4><ol>
+<li><p>创建一个<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==">GitHub<i class="fa fa-external-link-alt"></i></span>账号，如果你有一个更好。</p>
+</li>
+<li><p>创建一个仓库，名字必须为：&lt;Github账号名称&gt;.github.io</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo001.png" alt></p>
+<p>图中报错的细节就不要在意了，这个仓库只能创建一个，当时我创建的时候没有截图。为了方便理解，专门去打开了这个页面截了一张图。</p>
+</li>
+<li><p>将本地Hexo博客推送到GithubPages</p>
+<p>3.1.安装hexo-deployer-git插件。在命令行（即Git Bash）运行以下命令即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>3.2.添加SSH Key</p>
+<p>3.2.1.创建一个SSH Key。在命令行输入一下命令，密码为空，敲击三下回车：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>3.2.2.把公钥添加到GitHub。复制密钥文件内容，路径形如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator(也就是你的账户名)\.ssh\id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo002.png" alt></p>
+<p>然后粘贴到<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvZ2luP3JldHVybl90bz1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZzZXR0aW5ncyUyRmtleXM=">SSH keys<i class="fa fa-external-link-alt"></i></span>即可。</p>
+<p>3.2.3.测试是否添加成功。在命令行输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">$ yes</span><br></pre></td></tr></table></figure>
+
+<p>返回“You’re successfully authenticated”,就说明你添加成功啦！</p>
+<p>3.3.修改你的站点配置文件_config.yml(前面说过了在你的站点目录下)。文件末尾修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>仓库地址填写ssh地址，比如我的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@github.com:besscroft&#x2F;besscroft.github.io.git</span><br><span class="line">  barnch: master</span><br></pre></td></tr></table></figure>
+
+<p>3.4.然后我们要推送到GitHubPages。在命令行(即Git Bash)，输入以下命令，注意，这个命令请记下来。以后你会经常用到的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g	#等同于hexo generate，生成静态文件到public文件夹</span><br><span class="line">$ hexo d	# 等于hexo deploy 即，部署，可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure>
+
+<p>如果返回：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p>即推送成功啦！然后稍等片刻，浏览器访问地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;&lt;Github账号名称&gt;.github.io</span><br></pre></td></tr></table></figure>
+
+<p>然后，嗯嗯~ o(<em>￣▽￣</em>)o，到这里就成功了啦，是不是很开心？</p>
+</li>
+</ol>
+<h4 id="GithubPages-域名"><a href="#GithubPages-域名" class="headerlink" title="GithubPages + 域名"></a>GithubPages + 域名</h4><p>这一步最重要的就是买域名了，买个域名先！</p>
+<ol>
+<li><p>打开你的域名提供商的控制台，设置域名解析。</p>
+<p>1.1.解析类型选择为CNAME；</p>
+<p>1.2.主机记录，就是你的域名前缀，填写www即可；</p>
+<p>1.3.记录值去复制你的&lt;Github账号名称&gt;.github.io填上去；</p>
+<p>1.4.线路解析，就默认的就行了。</p>
+</li>
+<li><p>仓库设置</p>
+<p>2.1.打开你的博客仓库设置，都到这一步了别告诉我你不知道在哪儿。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo003.png" alt></p>
+<p>然后再该页面中往下滑，找到图中的位置！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo004.png" alt></p>
+<p>我相信你看到页面上的提示，能够非常容易地添加自定义域名并开启 https 的！</p>
+</li>
+</ol>
+<h4 id="GithubPages-CodingPages-域名"><a href="#GithubPages-CodingPages-域名" class="headerlink" title="GithubPages + CodingPages + 域名"></a>GithubPages + CodingPages + 域名</h4><p>你还可以在CodingPages上也搭建仓库，推送到仓库的时候2个仓库是同步推送的呢！</p>
+<ol>
+<li><p>创建你的<span class="exturl" data-url="aHR0cHM6Ly9jb2RpbmcubmV0Lw==">Coding<i class="fa fa-external-link-alt"></i></span>账号</p>
+</li>
+<li><p>一样要创建一个用来托管的仓库，而且仓库名为:&lt;Coding账号名称&gt;</p>
+</li>
+<li><p>将你的Hexo博客给推送到CodingPages</p>
+<p>3.1.之前大家在创建GitHubPages时，我们是已经做过生成公钥这一步了。这时候找到它，复制内容，并粘贴到Coding的<span class="exturl" data-url="aHR0cHM6Ly9kZXYudGVuY2VudC5jb20vdXNlci9hY2NvdW50L3NldHRpbmcva2V5cw==">新增公钥<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>3.2.然后我们来测试以下成功了没有。在命令行依次输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@git.coding.net</span><br><span class="line">$ yes</span><br></pre></td></tr></table></figure>
+
+<p>返回了“You’ve successfully authenticated”，就表示已经成功了！</p>
+<p>3.3.修改你的站点配置文件_config.yml(前面说过了在你的站点目录下)。文件末尾修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: git@git.dev.tencent.com:&lt;Coding账号名称&gt;&#x2F;&lt;Coding账号名称&gt;.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+
+<p>按照之前的GitHub添加一样，在这里把coding的也添加上去，直接加到后面即可！</p>
+<p>4.4.然后推送到你的Coding仓库，没错，又是这两条指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g	# 等于hexo generate # 生成静态文件</span><br><span class="line">$ hexo d	# 等于hexo deploy 即，部署，可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入刚才创建的Coding项目，进入代码页面，你会看到有一项叫Pages服务，然后点击“一键开启静态Pages”。稍等片刻，美味就快好。。。不对，稍等片刻CodingPages即可部署成功！</p>
+</li>
+<li><p>域名解析</p>
+<p>5.1.解析类型选择为CNAME；</p>
+<p>5.2.主机记录，就是你的域名前缀，填写www即可；</p>
+<p>5.3.记录值去复制你的&lt;Coding账号名称&gt;.coding.me填上去；</p>
+<p>5.4.线路解析，就默认的就行了。</p>
+</li>
+<li><p>在你刚才开启Pages服务的地方，点击设置，进入它的设置页绑定你的自定义域名。</p>
+</li>
+<li><p>最后，到这里基本上就大功告成啦！~ o(<em>￣▽￣</em>)o</p>
+</li>
+</ol>
+<h4 id="配置解析注意事项"><a href="#配置解析注意事项" class="headerlink" title="配置解析注意事项"></a>配置解析注意事项</h4><p>嗯，为什么要在两个托管平台都搭建起来呢？原因很简单：要实现国内外访问不同的服务，所以要分别托管并且分别设置解析。无论是腾讯云还是阿里云，他们的解析服务都能够很好地区分国内外的节点。我们需要将国内的CNAME设置到pages.coding.me，将国外的CNAME设置到pages.github.io，然后，魔法就出现了！</p>
+<p>如果你不会的话，请参考图片中的设置即可！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo005.png" alt></p>
+<p>别跟我说这样不行，难道你平常逛的淘宝，就只有一台服务器嘛？🙃</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="hexo/hexo006.png" alt></p>
+<p>可以去看看阿里的部分云解析的<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzI5NzMwLmh0bWw/c3BtPWEyYzRnLjExMTg2NjIzLjYuNTc1LjRlYTA1YjljbG5zMmh2">文档<i class="fa fa-external-link-alt"></i></span>。</p>
+<h3 id="Hexo命令行常用指令"><a href="#Hexo命令行常用指令" class="headerlink" title="Hexo命令行常用指令"></a>Hexo命令行常用指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo help	#查看帮助</span><br><span class="line">hexo init	#初始化一个目录</span><br><span class="line">hexo new &quot;postName&quot;		#新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; 	#新建页面</span><br><span class="line">hexo generate 	#生成网页，可以在 public 目录查看整个网站的文件</span><br><span class="line">hexo server 	#本地预览，&#39;Ctrl+C&#39;关闭</span><br><span class="line">hexo deploy 	#部署.deploy目录</span><br><span class="line">hexo clean 		# 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>如果你采用了静态资源压缩的话，每次同步到服务器就要多一条指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">gulp     &#x2F;&#x2F;没有用静态资源压缩，同步时不需要中间这条指令</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>部署成功时会返回这个：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[info] Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p>执行<code>hexo clean &amp;&amp; hexo deploy</code>命令。前者清除站点文件，后者重新生成站点文件并将之推送到指定的库分支。（如果你的Hexo是局部安装，则需要执行<code>./node_modules/.bin/hexo clean &amp;&amp; ./node_modules/.bin/hexo deploy</code>。）</p>
+<p>登入 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==">Github<i class="fa fa-external-link-alt"></i></span>/<span class="exturl" data-url="aHR0cHM6Ly9iaXRidWNrZXQub3JnLw==">BitBucket<i class="fa fa-external-link-alt"></i></span>/<span class="exturl" data-url="aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tLw==">Gitlab<i class="fa fa-external-link-alt"></i></span>，请在库设置（Repository Settings）中将默认分支设置为<code>_config.yml</code>配置中的分支名称。稍等片刻，你的站点就会显示在你的Github Pages中啦！</p>
+<p>如果你是才接触，那么我建议你熟悉之后，再将Hexo部署到其它托管平台！比如👉<span class="exturl" data-url="aHR0cHM6Ly9kYXNoYm9hcmQuaGVyb2t1LmNvbQ==">Heroku<i class="fa fa-external-link-alt"></i></span>（蛮好用的）、👉<span class="exturl" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20v">Netlify<i class="fa fa-external-link-alt"></i></span>、👉<span class="exturl" data-url="aHR0cHM6Ly9yc3luYy5zYW1iYS5vcmcv">Rsync<i class="fa fa-external-link-alt"></i></span>、👉<span class="exturl" data-url="aHR0cHM6Ly93d3cub3BlbnNoaWZ0LmNvbS8=">OpenShift<i class="fa fa-external-link-alt"></i></span>、等等。具体的可以去阅读👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvZGVwbG95bWVudA==">官方文档<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Hexo使用"><a href="#Hexo使用" class="headerlink" title="Hexo使用"></a>Hexo使用</h3><h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .deploy       #需要部署的文件</span><br><span class="line">├── node_modules  #Hexo插件</span><br><span class="line">├── public        #生成的静态网页文件</span><br><span class="line">├── scaffolds     #模板</span><br><span class="line">├── source        #博客正文和其他源文件，404、favicon、CNAME 都应该放在这里</span><br><span class="line">|   ├── _drafts   #草稿</span><br><span class="line">|   └── _posts    #文章</span><br><span class="line">├── themes        #主题</span><br><span class="line">├── _config.yml   #全局配置文件</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
+
+<h4 id="全局配置-config-yml"><a href="#全局配置-config-yml" class="headerlink" title="全局配置_config.yml"></a>全局配置_config.yml</h4><p>请看我的这篇👉<a href="http://blog.52bess.com/zhandian.html#more">文章</a></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>记得平时多做好备份，这是个好习惯。万一出现文件误删，丢失等，甚至GitHub你在某一天无法访问。</p>
+<p>我的博客的评论系统是<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnLw==">Valine<i class="fa fa-external-link-alt"></i></span>我觉得还可以吧，其它的如：来比利、哦不是<span class="exturl" data-url="aHR0cHM6Ly93d3cubGl2ZXJlLmNvbS8=">来必力<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cDovL2NoYW5neWFuLmt1YWl6aGFuLmNvbS8=">畅言<i class="fa fa-external-link-alt"></i></span>等都是不错的。由于我只用了一个，优缺点就不说了，但是感觉Valine的UI更符合我的胃口。</p>
+<p>博客右下角的被大家称为萌萌哒，也就是二次元看板娘，是使用<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0VZSE4vaGV4by1oZWxwZXItbGl2ZTJkL2Jsb2IvbWFzdGVyL1JFQURNRS56aC1DTi5tZA==">live-2d<i class="fa fa-external-link-alt"></i></span>实现的。</p>
+<p>如果你的Hexo搭建成功，不妨跟大家分享以下你的快乐呢！</p>
+
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+    
+    
+    
+        <div class="reward-container">
+  <div>请我喝杯咖啡吧！</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/wechatpay.png" alt="Bess Croft 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/alipay.jpg" alt="Bess Croft 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Bess Croft
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.52bess.com/posts/2019/hexo.html" title="Hexo博客搭建">https://blog.52bess.com/posts/2019/hexo.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道哦！</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/wechat_channel.jpg" width="100px" height="100px" />
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/RSS.png">
+            <img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/RSS.png" width="100px" height="100px" />
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/2019/clover.html" rel="prev" title="黑苹果教程">
+      <i class="fa fa-chevron-left"></i> 黑苹果教程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/2019/my-first-post.html" rel="next" title="浅谈：强大的Hexo">
+      浅谈：强大的Hexo <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
   window.addEventListener('tabs:register', () => {
     let { activeClass } = CONFIG.comments;
     if (CONFIG.comments.storage) {
@@ -18,7 +640,279 @@
       localStorage.setItem('comments_active', commentClass);
     });
   }
-</script></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span><span class="toggle-line toggle-line-middle"></span><span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc"> 文章目录</li><li class="sidebar-nav-overview"> 站点概览</li></ul><div class="post-toc-wrap sidebar-panel"><div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客搭建"><span class="nav-number">2.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适合哪些人呢？"><span class="nav-number">2.1.</span> <span class="nav-text">适合哪些人呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">2.2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装环境"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化Hexo"><span class="nav-number">2.2.3.</span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看"><span class="nav-number">2.2.4.</span> <span class="nav-text">本地查看</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项详解"><span class="nav-number">2.2.5.</span> <span class="nav-text">注意事项详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git"><span class="nav-number">2.2.6.</span> <span class="nav-text">Git</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网站搭建实施方案"><span class="nav-number">2.3.</span> <span class="nav-text">网站搭建实施方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GithubPages"><span class="nav-number">2.3.1.</span> <span class="nav-text">GithubPages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GithubPages-域名"><span class="nav-number">2.3.2.</span> <span class="nav-text">GithubPages + 域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GithubPages-CodingPages-域名"><span class="nav-number">2.3.3.</span> <span class="nav-text">GithubPages + CodingPages + 域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置解析注意事项"><span class="nav-number">2.3.4.</span> <span class="nav-text">配置解析注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo命令行常用指令"><span class="nav-number">2.4.</span> <span class="nav-text">Hexo命令行常用指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo使用"><span class="nav-number">2.5.</span> <span class="nav-text">Hexo使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#目录结构"><span class="nav-number">2.5.1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全局配置-config-yml"><span class="nav-number">2.5.2.</span> <span class="nav-text">全局配置_config.yml</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <a href="/"><img class="site-author-image" itemprop="image" alt="Bess Croft" src="https://www.52bess.com/uploads/avatar.png"></a><p class="site-author-name" itemprop="name">Bess Croft</p><div class="site-description" itemprop="description">热爱网络技术和开源软件的极客</div></div><div class="site-state-wrap motion-element"><nav class="site-state"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">32</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/"><span class="site-state-item-count">19</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/"><span class="site-state-item-count">40</span> <span class="site-state-item-name">标签</span></a></div></nav></div><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;besscroft"><i class="fab fa-github fa-fw"></i> GitHub</span></span><span class="links-of-author-item"><span class="exturl" data-url="bWFpbHRvOmJlc3Njcm9mdEBmb3htYWlsLmNvbQ==" title="E-Mail → mailto:besscroft@foxmail.com"><i class="fa fa-envelope fa-fw"></i> E-Mail</span></span></div><div class="cc-license motion-element" itemprop="license"> <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span></div><div class="links-of-blogroll motion-element"><div class="links-of-blogroll-title"><i class="globe fa-fw"></i> 一些♂链接</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"> <span class="exturl" data-url="aHR0cHM6Ly81MmJlc3MuY29t" title="https:&#x2F;&#x2F;52bess.com">主站</span></li><li class="links-of-blogroll-item"> <a href="https://blog.52bess.com/about/" title="https:&#x2F;&#x2F;blog.52bess.com&#x2F;about&#x2F;">关于此博客</a></li><li class="links-of-blogroll-item"> <span class="exturl" data-url="aHR0cHM6Ly9yZXN1bWUuNTJiZXNzLmNvbS9wdWJsaWMv" title="https:&#x2F;&#x2F;resume.52bess.com&#x2F;public&#x2F;">简历</span></li><li class="links-of-blogroll-item"> <span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLjUyYmVzcy5jb20v" title="https:&#x2F;&#x2F;mirrors.52bess.com&#x2F;">神奇海螺镜像站</span></li><li class="links-of-blogroll-item"> <a href="https://blog.52bess.com/" title="https:&#x2F;&#x2F;blog.52bess.com">博客</a></li><li class="links-of-blogroll-item"> <span class="exturl" data-url="aHR0cHM6Ly9iZXNzY2xvdWQuY2Y=" title="https:&#x2F;&#x2F;besscloud.cf">海螺小店</span></li></ul></div></div><div id="days"></div><script>function show_date_time(){window.setTimeout("show_date_time()",1e3),BirthDay=new Date("10/08/2018 10:00:00"),today=new Date,timeold=today.getTime()-BirthDay.getTime(),sectimeold=timeold/1e3,secondsold=Math.floor(sectimeold),msPerDay=864e5,e_daysold=timeold/msPerDay,daysold=Math.floor(e_daysold),e_hrsold=24*(e_daysold-daysold),hrsold=setzero(Math.floor(e_hrsold)),e_minsold=60*(e_hrsold-hrsold),minsold=setzero(Math.floor(60*(e_hrsold-hrsold))),seconds=setzero(Math.floor(60*(e_minsold-minsold))),document.getElementById("days").innerHTML="已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒"}function setzero(e){return e<10&&(e="0"+e),e}show_date_time()</script></div></aside><div id="sidebar-dimmer"></div></div></main><footer class="footer"><div class="footer-inner"><div class="beian"><span class="exturl" data-url="aHR0cDovL3d3dy5iZWlhbi5taWl0Lmdvdi5jbg==">鄂ICP备18028478号-4</span></div><div class="copyright"> &copy; 2018 – <span itemprop="copyrightYear">2021</span><span class="with-love"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">Bess Croft</span></div><div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==">BessCroft</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">NexT 7.8.0.</span> 强力驱动</div><div class="footer-end"><div class="footer-end1"> <a href="https://www.jsdelivr.com/" target="_blank" alt="Free CDN" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/JsDelivr.png" alt="jsDelivr" style="height:2em;max-height:2em;padding-bottom:0"></a></div>&nbsp;&nbsp;<div class="footer-end1"> <a href="https://github.com/" target="_blank" alt="Github" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/Github.png" alt="github" style="height:2.2em;max-height:2.5em;padding-bottom:0"></a></div>&nbsp;&nbsp;<div class="footer-end1"> <a href="https://www.netlify.com/" target="_blank" alt="Server provider" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/netlify.png" alt="netlify" style="height:2.2em;max-height:2.5em;padding-bottom:0"></a></div>&nbsp;&nbsp;<div class="footer-end1"> <a href="https://cloud.google.com/" target="_blank" alt="Server provider" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/google-cloud.png" alt="googlecloud" style="height:2.2em;max-height:2.5em;padding-bottom:0"></a></div>&nbsp;&nbsp;<div class="footer-end1"> <a href="https://www.aliyun.com" target="_blank" alt="Server provider" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/aliyun.png" alt="aliyun" style="height:2.2em;max-height:2.5em;padding-bottom:0"></a></div>&nbsp;&nbsp;<div class="footer-end1"> <a href="https://www.upyun.com/" target="_blank" alt="Server provider" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/%E5%8F%88%E6%8B%8D%E4%BA%91_logo5.png" alt="upyun" style="height:2.2em;max-height:2.5em;padding-bottom:0"></a></div>&nbsp;&nbsp;<div class="footer-end1"> <a href="https://vercel.com/" target="_blank" alt="Server provider" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/Vercel.png" alt="Vercel" style="height:2.2em;max-height:2.5em;padding-bottom:0"></a></div>&nbsp;&nbsp;<div class="footer-end1"> <a href="https://nextjs.org/" target="_blank" alt="Server provider" rel="nofollow"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/Next.png" alt="Next" style="height:2.2em;max-height:2.5em;padding-bottom:0"></a></div>&nbsp;&nbsp;</div><div style="display:none"><script src="//s95.cnzz.com/z_stat.php?id=1278139383&web_id=1278139383"></script></div></div></footer></div><script src="/lib/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script><script src="/lib/velocity/velocity.min.js"></script><script src="/lib/velocity/velocity.ui.min.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script src="/js/local-search.js"></script><script src="//code.tidio.co/ooy0sel3mgcojgqg8pgqtafsc3i9jtjd.js"></script><script>
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客搭建"><span class="nav-number">2.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适合哪些人呢？"><span class="nav-number">2.1.</span> <span class="nav-text">适合哪些人呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">2.2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装环境"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化Hexo"><span class="nav-number">2.2.3.</span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地查看"><span class="nav-number">2.2.4.</span> <span class="nav-text">本地查看</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项详解"><span class="nav-number">2.2.5.</span> <span class="nav-text">注意事项详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git"><span class="nav-number">2.2.6.</span> <span class="nav-text">Git</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网站搭建实施方案"><span class="nav-number">2.3.</span> <span class="nav-text">网站搭建实施方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GithubPages"><span class="nav-number">2.3.1.</span> <span class="nav-text">GithubPages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GithubPages-域名"><span class="nav-number">2.3.2.</span> <span class="nav-text">GithubPages + 域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GithubPages-CodingPages-域名"><span class="nav-number">2.3.3.</span> <span class="nav-text">GithubPages + CodingPages + 域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置解析注意事项"><span class="nav-number">2.3.4.</span> <span class="nav-text">配置解析注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo命令行常用指令"><span class="nav-number">2.4.</span> <span class="nav-text">Hexo命令行常用指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo使用"><span class="nav-number">2.5.</span> <span class="nav-text">Hexo使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#目录结构"><span class="nav-number">2.5.1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全局配置-config-yml"><span class="nav-number">2.5.2.</span> <span class="nav-text">全局配置_config.yml</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a href="/">
+    <img class="site-author-image" itemprop="image" alt="Bess Croft"
+      src="https://www.52bess.com/uploads/avatar.png">
+  </a>
+  <p class="site-author-name" itemprop="name">Bess Croft</p>
+  <div class="site-description" itemprop="description">热爱网络技术和开源软件的极客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;besscroft"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmJlc3Njcm9mdEBmb3htYWlsLmNvbQ==" title="E-Mail → mailto:besscroft@foxmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="globe fa-fw"></i>
+      一些♂链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly81MmJlc3MuY29t" title="https:&#x2F;&#x2F;52bess.com">主站</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.52bess.com/about/" title="https:&#x2F;&#x2F;blog.52bess.com&#x2F;about&#x2F;">关于此博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9yZXN1bWUuNTJiZXNzLmNvbS9wdWJsaWMv" title="https:&#x2F;&#x2F;resume.52bess.com&#x2F;public&#x2F;">简历</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLjUyYmVzcy5jb20v" title="https:&#x2F;&#x2F;mirrors.52bess.com&#x2F;">神奇海螺镜像站</span>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.52bess.com/" title="https:&#x2F;&#x2F;blog.52bess.com">博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9iZXNzY2xvdWQuY2Y=" title="https:&#x2F;&#x2F;besscloud.cf">海螺小店</span>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+<!-- 文件位置：~/blog/themes/next/layout/_custom/sidebar.swig -->
+
+<div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("10/08/2018 10:00:00");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i) {
+    if (i<10) {
+        i="0" + i
+    };
+    return i;
+}
+show_date_time();
+</script>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><span class="exturl" data-url="aHR0cDovL3d3dy5iZWlhbi5taWl0Lmdvdi5jbg==">鄂ICP备18028478号-4 </span>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bess Croft</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3Njcm9mdA==">BessCroft</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">NexT 7.8.0.</span> 强力驱动
+  </div>
+<div class="footer-end">
+	<div class="footer-end1">
+		<a href="https://www.jsdelivr.com/" target="_blank" alt="Free CDN" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/JsDelivr.png" alt="jsDelivr" style="height: 2em; max-height: 2em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://github.com/" target="_blank" alt="Github" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/Github.png" alt="github" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://www.netlify.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/netlify.png" alt="netlify" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://cloud.google.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/google-cloud.png" alt="googlecloud" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+	<div class="footer-end1">
+		<a href="https://www.aliyun.com" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/aliyun.png" alt="aliyun" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+  <div class="footer-end1">
+		<a href="https://www.upyun.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/%E5%8F%88%E6%8B%8D%E4%BA%91_logo5.png" alt="upyun" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+  <div class="footer-end1">
+		<a href="https://vercel.com/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/Vercel.png" alt="Vercel" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+  <div class="footer-end1">
+		<a href="https://nextjs.org/" target="_blank" alt="Server provider" rel="nofollow">
+		<img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="https://cdn.jsdelivr.net/gh/besscroft/cdn/img/icon/Next.png" alt="Next" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+		</a>
+	</div>&nbsp;&nbsp;
+</div>
+
+        
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1278139383&web_id=1278139383"></script>
+  </div>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  <script src="//code.tidio.co/ooy0sel3mgcojgqg8pgqtafsc3i9jtjd.js"></script>
+
+
+
+
+
+<script>
 if (document.querySelectorAll('pre.mermaid').length) {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
     mermaid.initialize({
@@ -30,7 +924,15 @@ if (document.querySelectorAll('pre.mermaid').length) {
     });
   }, window.mermaid);
 }
-</script><script>
+</script>
+
+
+  
+
+  
+
+
+<script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
@@ -56,4 +958,34 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
   }, window.Valine);
 });
-</script><script>window.imageLazyLoadSetting={isSPA:!1,processImages:null}</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})})</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=r[a].getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this)</script></body></html><canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:1;pointer-events:none"></canvas><script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/fireworks.js"></script><script src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/activate-power-mode.min.js"></script><script>POWERMODE.colorful=!0,POWERMODE.shake=!1,document.body.addEventListener("input",POWERMODE)</script>
+</script>
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+
+
+<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/fireworks.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+
+
+
+
+
