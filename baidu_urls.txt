@@ -1,4 +1,4 @@
-https://blog.52bess.com/posts/2021/design_order.html
+https://blog.52bess.com/posts/2021/design-order.html
 https://blog.52bess.com/posts/2021/end2020hello2021.html
 https://blog.52bess.com/posts/2020/vue-add-tagsview.html
 https://blog.52bess.com/posts/2020/lighthouse.html
