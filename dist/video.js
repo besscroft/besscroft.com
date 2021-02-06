@@ -1,6 +1,6 @@
 const dp = new DPlayer({
     container: document.getElementById('dplayer'),
     video: {
-        url: 'https://mirrors.52bess.com/cdn/video/Dream%20Crazy.mp4'
+        url: 'https://cdn.52bess.com/public/cdn/Dream%20Crazy.mp4'
     },
 });
