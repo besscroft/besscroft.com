@@ -4,7 +4,14 @@
   <url>
     <loc>https://blog.52bess.com/photos/photoslist.json</loc>
     
-    <lastmod>2021-02-06T07:12:04.022Z</lastmod>
+    <lastmod>2021-03-08T06:40:04.613Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.52bess.com/links/linklist.json</loc>
+    
+    <lastmod>2021-03-08T06:39:23.575Z</lastmod>
     
   </url>
   
@@ -54,13 +61,6 @@
     <loc>https://blog.52bess.com/posts/2020/lighthouse.html</loc>
     
     <lastmod>2020-06-29T12:56:34.908Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.52bess.com/links/linklist.json</loc>
-    
-    <lastmod>2020-05-27T13:16:39.048Z</lastmod>
     
   </url>
   

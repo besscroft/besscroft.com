@@ -137,9 +137,9 @@
       <category term="Blog" scheme="https://blog.52bess.com/categories/Blog/"/>
     
     
-      <category term="Hexo" scheme="https://blog.52bess.com/tags/Hexo/"/>
-    
       <category term="Blog" scheme="https://blog.52bess.com/tags/Blog/"/>
+    
+      <category term="Hexo" scheme="https://blog.52bess.com/tags/Hexo/"/>
     
       <category term="NexT" scheme="https://blog.52bess.com/tags/NexT/"/>
     
@@ -260,11 +260,11 @@
       <category term="GitHub" scheme="https://blog.52bess.com/categories/GitHub/"/>
     
     
-      <category term="Git" scheme="https://blog.52bess.com/tags/Git/"/>
+      <category term="GPG" scheme="https://blog.52bess.com/tags/GPG/"/>
     
       <category term="GitHub" scheme="https://blog.52bess.com/tags/GitHub/"/>
     
-      <category term="GPG" scheme="https://blog.52bess.com/tags/GPG/"/>
+      <category term="Git" scheme="https://blog.52bess.com/tags/Git/"/>
     
   </entry>
   
