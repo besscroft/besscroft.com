@@ -1,6 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2019年终总结</title>
+    <url>/posts/2019/2019year-end.html</url>
+    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="2019year-end/2019year-end_p1.jpg" alt></p>
+<blockquote>
+<p>美丽的灵魂成就美丽的人生    ——  《美丽人生》豆瓣短评</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>9102年马上就要结束了，回过头来看这一年，又完成了哪些目标？经历了哪些挫折？在人生的十字路口我做了怎样的选择？又学到了哪些新知识、又看了哪些书？</p>
+<p>先看看年初立的flag：</p>
+<ul>
+<li><input disabled type="checkbox"> 公众号坚持每周都发布原创文章</li>
+<li><input checked disabled type="checkbox"> GitHub上完成自己的一些项目(尽管可能并没有什么实际用处，但是需要练手)</li>
+<li><input checked disabled type="checkbox"> 少玩游戏少熬夜</li>
+<li><input disabled type="checkbox"> 学习或了解一门新的编程语言(这里有歧义，算作没完成吧)</li>
+<li><input disabled type="checkbox"> 从入门到精通并不弃坑的学习C++(先把Java搞好，Java真香)</li>
+<li><input disabled type="checkbox"> 坚持健身</li>
+<li><input disabled type="checkbox"> 拥有自己的小程序</li>
+<li><input checked disabled type="checkbox"> 考试不挂科</li>
+<li><input disabled type="checkbox"> 学习UE4</li>
+<li><input disabled type="checkbox"> 完成以上所有的计划</li>
+</ul>
+<p>嗯，😥真是不堪入目，今年看起来似乎很失败。了解我的小伙伴，应该知道我在很早之前就接触Java这门语言了。但是在去年写年终总结时，因为对游戏开发很感兴趣，所以当时决定选择游戏开发来作为新一年的目标。但是！！！在我发表之后不久，在一些大佬的劝说下(洗脑)，决定就往Java发展，目前正在学习JavaEE中。</p>
+<blockquote>
+<p>不能影响你编程观点的语言，不值得你去学！——Alan Perlis</p>
+</blockquote>
+<p>为什么我最终还是选择了Java？实不相瞒，我最早接触的编程语言，就是Java。后来因为种种原因，对Java的了解越来越多，也越来越喜欢这门语言。它从某种程度上对我的编程思想带来了影响，我也明白，编程语言学的越多，并不代表能力越强，更重要的应该是其中的“Programming paradigm”，即“编程范式”。</p>
+<p>所以从明年开始，决定专精Java这门语言，或许等到Java学的很好之后(也需要好几年)，才会再接触其它比较好的语言。某些语言，我也一直想去学，但是先认真地学“好”一门语言，并掌握编程思想才是我应该做的，不能“急功近利”。</p>
+<p>在今年，我了解并学习了很多新知识，不知道为什么，学习的速度跟以前比越来越快了，但是发现自己要学的东西越来越多了，不过我不会停止学习的。今年11月份的时候，一直在犹豫怎么选择以后的路(短期的)，最后参考一些前辈的经历，并结合自己的实际情况，决定选择培训。目前在武汉千峰培训JavaEE，每天在学习我喜欢的知识，感觉过的很充实。我也很感谢家人对我的支持，成功路上真的离不开家人的支持(虽然目前还没成功)。</p>
+<p>最后，说好的要定期更新文章，但是很多时候真的不知道写啥，我觉得这跟我的知识储备还是有关，毕竟不想太水文章。但是，我这一年来，至少做到了坚持做markdown笔记，并且我决定，将这个好习惯保持下去！</p>
+<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>那么2020年，也应该立新的flag了！</p>
+<ul>
+<li>学好Java，以及相关的一些技术。</li>
+<li>找一份自己喜欢的编程工作！</li>
+<li>少玩游戏少熬夜。</li>
+<li>坚持健身。</li>
+<li>继续坚持做笔记。</li>
+<li>精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
+<li>写一款自己的主题或web项目(在培训机构的不算数)</li>
+<li>积极的拥抱开源。</li>
+<li>学习或了解一项新技术</li>
+<li>成立自己的小团队，或者找到一群有共同理想目标的人</li>
+<li>完成以上所有的计划，最好能脱单！</li>
+</ul>
+<p>最后，祝大家在2020能够找到自己的方向或目标，并不断地努力下去！</p>
+<center><b>I shall rise oh well rise again and agian.</b></center>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public class void main(String[] args) &#123;</span><br><span class="line">    	System.out.println(&quot;你好，2020!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>年终总结</category>
+      </categories>
+      <tags>
+        <tag>年终总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在VirtualBox上安装Android-X86</title>
+    <url>/posts/2019/android-for-virtualbox.html</url>
+    <content><![CDATA[<p>对于<code>Android</code>开发来说，尤其是新手(没错，我自己就是<code>noob</code>😥)，有很多种开发调试的方案。比如<code>Genymotion+VirtualBox</code>搭配方案(在我的笔记本上这种方案性能最低，可能因配置而异)、直接用<code>VirtualBox</code>安装<code>Android-X86</code>的<code>iso</code>，或者是直接在<code>Android Studio</code>里面调试等等。本文介绍的是直接用<code>VirtualBox</code>安装<code>Android-X86</code>，虽然是在虚拟机中安装，但是也会有很多不可避免的坑！！！</p>
+<a id="more"></a>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox025.png" alt></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，我们要准备<code>VirtualBox</code>：</p>
+<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cudmlydHVhbGJveC5vcmcvd2lraS9Eb3dubG9hZHM=">https://www.virtualbox.org/wiki/Downloads<i class="fa fa-external-link-alt"></i></span></p>
+<p>然后下载<code>Android-X86</code>的<code>iso</code>，这是一个将<span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2UuYW5kcm9pZC5jb20v">Android开源项目<i class="fa fa-external-link-alt"></i></span>移植到x86平台的项目：</p>
+<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2Rvd25sb2Fk">https://www.android-x86.org/download<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>注：本文章同样适用于PhoenixOS系统！</strong></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>准备好之后，我们安装完并打开<code>VirtualBox</code>，找到如图所示的<code>新建</code>按钮(不同版本可能界面稍有不同，但是明白要干什么就行了):</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox001.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox002.png" alt></p>
+<p>然后设置相应的信息，注意文件夹就是虚拟机文件存放位置，建议不要用默认的。名称随便取，类型选<code>Linux</code>，版本选<code>Other Linux</code>，至于是<code>32位</code>还是<code>64位</code>，就看你下载的<code>iso</code>是多少位的了。然后点击下一步。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox003.png" alt></p>
+<p>然后分配内存，这个看电脑本身的内存多大再酌情配置，然后点击下一步。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox004.png" alt></p>
+<p>然后选择<code>现在创建虚拟硬盘</code>。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox005.png" alt></p>
+<p>然后选择VDI，点击下一步。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox006.png" alt></p>
+<p>选择动态分配，然后点击下一步(当然，硬盘空间大的请随意)。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox007.png" alt></p>
+<p>根据实际情况来配置虚拟硬盘的大小，硬盘空间大的请随意，然后点击创建。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox008.png" alt></p>
+<p>然后找到我们刚才创建好的<code>Android_test</code>，点击设置。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox009.png" alt></p>
+<p>然后点击显示-调整显存大小-启用硬件加速里面的3D加速。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox010.png" alt></p>
+<p>选择存储-点击盘片-分配一个光驱，就是把你下载的<code>Android-X86</code>的<code>iso</code>添加进去。然后点击ok。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>当鼠标进入虚拟机窗口移不出来时，按下键盘右边的Ctrl(唱、跳、Rap、篮球😀)即可，vm虚拟机是Ctrl+Alt。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox011.png" alt></p>
+<p>双击我们创建好的虚拟机。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox012.png" alt></p>
+<p>选择<code>Advanced options...</code>，然后</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox013.png" alt></p>
+<p>选择<code>Auto_Installation</code>，这里为什么建议大家选择自动安装呢？因为我们再“这个”虚拟机中只分配了一个虚拟硬盘，而且并不大，所以没必要分区。而且这样也最快，能保证新手在不太了解的情况下不出错。选择这一项之后，按下回车键。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox014.png" alt></p>
+<p>选择yes！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox015.png" alt></p>
+<p>耐心等待！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox016.png" alt></p>
+<p>选择Reboot以重启。</p>
+<h2 id="划重点"><a href="#划重点" class="headerlink" title="划重点"></a>划重点</h2><p>在重启之后，会回到开始的位置</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox017.png" alt></p>
+<p>然后我们将其强制退出！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox018.png" alt></p>
+<p>然后在设置里面，把iso的盘片移除，免得开机时加载盘片去了。然后再重新双击启动！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox019.png" alt></p>
+<p>然后选择<code>Android-x86 8.1-r2</code>，<strong>千万别手贱按了回车</strong>，通过下面的帮助信息得知，我们要按下<code>E键</code>，进入编辑页面.</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox020.png" alt></p>
+<p>然后在<code>kernel</code>哪里，同样的按下<code>E键</code>，进入编辑页面</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox021.png" alt></p>
+<p>移动光标，找到图中的<code>quiet</code>这个词。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox022.png" alt></p>
+<p>把<code>quiet</code>改为<code>nomodeset xforcevesa</code>，然后按下回车键，再按下键盘上的<code>B键</code>。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox023.png" alt></p>
+<p>然后你就会看到Android的字母了，慢慢等待即可！后面的就不说了，等到了“开机”，应该就自己会玩了，跟用手机也区别不大！</p>
+<p><strong>注：每次开机都需要这一步操作，如果你不想这么做，请自行Google！</strong></p>
+<h2 id="问题详解"><a href="#问题详解" class="headerlink" title="问题详解"></a>问题详解</h2><p>这时候来给大家解释一下，为什么刚才在进入系统之前要修改某些参数！转化成问题，也就是：为什么部分电脑或者虚拟机无法启动Android-x86系统的图形界面？</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox024.png" alt></p>
+<p>先来看一张图，我们知道，它是基于Linux内核的，就跟大多数人安装Linux时需要禁用独显一样，你在安装Android-x86时，需要告诉内核，不要设置图形分辨率。</p>
+<p>那么，刚才的三个步骤，分别是在干什么呢？</p>
+<ul>
+<li>删除<code>quiet</code>，删除之后可以查看内核消息。</li>
+<li>添加<code>nomodeset</code>参数，禁用“内核模式设置”(告诉内核不要设置图形分辨率，让X代替)。</li>
+<li>添加<code>xforcevesa</code>参数，强制使用X的VESA驱动程序。</li>
+</ul>
+<p><strong>VESA</strong>是一个支持大部分显卡的通用驱动，但不提供任何2D和3D加速功能。要充分发挥显卡性能，需安装<strong>相应的厂商驱动程序</strong>。</p>
+<p>nVidia用户，可以参考ArchLinux的内核模式设置:<span class="exturl" data-url="aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvaW5kZXgucGhwL0tlcm5lbF9tb2RlX3NldHRpbmc=">https://wiki.archlinux.org/index.php/Kernel_mode_setting<i class="fa fa-external-link-alt"></i></span></p>
+<p>同时，你可以了解HybridGraphics:<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLnVidW50dS5jb20vY29tbXVuaXR5L0h5YnJpZEdyYXBoaWNz">https://help.ubuntu.com/community/HybridGraphics<i class="fa fa-external-link-alt"></i></span></p>
+<p>然后查看项目官方的wiki(必要的):<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2RvY3VtZW50YXRpb24vZ3JhcGhpY19jYXJkLmh0bWw=">https://www.android-x86.org/documentation/graphic_card.html<i class="fa fa-external-link-alt"></i></span></p>
+<p>以及issues:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29wZW50aG9zL3N5c3RlbS1hbmFseXNpcy9pc3N1ZXMvMjM=">https://github.com/openthos/system-analysis/issues/23<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Playing CSO2 on your computer！</title>
+    <url>/posts/2019/cso2.html</url>
+    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>反恐精英Online2，英文名：Counter-Strike Online2，粉丝们称为蛋拐兔2。世纪天成公司于2013年9月5日正式宣布代理《反恐精英Online2》，国服于2015年2月5日起源首测，3月5号二测，4月22号正式公测。然而不辛的是，在2018年5月18日，国服（世纪天成代理）正式停止运营。</p>
+<a id="more"></a>
+
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>嗯，反正我是在停服之前的一段时间，就已经没玩了。因为我害怕，害怕前一天还玩了，第二天就进不去游戏了，这并不是我想要的。在我的印象中，每年的圣诞节，是蛋拐兔最好玩的时候，人多，氛围也好。而18年的圣诞节，只能听听bgm艰难度日，到后来，当我得知有私服之后，我便又重新燃起了激情！！！</p>
+<h2 id="Gaming"><a href="#Gaming" class="headerlink" title="Gaming"></a>Gaming</h2><h3 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h3><p>蛋拐兔2关服了，你是否还在苦恼呢？其实不少小伙伴们都知道有私服的，虽然不是我的，但是我也想借此机<br>会来推广，好让喜欢的朋友玩。我知道的私服都是免费的，都是公益性质的，搭建私服的大佬们完全是为了能<br>让大家接着玩，而且还免费。我录制视频和写教程，不出于任何形式的盈利目的，完全是基于一个热爱的老<br>玩家心态，告知和帮助那些跟我一样，曾经喜欢玩蛋拐兔的玩家，能够重新玩这款游戏。</p>
+<center>不管你玩不玩，但是请记得，你的青春里有过它！！！</center>
+
+<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>首先，让我们感谢Ochii大神写的CSO2的主服务器和客户端启动程序，并且已经开源了！<br>还有“I’m Not MentaL”大神的GUI启动器。<br>同时也感谢国内的几个小团队，自己搭建了国内的私服，并在此基础上优化了服务端和启动端，让大家<br>不仅免费也更容易地van这款游戏，而且是联机的！谢谢你们做出的努力！感谢！</p>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- Microsoft .NET Framework 4.5.2及以上</span><br><span class="line">- NodeJS（如果你玩国内的联机私服，则不需要安装）</span><br><span class="line">- 一些必要的游戏运行环境，如果你是平常玩游戏，那么我相信你的电脑上也已经有了</span><br></pre></td></tr></table></figure>
+
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 安装包，版本可选，看你想玩那种的。国内私服的话，也是有它们自己稍做了修改的版本的。</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;15qVLo7jrJxG6r-kZBqqEdQ   提取码：1h7v </span><br><span class="line">- 主服务器 </span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;166igd4lFMR1R776ATMKN5w   提取码：h0ka </span><br><span class="line">- 客户端启动程序</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1OeDIVXhbfgvDljVLdYxVfA   提取码：iwso </span><br><span class="line">- GUI启动器</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1A8rh44NzJ8MSXU8edJqIwQ   提取码：czup </span><br><span class="line">- node.js（版本10或更高版本）</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><p>我们先假设，你已经安装了<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>，然后，在你的电脑硬盘里面，随便找一个盘。我放在E盘了，比如我的游戏路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\Counter-Strike Online 2</span><br></pre></td></tr></table></figure>
+
+<p>然后创建<code>Game</code>文件夹和<code>Server</code>文件夹，如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs001.png" alt></p>
+<p>然后，将游戏的压缩包解压到<code>Game</code>文件夹，解压完之后，应该是这样：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs002.png" alt></p>
+<p>接着将主服务器的压缩包，解压至<code>Server</code>文件夹，解压完之后，应为：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs003.png" alt></p>
+<p>然后，将下载的2个客户端启动程序，解压至<code>Counter-Strike Online 2\Game\Bin</code>文件夹。解压完成后，再将GUI启动器压缩包，解压至<code>Counter-Strike Online 2</code>根目录下。然后，基本上就完成一大半了。正常的，这个时候你的游戏根目录下应该为这样：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs004.png" alt></p>
+<h2 id="构建游戏"><a href="#构建游戏" class="headerlink" title="构建游戏"></a>构建游戏</h2><p>下一步我们要做的，就是让游戏跑起来！</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>这一步是最开始的方法，但是也最复杂，不建议大家使用，请跳至下一步！</p>
+<p>要运行服务器，您需要：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>（版本10或更高版本）;</li>
+<li>搭建服务器，也就是我们下载的主服务器。</li>
+</ul>
+<p>然后，在服务器目录内的终端实例中，执行以下操作：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --only &#x3D; production ＃安装所需的依赖项（最小依赖项） </span><br><span class="line">npm run start ＃启动预构建服务器</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，服务器<strong>会询问您要侦听的网络接口</strong>。</p>
+<h4 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h4><p>下载源代码后，转到源代码目录中的终端实例，然后：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install ＃安装所需的依赖项 </span><br><span class="line">npm run build ＃ builds服务器 </span><br><span class="line">npm run start ＃启动新服务器构建</span><br></pre></td></tr></table></figure>
+
+<h4 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h4><p>选项：</p>
+<ul>
+<li><code>-i, --ip-address [ip]</code>（<em>可选</em>）要侦听的IP地址（默认值：自动检测）</li>
+<li><code>-p, --port-master [port]</code>（<em>可选</em>）服务器的（TCP）端口（默认值：30001）</li>
+<li><code>-P, --port-holepunch [port]</code>（<em>可选</em>）服务器的打孔（UDP）端口（默认值：30002）</li>
+<li><code>-l, --log-packets</code>（<em>可选</em>）记录传入和传出的数据包</li>
+</ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在开始之前，你必须允许launcher.exe在防火墙和端口转发端口27015到27020或打开路由器的NAT，以便与其他人一起玩。</p>
+<p>如果您举办房间比赛，其他客户将知道您的IP。</p>
+<p>如果您加入主持人的房间比赛，主人将知道您的IP。</p>
+<p>一旦开发了专用服务器启动器，这可能在将来可以避免。</p>
+<h4 id="开始游戏"><a href="#开始游戏" class="headerlink" title="开始游戏"></a>开始游戏</h4><p>基本上就是挂载到一个大服务器，然后玩家们进来。由配置和网络比较好的玩家开启房间当房主，然后其他人加入游戏。同时，房主卡，其他人跟着卡，房主推出房间，其他人也会掉。虽然目前只能这样，但是我觉得有得玩我就很高兴了😂</p>
+<h4 id="对于启动器"><a href="#对于启动器" class="headerlink" title="对于启动器"></a>对于启动器</h4><ul>
+<li><code>-lang [some language]</code>- 将游戏的语言设置为<em>某种语言</em>（考虑到您拥有语言文件）</li>
+<li><code>-masterip [some ip]</code>- 将主服务器的IP地址设置为<em>某个IP</em></li>
+<li><code>-masterport [some port]</code>- 将主服务器的端口号设置为<em>某个端口</em></li>
+<li><code>-decryptedfiles</code> - 告诉游戏将每个游戏文件视为已解密</li>
+<li><code>-enablecustom</code>- 允许在<code>custom</code>游戏文件的根目录中使用自定义目录</li>
+<li><code>-username [your username]</code> - 指定登录用户名，以跳过登录屏幕。<strong>必须</strong>使用<code>-password</code></li>
+<li><code>-password [your password]</code> - 指定登录密码，以跳过登录屏幕。<strong>必须</strong>使用<code>-username</code></li>
+</ul>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>直接运行游戏根目录下的<code>PlayCSO2.exe</code>,如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs005.png" alt></p>
+<p>然后点击游戏设定，分别如下面的图片所示，自己视情况设定选项：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs006.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs007.png" alt></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs008.png" alt></p>
+<p>然后点击保存，如果询问你是都要构建服务器之类的，或者是其它的，直接允许即可！然后根据你的网络情况，可以选择本地启动游戏，或者是连接到其它服务器加入游戏！开始游玩吧！</p>
+<p>运行成功之后，会有cso2_launcher.ini，这个文件里面有登陆账号和密码，是你不联网的情况下，在本地使用的。</p>
+<h3 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h3><p><del>这个其它方法嘛，就是各个搭建私服的工作组，给大家介绍的玩他们的私服的方法，略有不同，具体的自己去看看呢！</del>建议有条件玩外(私)服，国内的私服。。。</p>
+<h2 id="再次鸣谢"><a href="#再次鸣谢" class="headerlink" title="再次鸣谢"></a>再次鸣谢</h2><p>感谢Ochii，主服务器GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbWFzdGVyLXNlcnZlcg==">地址<i class="fa fa-external-link-alt"></i></span>，客户端启动程序GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbGF1bmNoZXIv">地址<i class="fa fa-external-link-alt"></i></span>，感谢！均有MIT许可证许可！</p>
+<p>感谢“I’m Not MentaL”大神的GUI启动器，他的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vcG9zdHMvY291bnRlci1zdHJpa2UtMi0yNDU5NzQ1Nj9mYmNsaWQ9SXdBUjI1VUJERXltMldoWWlzaFJjYkZVdFVEN1VSbTFaNHBoUU9sOUFzVUdzZTduRVJQMGRGT3kxRHdoZw==">Patreon<i class="fa fa-external-link-alt"></i></span>！感谢！</p>
+<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0Lw==">网站<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
+<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0L2ZvcnVtLw==">论坛<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
+<p>感谢<del>你们</del>国外大神所做出的努力！</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><iframe width="680" height="360" src="https://www.youtube-nocookie.com/embed/4qsRxFNMuL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>视频链接👉<span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS80cXNSeEZOTXVMMA==">https://youtu.be/4qsRxFNMuL0<i class="fa fa-external-link-alt"></i></span></p>
+<p>有什么问题或建议，欢迎留言或者发邮箱。<del>这里没有商业合作，每一个团队需要宣传都欢迎联系我！</del>感谢无私帮助玩家们的开发者们，你们辛苦了！~~感谢国外的几个大神！</p>
+]]></content>
+      <categories>
+        <category>CSO2</category>
+      </categories>
+      <tags>
+        <tag>CSO2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>黑苹果教程</title>
     <url>/posts/2019/clover.html</url>
     <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="clover/c001.png" alt></p>
@@ -155,146 +384,6 @@
       <tags>
         <tag>黑苹果</tag>
         <tag>暗影精灵</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2019年终总结</title>
-    <url>/posts/2019/2019year-end.html</url>
-    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="2019year-end/2019year-end_p1.jpg" alt></p>
-<blockquote>
-<p>美丽的灵魂成就美丽的人生    ——  《美丽人生》豆瓣短评</p>
-</blockquote>
-<a id="more"></a>
-
-<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>9102年马上就要结束了，回过头来看这一年，又完成了哪些目标？经历了哪些挫折？在人生的十字路口我做了怎样的选择？又学到了哪些新知识、又看了哪些书？</p>
-<p>先看看年初立的flag：</p>
-<ul>
-<li><input disabled type="checkbox"> 公众号坚持每周都发布原创文章</li>
-<li><input checked disabled type="checkbox"> GitHub上完成自己的一些项目(尽管可能并没有什么实际用处，但是需要练手)</li>
-<li><input checked disabled type="checkbox"> 少玩游戏少熬夜</li>
-<li><input disabled type="checkbox"> 学习或了解一门新的编程语言(这里有歧义，算作没完成吧)</li>
-<li><input disabled type="checkbox"> 从入门到精通并不弃坑的学习C++(先把Java搞好，Java真香)</li>
-<li><input disabled type="checkbox"> 坚持健身</li>
-<li><input disabled type="checkbox"> 拥有自己的小程序</li>
-<li><input checked disabled type="checkbox"> 考试不挂科</li>
-<li><input disabled type="checkbox"> 学习UE4</li>
-<li><input disabled type="checkbox"> 完成以上所有的计划</li>
-</ul>
-<p>嗯，😥真是不堪入目，今年看起来似乎很失败。了解我的小伙伴，应该知道我在很早之前就接触Java这门语言了。但是在去年写年终总结时，因为对游戏开发很感兴趣，所以当时决定选择游戏开发来作为新一年的目标。但是！！！在我发表之后不久，在一些大佬的劝说下(洗脑)，决定就往Java发展，目前正在学习JavaEE中。</p>
-<blockquote>
-<p>不能影响你编程观点的语言，不值得你去学！——Alan Perlis</p>
-</blockquote>
-<p>为什么我最终还是选择了Java？实不相瞒，我最早接触的编程语言，就是Java。后来因为种种原因，对Java的了解越来越多，也越来越喜欢这门语言。它从某种程度上对我的编程思想带来了影响，我也明白，编程语言学的越多，并不代表能力越强，更重要的应该是其中的“Programming paradigm”，即“编程范式”。</p>
-<p>所以从明年开始，决定专精Java这门语言，或许等到Java学的很好之后(也需要好几年)，才会再接触其它比较好的语言。某些语言，我也一直想去学，但是先认真地学“好”一门语言，并掌握编程思想才是我应该做的，不能“急功近利”。</p>
-<p>在今年，我了解并学习了很多新知识，不知道为什么，学习的速度跟以前比越来越快了，但是发现自己要学的东西越来越多了，不过我不会停止学习的。今年11月份的时候，一直在犹豫怎么选择以后的路(短期的)，最后参考一些前辈的经历，并结合自己的实际情况，决定选择培训。目前在武汉千峰培训JavaEE，每天在学习我喜欢的知识，感觉过的很充实。我也很感谢家人对我的支持，成功路上真的离不开家人的支持(虽然目前还没成功)。</p>
-<p>最后，说好的要定期更新文章，但是很多时候真的不知道写啥，我觉得这跟我的知识储备还是有关，毕竟不想太水文章。但是，我这一年来，至少做到了坚持做markdown笔记，并且我决定，将这个好习惯保持下去！</p>
-<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>那么2020年，也应该立新的flag了！</p>
-<ul>
-<li>学好Java，以及相关的一些技术。</li>
-<li>找一份自己喜欢的编程工作！</li>
-<li>少玩游戏少熬夜。</li>
-<li>坚持健身。</li>
-<li>继续坚持做笔记。</li>
-<li>精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
-<li>写一款自己的主题或web项目(在培训机构的不算数)</li>
-<li>积极的拥抱开源。</li>
-<li>学习或了解一项新技术</li>
-<li>成立自己的小团队，或者找到一群有共同理想目标的人</li>
-<li>完成以上所有的计划，最好能脱单！</li>
-</ul>
-<p>最后，祝大家在2020能够找到自己的方向或目标，并不断地努力下去！</p>
-<center><b>I shall rise oh well rise again and agian.</b></center>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public class void main(String[] args) &#123;</span><br><span class="line">    	System.out.println(&quot;你好，2020!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>年终总结</category>
-      </categories>
-      <tags>
-        <tag>年终总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在VirtualBox上安装Android-X86</title>
-    <url>/posts/2019/android-for-virtualbox.html</url>
-    <content><![CDATA[<p>对于<code>Android</code>开发来说，尤其是新手(没错，我自己就是<code>noob</code>😥)，有很多种开发调试的方案。比如<code>Genymotion+VirtualBox</code>搭配方案(在我的笔记本上这种方案性能最低，可能因配置而异)、直接用<code>VirtualBox</code>安装<code>Android-X86</code>的<code>iso</code>，或者是直接在<code>Android Studio</code>里面调试等等。本文介绍的是直接用<code>VirtualBox</code>安装<code>Android-X86</code>，虽然是在虚拟机中安装，但是也会有很多不可避免的坑！！！</p>
-<a id="more"></a>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox025.png" alt></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，我们要准备<code>VirtualBox</code>：</p>
-<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cudmlydHVhbGJveC5vcmcvd2lraS9Eb3dubG9hZHM=">https://www.virtualbox.org/wiki/Downloads<i class="fa fa-external-link-alt"></i></span></p>
-<p>然后下载<code>Android-X86</code>的<code>iso</code>，这是一个将<span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2UuYW5kcm9pZC5jb20v">Android开源项目<i class="fa fa-external-link-alt"></i></span>移植到x86平台的项目：</p>
-<p>官网👉：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2Rvd25sb2Fk">https://www.android-x86.org/download<i class="fa fa-external-link-alt"></i></span></p>
-<p><strong>注：本文章同样适用于PhoenixOS系统！</strong></p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>准备好之后，我们安装完并打开<code>VirtualBox</code>，找到如图所示的<code>新建</code>按钮(不同版本可能界面稍有不同，但是明白要干什么就行了):</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox001.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox002.png" alt></p>
-<p>然后设置相应的信息，注意文件夹就是虚拟机文件存放位置，建议不要用默认的。名称随便取，类型选<code>Linux</code>，版本选<code>Other Linux</code>，至于是<code>32位</code>还是<code>64位</code>，就看你下载的<code>iso</code>是多少位的了。然后点击下一步。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox003.png" alt></p>
-<p>然后分配内存，这个看电脑本身的内存多大再酌情配置，然后点击下一步。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox004.png" alt></p>
-<p>然后选择<code>现在创建虚拟硬盘</code>。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox005.png" alt></p>
-<p>然后选择VDI，点击下一步。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox006.png" alt></p>
-<p>选择动态分配，然后点击下一步(当然，硬盘空间大的请随意)。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox007.png" alt></p>
-<p>根据实际情况来配置虚拟硬盘的大小，硬盘空间大的请随意，然后点击创建。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox008.png" alt></p>
-<p>然后找到我们刚才创建好的<code>Android_test</code>，点击设置。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox009.png" alt></p>
-<p>然后点击显示-调整显存大小-启用硬件加速里面的3D加速。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox010.png" alt></p>
-<p>选择存储-点击盘片-分配一个光驱，就是把你下载的<code>Android-X86</code>的<code>iso</code>添加进去。然后点击ok。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>当鼠标进入虚拟机窗口移不出来时，按下键盘右边的Ctrl(唱、跳、Rap、篮球😀)即可，vm虚拟机是Ctrl+Alt。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox011.png" alt></p>
-<p>双击我们创建好的虚拟机。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox012.png" alt></p>
-<p>选择<code>Advanced options...</code>，然后</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox013.png" alt></p>
-<p>选择<code>Auto_Installation</code>，这里为什么建议大家选择自动安装呢？因为我们再“这个”虚拟机中只分配了一个虚拟硬盘，而且并不大，所以没必要分区。而且这样也最快，能保证新手在不太了解的情况下不出错。选择这一项之后，按下回车键。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox014.png" alt></p>
-<p>选择yes！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox015.png" alt></p>
-<p>耐心等待！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox016.png" alt></p>
-<p>选择Reboot以重启。</p>
-<h2 id="划重点"><a href="#划重点" class="headerlink" title="划重点"></a>划重点</h2><p>在重启之后，会回到开始的位置</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox017.png" alt></p>
-<p>然后我们将其强制退出！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox018.png" alt></p>
-<p>然后在设置里面，把iso的盘片移除，免得开机时加载盘片去了。然后再重新双击启动！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox019.png" alt></p>
-<p>然后选择<code>Android-x86 8.1-r2</code>，<strong>千万别手贱按了回车</strong>，通过下面的帮助信息得知，我们要按下<code>E键</code>，进入编辑页面.</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox020.png" alt></p>
-<p>然后在<code>kernel</code>哪里，同样的按下<code>E键</code>，进入编辑页面</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox021.png" alt></p>
-<p>移动光标，找到图中的<code>quiet</code>这个词。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox022.png" alt></p>
-<p>把<code>quiet</code>改为<code>nomodeset xforcevesa</code>，然后按下回车键，再按下键盘上的<code>B键</code>。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox023.png" alt></p>
-<p>然后你就会看到Android的字母了，慢慢等待即可！后面的就不说了，等到了“开机”，应该就自己会玩了，跟用手机也区别不大！</p>
-<p><strong>注：每次开机都需要这一步操作，如果你不想这么做，请自行Google！</strong></p>
-<h2 id="问题详解"><a href="#问题详解" class="headerlink" title="问题详解"></a>问题详解</h2><p>这时候来给大家解释一下，为什么刚才在进入系统之前要修改某些参数！转化成问题，也就是：为什么部分电脑或者虚拟机无法启动Android-x86系统的图形界面？</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="android-for-virtualbox/android-for-virtualbox024.png" alt></p>
-<p>先来看一张图，我们知道，它是基于Linux内核的，就跟大多数人安装Linux时需要禁用独显一样，你在安装Android-x86时，需要告诉内核，不要设置图形分辨率。</p>
-<p>那么，刚才的三个步骤，分别是在干什么呢？</p>
-<ul>
-<li>删除<code>quiet</code>，删除之后可以查看内核消息。</li>
-<li>添加<code>nomodeset</code>参数，禁用“内核模式设置”(告诉内核不要设置图形分辨率，让X代替)。</li>
-<li>添加<code>xforcevesa</code>参数，强制使用X的VESA驱动程序。</li>
-</ul>
-<p><strong>VESA</strong>是一个支持大部分显卡的通用驱动，但不提供任何2D和3D加速功能。要充分发挥显卡性能，需安装<strong>相应的厂商驱动程序</strong>。</p>
-<p>nVidia用户，可以参考ArchLinux的内核模式设置:<span class="exturl" data-url="aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvaW5kZXgucGhwL0tlcm5lbF9tb2RlX3NldHRpbmc=">https://wiki.archlinux.org/index.php/Kernel_mode_setting<i class="fa fa-external-link-alt"></i></span></p>
-<p>同时，你可以了解HybridGraphics:<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLnVidW50dS5jb20vY29tbXVuaXR5L0h5YnJpZEdyYXBoaWNz">https://help.ubuntu.com/community/HybridGraphics<i class="fa fa-external-link-alt"></i></span></p>
-<p>然后查看项目官方的wiki(必要的):<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5kcm9pZC14ODYub3JnL2RvY3VtZW50YXRpb24vZ3JhcGhpY19jYXJkLmh0bWw=">https://www.android-x86.org/documentation/graphic_card.html<i class="fa fa-external-link-alt"></i></span></p>
-<p>以及issues:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29wZW50aG9zL3N5c3RlbS1hbmFseXNpcy9pc3N1ZXMvMjM=">https://github.com/openthos/system-analysis/issues/23<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -474,138 +563,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Playing CSO2 on your computer！</title>
-    <url>/posts/2019/cso2.html</url>
-    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>反恐精英Online2，英文名：Counter-Strike Online2，粉丝们称为蛋拐兔2。世纪天成公司于2013年9月5日正式宣布代理《反恐精英Online2》，国服于2015年2月5日起源首测，3月5号二测，4月22号正式公测。然而不辛的是，在2018年5月18日，国服（世纪天成代理）正式停止运营。</p>
-<a id="more"></a>
-
-<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>嗯，反正我是在停服之前的一段时间，就已经没玩了。因为我害怕，害怕前一天还玩了，第二天就进不去游戏了，这并不是我想要的。在我的印象中，每年的圣诞节，是蛋拐兔最好玩的时候，人多，氛围也好。而18年的圣诞节，只能听听bgm艰难度日，到后来，当我得知有私服之后，我便又重新燃起了激情！！！</p>
-<h2 id="Gaming"><a href="#Gaming" class="headerlink" title="Gaming"></a>Gaming</h2><h3 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h3><p>蛋拐兔2关服了，你是否还在苦恼呢？其实不少小伙伴们都知道有私服的，虽然不是我的，但是我也想借此机<br>会来推广，好让喜欢的朋友玩。我知道的私服都是免费的，都是公益性质的，搭建私服的大佬们完全是为了能<br>让大家接着玩，而且还免费。我录制视频和写教程，不出于任何形式的盈利目的，完全是基于一个热爱的老<br>玩家心态，告知和帮助那些跟我一样，曾经喜欢玩蛋拐兔的玩家，能够重新玩这款游戏。</p>
-<center>不管你玩不玩，但是请记得，你的青春里有过它！！！</center>
-
-<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>首先，让我们感谢Ochii大神写的CSO2的主服务器和客户端启动程序，并且已经开源了！<br>还有“I’m Not MentaL”大神的GUI启动器。<br>同时也感谢国内的几个小团队，自己搭建了国内的私服，并在此基础上优化了服务端和启动端，让大家<br>不仅免费也更容易地van这款游戏，而且是联机的！谢谢你们做出的努力！感谢！</p>
-<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- Microsoft .NET Framework 4.5.2及以上</span><br><span class="line">- NodeJS（如果你玩国内的联机私服，则不需要安装）</span><br><span class="line">- 一些必要的游戏运行环境，如果你是平常玩游戏，那么我相信你的电脑上也已经有了</span><br></pre></td></tr></table></figure>
-
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 安装包，版本可选，看你想玩那种的。国内私服的话，也是有它们自己稍做了修改的版本的。</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;15qVLo7jrJxG6r-kZBqqEdQ   提取码：1h7v </span><br><span class="line">- 主服务器 </span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;166igd4lFMR1R776ATMKN5w   提取码：h0ka </span><br><span class="line">- 客户端启动程序</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1OeDIVXhbfgvDljVLdYxVfA   提取码：iwso </span><br><span class="line">- GUI启动器</span><br><span class="line">	链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1A8rh44NzJ8MSXU8edJqIwQ   提取码：czup </span><br><span class="line">- node.js（版本10或更高版本）</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><p>我们先假设，你已经安装了<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>，然后，在你的电脑硬盘里面，随便找一个盘。我放在E盘了，比如我的游戏路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E:\Counter-Strike Online 2</span><br></pre></td></tr></table></figure>
-
-<p>然后创建<code>Game</code>文件夹和<code>Server</code>文件夹，如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs001.png" alt></p>
-<p>然后，将游戏的压缩包解压到<code>Game</code>文件夹，解压完之后，应该是这样：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs002.png" alt></p>
-<p>接着将主服务器的压缩包，解压至<code>Server</code>文件夹，解压完之后，应为：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs003.png" alt></p>
-<p>然后，将下载的2个客户端启动程序，解压至<code>Counter-Strike Online 2\Game\Bin</code>文件夹。解压完成后，再将GUI启动器压缩包，解压至<code>Counter-Strike Online 2</code>根目录下。然后，基本上就完成一大半了。正常的，这个时候你的游戏根目录下应该为这样：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs004.png" alt></p>
-<h2 id="构建游戏"><a href="#构建游戏" class="headerlink" title="构建游戏"></a>构建游戏</h2><p>下一步我们要做的，就是让游戏跑起来！</p>
-<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>这一步是最开始的方法，但是也最复杂，不建议大家使用，请跳至下一步！</p>
-<p>要运行服务器，您需要：</p>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuLw==">Node.js<i class="fa fa-external-link-alt"></i></span>（版本10或更高版本）;</li>
-<li>搭建服务器，也就是我们下载的主服务器。</li>
-</ul>
-<p>然后，在服务器目录内的终端实例中，执行以下操作：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --only &#x3D; production ＃安装所需的依赖项（最小依赖项） </span><br><span class="line">npm run start ＃启动预构建服务器</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下，服务器<strong>会询问您要侦听的网络接口</strong>。</p>
-<h4 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h4><p>下载源代码后，转到源代码目录中的终端实例，然后：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install ＃安装所需的依赖项 </span><br><span class="line">npm run build ＃ builds服务器 </span><br><span class="line">npm run start ＃启动新服务器构建</span><br></pre></td></tr></table></figure>
-
-<h4 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h4><p>选项：</p>
-<ul>
-<li><code>-i, --ip-address [ip]</code>（<em>可选</em>）要侦听的IP地址（默认值：自动检测）</li>
-<li><code>-p, --port-master [port]</code>（<em>可选</em>）服务器的（TCP）端口（默认值：30001）</li>
-<li><code>-P, --port-holepunch [port]</code>（<em>可选</em>）服务器的打孔（UDP）端口（默认值：30002）</li>
-<li><code>-l, --log-packets</code>（<em>可选</em>）记录传入和传出的数据包</li>
-</ul>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在开始之前，你必须允许launcher.exe在防火墙和端口转发端口27015到27020或打开路由器的NAT，以便与其他人一起玩。</p>
-<p>如果您举办房间比赛，其他客户将知道您的IP。</p>
-<p>如果您加入主持人的房间比赛，主人将知道您的IP。</p>
-<p>一旦开发了专用服务器启动器，这可能在将来可以避免。</p>
-<h4 id="开始游戏"><a href="#开始游戏" class="headerlink" title="开始游戏"></a>开始游戏</h4><p>基本上就是挂载到一个大服务器，然后玩家们进来。由配置和网络比较好的玩家开启房间当房主，然后其他人加入游戏。同时，房主卡，其他人跟着卡，房主推出房间，其他人也会掉。虽然目前只能这样，但是我觉得有得玩我就很高兴了😂</p>
-<h4 id="对于启动器"><a href="#对于启动器" class="headerlink" title="对于启动器"></a>对于启动器</h4><ul>
-<li><code>-lang [some language]</code>- 将游戏的语言设置为<em>某种语言</em>（考虑到您拥有语言文件）</li>
-<li><code>-masterip [some ip]</code>- 将主服务器的IP地址设置为<em>某个IP</em></li>
-<li><code>-masterport [some port]</code>- 将主服务器的端口号设置为<em>某个端口</em></li>
-<li><code>-decryptedfiles</code> - 告诉游戏将每个游戏文件视为已解密</li>
-<li><code>-enablecustom</code>- 允许在<code>custom</code>游戏文件的根目录中使用自定义目录</li>
-<li><code>-username [your username]</code> - 指定登录用户名，以跳过登录屏幕。<strong>必须</strong>使用<code>-password</code></li>
-<li><code>-password [your password]</code> - 指定登录密码，以跳过登录屏幕。<strong>必须</strong>使用<code>-username</code></li>
-</ul>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>直接运行游戏根目录下的<code>PlayCSO2.exe</code>,如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs005.png" alt></p>
-<p>然后点击游戏设定，分别如下面的图片所示，自己视情况设定选项：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs006.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs007.png" alt></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="cso2/cs008.png" alt></p>
-<p>然后点击保存，如果询问你是都要构建服务器之类的，或者是其它的，直接允许即可！然后根据你的网络情况，可以选择本地启动游戏，或者是连接到其它服务器加入游戏！开始游玩吧！</p>
-<p>运行成功之后，会有cso2_launcher.ini，这个文件里面有登陆账号和密码，是你不联网的情况下，在本地使用的。</p>
-<h3 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h3><p><del>这个其它方法嘛，就是各个搭建私服的工作组，给大家介绍的玩他们的私服的方法，略有不同，具体的自己去看看呢！</del>建议有条件玩外(私)服，国内的私服。。。</p>
-<h2 id="再次鸣谢"><a href="#再次鸣谢" class="headerlink" title="再次鸣谢"></a>再次鸣谢</h2><p>感谢Ochii，主服务器GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbWFzdGVyLXNlcnZlcg==">地址<i class="fa fa-external-link-alt"></i></span>，客户端启动程序GitHub👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL09jaGlpL2NzbzItbGF1bmNoZXIv">地址<i class="fa fa-external-link-alt"></i></span>，感谢！均有MIT许可证许可！</p>
-<p>感谢“I’m Not MentaL”大神的GUI启动器，他的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cucGF0cmVvbi5jb20vcG9zdHMvY291bnRlci1zdHJpa2UtMi0yNDU5NzQ1Nj9mYmNsaWQ9SXdBUjI1VUJERXltMldoWWlzaFJjYkZVdFVEN1VSbTFaNHBoUU9sOUFzVUdzZTduRVJQMGRGT3kxRHdoZw==">Patreon<i class="fa fa-external-link-alt"></i></span>！感谢！</p>
-<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0Lw==">网站<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
-<p>Counter-Strike Online2的👉<span class="exturl" data-url="aHR0cHM6Ly9jc29ubGluZTIubmV0L2ZvcnVtLw==">论坛<i class="fa fa-external-link-alt"></i></span>，感谢！</p>
-<p>感谢<del>你们</del>国外大神所做出的努力！</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><iframe width="680" height="360" src="https://www.youtube-nocookie.com/embed/4qsRxFNMuL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>视频链接👉<span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS80cXNSeEZOTXVMMA==">https://youtu.be/4qsRxFNMuL0<i class="fa fa-external-link-alt"></i></span></p>
-<p>有什么问题或建议，欢迎留言或者发邮箱。<del>这里没有商业合作，每一个团队需要宣传都欢迎联系我！</del>感谢无私帮助玩家们的开发者们，你们辛苦了！~~感谢国外的几个大神！</p>
-]]></content>
-      <categories>
-        <category>CSO2</category>
-      </categories>
-      <tags>
-        <tag>CSO2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FTP的搭建和使用</title>
-    <url>/posts/2019/ftp.html</url>
-    <content><![CDATA[<p>去年再阿里买的学生价的服务器，在使用的过程中用到了FTP，故将使用方法记录下来，也方便自己之后查阅。</p>
-<a id="more"></a>
-
-<h2 id="What’s-FTP"><a href="#What’s-FTP" class="headerlink" title="What’s FTP?"></a>What’s FTP?</h2><p>FTP 是File Transfer Protocol（文件传输协议）的英文简称，而中文简称为“文传协议”。用于Internet上的控制文件的双向传输。同时，它也是一个应用程序（Application）。基于不同的操作系统有不同的FTP应用程序，而所有这些应用程序都遵守同一种协议以传输文件。互联网上提供文件存储和访问服务的计算机，他们依照的是FTP协议提供服务！支持FTP协议的服务器就是FTP服务器！FTP协议提供存储和传输服务的一套协议。下载”（Download）和”上传”（Upload）。”下载”文件就是从远程主机拷贝文件至自己的计算机上；”上传”文件就是将文件从自己的计算机中拷贝至远程主机上。用Internet语言来说，用户可通过客户机程序向（从）远程主机上传（下载）文件。</p>
-<h2 id="FTP的安装与配置"><a href="#FTP的安装与配置" class="headerlink" title="FTP的安装与配置"></a>FTP的安装与配置</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先我们肯定得安装vsftpd，如果不知道这是啥，Google查一查吧，但是会看这篇文章的人，应该没有不知道的😁在用<span class="exturl" data-url="aHR0cDovL3d3dy5wdXR0eS5vcmcv">putty<i class="fa fa-external-link-alt"></i></span>连上你的服务器之后，直接用<code>yum</code>安装就好了,输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
-
-<p>如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp001.png" alt></p>
-<p>出现下图表示安装成功：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp002.png" alt></p>
-<p>如果你像我的一样，已经安装了的话，会这样显示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp003.png" alt></p>
-<p>它会告诉你已经安装了最新的软件安装包，这时候它无事可做了😂</p>
-<h3 id="相关配置文件"><a href="#相关配置文件" class="headerlink" title="相关配置文件"></a>相关配置文件</h3><p>输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;etc&#x2F;vsftpd</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
-
-<p>如图所示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp004.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf 	&#x2F;&#x2F;主配置文件，核心配置文件</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;ftpusers 	    &#x2F;&#x2F;黑名单，这个里面的用户不允许访问FTP服务器</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;user_list 		&#x2F;&#x2F;白名单，允许访问FTP服务器的用户列表</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>同样的，输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vsftpd.service 	&#x2F;&#x2F;设置开机自启动</span><br><span class="line">systemctl start vsftpd.service 		&#x2F;&#x2F;启动ftp服务</span><br><span class="line">netstat -antup | grep ftp 			&#x2F;&#x2F;查看ftp服务端口</span><br></pre></td></tr></table></figure>
-
-<p>输出情况如图所示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp005.png" alt></p>
-<p>由于我是在阿里云买的服务器，所以去阿里云的控制台添加一条防火墙规则，如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp006.png" alt></p>
-<p>登录轻量服务器控制台，单击 <strong>服务器运维</strong> &gt; <strong>防火墙</strong> &gt; <strong>添加规则</strong>。</p>
-<p>然后登陆FTP服务器：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp007.png" alt></p>
-<h2 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h2><p>如果你是刚接触ftp，出于安全考虑，不建议你使用匿名FTP上传文件，或者进行创建目录等操作。vsftpd在默认情况下也是不允许用户匿名的，若是执意要这样，可以修改vsftpd.conf配置文件的选项，可以赋予匿名ftp更多的权限。更高的进阶操作，欢迎大家自行Google，若有不足之处，欢迎指出！</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>FTP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git本地文件到GitHub仓库</title>
     <url>/posts/2019/gitgo.html</url>
     <content><![CDATA[<p>这是一个简单使用的教程，如果你刚接触<code>git</code>和<code>GitHub</code>，那么，这篇文章再适合你不过了！首先，没有接触过版本控制概念的同学们也可以轻松入门；其次，通过这篇博文，你将学会本地构建仓库、远程克隆仓库、上传本地仓库等魔法操作(语言上可能组织不太好😅)，值得你一看。</p>
@@ -729,6 +686,49 @@
       <tags>
         <tag>Git</tag>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FTP的搭建和使用</title>
+    <url>/posts/2019/ftp.html</url>
+    <content><![CDATA[<p>去年再阿里买的学生价的服务器，在使用的过程中用到了FTP，故将使用方法记录下来，也方便自己之后查阅。</p>
+<a id="more"></a>
+
+<h2 id="What’s-FTP"><a href="#What’s-FTP" class="headerlink" title="What’s FTP?"></a>What’s FTP?</h2><p>FTP 是File Transfer Protocol（文件传输协议）的英文简称，而中文简称为“文传协议”。用于Internet上的控制文件的双向传输。同时，它也是一个应用程序（Application）。基于不同的操作系统有不同的FTP应用程序，而所有这些应用程序都遵守同一种协议以传输文件。互联网上提供文件存储和访问服务的计算机，他们依照的是FTP协议提供服务！支持FTP协议的服务器就是FTP服务器！FTP协议提供存储和传输服务的一套协议。下载”（Download）和”上传”（Upload）。”下载”文件就是从远程主机拷贝文件至自己的计算机上；”上传”文件就是将文件从自己的计算机中拷贝至远程主机上。用Internet语言来说，用户可通过客户机程序向（从）远程主机上传（下载）文件。</p>
+<h2 id="FTP的安装与配置"><a href="#FTP的安装与配置" class="headerlink" title="FTP的安装与配置"></a>FTP的安装与配置</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先我们肯定得安装vsftpd，如果不知道这是啥，Google查一查吧，但是会看这篇文章的人，应该没有不知道的😁在用<span class="exturl" data-url="aHR0cDovL3d3dy5wdXR0eS5vcmcv">putty<i class="fa fa-external-link-alt"></i></span>连上你的服务器之后，直接用<code>yum</code>安装就好了,输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+
+<p>如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp001.png" alt></p>
+<p>出现下图表示安装成功：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp002.png" alt></p>
+<p>如果你像我的一样，已经安装了的话，会这样显示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp003.png" alt></p>
+<p>它会告诉你已经安装了最新的软件安装包，这时候它无事可做了😂</p>
+<h3 id="相关配置文件"><a href="#相关配置文件" class="headerlink" title="相关配置文件"></a>相关配置文件</h3><p>输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;etc&#x2F;vsftpd</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<p>如图所示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp004.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf 	&#x2F;&#x2F;主配置文件，核心配置文件</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;ftpusers 	    &#x2F;&#x2F;黑名单，这个里面的用户不允许访问FTP服务器</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;user_list 		&#x2F;&#x2F;白名单，允许访问FTP服务器的用户列表</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>同样的，输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vsftpd.service 	&#x2F;&#x2F;设置开机自启动</span><br><span class="line">systemctl start vsftpd.service 		&#x2F;&#x2F;启动ftp服务</span><br><span class="line">netstat -antup | grep ftp 			&#x2F;&#x2F;查看ftp服务端口</span><br></pre></td></tr></table></figure>
+
+<p>输出情况如图所示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp005.png" alt></p>
+<p>由于我是在阿里云买的服务器，所以去阿里云的控制台添加一条防火墙规则，如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp006.png" alt></p>
+<p>登录轻量服务器控制台，单击 <strong>服务器运维</strong> &gt; <strong>防火墙</strong> &gt; <strong>添加规则</strong>。</p>
+<p>然后登陆FTP服务器：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp007.png" alt></p>
+<h2 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h2><p>如果你是刚接触ftp，出于安全考虑，不建议你使用匿名FTP上传文件，或者进行创建目录等操作。vsftpd在默认情况下也是不允许用户匿名的，若是执意要这样，可以修改vsftpd.conf配置文件的选项，可以赋予匿名ftp更多的权限。更高的进阶操作，欢迎大家自行Google，若有不足之处，欢迎指出！</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>FTP</tag>
       </tags>
   </entry>
   <entry>
@@ -1141,50 +1141,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo多端同步</title>
-    <url>/posts/2019/remote.html</url>
-    <content><![CDATA[<p>假设你换了一台电脑，或者是把电脑重置了，那么，要怎样才能接着跟原来一样配置好Hexo，然后继续写文章呢？毕竟你不是从头、从零开始配置的，很多文件都已经有了，但是，怎么保证不出问题的继续运行呢?</p>
-<a id="more"></a>
-
-<p>多台电脑同步博客源码，首先要把最新的源码上传到git上，然后在其它电脑上搭建Hexo环境后同步博客源码。 前提是两台电脑都能连上git，主要是都配置了 <code>git ssh</code>密钥连接。这个方法同样适用与误删文件的你，但是我建议平时尽量多做好备份！！！</p>
-<h2 id="同步博客源码到你的GitHub"><a href="#同步博客源码到你的GitHub" class="headerlink" title="同步博客源码到你的GitHub"></a>同步博客源码到你的GitHub</h2><p>在你打算上传的最新博客源码的基础上，按照下面的魔法操作：</p>
-<h3 id="编辑-gitignore文件"><a href="#编辑-gitignore文件" class="headerlink" title="编辑.gitignore文件"></a>编辑.gitignore文件</h3><p><code>.gitignore</code>文件作用是声明不被git记录的文件，blog根目录下的 <code>.gitignore</code>是hexo初始化是创建的，可以直接编辑，建议.gitignore文件包括以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.DS_Store      </span><br><span class="line">Thumbs.db      </span><br><span class="line">db.json      </span><br><span class="line">*.log      </span><br><span class="line">node_modules&#x2F;      </span><br><span class="line">public&#x2F;      </span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>说明：public内的文件可以根据source文件夹内容自动生成的，不需要备份。其他日志log、压缩、数据库Thumbs.db等文件也都是调试等使用，也不需要备份。</p>
-<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git # 将本地仓库映射到托管服务器的仓库</span><br></pre></td></tr></table></figure>
-
-<p>server是仓库的在线目录地址，可以从git上直接复制过来，origin是本地分支，remote add会将本地仓库映射到托管服务器的仓库上。</p>
-<h3 id="同步到git"><a href="#同步到git" class="headerlink" title="同步到git"></a>同步到git</h3><p>添加你的本地文件到仓库，并同步到GitHub上</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add . #添加blog目录下所有文件，注意有个&#39;.&#39;(.gitignore里面声明的文件不在此内)    </span><br><span class="line">git commit -m &quot;hexo source first add&quot; #添加更新说明    </span><br><span class="line">git push -u origin master  #推送更新到git上</span><br></pre></td></tr></table></figure>
-
-<h2 id="将git的内容同步到另一台电脑"><a href="#将git的内容同步到另一台电脑" class="headerlink" title="将git的内容同步到另一台电脑"></a>将git的内容同步到另一台电脑</h2><p>之前的操作主要类似于备份，而这里开始，就基本上是你在新电脑、或者是重置电脑之后的操作啦！假设我们这时候已经将blog源码内容备份到了GitHub上，现在准备在新电脑上同步源码内容。</p>
-<h3 id="搭建hexo的环境"><a href="#搭建hexo的环境" class="headerlink" title="搭建hexo的环境"></a>搭建hexo的环境</h3><p>这时候在你的新电脑上，肯定是必须要搭建环境的呢，没有环境，Hexo也无法运行呀不是。没错，又是熟悉的配方：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init &lt;folder&gt;         #用hexo创建一个博客目录</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>&lt;folder&gt;还是一样地填上博客文件夹地名字，比如说我的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init hexo         #用hexo创建一个博客目录</span><br><span class="line">cd hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<h3 id="拉取源代码"><a href="#拉取源代码" class="headerlink" title="拉取源代码"></a>拉取源代码</h3><p>在建好的环境的主目录运行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init       #将目录添加到版本控制系统中    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git </span><br><span class="line">#将本地仓库映射到托管服务器的仓库上    </span><br><span class="line">git fetch --all  #将git上所有文件拉取到本地    </span><br><span class="line">git reset --hard origin&#x2F;master  #强制将本地内容指向刚刚同步git云端内容,用远端文件覆盖本地相同文件</span><br></pre></td></tr></table></figure>
-
-<p>reset对所拉取的文件不做任何处理，此处不用pull是因为本地尚有许多文件，使用pull会有一些版本冲突，解决起来也麻烦，而本地的文件都是初始化生成的文件，较拉取的库里面的文件而言基本无用，所以直接丢弃。</p>
-<h4 id="发布内容到GitHub"><a href="#发布内容到GitHub" class="headerlink" title="发布内容到GitHub"></a>发布内容到GitHub</h4><p>要将新电脑上的最新的文章更新到git。在本地文件中运行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status #查看本地文件的状态。</span><br><span class="line">git add . #将所有更新的本地文件添加到版本控制系统中</span><br><span class="line"></span><br><span class="line">git commit -m &#39;更新信息说明&#39; </span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<h4 id="同步文章"><a href="#同步文章" class="headerlink" title="同步文章"></a>同步文章</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>获取的源码即为最新文件</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>同步</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>NexT主题个性定制与深度优化</title>
     <url>/posts/2019/next.html</url>
     <content><![CDATA[<blockquote><p>给岁月以文明，而不是给文明以岁月.</p>
@@ -1303,6 +1259,50 @@
       </categories>
       <tags>
         <tag>个性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo多端同步</title>
+    <url>/posts/2019/remote.html</url>
+    <content><![CDATA[<p>假设你换了一台电脑，或者是把电脑重置了，那么，要怎样才能接着跟原来一样配置好Hexo，然后继续写文章呢？毕竟你不是从头、从零开始配置的，很多文件都已经有了，但是，怎么保证不出问题的继续运行呢?</p>
+<a id="more"></a>
+
+<p>多台电脑同步博客源码，首先要把最新的源码上传到git上，然后在其它电脑上搭建Hexo环境后同步博客源码。 前提是两台电脑都能连上git，主要是都配置了 <code>git ssh</code>密钥连接。这个方法同样适用与误删文件的你，但是我建议平时尽量多做好备份！！！</p>
+<h2 id="同步博客源码到你的GitHub"><a href="#同步博客源码到你的GitHub" class="headerlink" title="同步博客源码到你的GitHub"></a>同步博客源码到你的GitHub</h2><p>在你打算上传的最新博客源码的基础上，按照下面的魔法操作：</p>
+<h3 id="编辑-gitignore文件"><a href="#编辑-gitignore文件" class="headerlink" title="编辑.gitignore文件"></a>编辑.gitignore文件</h3><p><code>.gitignore</code>文件作用是声明不被git记录的文件，blog根目录下的 <code>.gitignore</code>是hexo初始化是创建的，可以直接编辑，建议.gitignore文件包括以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.DS_Store      </span><br><span class="line">Thumbs.db      </span><br><span class="line">db.json      </span><br><span class="line">*.log      </span><br><span class="line">node_modules&#x2F;      </span><br><span class="line">public&#x2F;      </span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>说明：public内的文件可以根据source文件夹内容自动生成的，不需要备份。其他日志log、压缩、数据库Thumbs.db等文件也都是调试等使用，也不需要备份。</p>
+<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git # 将本地仓库映射到托管服务器的仓库</span><br></pre></td></tr></table></figure>
+
+<p>server是仓库的在线目录地址，可以从git上直接复制过来，origin是本地分支，remote add会将本地仓库映射到托管服务器的仓库上。</p>
+<h3 id="同步到git"><a href="#同步到git" class="headerlink" title="同步到git"></a>同步到git</h3><p>添加你的本地文件到仓库，并同步到GitHub上</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add . #添加blog目录下所有文件，注意有个&#39;.&#39;(.gitignore里面声明的文件不在此内)    </span><br><span class="line">git commit -m &quot;hexo source first add&quot; #添加更新说明    </span><br><span class="line">git push -u origin master  #推送更新到git上</span><br></pre></td></tr></table></figure>
+
+<h2 id="将git的内容同步到另一台电脑"><a href="#将git的内容同步到另一台电脑" class="headerlink" title="将git的内容同步到另一台电脑"></a>将git的内容同步到另一台电脑</h2><p>之前的操作主要类似于备份，而这里开始，就基本上是你在新电脑、或者是重置电脑之后的操作啦！假设我们这时候已经将blog源码内容备份到了GitHub上，现在准备在新电脑上同步源码内容。</p>
+<h3 id="搭建hexo的环境"><a href="#搭建hexo的环境" class="headerlink" title="搭建hexo的环境"></a>搭建hexo的环境</h3><p>这时候在你的新电脑上，肯定是必须要搭建环境的呢，没有环境，Hexo也无法运行呀不是。没错，又是熟悉的配方：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init &lt;folder&gt;         #用hexo创建一个博客目录</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>&lt;folder&gt;还是一样地填上博客文件夹地名字，比如说我的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli  # 安装hexo</span><br><span class="line"></span><br><span class="line">hexo init hexo         #用hexo创建一个博客目录</span><br><span class="line">cd hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save # 部署安装 hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<h3 id="拉取源代码"><a href="#拉取源代码" class="headerlink" title="拉取源代码"></a>拉取源代码</h3><p>在建好的环境的主目录运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init       #将目录添加到版本控制系统中    </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.git </span><br><span class="line">#将本地仓库映射到托管服务器的仓库上    </span><br><span class="line">git fetch --all  #将git上所有文件拉取到本地    </span><br><span class="line">git reset --hard origin&#x2F;master  #强制将本地内容指向刚刚同步git云端内容,用远端文件覆盖本地相同文件</span><br></pre></td></tr></table></figure>
+
+<p>reset对所拉取的文件不做任何处理，此处不用pull是因为本地尚有许多文件，使用pull会有一些版本冲突，解决起来也麻烦，而本地的文件都是初始化生成的文件，较拉取的库里面的文件而言基本无用，所以直接丢弃。</p>
+<h4 id="发布内容到GitHub"><a href="#发布内容到GitHub" class="headerlink" title="发布内容到GitHub"></a>发布内容到GitHub</h4><p>要将新电脑上的最新的文章更新到git。在本地文件中运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status #查看本地文件的状态。</span><br><span class="line">git add . #将所有更新的本地文件添加到版本控制系统中</span><br><span class="line"></span><br><span class="line">git commit -m &#39;更新信息说明&#39; </span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<h4 id="同步文章"><a href="#同步文章" class="headerlink" title="同步文章"></a>同步文章</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<p>获取的源码即为最新文件</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>同步</tag>
       </tags>
   </entry>
   <entry>
@@ -2561,95 +2561,6 @@
       </tags>
   </entry>
   <entry>
-    <title>给vue-admin-template添加TagsView</title>
-    <url>/posts/2020/vue-add-tagsview.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前规划着做一做自己的比较正式一点的项目，基于SpringBoot开发的前后端分离项目，但是自己本身只是Java后端为主的，所以前端功底并不好。于是就采用了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4=">vue-element-admin<i class="fa fa-external-link-alt"></i></span>的基础模板<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWFkbWluLXRlbXBsYXRl">vue-admin-template<i class="fa fa-external-link-alt"></i></span>来进行开发。同时也可以基于自己的需要，增加很多组件上去。</p>
-<a id="more"></a>
-
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="官方案例的对比"><a href="#官方案例的对比" class="headerlink" title="官方案例的对比"></a>官方案例的对比</h3><div class="tabs" id="选项卡-1"><ul class="nav-tabs"><li class="tab active"><a href="#选项卡-1-1">无tagsView</a></li><li class="tab"><a href="#选项卡-1-2">有tagsView</a></li></ul><div class="tab-content"><div class="tab-pane active" id="选项卡-1-1"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview01.png"></div><div class="tab-pane" id="选项卡-1-2"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview02.png"></div></div></div>
-
-<p>我们可以清楚的看到，有无tagsView的区别。</p>
-<h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><p>既然需要这个组件，那么就添加上去吧，好在官方的完整解决方案中，是有这个代码的。</p>
-<h4 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h4><p>我们需要先从<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4=">vue-element-admin<i class="fa fa-external-link-alt"></i></span>复制一些必要的文件过来。</p>
-<ul>
-<li><code>src/layout/components/TagsView</code> 注意，这是一整个文件夹，全部复制进去。地址： <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4vdHJlZS9tYXN0ZXIvc3JjL2xheW91dC9jb21wb25lbnRz">https://github.com/PanJiaChen/vue-element-admin/tree/master/src/layout/components<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview03.png" alt></p>
-<ul>
-<li><code>src/store/modules/tagsView.js</code>，复制这个文件到相应的位置，不知道位置的，就看这个文件的路径。。。地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4vYmxvYi9tYXN0ZXIvc3JjL3N0b3JlL21vZHVsZXMvdGFnc1ZpZXcuanM=">https://github.com/PanJiaChen/vue-element-admin/blob/master/src/store/modules/tagsView.js<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<h4 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h4><ul>
-<li>修改<code>vue-admin-template\src\layout\components\AppMain.vue</code></li>
-</ul>
-<p>修改如下代码：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview04.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;section class&#x3D;&quot;app-main&quot;&gt;</span><br><span class="line">    &lt;transition name&#x3D;&quot;fade-transform&quot; mode&#x3D;&quot;out-in&quot;&gt;</span><br><span class="line">      &lt;keep-alive :include&#x3D;&quot;cachedViews&quot;&gt;</span><br><span class="line">&lt;!--        &lt;router-view :key&#x3D;&quot;key&quot; &#x2F;&gt;--&gt;</span><br><span class="line">        &lt;router-view&gt;&lt;&#x2F;router-view&gt;</span><br><span class="line">      &lt;&#x2F;keep-alive&gt;</span><br><span class="line">    &lt;&#x2F;transition&gt;</span><br><span class="line">  &lt;&#x2F;section&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
-
-<p>修改如下代码：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview05.png" alt></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">'AppMain'</span>,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    cachedViews() &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.tagsView.cachedViews</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ,</span></span><br><span class="line">    <span class="comment">// key() &#123;</span></span><br><span class="line">    <span class="comment">//   return this.$route.path</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>新增如下代码：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview06.png" alt></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hasTagsView</span> &#123;</span><br><span class="line">  .app-main &#123;</span><br><span class="line">    <span class="comment">/* 84 = navbar + tags-view = 50 + 34 */</span></span><br><span class="line">    <span class="selector-tag">min-height</span>: <span class="selector-tag">calc</span>(100<span class="selector-tag">vh</span> <span class="selector-tag">-</span> 84<span class="selector-tag">px</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.fixed-header</span>+<span class="selector-class">.app-main</span> &#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">84px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改<code>vue-admin-template\src\layout\components\index.js</code></li>
-</ul>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview08.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export &#123; default as TagsView &#125; from &#39;.&#x2F;TagsView&#39;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改<code>src\layout\index.vue</code></li>
-</ul>
-<p>修改如下代码：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview09.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div :class&#x3D;&quot;classObj&quot; class&#x3D;&quot;app-wrapper&quot;&gt;</span><br><span class="line">    &lt;div v-if&#x3D;&quot;device&#x3D;&#x3D;&#x3D;&#39;mobile&#39;&amp;&amp;sidebar.opened&quot; class&#x3D;&quot;drawer-bg&quot; @click&#x3D;&quot;handleClickOutside&quot; &#x2F;&gt;</span><br><span class="line">    &lt;sidebar class&#x3D;&quot;sidebar-container&quot; &#x2F;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;main-container&quot;&gt;</span><br><span class="line">      &lt;div :class&#x3D;&quot;&#123;&#39;fixed-header&#39;:fixedHeader&#125;&quot;&gt;</span><br><span class="line">        &lt;navbar &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;tags-view &#x2F;&gt;</span><br><span class="line">      &lt;app-main &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
-
-<p>修改如下代码：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview10.png" alt></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Navbar, Sidebar, AppMain, TagsView &#125; <span class="keyword">from</span> <span class="string">'./components'</span></span><br></pre></td></tr></table></figure>
-
-<p>修改如下代码：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview11.png" alt></p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Navbar,</span><br><span class="line">    Sidebar,</span><br><span class="line">    AppMain,</span><br><span class="line">    TagsView</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改<code>src\settings.js</code></li>
-</ul>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview12.png" alt></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@type <span class="type">&#123;boolean&#125;</span> </span>true | false</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description </span>是否开启标签栏缓存</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">tagsView: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改<code>src\store\getters.js</code></li>
-</ul>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview13.png" alt></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">  sidebar: <span class="function"><span class="params">state</span> =&gt;</span> state.app.sidebar,</span><br><span class="line">  device: <span class="function"><span class="params">state</span> =&gt;</span> state.app.device,</span><br><span class="line">  token: <span class="function"><span class="params">state</span> =&gt;</span> state.user.token,</span><br><span class="line">  avatar: <span class="function"><span class="params">state</span> =&gt;</span> state.user.avatar,</span><br><span class="line">  name: <span class="function"><span class="params">state</span> =&gt;</span> state.user.name,</span><br><span class="line">  visitedViews: <span class="function"><span class="params">state</span> =&gt;</span> state.tagsView.visitedViews,</span><br><span class="line">  cachedViews: <span class="function"><span class="params">state</span> =&gt;</span> state.tagsView.cachedViews</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> getters</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改<code>src/store/index.js</code></li>
-</ul>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview14.png" alt></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">'./modules/user'</span></span><br><span class="line"><span class="keyword">import</span> tagsView <span class="keyword">from</span> <span class="string">'./modules/tagsView'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    app,</span><br><span class="line">    settings,</span><br><span class="line">    tagsView,</span><br><span class="line">    user</span><br><span class="line">  &#125;,</span><br><span class="line">  getters</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改<code>src/store/modules/settings.js</code></li>
-</ul>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview15.png" alt></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> defaultSettings <span class="keyword">from</span> <span class="string">'@/settings'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; showSettings, tagsView, fixedHeader, sidebarLogo &#125; = defaultSettings</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">  showSettings: showSettings,</span><br><span class="line">  tagsView: tagsView,</span><br><span class="line">  fixedHeader: fixedHeader,</span><br><span class="line">  sidebarLogo: sidebarLogo</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>至此，我们就把新功能添加上去啦！😉</p>
-<h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>现在我们来看看添加后的效果吧！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview16.png" alt></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>世纪互联OneDrive搭建OneIndex</title>
     <url>/posts/2020/onedrivecn.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>众所周知，国际版OneDrive在国内的访问速度并不理想(多线程下载除外)，所以我们就需要相对而言速度更快的世纪互联版OneDrive来体验体验了。</p>
@@ -2739,6 +2650,132 @@
       </tags>
   </entry>
   <entry>
+    <title>给vue-admin-template添加TagsView</title>
+    <url>/posts/2020/vue-add-tagsview.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前规划着做一做自己的比较正式一点的项目，基于SpringBoot开发的前后端分离项目，但是自己本身只是Java后端为主的，所以前端功底并不好。于是就采用了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4=">vue-element-admin<i class="fa fa-external-link-alt"></i></span>的基础模板<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWFkbWluLXRlbXBsYXRl">vue-admin-template<i class="fa fa-external-link-alt"></i></span>来进行开发。同时也可以基于自己的需要，增加很多组件上去。</p>
+<a id="more"></a>
+
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="官方案例的对比"><a href="#官方案例的对比" class="headerlink" title="官方案例的对比"></a>官方案例的对比</h3><div class="tabs" id="选项卡-1"><ul class="nav-tabs"><li class="tab active"><a href="#选项卡-1-1">无tagsView</a></li><li class="tab"><a href="#选项卡-1-2">有tagsView</a></li></ul><div class="tab-content"><div class="tab-pane active" id="选项卡-1-1"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview01.png"></div><div class="tab-pane" id="选项卡-1-2"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview02.png"></div></div></div>
+
+<p>我们可以清楚的看到，有无tagsView的区别。</p>
+<h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><p>既然需要这个组件，那么就添加上去吧，好在官方的完整解决方案中，是有这个代码的。</p>
+<h4 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h4><p>我们需要先从<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4=">vue-element-admin<i class="fa fa-external-link-alt"></i></span>复制一些必要的文件过来。</p>
+<ul>
+<li><code>src/layout/components/TagsView</code> 注意，这是一整个文件夹，全部复制进去。地址： <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4vdHJlZS9tYXN0ZXIvc3JjL2xheW91dC9jb21wb25lbnRz">https://github.com/PanJiaChen/vue-element-admin/tree/master/src/layout/components<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview03.png" alt></p>
+<ul>
+<li><code>src/store/modules/tagsView.js</code>，复制这个文件到相应的位置，不知道位置的，就看这个文件的路径。。。地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4vYmxvYi9tYXN0ZXIvc3JjL3N0b3JlL21vZHVsZXMvdGFnc1ZpZXcuanM=">https://github.com/PanJiaChen/vue-element-admin/blob/master/src/store/modules/tagsView.js<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h4 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h4><ul>
+<li>修改<code>vue-admin-template\src\layout\components\AppMain.vue</code></li>
+</ul>
+<p>修改如下代码：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview04.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;section class&#x3D;&quot;app-main&quot;&gt;</span><br><span class="line">    &lt;transition name&#x3D;&quot;fade-transform&quot; mode&#x3D;&quot;out-in&quot;&gt;</span><br><span class="line">      &lt;keep-alive :include&#x3D;&quot;cachedViews&quot;&gt;</span><br><span class="line">&lt;!--        &lt;router-view :key&#x3D;&quot;key&quot; &#x2F;&gt;--&gt;</span><br><span class="line">        &lt;router-view&gt;&lt;&#x2F;router-view&gt;</span><br><span class="line">      &lt;&#x2F;keep-alive&gt;</span><br><span class="line">    &lt;&#x2F;transition&gt;</span><br><span class="line">  &lt;&#x2F;section&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>修改如下代码：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview05.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">'AppMain'</span>,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    cachedViews() &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.tagsView.cachedViews</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ,</span></span><br><span class="line">    <span class="comment">// key() &#123;</span></span><br><span class="line">    <span class="comment">//   return this.$route.path</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新增如下代码：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview06.png" alt></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hasTagsView</span> &#123;</span><br><span class="line">  .app-main &#123;</span><br><span class="line">    <span class="comment">/* 84 = navbar + tags-view = 50 + 34 */</span></span><br><span class="line">    <span class="selector-tag">min-height</span>: <span class="selector-tag">calc</span>(100<span class="selector-tag">vh</span> <span class="selector-tag">-</span> 84<span class="selector-tag">px</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.fixed-header</span>+<span class="selector-class">.app-main</span> &#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">84px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>vue-admin-template\src\layout\components\index.js</code></li>
+</ul>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview08.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export &#123; default as TagsView &#125; from &#39;.&#x2F;TagsView&#39;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>src\layout\index.vue</code></li>
+</ul>
+<p>修改如下代码：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview09.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div :class&#x3D;&quot;classObj&quot; class&#x3D;&quot;app-wrapper&quot;&gt;</span><br><span class="line">    &lt;div v-if&#x3D;&quot;device&#x3D;&#x3D;&#x3D;&#39;mobile&#39;&amp;&amp;sidebar.opened&quot; class&#x3D;&quot;drawer-bg&quot; @click&#x3D;&quot;handleClickOutside&quot; &#x2F;&gt;</span><br><span class="line">    &lt;sidebar class&#x3D;&quot;sidebar-container&quot; &#x2F;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;main-container&quot;&gt;</span><br><span class="line">      &lt;div :class&#x3D;&quot;&#123;&#39;fixed-header&#39;:fixedHeader&#125;&quot;&gt;</span><br><span class="line">        &lt;navbar &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;tags-view &#x2F;&gt;</span><br><span class="line">      &lt;app-main &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>修改如下代码：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview10.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Navbar, Sidebar, AppMain, TagsView &#125; <span class="keyword">from</span> <span class="string">'./components'</span></span><br></pre></td></tr></table></figure>
+
+<p>修改如下代码：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview11.png" alt></p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">components: &#123;</span><br><span class="line">    Navbar,</span><br><span class="line">    Sidebar,</span><br><span class="line">    AppMain,</span><br><span class="line">    TagsView</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>src\settings.js</code></li>
+</ul>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview12.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@type <span class="type">&#123;boolean&#125;</span> </span>true | false</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description </span>是否开启标签栏缓存</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">tagsView: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>src\store\getters.js</code></li>
+</ul>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview13.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">  sidebar: <span class="function"><span class="params">state</span> =&gt;</span> state.app.sidebar,</span><br><span class="line">  device: <span class="function"><span class="params">state</span> =&gt;</span> state.app.device,</span><br><span class="line">  token: <span class="function"><span class="params">state</span> =&gt;</span> state.user.token,</span><br><span class="line">  avatar: <span class="function"><span class="params">state</span> =&gt;</span> state.user.avatar,</span><br><span class="line">  name: <span class="function"><span class="params">state</span> =&gt;</span> state.user.name,</span><br><span class="line">  visitedViews: <span class="function"><span class="params">state</span> =&gt;</span> state.tagsView.visitedViews,</span><br><span class="line">  cachedViews: <span class="function"><span class="params">state</span> =&gt;</span> state.tagsView.cachedViews</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> getters</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>src/store/index.js</code></li>
+</ul>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview14.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">'./modules/user'</span></span><br><span class="line"><span class="keyword">import</span> tagsView <span class="keyword">from</span> <span class="string">'./modules/tagsView'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    app,</span><br><span class="line">    settings,</span><br><span class="line">    tagsView,</span><br><span class="line">    user</span><br><span class="line">  &#125;,</span><br><span class="line">  getters</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>src/store/modules/settings.js</code></li>
+</ul>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview15.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> defaultSettings <span class="keyword">from</span> <span class="string">'@/settings'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; showSettings, tagsView, fixedHeader, sidebarLogo &#125; = defaultSettings</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">  showSettings: showSettings,</span><br><span class="line">  tagsView: tagsView,</span><br><span class="line">  fixedHeader: fixedHeader,</span><br><span class="line">  sidebarLogo: sidebarLogo</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>至此，我们就把新功能添加上去啦！😉</p>
+<h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>现在我们来看看添加后的效果吧！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="vue-add-tagsview/vue-add-tagsview16.png" alt></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计一个简易的订单系统</title>
+    <url>/posts/2021/design-order.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在电商系统中，订单系统往往承载着非常重要的角色。在极光商城项目的准备阶段，最耗费我时长的就是订单系统了（毕竟实力也不咋样😅。这期间我也查阅了大量资料，为这一块的设计做了些准备。只能说第一次设计，还是挺想做出个好东西来，但是这要考虑的东西，可比单纯的写业务代码要多得多了呀。</p>
+<a id="more"></a>
+
+<h2 id="业务关系"><a href="#业务关系" class="headerlink" title="业务关系"></a>业务关系</h2><h3 id="订单系统"><a href="#订单系统" class="headerlink" title="订单系统"></a>订单系统</h3><p>先来看看订单系统在整个极光商城中扮演的角色，实际上是负责管理平台交易的订单处理系统。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder001.png" alt></p>
+<h3 id="订单管理"><a href="#订单管理" class="headerlink" title="订单管理"></a>订单管理</h3><p>订单管理模块，主要的体现就是在后台的订单管理模块了。主要功能为订单列表、订单详情、订单定时任务、订单操作、订单跟踪、订单售后、订单流水等。</p>
+<h3 id="订单服务"><a href="#订单服务" class="headerlink" title="订单服务"></a>订单服务</h3><p>订单服务模块，为整个商城的业务支撑，负责的业务也是较复杂的。主要有订单创建，订单支付、订单确认、取消订单、发起售后、订单跟踪等流程。其中的规则较为复杂，比如说在用户提交订单时，得根据相应的规则判断订单是否合法，也可以理解为风控吧。然后要计算订单的金额，购买了东西，相应的库存也要变化，还要考虑超卖问题。其中某些步骤可能是需要异步调用的，举个例子：我用12306买票时，付款后，先收到邮件，然后12306APP这边的状态过几秒钟能看到购买成功，这里发邮件的功能，可能就是用的异步调用。</p>
+<h3 id="订单信息"><a href="#订单信息" class="headerlink" title="订单信息"></a>订单信息</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder002.png" alt></p>
+<p>整个订单的设计，是采取的主表和子表。主表主要会存放订单的基本信息、用户信息、订单流水，物流信息、促销信息、等。但是考虑到一个订单可能包含多个商品，所以说子订单就是用来存放这些不同商品的信息的，当然，也可以进行订单拆分业务，但是即使这么设计，也要考虑到用户只应该付一次款的问题。</p>
+<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder003.png" alt></p>
+<p>数据库里面，目前只对订单系统设计了6张表，以目前的业务来看的话，是绰绰有余了，以后业务变更了再修改吧。</p>
+<h2 id="订单流程"><a href="#订单流程" class="headerlink" title="订单流程"></a>订单流程</h2><p>就以正常下单的流程来说吧，售后的订单这里就不过多介绍了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder004.png" alt></p>
+<h3 id="订单创建"><a href="#订单创建" class="headerlink" title="订单创建"></a>订单创建</h3><p>用户登录商城，挑选想要购买的商品，然后选择地址和促销信息并提交订单。然后生成订单前，我们需要获取用户信息、商品信息、促销信息等。当然，并不是所有的数据都从前端接收的，不然的话用户传个假的价格过来，岂不是0元购了😂。获取完信息后，这时后台的风控系统，可以进行一系列的规则校验。咱们还得判断库存吧，库存不够了也不能卖，这里的业务设计，以提交订单为准进行库存的扣除。最后生成订单信息和支付信息，同步当前订单即创建完成。</p>
+<h3 id="订单支付"><a href="#订单支付" class="headerlink" title="订单支付"></a>订单支付</h3><p>支付的话，肯定就是对接第三方平台做一个支付功能了，具体的可以去看支付宝开放平台的文档做个参考。这里主要阐述下订单拆分问题。根据订单里面的商品的性质等原因，可以进行不同的订单拆分。但是，订单建议设计成同时支付和绑定订单。不然的话，很容易被凑单，从而造成一定的损失。除非你的业务就是想弄成淘宝那种，为了凑单拼到300元，然后付款了秒退凑单商品，从而达到优惠的效果。最后根据订单支付的结果，对订单进行操作，成功了就走订单生产流程，失败了就走失败订单的流程，还原被扣除的库存。</p>
+<h3 id="订单生产"><a href="#订单生产" class="headerlink" title="订单生产"></a>订单生产</h3><p>如果有多个仓库，可根据用户收货地址等因素来调配仓库的货物。并将商品打包寄出，同时更新快递状态实时同步。</p>
+<h3 id="订单完成"><a href="#订单完成" class="headerlink" title="订单完成"></a>订单完成</h3><p>用户收到商品后，确认收货，订单至此完成。</p>
+<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p>在订单的整个生命周期，都可以通过消息队列来异步操作。比如订单状态更新了，可以给用户发邮件或者短信通知，在商城系统的用户中心也可以推送通知等。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>将订单系统进行拆分，也就是订单的管理和订单的处理这两个模块是分开的。主要是考虑到用户下单，和客服进行订单管理的业务区别有点大，前者操作很频繁，后者可能更多的只是看看，做的操作较少。虽然移动端我现在还不会开发，但是得想到一个问题，不同的平台，对应的订单系统的处理逻辑肯定无法保证100%相同的。那么将逻辑拆分，统一管理，我觉得可能是较好的一个方案（目前也只能想到这一步了😅），脚踏实地，一步步来吧，毕竟自己要学的东西也很多。</p>
+<blockquote>
+<p>大公司的经验和成功模式固然重要，值得学习借鉴，但如果因此而变得盲从，就失去了坚持自我的勇气，在架构演化的道路上迟早会迷路。    </p>
+<p>​                《大型网站技术架构：核心原理与案例分析》——李智慧</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>软件工程</category>
+        <category>极光商城</category>
+      </categories>
+      <tags>
+        <tag>软件工程</tag>
+        <tag>极光商城</tag>
+        <tag>数据库设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>再见，我的2020</title>
     <url>/posts/2021/end2020hello2021.html</url>
     <content><![CDATA[<center><B>非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</B></center>
@@ -2803,43 +2840,6 @@
       </categories>
       <tags>
         <tag>年终总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计一个简易的订单系统</title>
-    <url>/posts/2021/design-order.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在电商系统中，订单系统往往承载着非常重要的角色。在极光商城项目的准备阶段，最耗费我时长的就是订单系统了（毕竟实力也不咋样😅。这期间我也查阅了大量资料，为这一块的设计做了些准备。只能说第一次设计，还是挺想做出个好东西来，但是这要考虑的东西，可比单纯的写业务代码要多得多了呀。</p>
-<a id="more"></a>
-
-<h2 id="业务关系"><a href="#业务关系" class="headerlink" title="业务关系"></a>业务关系</h2><h3 id="订单系统"><a href="#订单系统" class="headerlink" title="订单系统"></a>订单系统</h3><p>先来看看订单系统在整个极光商城中扮演的角色，实际上是负责管理平台交易的订单处理系统。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder001.png" alt></p>
-<h3 id="订单管理"><a href="#订单管理" class="headerlink" title="订单管理"></a>订单管理</h3><p>订单管理模块，主要的体现就是在后台的订单管理模块了。主要功能为订单列表、订单详情、订单定时任务、订单操作、订单跟踪、订单售后、订单流水等。</p>
-<h3 id="订单服务"><a href="#订单服务" class="headerlink" title="订单服务"></a>订单服务</h3><p>订单服务模块，为整个商城的业务支撑，负责的业务也是较复杂的。主要有订单创建，订单支付、订单确认、取消订单、发起售后、订单跟踪等流程。其中的规则较为复杂，比如说在用户提交订单时，得根据相应的规则判断订单是否合法，也可以理解为风控吧。然后要计算订单的金额，购买了东西，相应的库存也要变化，还要考虑超卖问题。其中某些步骤可能是需要异步调用的，举个例子：我用12306买票时，付款后，先收到邮件，然后12306APP这边的状态过几秒钟能看到购买成功，这里发邮件的功能，可能就是用的异步调用。</p>
-<h3 id="订单信息"><a href="#订单信息" class="headerlink" title="订单信息"></a>订单信息</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder002.png" alt></p>
-<p>整个订单的设计，是采取的主表和子表。主表主要会存放订单的基本信息、用户信息、订单流水，物流信息、促销信息、等。但是考虑到一个订单可能包含多个商品，所以说子订单就是用来存放这些不同商品的信息的，当然，也可以进行订单拆分业务，但是即使这么设计，也要考虑到用户只应该付一次款的问题。</p>
-<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder003.png" alt></p>
-<p>数据库里面，目前只对订单系统设计了6张表，以目前的业务来看的话，是绰绰有余了，以后业务变更了再修改吧。</p>
-<h2 id="订单流程"><a href="#订单流程" class="headerlink" title="订单流程"></a>订单流程</h2><p>就以正常下单的流程来说吧，售后的订单这里就不过多介绍了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder004.png" alt></p>
-<h3 id="订单创建"><a href="#订单创建" class="headerlink" title="订单创建"></a>订单创建</h3><p>用户登录商城，挑选想要购买的商品，然后选择地址和促销信息并提交订单。然后生成订单前，我们需要获取用户信息、商品信息、促销信息等。当然，并不是所有的数据都从前端接收的，不然的话用户传个假的价格过来，岂不是0元购了😂。获取完信息后，这时后台的风控系统，可以进行一系列的规则校验。咱们还得判断库存吧，库存不够了也不能卖，这里的业务设计，以提交订单为准进行库存的扣除。最后生成订单信息和支付信息，同步当前订单即创建完成。</p>
-<h3 id="订单支付"><a href="#订单支付" class="headerlink" title="订单支付"></a>订单支付</h3><p>支付的话，肯定就是对接第三方平台做一个支付功能了，具体的可以去看支付宝开放平台的文档做个参考。这里主要阐述下订单拆分问题。根据订单里面的商品的性质等原因，可以进行不同的订单拆分。但是，订单建议设计成同时支付和绑定订单。不然的话，很容易被凑单，从而造成一定的损失。除非你的业务就是想弄成淘宝那种，为了凑单拼到300元，然后付款了秒退凑单商品，从而达到优惠的效果。最后根据订单支付的结果，对订单进行操作，成功了就走订单生产流程，失败了就走失败订单的流程，还原被扣除的库存。</p>
-<h3 id="订单生产"><a href="#订单生产" class="headerlink" title="订单生产"></a>订单生产</h3><p>如果有多个仓库，可根据用户收货地址等因素来调配仓库的货物。并将商品打包寄出，同时更新快递状态实时同步。</p>
-<h3 id="订单完成"><a href="#订单完成" class="headerlink" title="订单完成"></a>订单完成</h3><p>用户收到商品后，确认收货，订单至此完成。</p>
-<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p>在订单的整个生命周期，都可以通过消息队列来异步操作。比如订单状态更新了，可以给用户发邮件或者短信通知，在商城系统的用户中心也可以推送通知等。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>将订单系统进行拆分，也就是订单的管理和订单的处理这两个模块是分开的。主要是考虑到用户下单，和客服进行订单管理的业务区别有点大，前者操作很频繁，后者可能更多的只是看看，做的操作较少。虽然移动端我现在还不会开发，但是得想到一个问题，不同的平台，对应的订单系统的处理逻辑肯定无法保证100%相同的。那么将逻辑拆分，统一管理，我觉得可能是较好的一个方案（目前也只能想到这一步了😅），脚踏实地，一步步来吧，毕竟自己要学的东西也很多。</p>
-<blockquote>
-<p>大公司的经验和成功模式固然重要，值得学习借鉴，但如果因此而变得盲从，就失去了坚持自我的勇气，在架构演化的道路上迟早会迷路。    </p>
-<p>​                《大型网站技术架构：核心原理与案例分析》——李智慧</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>软件工程</category>
-        <category>极光商城</category>
-      </categories>
-      <tags>
-        <tag>软件工程</tag>
-        <tag>极光商城</tag>
-        <tag>数据库设计</tag>
       </tags>
   </entry>
   <entry>

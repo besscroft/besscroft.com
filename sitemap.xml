@@ -4,7 +4,14 @@
   <url>
     <loc>https://blog.52bess.com/photos/photoslist.json</loc>
     
-    <lastmod>2021-03-14T07:25:39.133Z</lastmod>
+    <lastmod>2021-03-14T07:30:35.644Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.52bess.com/links/linklist.json</loc>
+    
+    <lastmod>2021-03-14T07:30:08.762Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://blog.52bess.com/posts/2021/ioc-auto-injection-annotation.html</loc>
     
     <lastmod>2021-03-14T07:22:39.227Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.52bess.com/links/linklist.json</loc>
-    
-    <lastmod>2021-03-08T06:39:23.575Z</lastmod>
     
   </url>
   
