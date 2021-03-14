@@ -1,54 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2019年终总结</title>
-    <url>/posts/2019/2019year-end.html</url>
-    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="2019year-end/2019year-end_p1.jpg" alt></p>
-<blockquote>
-<p>美丽的灵魂成就美丽的人生    ——  《美丽人生》豆瓣短评</p>
-</blockquote>
+    <title>IOC依赖注入——自动注入的三个注解</title>
+    <url>/posts/2021/ioc-auto-injection-annotation.html</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>学过Spring的小伙伴应该知道，只要是能够运行Java程序的平台，就能运行Spring应用程序。而Spring框架也同时为Java应用程序的开发，提供了基础架构支持和丰富的功能。但是这些功能的底层，都会依赖Spring框架的两大核心特性：依赖注入(dependency injection，DI)和面向切面编程(aspect-oriented programming，AOP)。</p>
 <a id="more"></a>
 
-<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>9102年马上就要结束了，回过头来看这一年，又完成了哪些目标？经历了哪些挫折？在人生的十字路口我做了怎样的选择？又学到了哪些新知识、又看了哪些书？</p>
-<p>先看看年初立的flag：</p>
+<p>最近一直在看的书单：<code>Spring 实战(第四版)</code>和<code>Spring 实战(第五版)</code>，同时在Google也查阅了一些资料，算是对一个小知识点的总结了。</p>
+<h3 id="自动化装配"><a href="#自动化装配" class="headerlink" title="自动化装配"></a>自动化装配</h3><p>Spring框架主要从两个角度来实现了自动化装配：</p>
 <ul>
-<li><input disabled type="checkbox"> 公众号坚持每周都发布原创文章</li>
-<li><input checked disabled type="checkbox"> GitHub上完成自己的一些项目(尽管可能并没有什么实际用处，但是需要练手)</li>
-<li><input checked disabled type="checkbox"> 少玩游戏少熬夜</li>
-<li><input disabled type="checkbox"> 学习或了解一门新的编程语言(这里有歧义，算作没完成吧)</li>
-<li><input disabled type="checkbox"> 从入门到精通并不弃坑的学习C++(先把Java搞好，Java真香)</li>
-<li><input disabled type="checkbox"> 坚持健身</li>
-<li><input disabled type="checkbox"> 拥有自己的小程序</li>
-<li><input checked disabled type="checkbox"> 考试不挂科</li>
-<li><input disabled type="checkbox"> 学习UE4</li>
-<li><input disabled type="checkbox"> 完成以上所有的计划</li>
+<li><p>组件扫描（component scanning）：Spring 会自动发现应用上下文中所创建的 bean。</p>
+</li>
+<li><p>自动装配（autowiring）：Spring 自动满足 bean 之间的依赖。</p>
+</li>
 </ul>
-<p>嗯，😥真是不堪入目，今年看起来似乎很失败。了解我的小伙伴，应该知道我在很早之前就接触Java这门语言了。但是在去年写年终总结时，因为对游戏开发很感兴趣，所以当时决定选择游戏开发来作为新一年的目标。但是！！！在我发表之后不久，在一些大佬的劝说下(洗脑)，决定就往Java发展，目前正在学习JavaEE中。</p>
-<blockquote>
-<p>不能影响你编程观点的语言，不值得你去学！——Alan Perlis</p>
-</blockquote>
-<p>为什么我最终还是选择了Java？实不相瞒，我最早接触的编程语言，就是Java。后来因为种种原因，对Java的了解越来越多，也越来越喜欢这门语言。它从某种程度上对我的编程思想带来了影响，我也明白，编程语言学的越多，并不代表能力越强，更重要的应该是其中的“Programming paradigm”，即“编程范式”。</p>
-<p>所以从明年开始，决定专精Java这门语言，或许等到Java学的很好之后(也需要好几年)，才会再接触其它比较好的语言。某些语言，我也一直想去学，但是先认真地学“好”一门语言，并掌握编程思想才是我应该做的，不能“急功近利”。</p>
-<p>在今年，我了解并学习了很多新知识，不知道为什么，学习的速度跟以前比越来越快了，但是发现自己要学的东西越来越多了，不过我不会停止学习的。今年11月份的时候，一直在犹豫怎么选择以后的路(短期的)，最后参考一些前辈的经历，并结合自己的实际情况，决定选择培训。目前在武汉千峰培训JavaEE，每天在学习我喜欢的知识，感觉过的很充实。我也很感谢家人对我的支持，成功路上真的离不开家人的支持(虽然目前还没成功)。</p>
-<p>最后，说好的要定期更新文章，但是很多时候真的不知道写啥，我觉得这跟我的知识储备还是有关，毕竟不想太水文章。但是，我这一年来，至少做到了坚持做markdown笔记，并且我决定，将这个好习惯保持下去！</p>
-<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>那么2020年，也应该立新的flag了！</p>
-<ul>
-<li>学好Java，以及相关的一些技术。</li>
-<li>找一份自己喜欢的编程工作！</li>
-<li>少玩游戏少熬夜。</li>
-<li>坚持健身。</li>
-<li>继续坚持做笔记。</li>
-<li>精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
-<li>写一款自己的主题或web项目(在培训机构的不算数)</li>
-<li>积极的拥抱开源。</li>
-<li>学习或了解一项新技术</li>
-<li>成立自己的小团队，或者找到一群有共同理想目标的人</li>
-<li>完成以上所有的计划，最好能脱单！</li>
-</ul>
-<p>最后，祝大家在2020能够找到自己的方向或目标，并不断地努力下去！</p>
-<center><b>I shall rise oh well rise again and agian.</b></center>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public class void main(String[] args) &#123;</span><br><span class="line">    	System.out.println(&quot;你好，2020!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现自动装配的三大注解"><a href="#实现自动装配的三大注解" class="headerlink" title="实现自动装配的三大注解"></a>实现自动装配的三大注解</h3><h4 id="Autowired"><a href="#Autowired" class="headerlink" title="@Autowired"></a>@Autowired</h4><p>我们可以对一个Bean的<code>构造器</code> 、<code>属性</code>、<code>Setter方法</code>上面标注<code>@Autowired</code>注解，无论采用构造器还是Setter方法，Spring都会尝试满足方法参数上所声明的依赖。标注在属性上，Spring也会按照属性对应的类型，从容器中找到对应的Bean赋值到对应的属性上。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> personsystem;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 构造器注入</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boy</span> <span class="keyword">implements</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">	<span class="keyword">private</span> Girl girl;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Boy</span><span class="params">(Girl girl)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.girl = girl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">love</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		girl.love();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>上面的例子，不出意外的话，Spring会注入一个girl给boy😅</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Setter方法注入</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Autowired</span>(required=<span class="keyword">false</span>)</span><br><span class="line"><span class="meta">@Qualifier</span>(<span class="string">"beautifulGirl"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGirl</span><span class="params">(Girl girl)</span></span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.girl = girl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在Spring初始化Bean之后，会尽可能的去满足Bean的依赖。但是如果没有girl给boy注入的话，Spring会抛出一个异常。为了避免这个异常的发生，我们需要将<code>@Autowired</code>的<code>required</code>属性设置为false。如果有多个Bean可供注入时，我们可以使用<code>@Qualifier</code>注解指定要注入的Bean。</p>
+<h4 id="Resource"><a href="#Resource" class="headerlink" title="@Resource"></a>@Resource</h4><p>后面的两个注释，来源于Java 依赖注入规范（JSR, Java Specification Requests）。而<code>@Resource</code>注解，依赖于JSR250规范，可以参考下官方文档：<span class="exturl" data-url="aHR0cHM6Ly9qY3Aub3JnL2VuL2pzci9kZXRhaWw/aWQ9MjUw">https://jcp.org/en/jsr/detail?id=250<i class="fa fa-external-link-alt"></i></span></p>
+<p><code>@Resource</code>和<code>@Autowired</code>的区别：</p>
+<table>
+<thead>
+<tr>
+<th>注解名</th>
+<th>注入方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@Resource</td>
+<td>按照属性名/Bean的名称注入，也提供按照类型注入</td>
+</tr>
+<tr>
+<td>@Autowired</td>
+<td>按照类型注入</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boy</span> <span class="keyword">implements</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="meta">@Resource</span>(name=<span class="string">"beautifulGirl"</span>)</span><br><span class="line">	<span class="keyword">private</span> Girl girl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当然，<code>@Resource</code>也是可以指定要注入的Bean的。</p>
+<h4 id="Inject"><a href="#Inject" class="headerlink" title="@Inject"></a>@Inject</h4><p><code>@Inject</code>注解依赖JSR330规范：<span class="exturl" data-url="aHR0cHM6Ly9qY3Aub3JnL2VuL2pzci9kZXRhaWw/aWQ9MzMw">https://jcp.org/en/jsr/detail?id=330<i class="fa fa-external-link-alt"></i></span> ，但是我们在用这个注解之前，是需要导入一个依赖的：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/javax.inject/javax.inject --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.inject<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.inject<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>@Inject</code>注解虽然来源于Java依赖注入规范，但是只和<code>@Autowired</code>有着一点点差别，在绝大多数场景下，都是可以相互替换的。该规范还提供了一个<code>@Named</code>注解，作用是等同于<code>@Qualifier</code>注解的。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boy</span> <span class="keyword">implements</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="meta">@Inject</span></span><br><span class="line">    <span class="meta">@Named</span>(<span class="string">"beautifulGirl"</span>)</span><br><span class="line">	<span class="keyword">private</span> Girl girl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>值得一提的是，<code>@Resource</code>和<code>@Inject</code>注解，并不属于Spring。而依赖特性，并不是只有Spring框架才有。但是我个人并没有什么偏向性，只是习惯使用某些注解了。比如<code>@Inject</code>需要导包，我自己平常写代码喜欢用<code>@Resource</code>，在idea里面，用<code>@Autowired</code>会有红色的波浪线等等，不过搬砖的时候，还是用的<code>@Autowired</code>。这都是些个人习惯，不知道是不是只有我一个人这样，哈哈😃</p>
+]]></content>
+      <categories>
+        <category>Spring</category>
+        <category>Spring IOC</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>Spring IOC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计一个简易的订单系统</title>
+    <url>/posts/2021/design-order.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在电商系统中，订单系统往往承载着非常重要的角色。在极光商城项目的准备阶段，最耗费我时长的就是订单系统了（毕竟实力也不咋样😅。这期间我也查阅了大量资料，为这一块的设计做了些准备。只能说第一次设计，还是挺想做出个好东西来，但是这要考虑的东西，可比单纯的写业务代码要多得多了呀。</p>
+<a id="more"></a>
+
+<h2 id="业务关系"><a href="#业务关系" class="headerlink" title="业务关系"></a>业务关系</h2><h3 id="订单系统"><a href="#订单系统" class="headerlink" title="订单系统"></a>订单系统</h3><p>先来看看订单系统在整个极光商城中扮演的角色，实际上是负责管理平台交易的订单处理系统。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder001.png" alt></p>
+<h3 id="订单管理"><a href="#订单管理" class="headerlink" title="订单管理"></a>订单管理</h3><p>订单管理模块，主要的体现就是在后台的订单管理模块了。主要功能为订单列表、订单详情、订单定时任务、订单操作、订单跟踪、订单售后、订单流水等。</p>
+<h3 id="订单服务"><a href="#订单服务" class="headerlink" title="订单服务"></a>订单服务</h3><p>订单服务模块，为整个商城的业务支撑，负责的业务也是较复杂的。主要有订单创建，订单支付、订单确认、取消订单、发起售后、订单跟踪等流程。其中的规则较为复杂，比如说在用户提交订单时，得根据相应的规则判断订单是否合法，也可以理解为风控吧。然后要计算订单的金额，购买了东西，相应的库存也要变化，还要考虑超卖问题。其中某些步骤可能是需要异步调用的，举个例子：我用12306买票时，付款后，先收到邮件，然后12306APP这边的状态过几秒钟能看到购买成功，这里发邮件的功能，可能就是用的异步调用。</p>
+<h3 id="订单信息"><a href="#订单信息" class="headerlink" title="订单信息"></a>订单信息</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder002.png" alt></p>
+<p>整个订单的设计，是采取的主表和子表。主表主要会存放订单的基本信息、用户信息、订单流水，物流信息、促销信息、等。但是考虑到一个订单可能包含多个商品，所以说子订单就是用来存放这些不同商品的信息的，当然，也可以进行订单拆分业务，但是即使这么设计，也要考虑到用户只应该付一次款的问题。</p>
+<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder003.png" alt></p>
+<p>数据库里面，目前只对订单系统设计了6张表，以目前的业务来看的话，是绰绰有余了，以后业务变更了再修改吧。</p>
+<h2 id="订单流程"><a href="#订单流程" class="headerlink" title="订单流程"></a>订单流程</h2><p>就以正常下单的流程来说吧，售后的订单这里就不过多介绍了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder004.png" alt></p>
+<h3 id="订单创建"><a href="#订单创建" class="headerlink" title="订单创建"></a>订单创建</h3><p>用户登录商城，挑选想要购买的商品，然后选择地址和促销信息并提交订单。然后生成订单前，我们需要获取用户信息、商品信息、促销信息等。当然，并不是所有的数据都从前端接收的，不然的话用户传个假的价格过来，岂不是0元购了😂。获取完信息后，这时后台的风控系统，可以进行一系列的规则校验。咱们还得判断库存吧，库存不够了也不能卖，这里的业务设计，以提交订单为准进行库存的扣除。最后生成订单信息和支付信息，同步当前订单即创建完成。</p>
+<h3 id="订单支付"><a href="#订单支付" class="headerlink" title="订单支付"></a>订单支付</h3><p>支付的话，肯定就是对接第三方平台做一个支付功能了，具体的可以去看支付宝开放平台的文档做个参考。这里主要阐述下订单拆分问题。根据订单里面的商品的性质等原因，可以进行不同的订单拆分。但是，订单建议设计成同时支付和绑定订单。不然的话，很容易被凑单，从而造成一定的损失。除非你的业务就是想弄成淘宝那种，为了凑单拼到300元，然后付款了秒退凑单商品，从而达到优惠的效果。最后根据订单支付的结果，对订单进行操作，成功了就走订单生产流程，失败了就走失败订单的流程，还原被扣除的库存。</p>
+<h3 id="订单生产"><a href="#订单生产" class="headerlink" title="订单生产"></a>订单生产</h3><p>如果有多个仓库，可根据用户收货地址等因素来调配仓库的货物。并将商品打包寄出，同时更新快递状态实时同步。</p>
+<h3 id="订单完成"><a href="#订单完成" class="headerlink" title="订单完成"></a>订单完成</h3><p>用户收到商品后，确认收货，订单至此完成。</p>
+<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p>在订单的整个生命周期，都可以通过消息队列来异步操作。比如订单状态更新了，可以给用户发邮件或者短信通知，在商城系统的用户中心也可以推送通知等。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>将订单系统进行拆分，也就是订单的管理和订单的处理这两个模块是分开的。主要是考虑到用户下单，和客服进行订单管理的业务区别有点大，前者操作很频繁，后者可能更多的只是看看，做的操作较少。虽然移动端我现在还不会开发，但是得想到一个问题，不同的平台，对应的订单系统的处理逻辑肯定无法保证100%相同的。那么将逻辑拆分，统一管理，我觉得可能是较好的一个方案（目前也只能想到这一步了😅），脚踏实地，一步步来吧，毕竟自己要学的东西也很多。</p>
+<blockquote>
+<p>大公司的经验和成功模式固然重要，值得学习借鉴，但如果因此而变得盲从，就失去了坚持自我的勇气，在架构演化的道路上迟早会迷路。    </p>
+<p>​                《大型网站技术架构：核心原理与案例分析》——李智慧</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>软件工程</category>
+        <category>极光商城</category>
+      </categories>
+      <tags>
+        <tag>软件工程</tag>
+        <tag>极光商城</tag>
+        <tag>数据库设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再见，我的2020</title>
+    <url>/posts/2021/end2020hello2021.html</url>
+    <content><![CDATA[<center><B>非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</B></center>
+
+<a id="more"></a>
+
+<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>没想到2020就这么平凡的结束了，但这也是不平凡的一年。</p>
+<p>先看看去年的计划：</p>
+<ul>
+<li><input checked disabled type="checkbox"> 学好Java，以及相关的一些技术。（不知道“好”怎么定义，但今年确实技术提升不少）</li>
+<li><input disabled type="checkbox"> 找一份自己喜欢的编程工作！</li>
+<li><input disabled type="checkbox"> 少玩游戏少熬夜（游戏确实玩的少了，但是熬夜真没办法）</li>
+<li><input disabled type="checkbox"> 坚持健身。</li>
+<li><input checked disabled type="checkbox"> 继续坚持做笔记。（虽然没怎么发博客，但是笔记做得还是非常丰富的）</li>
+<li><input checked disabled type="checkbox"> 精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
+<li><input disabled type="checkbox"> 写一款自己的主题或web项目（一言难尽）</li>
+<li><input checked disabled type="checkbox"> 积极的拥抱开源。</li>
+<li><input checked disabled type="checkbox"> 学习或了解一项新技术</li>
+<li><input checked disabled type="checkbox"> 成立自己的小团队，或者找到一群有共同理想目标的人</li>
+<li><input disabled type="checkbox"> 完成以上所有的计划，最好能脱单！</li>
+</ul>
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>不可否认，这一年，我的编程水平确实提升不少，但是，这仅仅是<code>能力的渐进</code>，而非<code>能力的跃迁</code>。也就是说，我花了这么多时间去学习，这只是应有的收获，但它还不够！首先，技术确实可以应对我目前在公司日常开发的大部分场景，但是却无法形成体系。怎么说呢，一个项目/软件的整个生命周期，我无法全部兼顾，尤其是技术这一块，有不少自己的短板。很多时候，感觉自己只是个API调用工程师，虽然是在写业务/功能，但是很多时候会思考：</p>
+<ul>
+<li>我为什么要用这个东西？</li>
+<li>它是怎么实现的？</li>
+<li>有没有更好的解决方案？</li>
+<li>如果断网/不看文档，我还能不能写出来？</li>
+<li>真正碰到困难了，没有套路可以照搬，我该怎么办？</li>
+</ul>
+<blockquote>
+<p>所以，我希望2021能沉下心来多读书，避免直接照搬别人的答案，而应该结合书本中成体系的知识，通过自己的独立思考得出自己的答案。<strong>对编程保持足够的热情、足够的动力、足够的耐心，最重要的是坚持下去！</strong></p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>先结合工作聊聊，在工作中，跟不少同事平常的聊天可以看出不少东西。虽然他们的技术知识面不一定有我的广（脸红😛），甚至很多东西都仅仅是听说过而已。但是呢，做项目的时候，总是会有一些刁钻的问题和让人摸不着头脑的bug，这时我自己尝试的时间过多的话，就会去问，避免项目进度停滞。而他们总是会说：“小伙子没事，你还年轻”，来避免尴尬。但是这确实是我经验不足，技术研究不够深入，不能很好的运用到项目中。所以我就会想，是不是我以前一直尝试的方向有些偏差。在过去，虽然我本身技术并不算好，但是也经常帮助朋友和同学解决问题，也许你能够猜到我为什么要这么做，因为你也可以这么做。</p>
+<blockquote>
+<p><code>工作年限</code>不等于<code>工作经验</code>，同理，<code>工作经验</code>也不能等于<code>综合能力</code>。</p>
+</blockquote>
+<p>再聊聊开源，我最喜欢的两个作者：<code>@Evan You</code>和<code>@DIYgod</code>，虽然没见过真人，对他们也了解不太多。但是透过他们的作品可以发现，<strong>他们总是在自己喜欢/擅长的领域，认真的在写代码，写到世界充满爱！</strong>也就是说，一名程序员，并不需要什么都懂，不求广但求精。至少对于现阶段的我来说打好基础，弄清原理才是最重要的。编程本身就是强耦合性的复杂领域，而越是依赖关系很复杂的领域，越是需要通过【系统性学习】才能搞定它。<strong>知人者智，自知者明；胜人者有力，自胜者强。</strong></p>
+<blockquote>
+<p>我今年遇到了一本书，叫《如何阅读一本书》，怎么说呢，确实有点相遇恨晚的感觉。</p>
+</blockquote>
+<h3 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h3><p>又到了立flag的时间了，希望2021能将这些小目标一个个完成💪</p>
+<ul>
+<li>Java，本职工作，可以针对集合、多线程、IO、jvm等作为切入点深入学习。</li>
+<li>深入学习Spring、SpringCloud、MySQL、Redis和Elasticsearch（看着有点多😅）。</li>
+<li>入坑Rust或Go。</li>
+<li>Vue/JavaScript/CSS的学习，起码得能写点有模有样的东西，虽然是Java程序员，但是前端不会点还是不太行。</li>
+<li>坚持锻炼身体（以跑步为主）。</li>
+<li>leetcode坚持刷题，希望不要碰到困难就停住了。</li>
+<li>不仅要有输入，也要有持续的输出。</li>
+<li>写一款自己的主题或web项目。</li>
+<li>成立一个小的开源开发团队，虽然技术目前不算好，但是一步一步走，总有一天会变好！</li>
+</ul>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
+<p>送大家一句话：任何一个傻瓜都能写出计算机可以理解的代码。唯有写出人类容易理解的代码，才是优秀的程序员。——马丁·福勒 (Martin Fowler)</p>
+</blockquote>
+<p>每个人都有自己的人生，我不必羡慕他人，只需要走好自己的路，希望以后的生活会越来越好！</p>
+<center><b>I shall rise oh well rise again and agian.</b></center>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	System.out.println(<span class="string">"你好，2021!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>年终总结</category>
@@ -138,6 +244,63 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2019年终总结</title>
+    <url>/posts/2019/2019year-end.html</url>
+    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="2019year-end/2019year-end_p1.jpg" alt></p>
+<blockquote>
+<p>美丽的灵魂成就美丽的人生    ——  《美丽人生》豆瓣短评</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>9102年马上就要结束了，回过头来看这一年，又完成了哪些目标？经历了哪些挫折？在人生的十字路口我做了怎样的选择？又学到了哪些新知识、又看了哪些书？</p>
+<p>先看看年初立的flag：</p>
+<ul>
+<li><input disabled type="checkbox"> 公众号坚持每周都发布原创文章</li>
+<li><input checked disabled type="checkbox"> GitHub上完成自己的一些项目(尽管可能并没有什么实际用处，但是需要练手)</li>
+<li><input checked disabled type="checkbox"> 少玩游戏少熬夜</li>
+<li><input disabled type="checkbox"> 学习或了解一门新的编程语言(这里有歧义，算作没完成吧)</li>
+<li><input disabled type="checkbox"> 从入门到精通并不弃坑的学习C++(先把Java搞好，Java真香)</li>
+<li><input disabled type="checkbox"> 坚持健身</li>
+<li><input disabled type="checkbox"> 拥有自己的小程序</li>
+<li><input checked disabled type="checkbox"> 考试不挂科</li>
+<li><input disabled type="checkbox"> 学习UE4</li>
+<li><input disabled type="checkbox"> 完成以上所有的计划</li>
+</ul>
+<p>嗯，😥真是不堪入目，今年看起来似乎很失败。了解我的小伙伴，应该知道我在很早之前就接触Java这门语言了。但是在去年写年终总结时，因为对游戏开发很感兴趣，所以当时决定选择游戏开发来作为新一年的目标。但是！！！在我发表之后不久，在一些大佬的劝说下(洗脑)，决定就往Java发展，目前正在学习JavaEE中。</p>
+<blockquote>
+<p>不能影响你编程观点的语言，不值得你去学！——Alan Perlis</p>
+</blockquote>
+<p>为什么我最终还是选择了Java？实不相瞒，我最早接触的编程语言，就是Java。后来因为种种原因，对Java的了解越来越多，也越来越喜欢这门语言。它从某种程度上对我的编程思想带来了影响，我也明白，编程语言学的越多，并不代表能力越强，更重要的应该是其中的“Programming paradigm”，即“编程范式”。</p>
+<p>所以从明年开始，决定专精Java这门语言，或许等到Java学的很好之后(也需要好几年)，才会再接触其它比较好的语言。某些语言，我也一直想去学，但是先认真地学“好”一门语言，并掌握编程思想才是我应该做的，不能“急功近利”。</p>
+<p>在今年，我了解并学习了很多新知识，不知道为什么，学习的速度跟以前比越来越快了，但是发现自己要学的东西越来越多了，不过我不会停止学习的。今年11月份的时候，一直在犹豫怎么选择以后的路(短期的)，最后参考一些前辈的经历，并结合自己的实际情况，决定选择培训。目前在武汉千峰培训JavaEE，每天在学习我喜欢的知识，感觉过的很充实。我也很感谢家人对我的支持，成功路上真的离不开家人的支持(虽然目前还没成功)。</p>
+<p>最后，说好的要定期更新文章，但是很多时候真的不知道写啥，我觉得这跟我的知识储备还是有关，毕竟不想太水文章。但是，我这一年来，至少做到了坚持做markdown笔记，并且我决定，将这个好习惯保持下去！</p>
+<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>那么2020年，也应该立新的flag了！</p>
+<ul>
+<li>学好Java，以及相关的一些技术。</li>
+<li>找一份自己喜欢的编程工作！</li>
+<li>少玩游戏少熬夜。</li>
+<li>坚持健身。</li>
+<li>继续坚持做笔记。</li>
+<li>精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
+<li>写一款自己的主题或web项目(在培训机构的不算数)</li>
+<li>积极的拥抱开源。</li>
+<li>学习或了解一项新技术</li>
+<li>成立自己的小团队，或者找到一群有共同理想目标的人</li>
+<li>完成以上所有的计划，最好能脱单！</li>
+</ul>
+<p>最后，祝大家在2020能够找到自己的方向或目标，并不断地努力下去！</p>
+<center><b>I shall rise oh well rise again and agian.</b></center>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public class void main(String[] args) &#123;</span><br><span class="line">    	System.out.println(&quot;你好，2020!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>年终总结</category>
+      </categories>
+      <tags>
+        <tag>年终总结</tag>
       </tags>
   </entry>
   <entry>
@@ -563,6 +726,49 @@
       </tags>
   </entry>
   <entry>
+    <title>FTP的搭建和使用</title>
+    <url>/posts/2019/ftp.html</url>
+    <content><![CDATA[<p>去年再阿里买的学生价的服务器，在使用的过程中用到了FTP，故将使用方法记录下来，也方便自己之后查阅。</p>
+<a id="more"></a>
+
+<h2 id="What’s-FTP"><a href="#What’s-FTP" class="headerlink" title="What’s FTP?"></a>What’s FTP?</h2><p>FTP 是File Transfer Protocol（文件传输协议）的英文简称，而中文简称为“文传协议”。用于Internet上的控制文件的双向传输。同时，它也是一个应用程序（Application）。基于不同的操作系统有不同的FTP应用程序，而所有这些应用程序都遵守同一种协议以传输文件。互联网上提供文件存储和访问服务的计算机，他们依照的是FTP协议提供服务！支持FTP协议的服务器就是FTP服务器！FTP协议提供存储和传输服务的一套协议。下载”（Download）和”上传”（Upload）。”下载”文件就是从远程主机拷贝文件至自己的计算机上；”上传”文件就是将文件从自己的计算机中拷贝至远程主机上。用Internet语言来说，用户可通过客户机程序向（从）远程主机上传（下载）文件。</p>
+<h2 id="FTP的安装与配置"><a href="#FTP的安装与配置" class="headerlink" title="FTP的安装与配置"></a>FTP的安装与配置</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先我们肯定得安装vsftpd，如果不知道这是啥，Google查一查吧，但是会看这篇文章的人，应该没有不知道的😁在用<span class="exturl" data-url="aHR0cDovL3d3dy5wdXR0eS5vcmcv">putty<i class="fa fa-external-link-alt"></i></span>连上你的服务器之后，直接用<code>yum</code>安装就好了,输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+
+<p>如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp001.png" alt></p>
+<p>出现下图表示安装成功：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp002.png" alt></p>
+<p>如果你像我的一样，已经安装了的话，会这样显示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp003.png" alt></p>
+<p>它会告诉你已经安装了最新的软件安装包，这时候它无事可做了😂</p>
+<h3 id="相关配置文件"><a href="#相关配置文件" class="headerlink" title="相关配置文件"></a>相关配置文件</h3><p>输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;etc&#x2F;vsftpd</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<p>如图所示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp004.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf 	&#x2F;&#x2F;主配置文件，核心配置文件</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;ftpusers 	    &#x2F;&#x2F;黑名单，这个里面的用户不允许访问FTP服务器</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;user_list 		&#x2F;&#x2F;白名单，允许访问FTP服务器的用户列表</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>同样的，输入如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vsftpd.service 	&#x2F;&#x2F;设置开机自启动</span><br><span class="line">systemctl start vsftpd.service 		&#x2F;&#x2F;启动ftp服务</span><br><span class="line">netstat -antup | grep ftp 			&#x2F;&#x2F;查看ftp服务端口</span><br></pre></td></tr></table></figure>
+
+<p>输出情况如图所示：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp005.png" alt></p>
+<p>由于我是在阿里云买的服务器，所以去阿里云的控制台添加一条防火墙规则，如图：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp006.png" alt></p>
+<p>登录轻量服务器控制台，单击 <strong>服务器运维</strong> &gt; <strong>防火墙</strong> &gt; <strong>添加规则</strong>。</p>
+<p>然后登陆FTP服务器：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp007.png" alt></p>
+<h2 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h2><p>如果你是刚接触ftp，出于安全考虑，不建议你使用匿名FTP上传文件，或者进行创建目录等操作。vsftpd在默认情况下也是不允许用户匿名的，若是执意要这样，可以修改vsftpd.conf配置文件的选项，可以赋予匿名ftp更多的权限。更高的进阶操作，欢迎大家自行Google，若有不足之处，欢迎指出！</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>FTP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git本地文件到GitHub仓库</title>
     <url>/posts/2019/gitgo.html</url>
     <content><![CDATA[<p>这是一个简单使用的教程，如果你刚接触<code>git</code>和<code>GitHub</code>，那么，这篇文章再适合你不过了！首先，没有接触过版本控制概念的同学们也可以轻松入门；其次，通过这篇博文，你将学会本地构建仓库、远程克隆仓库、上传本地仓库等魔法操作(语言上可能组织不太好😅)，值得你一看。</p>
@@ -686,49 +892,6 @@
       <tags>
         <tag>Git</tag>
         <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FTP的搭建和使用</title>
-    <url>/posts/2019/ftp.html</url>
-    <content><![CDATA[<p>去年再阿里买的学生价的服务器，在使用的过程中用到了FTP，故将使用方法记录下来，也方便自己之后查阅。</p>
-<a id="more"></a>
-
-<h2 id="What’s-FTP"><a href="#What’s-FTP" class="headerlink" title="What’s FTP?"></a>What’s FTP?</h2><p>FTP 是File Transfer Protocol（文件传输协议）的英文简称，而中文简称为“文传协议”。用于Internet上的控制文件的双向传输。同时，它也是一个应用程序（Application）。基于不同的操作系统有不同的FTP应用程序，而所有这些应用程序都遵守同一种协议以传输文件。互联网上提供文件存储和访问服务的计算机，他们依照的是FTP协议提供服务！支持FTP协议的服务器就是FTP服务器！FTP协议提供存储和传输服务的一套协议。下载”（Download）和”上传”（Upload）。”下载”文件就是从远程主机拷贝文件至自己的计算机上；”上传”文件就是将文件从自己的计算机中拷贝至远程主机上。用Internet语言来说，用户可通过客户机程序向（从）远程主机上传（下载）文件。</p>
-<h2 id="FTP的安装与配置"><a href="#FTP的安装与配置" class="headerlink" title="FTP的安装与配置"></a>FTP的安装与配置</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先我们肯定得安装vsftpd，如果不知道这是啥，Google查一查吧，但是会看这篇文章的人，应该没有不知道的😁在用<span class="exturl" data-url="aHR0cDovL3d3dy5wdXR0eS5vcmcv">putty<i class="fa fa-external-link-alt"></i></span>连上你的服务器之后，直接用<code>yum</code>安装就好了,输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
-
-<p>如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp001.png" alt></p>
-<p>出现下图表示安装成功：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp002.png" alt></p>
-<p>如果你像我的一样，已经安装了的话，会这样显示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp003.png" alt></p>
-<p>它会告诉你已经安装了最新的软件安装包，这时候它无事可做了😂</p>
-<h3 id="相关配置文件"><a href="#相关配置文件" class="headerlink" title="相关配置文件"></a>相关配置文件</h3><p>输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;etc&#x2F;vsftpd</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
-
-<p>如图所示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp004.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf 	&#x2F;&#x2F;主配置文件，核心配置文件</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;ftpusers 	    &#x2F;&#x2F;黑名单，这个里面的用户不允许访问FTP服务器</span><br><span class="line">&#x2F;etc&#x2F;vsftpd&#x2F;user_list 		&#x2F;&#x2F;白名单，允许访问FTP服务器的用户列表</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>同样的，输入如下指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable vsftpd.service 	&#x2F;&#x2F;设置开机自启动</span><br><span class="line">systemctl start vsftpd.service 		&#x2F;&#x2F;启动ftp服务</span><br><span class="line">netstat -antup | grep ftp 			&#x2F;&#x2F;查看ftp服务端口</span><br></pre></td></tr></table></figure>
-
-<p>输出情况如图所示：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp005.png" alt></p>
-<p>由于我是在阿里云买的服务器，所以去阿里云的控制台添加一条防火墙规则，如图：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp006.png" alt></p>
-<p>登录轻量服务器控制台，单击 <strong>服务器运维</strong> &gt; <strong>防火墙</strong> &gt; <strong>添加规则</strong>。</p>
-<p>然后登陆FTP服务器：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="ftp/ftp007.png" alt></p>
-<h2 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h2><p>如果你是刚接触ftp，出于安全考虑，不建议你使用匿名FTP上传文件，或者进行创建目录等操作。vsftpd在默认情况下也是不允许用户匿名的，若是执意要这样，可以修改vsftpd.conf配置文件的选项，可以赋予匿名ftp更多的权限。更高的进阶操作，欢迎大家自行Google，若有不足之处，欢迎指出！</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>FTP</tag>
       </tags>
   </entry>
   <entry>
@@ -1306,151 +1469,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo之魔法操作</title>
-    <url>/posts/2019/sao.html</url>
-    <content><![CDATA[<p>这篇博文用来记录关于hexo的一些魔法操作，主要针对于NEXT主题。将会在未来很长一段时间内持续更新，希望对大家有所帮助。</p>
-<a id="more"></a>
-
-<h2 id="常规基本操作"><a href="#常规基本操作" class="headerlink" title="常规基本操作"></a>常规基本操作</h2><h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>我们在搭建好了Hexo博客之后，肯定是需要写文章上去的。 那么，首先打开git，在命令行输入这些指令来创建文章：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;  &#x2F;&#x2F;[这里是文章布局]，&lt;这里是文章标题&gt;</span><br></pre></td></tr></table></figure>
-
-<p>例如这样：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new post HelloHexo</span><br></pre></td></tr></table></figure>
-
-<p>完成之后，会在 _posts 目录下会生成文件标题.md，一般的格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: HelloHexo</span><br><span class="line">date: 201-03-17 16:10:00 #发表日期，一般不改动</span><br><span class="line">categories: hexo #文章文类</span><br><span class="line">tags: [hexo,github] #文章标签，多于一项时用这种格式</span><br><span class="line">---</span><br><span class="line">正文，使用Markdown语法书写</span><br></pre></td></tr></table></figure>
-
-<p>写完文章后，可以先预览，或者直接推送到服务器上。</p>
-<h4 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h4><p>Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>，它们分别对应不同的路径，而您自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。</p>
-<table>
-<thead>
-<tr>
-<th><strong>参数</strong></th>
-<th><strong>路径</strong></th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>post</td>
-<td>source/_posts</td>
-<td>文章</td>
-</tr>
-<tr>
-<td>page</td>
-<td>source</td>
-<td>页面</td>
-</tr>
-<tr>
-<td>draft</td>
-<td>source/_drafts</td>
-<td>草稿</td>
-</tr>
-</tbody></table>
-<p>在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> (根目录下的)中的 <code>default_layout</code> 参数来指定默认布局。如果你不想你的文章被处理，你可以将 Front-Matter 中的<code>layout:</code> 设为 <code>false</code> 。</p>
-<h4 id="基本模板参数"><a href="#基本模板参数" class="headerlink" title="基本模板参数"></a>基本模板参数</h4><table>
-<thead>
-<tr>
-<th><strong>参数</strong></th>
-<th><strong>描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>layout</td>
-<td>布局</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>date</td>
-<td>建立日期</td>
-</tr>
-<tr>
-<td>updated</td>
-<td>更新日期</td>
-</tr>
-<tr>
-<td>comments</td>
-<td>开启文章的评论功能</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>标签（不适用于分页）</td>
-</tr>
-<tr>
-<td>categories</td>
-<td>分类（不适用于分页）</td>
-</tr>
-<tr>
-<td>permalink</td>
-<td>覆盖文章网址</td>
-</tr>
-</tbody></table>
-<h4 id="基本变量参数"><a href="#基本变量参数" class="headerlink" title="基本变量参数"></a>基本变量参数</h4><table>
-<thead>
-<tr>
-<th><strong>变量</strong></th>
-<th><strong>描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>:title</td>
-<td>标题（小写，空格将会被替换为短杠）</td>
-</tr>
-<tr>
-<td>:year</td>
-<td>建立的年份，比如， <code>2015</code></td>
-</tr>
-<tr>
-<td>:month</td>
-<td>建立的月份（有前导零），比如， <code>04</code></td>
-</tr>
-<tr>
-<td>:i_month</td>
-<td>建立的月份（无前导零），比如， <code>4</code></td>
-</tr>
-<tr>
-<td>:day</td>
-<td>建立的日期（有前导零），比如， <code>07</code></td>
-</tr>
-<tr>
-<td>:i_day</td>
-<td>建立的日期（无前导零），比如， <code>7</code></td>
-</tr>
-</tbody></table>
-<h2 id="强大的标签插件"><a href="#强大的标签插件" class="headerlink" title="强大的标签插件"></a>强大的标签插件</h2><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
-<p>这个其实在Hexo的官方文档上都有比较完善的，大家想了解更多的话，还是建议去那里看，这里主要放一些我用到过的，以及我自己的一些理解。</p>
-<h4 id="引用书上的句子"><a href="#引用书上的句子" class="headerlink" title="引用书上的句子"></a>引用书上的句子</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>演示效果：</p>
-<blockquote>
-<p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<p><strong>David Levithan</strong>—Wide Awake</p>
-</blockquote>
-<p>解释一下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote &lt;这里填作者&gt;, &lt;这里填书名等&gt; %&#125;</span><br><span class="line">中间这里存放引用正文</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h4><p>在文章中插入 iframe。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;  &#x2F;&#x2F;设定url，宽、高</span><br></pre></td></tr></table></figure>
-
-<h4 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h4><p>在文章中插入指定大小的图片。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% img [class names] &#x2F;path&#x2F;to&#x2F;image [width] [height] [title text [alt text]] %&#125;</span><br><span class="line">&#x2F;&#x2F;实际上，只需要定义图片的路径即可，除非图片的大小不能使你满意。图片的路径可以是本地路径，也可以是网络路径，这取决于你的选择。</span><br></pre></td></tr></table></figure>
-
-<h4 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h4><p>在文章中插入链接，并自动给外部链接添加 <code>target=&quot;_blank&quot;</code> 属性。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;   &#x2F;&#x2F;这个不作过多的解释，都是常见属性</span><br></pre></td></tr></table></figure>
-
-<p>/</p>
-<h2 id="基于Next主题的优化与配置"><a href="#基于Next主题的优化与配置" class="headerlink" title="基于Next主题的优化与配置"></a>基于Next主题的优化与配置</h2><p>现在转到我的这篇文章👉<a href="http://blog.52bess.com/next.html">NexT主题个性定制与深度优化</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>魔法操作</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>神器Termux的使用记录</title>
     <url>/posts/2019/termux.html</url>
     <content><![CDATA[<p>Termux是一个Android终端模拟器和Linux环境应用程序，可以直接使用，无需root或设置。自动安装最小基本系统 - 使用APT包管理器可以使用其他软件包。</p>
@@ -1655,6 +1673,151 @@
       </categories>
       <tags>
         <tag>Termux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo之魔法操作</title>
+    <url>/posts/2019/sao.html</url>
+    <content><![CDATA[<p>这篇博文用来记录关于hexo的一些魔法操作，主要针对于NEXT主题。将会在未来很长一段时间内持续更新，希望对大家有所帮助。</p>
+<a id="more"></a>
+
+<h2 id="常规基本操作"><a href="#常规基本操作" class="headerlink" title="常规基本操作"></a>常规基本操作</h2><h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>我们在搭建好了Hexo博客之后，肯定是需要写文章上去的。 那么，首先打开git，在命令行输入这些指令来创建文章：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;  &#x2F;&#x2F;[这里是文章布局]，&lt;这里是文章标题&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new post HelloHexo</span><br></pre></td></tr></table></figure>
+
+<p>完成之后，会在 _posts 目录下会生成文件标题.md，一般的格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: HelloHexo</span><br><span class="line">date: 201-03-17 16:10:00 #发表日期，一般不改动</span><br><span class="line">categories: hexo #文章文类</span><br><span class="line">tags: [hexo,github] #文章标签，多于一项时用这种格式</span><br><span class="line">---</span><br><span class="line">正文，使用Markdown语法书写</span><br></pre></td></tr></table></figure>
+
+<p>写完文章后，可以先预览，或者直接推送到服务器上。</p>
+<h4 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h4><p>Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>，它们分别对应不同的路径，而您自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数</strong></th>
+<th><strong>路径</strong></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>post</td>
+<td>source/_posts</td>
+<td>文章</td>
+</tr>
+<tr>
+<td>page</td>
+<td>source</td>
+<td>页面</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>source/_drafts</td>
+<td>草稿</td>
+</tr>
+</tbody></table>
+<p>在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> (根目录下的)中的 <code>default_layout</code> 参数来指定默认布局。如果你不想你的文章被处理，你可以将 Front-Matter 中的<code>layout:</code> 设为 <code>false</code> 。</p>
+<h4 id="基本模板参数"><a href="#基本模板参数" class="headerlink" title="基本模板参数"></a>基本模板参数</h4><table>
+<thead>
+<tr>
+<th><strong>参数</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>建立日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>开启文章的评论功能</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签（不适用于分页）</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类（不适用于分页）</td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>覆盖文章网址</td>
+</tr>
+</tbody></table>
+<h4 id="基本变量参数"><a href="#基本变量参数" class="headerlink" title="基本变量参数"></a>基本变量参数</h4><table>
+<thead>
+<tr>
+<th><strong>变量</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:title</td>
+<td>标题（小写，空格将会被替换为短杠）</td>
+</tr>
+<tr>
+<td>:year</td>
+<td>建立的年份，比如， <code>2015</code></td>
+</tr>
+<tr>
+<td>:month</td>
+<td>建立的月份（有前导零），比如， <code>04</code></td>
+</tr>
+<tr>
+<td>:i_month</td>
+<td>建立的月份（无前导零），比如， <code>4</code></td>
+</tr>
+<tr>
+<td>:day</td>
+<td>建立的日期（有前导零），比如， <code>07</code></td>
+</tr>
+<tr>
+<td>:i_day</td>
+<td>建立的日期（无前导零），比如， <code>7</code></td>
+</tr>
+</tbody></table>
+<h2 id="强大的标签插件"><a href="#强大的标签插件" class="headerlink" title="强大的标签插件"></a>强大的标签插件</h2><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
+<p>这个其实在Hexo的官方文档上都有比较完善的，大家想了解更多的话，还是建议去那里看，这里主要放一些我用到过的，以及我自己的一些理解。</p>
+<h4 id="引用书上的句子"><a href="#引用书上的句子" class="headerlink" title="引用书上的句子"></a>引用书上的句子</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>演示效果：</p>
+<blockquote>
+<p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<p><strong>David Levithan</strong>—Wide Awake</p>
+</blockquote>
+<p>解释一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote &lt;这里填作者&gt;, &lt;这里填书名等&gt; %&#125;</span><br><span class="line">中间这里存放引用正文</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h4><p>在文章中插入 iframe。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;  &#x2F;&#x2F;设定url，宽、高</span><br></pre></td></tr></table></figure>
+
+<h4 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h4><p>在文章中插入指定大小的图片。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% img [class names] &#x2F;path&#x2F;to&#x2F;image [width] [height] [title text [alt text]] %&#125;</span><br><span class="line">&#x2F;&#x2F;实际上，只需要定义图片的路径即可，除非图片的大小不能使你满意。图片的路径可以是本地路径，也可以是网络路径，这取决于你的选择。</span><br></pre></td></tr></table></figure>
+
+<h4 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h4><p>在文章中插入链接，并自动给外部链接添加 <code>target=&quot;_blank&quot;</code> 属性。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;   &#x2F;&#x2F;这个不作过多的解释，都是常见属性</span><br></pre></td></tr></table></figure>
+
+<p>/</p>
+<h2 id="基于Next主题的优化与配置"><a href="#基于Next主题的优化与配置" class="headerlink" title="基于Next主题的优化与配置"></a>基于Next主题的优化与配置</h2><p>现在转到我的这篇文章👉<a href="http://blog.52bess.com/next.html">NexT主题个性定制与深度优化</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>魔法操作</tag>
       </tags>
   </entry>
   <entry>
@@ -2112,6 +2275,97 @@
       </tags>
   </entry>
   <entry>
+    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
+    <url>/posts/2020/lighthouse.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
+<a id="more"></a>
+
+<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
+<li>这里是文档上的介绍，让我们先了解下！</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
+<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
+<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
+<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
+<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
+<ul>
+<li>更新系统和软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装一些软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装BT面板</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
+<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
+<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
+<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
+<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
+<p>然后等待安装就行了。</p>
+<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
+<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
+<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
+<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
+<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
+<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
+<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
+<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
+<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
+<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
+<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
+<p>点击【现在就开始】，进入下一步！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
+<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
+<p>进行安装！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
+<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
+<p>成功之后，登录就能进到后台啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
+<p>然后就自己去探索功能吧！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
+<p>至此，动态网站已经搭建完成！</p>
+<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
+<p>主要的应用场景：</p>
+<ul>
+<li>网站搭建</li>
+<li>Web 应用服务</li>
+<li>快速搭建开发测试环境</li>
+<li>云端学习环境</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>玩转腾讯云</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在虚拟机中安装ArchLinux(UEFI)</title>
     <url>/posts/2020/helloarchlinux.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于操作系统的选择，我还是喜欢把Windows 10作为<strong>Host OS</strong>，把其它的作为<strong>Guest OS</strong>，比如一些Linux发行版openSUSE、Ubuntu等，以及用作其它用途的系统。比如我喜欢把迅雷等软件放在虚拟机的Windows系统里面(迅雷之类的软件感觉就是毒瘤，但有时候又需要用，别跟我说还有很多替代软件，我用的也不只是迅雷哦😅)。至于为什么要写这篇文章，因为我身边用ArchLinux的人慢慢地变多了起来，不过相对于ArchLinux，我还是比较喜欢openSUSE啊😄</p>
@@ -2441,97 +2695,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
-    <url>/posts/2020/lighthouse.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
-<a id="more"></a>
-
-<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
-<li>这里是文档上的介绍，让我们先了解下！</li>
-</ul>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
-<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
-<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
-<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
-<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
-<ul>
-<li>更新系统和软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装一些软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装BT面板</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
-<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
-<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
-<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
-<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
-<p>然后等待安装就行了。</p>
-<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
-<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
-<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
-<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
-<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
-<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
-<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
-<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
-<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
-<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
-<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
-<p>点击【现在就开始】，进入下一步！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
-<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
-<p>进行安装！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
-<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
-<p>成功之后，登录就能进到后台啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
-<p>然后就自己去探索功能吧！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
-<p>至此，动态网站已经搭建完成！</p>
-<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
-<p>主要的应用场景：</p>
-<ul>
-<li>网站搭建</li>
-<li>Web 应用服务</li>
-<li>快速搭建开发测试环境</li>
-<li>云端学习环境</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>玩转腾讯云</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我和我的博客的过去、现在与未来</title>
     <url>/posts/2020/newblog.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>博客原来的样式，是去年五一晚上熬夜搞出来的，当时觉得蛮漂亮，但是看久了，就觉得乏了！但这还不是我要重构的原因，博客代码冗余、加载速度慢、载入资源多等等，迫使我对整个博客进行了重构和魔改！</p>
@@ -2736,169 +2899,6 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计一个简易的订单系统</title>
-    <url>/posts/2021/design-order.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在电商系统中，订单系统往往承载着非常重要的角色。在极光商城项目的准备阶段，最耗费我时长的就是订单系统了（毕竟实力也不咋样😅。这期间我也查阅了大量资料，为这一块的设计做了些准备。只能说第一次设计，还是挺想做出个好东西来，但是这要考虑的东西，可比单纯的写业务代码要多得多了呀。</p>
-<a id="more"></a>
-
-<h2 id="业务关系"><a href="#业务关系" class="headerlink" title="业务关系"></a>业务关系</h2><h3 id="订单系统"><a href="#订单系统" class="headerlink" title="订单系统"></a>订单系统</h3><p>先来看看订单系统在整个极光商城中扮演的角色，实际上是负责管理平台交易的订单处理系统。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder001.png" alt></p>
-<h3 id="订单管理"><a href="#订单管理" class="headerlink" title="订单管理"></a>订单管理</h3><p>订单管理模块，主要的体现就是在后台的订单管理模块了。主要功能为订单列表、订单详情、订单定时任务、订单操作、订单跟踪、订单售后、订单流水等。</p>
-<h3 id="订单服务"><a href="#订单服务" class="headerlink" title="订单服务"></a>订单服务</h3><p>订单服务模块，为整个商城的业务支撑，负责的业务也是较复杂的。主要有订单创建，订单支付、订单确认、取消订单、发起售后、订单跟踪等流程。其中的规则较为复杂，比如说在用户提交订单时，得根据相应的规则判断订单是否合法，也可以理解为风控吧。然后要计算订单的金额，购买了东西，相应的库存也要变化，还要考虑超卖问题。其中某些步骤可能是需要异步调用的，举个例子：我用12306买票时，付款后，先收到邮件，然后12306APP这边的状态过几秒钟能看到购买成功，这里发邮件的功能，可能就是用的异步调用。</p>
-<h3 id="订单信息"><a href="#订单信息" class="headerlink" title="订单信息"></a>订单信息</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder002.png" alt></p>
-<p>整个订单的设计，是采取的主表和子表。主表主要会存放订单的基本信息、用户信息、订单流水，物流信息、促销信息、等。但是考虑到一个订单可能包含多个商品，所以说子订单就是用来存放这些不同商品的信息的，当然，也可以进行订单拆分业务，但是即使这么设计，也要考虑到用户只应该付一次款的问题。</p>
-<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder003.png" alt></p>
-<p>数据库里面，目前只对订单系统设计了6张表，以目前的业务来看的话，是绰绰有余了，以后业务变更了再修改吧。</p>
-<h2 id="订单流程"><a href="#订单流程" class="headerlink" title="订单流程"></a>订单流程</h2><p>就以正常下单的流程来说吧，售后的订单这里就不过多介绍了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder004.png" alt></p>
-<h3 id="订单创建"><a href="#订单创建" class="headerlink" title="订单创建"></a>订单创建</h3><p>用户登录商城，挑选想要购买的商品，然后选择地址和促销信息并提交订单。然后生成订单前，我们需要获取用户信息、商品信息、促销信息等。当然，并不是所有的数据都从前端接收的，不然的话用户传个假的价格过来，岂不是0元购了😂。获取完信息后，这时后台的风控系统，可以进行一系列的规则校验。咱们还得判断库存吧，库存不够了也不能卖，这里的业务设计，以提交订单为准进行库存的扣除。最后生成订单信息和支付信息，同步当前订单即创建完成。</p>
-<h3 id="订单支付"><a href="#订单支付" class="headerlink" title="订单支付"></a>订单支付</h3><p>支付的话，肯定就是对接第三方平台做一个支付功能了，具体的可以去看支付宝开放平台的文档做个参考。这里主要阐述下订单拆分问题。根据订单里面的商品的性质等原因，可以进行不同的订单拆分。但是，订单建议设计成同时支付和绑定订单。不然的话，很容易被凑单，从而造成一定的损失。除非你的业务就是想弄成淘宝那种，为了凑单拼到300元，然后付款了秒退凑单商品，从而达到优惠的效果。最后根据订单支付的结果，对订单进行操作，成功了就走订单生产流程，失败了就走失败订单的流程，还原被扣除的库存。</p>
-<h3 id="订单生产"><a href="#订单生产" class="headerlink" title="订单生产"></a>订单生产</h3><p>如果有多个仓库，可根据用户收货地址等因素来调配仓库的货物。并将商品打包寄出，同时更新快递状态实时同步。</p>
-<h3 id="订单完成"><a href="#订单完成" class="headerlink" title="订单完成"></a>订单完成</h3><p>用户收到商品后，确认收货，订单至此完成。</p>
-<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p>在订单的整个生命周期，都可以通过消息队列来异步操作。比如订单状态更新了，可以给用户发邮件或者短信通知，在商城系统的用户中心也可以推送通知等。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>将订单系统进行拆分，也就是订单的管理和订单的处理这两个模块是分开的。主要是考虑到用户下单，和客服进行订单管理的业务区别有点大，前者操作很频繁，后者可能更多的只是看看，做的操作较少。虽然移动端我现在还不会开发，但是得想到一个问题，不同的平台，对应的订单系统的处理逻辑肯定无法保证100%相同的。那么将逻辑拆分，统一管理，我觉得可能是较好的一个方案（目前也只能想到这一步了😅），脚踏实地，一步步来吧，毕竟自己要学的东西也很多。</p>
-<blockquote>
-<p>大公司的经验和成功模式固然重要，值得学习借鉴，但如果因此而变得盲从，就失去了坚持自我的勇气，在架构演化的道路上迟早会迷路。    </p>
-<p>​                《大型网站技术架构：核心原理与案例分析》——李智慧</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>软件工程</category>
-        <category>极光商城</category>
-      </categories>
-      <tags>
-        <tag>软件工程</tag>
-        <tag>极光商城</tag>
-        <tag>数据库设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>再见，我的2020</title>
-    <url>/posts/2021/end2020hello2021.html</url>
-    <content><![CDATA[<center><B>非淡泊无以明志，非宁静无以致远    ——《淮南子》刘安</B></center>
-
-<a id="more"></a>
-
-<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>没想到2020就这么平凡的结束了，但这也是不平凡的一年。</p>
-<p>先看看去年的计划：</p>
-<ul>
-<li><input checked disabled type="checkbox"> 学好Java，以及相关的一些技术。（不知道“好”怎么定义，但今年确实技术提升不少）</li>
-<li><input disabled type="checkbox"> 找一份自己喜欢的编程工作！</li>
-<li><input disabled type="checkbox"> 少玩游戏少熬夜（游戏确实玩的少了，但是熬夜真没办法）</li>
-<li><input disabled type="checkbox"> 坚持健身。</li>
-<li><input checked disabled type="checkbox"> 继续坚持做笔记。（虽然没怎么发博客，但是笔记做得还是非常丰富的）</li>
-<li><input checked disabled type="checkbox"> 精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
-<li><input disabled type="checkbox"> 写一款自己的主题或web项目（一言难尽）</li>
-<li><input checked disabled type="checkbox"> 积极的拥抱开源。</li>
-<li><input checked disabled type="checkbox"> 学习或了解一项新技术</li>
-<li><input checked disabled type="checkbox"> 成立自己的小团队，或者找到一群有共同理想目标的人</li>
-<li><input disabled type="checkbox"> 完成以上所有的计划，最好能脱单！</li>
-</ul>
-<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>不可否认，这一年，我的编程水平确实提升不少，但是，这仅仅是<code>能力的渐进</code>，而非<code>能力的跃迁</code>。也就是说，我花了这么多时间去学习，这只是应有的收获，但它还不够！首先，技术确实可以应对我目前在公司日常开发的大部分场景，但是却无法形成体系。怎么说呢，一个项目/软件的整个生命周期，我无法全部兼顾，尤其是技术这一块，有不少自己的短板。很多时候，感觉自己只是个API调用工程师，虽然是在写业务/功能，但是很多时候会思考：</p>
-<ul>
-<li>我为什么要用这个东西？</li>
-<li>它是怎么实现的？</li>
-<li>有没有更好的解决方案？</li>
-<li>如果断网/不看文档，我还能不能写出来？</li>
-<li>真正碰到困难了，没有套路可以照搬，我该怎么办？</li>
-</ul>
-<blockquote>
-<p>所以，我希望2021能沉下心来多读书，避免直接照搬别人的答案，而应该结合书本中成体系的知识，通过自己的独立思考得出自己的答案。<strong>对编程保持足够的热情、足够的动力、足够的耐心，最重要的是坚持下去！</strong></p>
-</blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>先结合工作聊聊，在工作中，跟不少同事平常的聊天可以看出不少东西。虽然他们的技术知识面不一定有我的广（脸红😛），甚至很多东西都仅仅是听说过而已。但是呢，做项目的时候，总是会有一些刁钻的问题和让人摸不着头脑的bug，这时我自己尝试的时间过多的话，就会去问，避免项目进度停滞。而他们总是会说：“小伙子没事，你还年轻”，来避免尴尬。但是这确实是我经验不足，技术研究不够深入，不能很好的运用到项目中。所以我就会想，是不是我以前一直尝试的方向有些偏差。在过去，虽然我本身技术并不算好，但是也经常帮助朋友和同学解决问题，也许你能够猜到我为什么要这么做，因为你也可以这么做。</p>
-<blockquote>
-<p><code>工作年限</code>不等于<code>工作经验</code>，同理，<code>工作经验</code>也不能等于<code>综合能力</code>。</p>
-</blockquote>
-<p>再聊聊开源，我最喜欢的两个作者：<code>@Evan You</code>和<code>@DIYgod</code>，虽然没见过真人，对他们也了解不太多。但是透过他们的作品可以发现，<strong>他们总是在自己喜欢/擅长的领域，认真的在写代码，写到世界充满爱！</strong>也就是说，一名程序员，并不需要什么都懂，不求广但求精。至少对于现阶段的我来说打好基础，弄清原理才是最重要的。编程本身就是强耦合性的复杂领域，而越是依赖关系很复杂的领域，越是需要通过【系统性学习】才能搞定它。<strong>知人者智，自知者明；胜人者有力，自胜者强。</strong></p>
-<blockquote>
-<p>我今年遇到了一本书，叫《如何阅读一本书》，怎么说呢，确实有点相遇恨晚的感觉。</p>
-</blockquote>
-<h3 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h3><p>又到了立flag的时间了，希望2021能将这些小目标一个个完成💪</p>
-<ul>
-<li>Java，本职工作，可以针对集合、多线程、IO、jvm等作为切入点深入学习。</li>
-<li>深入学习Spring、SpringCloud、MySQL、Redis和Elasticsearch（看着有点多😅）。</li>
-<li>入坑Rust或Go。</li>
-<li>Vue/JavaScript/CSS的学习，起码得能写点有模有样的东西，虽然是Java程序员，但是前端不会点还是不太行。</li>
-<li>坚持锻炼身体（以跑步为主）。</li>
-<li>leetcode坚持刷题，希望不要碰到困难就停住了。</li>
-<li>不仅要有输入，也要有持续的输出。</li>
-<li>写一款自己的主题或web项目。</li>
-<li>成立一个小的开源开发团队，虽然技术目前不算好，但是一步一步走，总有一天会变好！</li>
-</ul>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
-<p>送大家一句话：任何一个傻瓜都能写出计算机可以理解的代码。唯有写出人类容易理解的代码，才是优秀的程序员。——马丁·福勒 (Martin Fowler)</p>
-</blockquote>
-<p>每个人都有自己的人生，我不必羡慕他人，只需要走好自己的路，希望以后的生活会越来越好！</p>
-<center><b>I shall rise oh well rise again and agian.</b></center>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> class <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	System.out.println(<span class="string">"你好，2021!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>年终总结</category>
-      </categories>
-      <tags>
-        <tag>年终总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IOC依赖注入——自动注入的三个注解</title>
-    <url>/posts/2021/ioc-auto-injection-annotation.html</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>学过Spring的小伙伴应该知道，只要是能够运行Java程序的平台，就能运行Spring应用程序。而Spring框架也同时为Java应用程序的开发，提供了基础架构支持和丰富的功能。但是这些功能的底层，都会依赖Spring框架的两大核心特性：依赖注入(dependency injection，DI)和面向切面编程(aspect-oriented programming，AOP)。</p>
-<a id="more"></a>
-
-<p>最近一直在看的书单：<code>Spring 实战(第四版)</code>和<code>Spring 实战(第五版)</code>，同时在Google也查阅了一些资料，算是对一个小知识点的总结了。</p>
-<h3 id="自动化装配"><a href="#自动化装配" class="headerlink" title="自动化装配"></a>自动化装配</h3><p>Spring框架主要从两个角度来实现了自动化装配：</p>
-<ul>
-<li><p>组件扫描（component scanning）：Spring 会自动发现应用上下文中所创建的 bean。</p>
-</li>
-<li><p>自动装配（autowiring）：Spring 自动满足 bean 之间的依赖。</p>
-</li>
-</ul>
-<h3 id="实现自动装配的三大注解"><a href="#实现自动装配的三大注解" class="headerlink" title="实现自动装配的三大注解"></a>实现自动装配的三大注解</h3><h4 id="Autowired"><a href="#Autowired" class="headerlink" title="@Autowired"></a>@Autowired</h4><p>我们可以对一个Bean的<code>构造器</code> 、<code>属性</code>、<code>Setter方法</code>上面标注<code>@Autowired</code>注解，无论采用构造器还是Setter方法，Spring都会尝试满足方法参数上所声明的依赖。标注在属性上，Spring也会按照属性对应的类型，从容器中找到对应的Bean赋值到对应的属性上。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> personsystem;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 构造器注入</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boy</span> <span class="keyword">implements</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">	<span class="keyword">private</span> Girl girl;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Boy</span><span class="params">(Girl girl)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.girl = girl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">love</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		girl.love();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面的例子，不出意外的话，Spring会注入一个girl给boy😅</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Setter方法注入</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Autowired</span>(required=<span class="keyword">false</span>)</span><br><span class="line"><span class="meta">@Qualifier</span>(<span class="string">"beautifulGirl"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGirl</span><span class="params">(Girl girl)</span></span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.girl = girl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在Spring初始化Bean之后，会尽可能的去满足Bean的依赖。但是如果没有girl给boy注入的话，Spring会抛出一个异常。为了避免这个异常的发生，我们需要将<code>@Autowired</code>的<code>required</code>属性设置为false。如果有多个Bean可供注入时，我们可以使用<code>@Qualifier</code>注解指定要注入的Bean。</p>
-<h4 id="Resource"><a href="#Resource" class="headerlink" title="@Resource"></a>@Resource</h4><p>后面的两个注释，来源于Java 依赖注入规范（JSR, Java Specification Requests）。而<code>@Resource</code>注解，依赖于JSR250规范，可以参考下官方文档：<span class="exturl" data-url="aHR0cHM6Ly9qY3Aub3JnL2VuL2pzci9kZXRhaWw/aWQ9MjUw">https://jcp.org/en/jsr/detail?id=250<i class="fa fa-external-link-alt"></i></span></p>
-<p><code>@Resource</code>和<code>@Autowired</code>的区别：</p>
-<table>
-<thead>
-<tr>
-<th>注解名</th>
-<th>注入方式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>@Resource</td>
-<td>按照属性名/Bean的名称注入，也提供按照类型注入</td>
-</tr>
-<tr>
-<td>@Autowired</td>
-<td>按照类型注入</td>
-</tr>
-</tbody></table>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boy</span> <span class="keyword">implements</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="meta">@Resource</span>(name=<span class="string">"beautifulGirl"</span>)</span><br><span class="line">	<span class="keyword">private</span> Girl girl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>当然，<code>@Resource</code>也是可以指定要注入的Bean的。</p>
-<h4 id="Inject"><a href="#Inject" class="headerlink" title="@Inject"></a>@Inject</h4><p><code>@Inject</code>注解依赖JSR330规范：<span class="exturl" data-url="aHR0cHM6Ly9qY3Aub3JnL2VuL2pzci9kZXRhaWw/aWQ9MzMw">https://jcp.org/en/jsr/detail?id=330<i class="fa fa-external-link-alt"></i></span> ，但是我们在用这个注解之前，是需要导入一个依赖的：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/javax.inject/javax.inject --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.inject<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.inject<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>@Inject</code>注解虽然来源于Java依赖注入规范，但是只和<code>@Autowired</code>有着一点点差别，在绝大多数场景下，都是可以相互替换的。该规范还提供了一个<code>@Named</code>注解，作用是等同于<code>@Qualifier</code>注解的。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boy</span> <span class="keyword">implements</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="meta">@Inject</span></span><br><span class="line">    <span class="meta">@Named</span>(<span class="string">"beautifulGirl"</span>)</span><br><span class="line">	<span class="keyword">private</span> Girl girl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>值得一提的是，<code>@Resource</code>和<code>@Inject</code>注解，并不属于Spring。而依赖特性，并不是只有Spring框架才有。但是我个人并没有什么偏向性，只是习惯使用某些注解了。比如<code>@Inject</code>需要导包，我自己平常写代码喜欢用<code>@Resource</code>，在idea里面，用<code>@Autowired</code>会有红色的波浪线等等，不过搬砖的时候，还是用的<code>@Autowired</code>。这都是些个人习惯，不知道是不是只有我一个人这样，哈哈😃</p>
-]]></content>
-      <categories>
-        <category>Spring</category>
-        <category>Spring IOC</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>Spring IOC</tag>
       </tags>
   </entry>
 </search>
