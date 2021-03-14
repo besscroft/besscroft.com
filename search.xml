@@ -158,6 +158,63 @@
       </tags>
   </entry>
   <entry>
+    <title>2019年终总结</title>
+    <url>/posts/2019/2019year-end.html</url>
+    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="2019year-end/2019year-end_p1.jpg" alt></p>
+<blockquote>
+<p>美丽的灵魂成就美丽的人生    ——  《美丽人生》豆瓣短评</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>9102年马上就要结束了，回过头来看这一年，又完成了哪些目标？经历了哪些挫折？在人生的十字路口我做了怎样的选择？又学到了哪些新知识、又看了哪些书？</p>
+<p>先看看年初立的flag：</p>
+<ul>
+<li><input disabled type="checkbox"> 公众号坚持每周都发布原创文章</li>
+<li><input checked disabled type="checkbox"> GitHub上完成自己的一些项目(尽管可能并没有什么实际用处，但是需要练手)</li>
+<li><input checked disabled type="checkbox"> 少玩游戏少熬夜</li>
+<li><input disabled type="checkbox"> 学习或了解一门新的编程语言(这里有歧义，算作没完成吧)</li>
+<li><input disabled type="checkbox"> 从入门到精通并不弃坑的学习C++(先把Java搞好，Java真香)</li>
+<li><input disabled type="checkbox"> 坚持健身</li>
+<li><input disabled type="checkbox"> 拥有自己的小程序</li>
+<li><input checked disabled type="checkbox"> 考试不挂科</li>
+<li><input disabled type="checkbox"> 学习UE4</li>
+<li><input disabled type="checkbox"> 完成以上所有的计划</li>
+</ul>
+<p>嗯，😥真是不堪入目，今年看起来似乎很失败。了解我的小伙伴，应该知道我在很早之前就接触Java这门语言了。但是在去年写年终总结时，因为对游戏开发很感兴趣，所以当时决定选择游戏开发来作为新一年的目标。但是！！！在我发表之后不久，在一些大佬的劝说下(洗脑)，决定就往Java发展，目前正在学习JavaEE中。</p>
+<blockquote>
+<p>不能影响你编程观点的语言，不值得你去学！——Alan Perlis</p>
+</blockquote>
+<p>为什么我最终还是选择了Java？实不相瞒，我最早接触的编程语言，就是Java。后来因为种种原因，对Java的了解越来越多，也越来越喜欢这门语言。它从某种程度上对我的编程思想带来了影响，我也明白，编程语言学的越多，并不代表能力越强，更重要的应该是其中的“Programming paradigm”，即“编程范式”。</p>
+<p>所以从明年开始，决定专精Java这门语言，或许等到Java学的很好之后(也需要好几年)，才会再接触其它比较好的语言。某些语言，我也一直想去学，但是先认真地学“好”一门语言，并掌握编程思想才是我应该做的，不能“急功近利”。</p>
+<p>在今年，我了解并学习了很多新知识，不知道为什么，学习的速度跟以前比越来越快了，但是发现自己要学的东西越来越多了，不过我不会停止学习的。今年11月份的时候，一直在犹豫怎么选择以后的路(短期的)，最后参考一些前辈的经历，并结合自己的实际情况，决定选择培训。目前在武汉千峰培训JavaEE，每天在学习我喜欢的知识，感觉过的很充实。我也很感谢家人对我的支持，成功路上真的离不开家人的支持(虽然目前还没成功)。</p>
+<p>最后，说好的要定期更新文章，但是很多时候真的不知道写啥，我觉得这跟我的知识储备还是有关，毕竟不想太水文章。但是，我这一年来，至少做到了坚持做markdown笔记，并且我决定，将这个好习惯保持下去！</p>
+<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>那么2020年，也应该立新的flag了！</p>
+<ul>
+<li>学好Java，以及相关的一些技术。</li>
+<li>找一份自己喜欢的编程工作！</li>
+<li>少玩游戏少熬夜。</li>
+<li>坚持健身。</li>
+<li>继续坚持做笔记。</li>
+<li>精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
+<li>写一款自己的主题或web项目(在培训机构的不算数)</li>
+<li>积极的拥抱开源。</li>
+<li>学习或了解一项新技术</li>
+<li>成立自己的小团队，或者找到一群有共同理想目标的人</li>
+<li>完成以上所有的计划，最好能脱单！</li>
+</ul>
+<p>最后，祝大家在2020能够找到自己的方向或目标，并不断地努力下去！</p>
+<center><b>I shall rise oh well rise again and agian.</b></center>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public class void main(String[] args) &#123;</span><br><span class="line">    	System.out.println(&quot;你好，2020!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>年终总结</category>
+      </categories>
+      <tags>
+        <tag>年终总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在VirtualBox上安装Android-X86</title>
     <url>/posts/2019/android-for-virtualbox.html</url>
     <content><![CDATA[<p>对于<code>Android</code>开发来说，尤其是新手(没错，我自己就是<code>noob</code>😥)，有很多种开发调试的方案。比如<code>Genymotion+VirtualBox</code>搭配方案(在我的笔记本上这种方案性能最低，可能因配置而异)、直接用<code>VirtualBox</code>安装<code>Android-X86</code>的<code>iso</code>，或者是直接在<code>Android Studio</code>里面调试等等。本文介绍的是直接用<code>VirtualBox</code>安装<code>Android-X86</code>，虽然是在虚拟机中安装，但是也会有很多不可避免的坑！！！</p>
@@ -241,60 +298,52 @@
       </tags>
   </entry>
   <entry>
-    <title>2019年终总结</title>
-    <url>/posts/2019/2019year-end.html</url>
-    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="2019year-end/2019year-end_p1.jpg" alt></p>
-<blockquote>
-<p>美丽的灵魂成就美丽的人生    ——  《美丽人生》豆瓣短评</p>
-</blockquote>
+    <title>炫酷的主页</title>
+    <url>/posts/2019/diy.html</url>
+    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="diy/diy001.png" alt></p>
+<p>周末放假回家，给自己的<code>Hexo</code>博客自定义了一个首页，看起来炫酷多了。实现简单，操作步骤稍微繁琐了一点，因为涉及到要修改的东西太多了。需要一点<code>HTML</code>和<code>css</code>基础，主要就是。。。算了，干啥都要时间，直接进入正题！</p>
 <a id="more"></a>
 
-<h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>9102年马上就要结束了，回过头来看这一年，又完成了哪些目标？经历了哪些挫折？在人生的十字路口我做了怎样的选择？又学到了哪些新知识、又看了哪些书？</p>
-<p>先看看年初立的flag：</p>
-<ul>
-<li><input disabled type="checkbox"> 公众号坚持每周都发布原创文章</li>
-<li><input checked disabled type="checkbox"> GitHub上完成自己的一些项目(尽管可能并没有什么实际用处，但是需要练手)</li>
-<li><input checked disabled type="checkbox"> 少玩游戏少熬夜</li>
-<li><input disabled type="checkbox"> 学习或了解一门新的编程语言(这里有歧义，算作没完成吧)</li>
-<li><input disabled type="checkbox"> 从入门到精通并不弃坑的学习C++(先把Java搞好，Java真香)</li>
-<li><input disabled type="checkbox"> 坚持健身</li>
-<li><input disabled type="checkbox"> 拥有自己的小程序</li>
-<li><input checked disabled type="checkbox"> 考试不挂科</li>
-<li><input disabled type="checkbox"> 学习UE4</li>
-<li><input disabled type="checkbox"> 完成以上所有的计划</li>
-</ul>
-<p>嗯，😥真是不堪入目，今年看起来似乎很失败。了解我的小伙伴，应该知道我在很早之前就接触Java这门语言了。但是在去年写年终总结时，因为对游戏开发很感兴趣，所以当时决定选择游戏开发来作为新一年的目标。但是！！！在我发表之后不久，在一些大佬的劝说下(洗脑)，决定就往Java发展，目前正在学习JavaEE中。</p>
-<blockquote>
-<p>不能影响你编程观点的语言，不值得你去学！——Alan Perlis</p>
-</blockquote>
-<p>为什么我最终还是选择了Java？实不相瞒，我最早接触的编程语言，就是Java。后来因为种种原因，对Java的了解越来越多，也越来越喜欢这门语言。它从某种程度上对我的编程思想带来了影响，我也明白，编程语言学的越多，并不代表能力越强，更重要的应该是其中的“Programming paradigm”，即“编程范式”。</p>
-<p>所以从明年开始，决定专精Java这门语言，或许等到Java学的很好之后(也需要好几年)，才会再接触其它比较好的语言。某些语言，我也一直想去学，但是先认真地学“好”一门语言，并掌握编程思想才是我应该做的，不能“急功近利”。</p>
-<p>在今年，我了解并学习了很多新知识，不知道为什么，学习的速度跟以前比越来越快了，但是发现自己要学的东西越来越多了，不过我不会停止学习的。今年11月份的时候，一直在犹豫怎么选择以后的路(短期的)，最后参考一些前辈的经历，并结合自己的实际情况，决定选择培训。目前在武汉千峰培训JavaEE，每天在学习我喜欢的知识，感觉过的很充实。我也很感谢家人对我的支持，成功路上真的离不开家人的支持(虽然目前还没成功)。</p>
-<p>最后，说好的要定期更新文章，但是很多时候真的不知道写啥，我觉得这跟我的知识储备还是有关，毕竟不想太水文章。但是，我这一年来，至少做到了坚持做markdown笔记，并且我决定，将这个好习惯保持下去！</p>
-<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>那么2020年，也应该立新的flag了！</p>
-<ul>
-<li>学好Java，以及相关的一些技术。</li>
-<li>找一份自己喜欢的编程工作！</li>
-<li>少玩游戏少熬夜。</li>
-<li>坚持健身。</li>
-<li>继续坚持做笔记。</li>
-<li>精通Linux的日常使用以及掌握Linux平台的开发(以Java为主)</li>
-<li>写一款自己的主题或web项目(在培训机构的不算数)</li>
-<li>积极的拥抱开源。</li>
-<li>学习或了解一项新技术</li>
-<li>成立自己的小团队，或者找到一群有共同理想目标的人</li>
-<li>完成以上所有的计划，最好能脱单！</li>
-</ul>
-<p>最后，祝大家在2020能够找到自己的方向或目标，并不断地努力下去！</p>
-<center><b>I shall rise oh well rise again and agian.</b></center>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public class void main(String[] args) &#123;</span><br><span class="line">    	System.out.println(&quot;你好，2020!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>zhuimeng.online域名没有续费，本文基本已作废</strong></p>
+<h2 id="结构分析"><a href="#结构分析" class="headerlink" title="结构分析"></a>结构分析</h2><p>首先，我们看到博客名字后面的渐变色块，就是用的最基础的css渐变动画做的效果。其实我本来想用<code>Google</code>的<span class="exturl" data-url="aHR0cHM6Ly9tYXRlcmlhbC5pby9kZXNpZ24v">Material Design<i class="fa fa-external-link-alt"></i></span>做一个响应式的，奈何水平不够，设计这一块儿，真玩不来。</p>
+<p>头像本来是个方块图，用PPT修成圆形的，然后放了上去。下面的四个图标，用的是阿里巴巴矢量图标库—<span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvbmZvbnQuY24v">Iconfont<i class="fa fa-external-link-alt"></i></span>的图标，侵权请联系我删除！然后最下面就是固定的版权信息，最后就是背景动画！</p>
+<h2 id="背景特效"><a href="#背景特效" class="headerlink" title="背景特效"></a>背景特效</h2><p>背景用的是已经造好的轮子，基于<code>JavaScript</code>开发的。原作者在👍<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0plcmVtYm9vL2FuaW1hdGVkLW1lc2gtbGluZXM=">GitHub<i class="fa fa-external-link-alt"></i></span>开源了，大家喜欢可以star支持一下！<strong>这里我就想吐槽一下了，国内很多模板资源站之类的网站，拿人家辛辛苦苦写的代码，假装是自己的卖钱。知道最可耻的是什么吗？这种人还好意思说请尊重劳动成果！！！</strong></p>
+<p>我基于现成的轮子，成功的让车驱动起来了，感兴趣的大家可以看看！我也放到<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3N5amwvYmVzc2Nyb2Z0LmdpdGh1Yi5pbw==">GitHub<i class="fa fa-external-link-alt"></i></span>上去了！你可以直接去下载，或者用一下指令<code>clone</code>到本地。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;bessyjl&#x2F;besscroft.github.io.git</span><br></pre></td></tr></table></figure>
 
+<p>如果你觉得不错的话，可以按照我的模板修改成你自己的并使用它，我没啥要求，给个Star可以吗😘</p>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><p>1.先去<code>GitHub</code>创建一个<code>repo</code>，名字就用<code>blog</code>就行。</p>
+<p>2.要修改<code>hexo</code>博客的生成目录信息，打开根目录下的配置文件：</p>
+<figure class="highlight diff"><figcaption><span>文件位置:\_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="deletion">-url: http://www.zhuimeng.online</span></span><br><span class="line"><span class="deletion">-root: /</span></span><br><span class="line"><span class="addition">+url: http://www.zhuimeng.online/blog      # url后需要加：/刚才创建的仓库名</span></span><br><span class="line"><span class="addition">+root: /blog/                              # root修改为：/刚才创建的仓库名/</span></span><br><span class="line">**********</span><br><span class="line">**********</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line"><span class="deletion">- repo: git@github.com:besscroft/besscroft.github.io</span></span><br><span class="line"><span class="addition">+ repo: git@github.com:besscroft/blog.git         # 修改为新建的仓库地址</span></span><br><span class="line">  barnch: master</span><br></pre></td></tr></table></figure>
+
+<p>3.重新部署</p>
+<p>这个时候，删掉原来的<code>CNAME</code>文件，不然会解析失败，记得在别的地方备份一份，等会还要用。然后：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>这时候我们去刚才创建的<code>repo</code>去看，已经好了:</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="diy/diy002.png" alt></p>
+<p>4.上传自定义首页</p>
+<p>这时候，我们先<code>clone</code>一份原来的<code>repo</code>的代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;besscroft&#x2F;besscroft.github.io.git</span><br></pre></td></tr></table></figure>
+
+<p>然后删除所有的文件，只留下<code>CNAME</code>文件，当然<code>README.md</code>文件也可以留下。复制我们已经写好的自定义首页的相关文件到这个本地仓库的文件夹，然后老规矩：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;update index&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>然后再访问我们原来的域名<span class="exturl" data-url="aHR0cDovL3d3dy56aHVpbWVuZy5vbmxpbmU=">http://www.zhuimeng.online<i class="fa fa-external-link-alt"></i></span>，发现已经成功了。然后博客地址变成了<span class="exturl" data-url="aHR0cDovL3d3dy56aHVpbWVuZy5vbmxpbmUvYmxvZw==">http://www.zhuimeng.online/blog<i class="fa fa-external-link-alt"></i></span>。</p>
+<h2 id="自定义文件"><a href="#自定义文件" class="headerlink" title="自定义文件"></a>自定义文件</h2><p>在博客自定义首页文件<code>index.html</code>中，我们需要把跳转链接到<span class="exturl" data-url="aHR0cDovL3d3dy56aHVpbWVuZy5vbmxpbmUvYmxvZw==">http://www.zhuimeng.online/blog<i class="fa fa-external-link-alt"></i></span>，不然就没地方访问你的博客了，因为别人并不知道要访问<code>/blog</code>路径。</p>
+<p>我用的如下方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--标题--&gt;</span><br><span class="line">	&lt;div class&#x3D;&quot;title_bess&quot;&gt;</span><br><span class="line">		&lt;h1 class&#x3D;&quot;h1_bess&quot;&gt;&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;www.zhuimeng.online&#x2F;blog&quot;&gt;Bess&#39;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;	</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br><span class="line">	</span><br><span class="line">&lt;!--社交图标--&gt;</span><br><span class="line">		&lt;!--博客--&gt;</span><br><span class="line">	&lt;div class&#x3D;&quot;go_bess_blog&quot;&gt;</span><br><span class="line">		&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;www.zhuimeng.online&#x2F;blog&quot;&gt;&lt;img src&#x3D;&quot;images&#x2F;blogger.png&quot; alt&#x3D;&quot;Blog&quot; &#x2F;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="最痛苦的步骤"><a href="#最痛苦的步骤" class="headerlink" title="最痛苦的步骤"></a>最痛苦的步骤</h2><p>你以为这样就结束了？你难道没发现访问自己的博客，一大堆的报错？</p>
+<div class="note warning"><p>你需要把hexo调用的每一个资源文件的路径前面加上/blog，否则就会导致无法调用，然后很多效果加载不出来。</p></div>
+
+<p>重点不是这，是你根本不知道是哪些，在哪里。只能跟着报错信息去找，我大部分已经找到了，并改正了路径，但是还是有部分找不到了(懒癌)，反正已经不影响博客体验，我也就不管它了，哈哈哈😂</p>
 ]]></content>
       <categories>
-        <category>年终总结</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>年终总结</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -394,6 +443,34 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更换为Google Fonts思源宋体！</title>
+    <url>/posts/2019/fonts.html</url>
+    <content><![CDATA[<p>对于中文书籍来说，宋体一直是正文印刷的标准字体，而不是目前电子显示屏上普遍的黑体，因为<strong>宋体的衬线更适合长时间阅读</strong>。</p>
+<p>本文是针对Hexo博客的NexT主题来设置的，不是这个的小伙伴们也可以参照着来看！</p>
+<a id="more"></a>
+
+<h3 id="修改字体"><a href="#修改字体" class="headerlink" title="修改字体"></a>修改字体</h3><h4 id="修改配置文件中的参数"><a href="#修改配置文件中的参数" class="headerlink" title="修改配置文件中的参数"></a>修改配置文件中的参数</h4><p>修改配置文件<code>_config.yml</code> ，找到<code>font</code>将下列代码中红色的部分修改成绿色的部分即可。可以根据实际情况稍作修改！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line"></span><br><span class="line">  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).</span><br><span class="line">  # Uri字体主机，例如//fonts.googleapis.com（默认）。</span><br><span class="line"><span class="addition">+ host: https://fonts.loli.net</span></span><br><span class="line"></span><br><span class="line">  # Font options:字体选项：</span><br><span class="line">  # `external: true` will load this font family from `host` above.</span><br><span class="line">  # `family: Times New Roman`. Without any quotes.</span><br><span class="line">  # `size: xx`. Use `px` as unit.</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  # 用于&lt;body&gt;中所有元素的全局字体设置。</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # 标题的字体设置（H1，H2，H3，H4，H5，H6）。</span><br><span class="line">  # Fallback to `global` font settings.</span><br><span class="line">  # 回退到`global`字体设置。</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.帖子的字体设置</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.LOGO的字体设置。</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>找到主题的<code>base.styl</code>文件，具体位置为<code>~/blog/themes/next/source/css/_variables/base.styl</code>,然后修改相关数据！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="deletion">-$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = consolas, Menlo, $font-family-base, monospace</span></span><br><span class="line"><span class="deletion">-$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-chinese, monospace if get_font_family('codes')</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-base, monospace if get_font_family('codes')</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义项目"><a href="#自定义项目" class="headerlink" title="自定义项目"></a>自定义项目</h3><h4 id="设置字体大小"><a href="#设置字体大小" class="headerlink" title="设置字体大小"></a>设置字体大小</h4><p>如果你看不习惯默认(原来)的字体大小的话，你可以尝试修改它！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = 14px	//改成你想要的即可！</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置字体颜色"><a href="#设置字体颜色" class="headerlink" title="设置字体颜色"></a>设置字体颜色</h4><p>没错，你甚至可以设置不同的颜色！</p>
+<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_custom/custom.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">//修改字体颜色</span><br><span class="line">body &#123;</span><br><span class="line">    color: &lt;在这里填上你想要的颜色，如：#000&gt;;	//别漏了分号！</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note warning"><p>本文参考自reuixiy的<span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS90ZWNoL25vdG8tc2VyaWYtc2MtYWRkZWQtb24tZ29vZ2xlLWZvbnRzLmh0bWwjbWFpbg==">Google Fonts已支持思源宋体！<i class="fa fa-external-link-alt"></i></span>点击即可访问！</p></div>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Google Fonts</tag>
       </tags>
   </entry>
   <entry>
@@ -529,55 +606,6 @@
       </tags>
   </entry>
   <entry>
-    <title>炫酷的主页</title>
-    <url>/posts/2019/diy.html</url>
-    <content><![CDATA[<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="diy/diy001.png" alt></p>
-<p>周末放假回家，给自己的<code>Hexo</code>博客自定义了一个首页，看起来炫酷多了。实现简单，操作步骤稍微繁琐了一点，因为涉及到要修改的东西太多了。需要一点<code>HTML</code>和<code>css</code>基础，主要就是。。。算了，干啥都要时间，直接进入正题！</p>
-<a id="more"></a>
-
-<p><strong>zhuimeng.online域名没有续费，本文基本已作废</strong></p>
-<h2 id="结构分析"><a href="#结构分析" class="headerlink" title="结构分析"></a>结构分析</h2><p>首先，我们看到博客名字后面的渐变色块，就是用的最基础的css渐变动画做的效果。其实我本来想用<code>Google</code>的<span class="exturl" data-url="aHR0cHM6Ly9tYXRlcmlhbC5pby9kZXNpZ24v">Material Design<i class="fa fa-external-link-alt"></i></span>做一个响应式的，奈何水平不够，设计这一块儿，真玩不来。</p>
-<p>头像本来是个方块图，用PPT修成圆形的，然后放了上去。下面的四个图标，用的是阿里巴巴矢量图标库—<span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNvbmZvbnQuY24v">Iconfont<i class="fa fa-external-link-alt"></i></span>的图标，侵权请联系我删除！然后最下面就是固定的版权信息，最后就是背景动画！</p>
-<h2 id="背景特效"><a href="#背景特效" class="headerlink" title="背景特效"></a>背景特效</h2><p>背景用的是已经造好的轮子，基于<code>JavaScript</code>开发的。原作者在👍<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0plcmVtYm9vL2FuaW1hdGVkLW1lc2gtbGluZXM=">GitHub<i class="fa fa-external-link-alt"></i></span>开源了，大家喜欢可以star支持一下！<strong>这里我就想吐槽一下了，国内很多模板资源站之类的网站，拿人家辛辛苦苦写的代码，假装是自己的卖钱。知道最可耻的是什么吗？这种人还好意思说请尊重劳动成果！！！</strong></p>
-<p>我基于现成的轮子，成功的让车驱动起来了，感兴趣的大家可以看看！我也放到<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Jlc3N5amwvYmVzc2Nyb2Z0LmdpdGh1Yi5pbw==">GitHub<i class="fa fa-external-link-alt"></i></span>上去了！你可以直接去下载，或者用一下指令<code>clone</code>到本地。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;bessyjl&#x2F;besscroft.github.io.git</span><br></pre></td></tr></table></figure>
-
-<p>如果你觉得不错的话，可以按照我的模板修改成你自己的并使用它，我没啥要求，给个Star可以吗😘</p>
-<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><p>1.先去<code>GitHub</code>创建一个<code>repo</code>，名字就用<code>blog</code>就行。</p>
-<p>2.要修改<code>hexo</code>博客的生成目录信息，打开根目录下的配置文件：</p>
-<figure class="highlight diff"><figcaption><span>文件位置:\_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="deletion">-url: http://www.zhuimeng.online</span></span><br><span class="line"><span class="deletion">-root: /</span></span><br><span class="line"><span class="addition">+url: http://www.zhuimeng.online/blog      # url后需要加：/刚才创建的仓库名</span></span><br><span class="line"><span class="addition">+root: /blog/                              # root修改为：/刚才创建的仓库名/</span></span><br><span class="line">**********</span><br><span class="line">**********</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line"><span class="deletion">- repo: git@github.com:besscroft/besscroft.github.io</span></span><br><span class="line"><span class="addition">+ repo: git@github.com:besscroft/blog.git         # 修改为新建的仓库地址</span></span><br><span class="line">  barnch: master</span><br></pre></td></tr></table></figure>
-
-<p>3.重新部署</p>
-<p>这个时候，删掉原来的<code>CNAME</code>文件，不然会解析失败，记得在别的地方备份一份，等会还要用。然后：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>这时候我们去刚才创建的<code>repo</code>去看，已经好了:</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="diy/diy002.png" alt></p>
-<p>4.上传自定义首页</p>
-<p>这时候，我们先<code>clone</code>一份原来的<code>repo</code>的代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;besscroft&#x2F;besscroft.github.io.git</span><br></pre></td></tr></table></figure>
-
-<p>然后删除所有的文件，只留下<code>CNAME</code>文件，当然<code>README.md</code>文件也可以留下。复制我们已经写好的自定义首页的相关文件到这个本地仓库的文件夹，然后老规矩：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;update index&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>然后再访问我们原来的域名<span class="exturl" data-url="aHR0cDovL3d3dy56aHVpbWVuZy5vbmxpbmU=">http://www.zhuimeng.online<i class="fa fa-external-link-alt"></i></span>，发现已经成功了。然后博客地址变成了<span class="exturl" data-url="aHR0cDovL3d3dy56aHVpbWVuZy5vbmxpbmUvYmxvZw==">http://www.zhuimeng.online/blog<i class="fa fa-external-link-alt"></i></span>。</p>
-<h2 id="自定义文件"><a href="#自定义文件" class="headerlink" title="自定义文件"></a>自定义文件</h2><p>在博客自定义首页文件<code>index.html</code>中，我们需要把跳转链接到<span class="exturl" data-url="aHR0cDovL3d3dy56aHVpbWVuZy5vbmxpbmUvYmxvZw==">http://www.zhuimeng.online/blog<i class="fa fa-external-link-alt"></i></span>，不然就没地方访问你的博客了，因为别人并不知道要访问<code>/blog</code>路径。</p>
-<p>我用的如下方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--标题--&gt;</span><br><span class="line">	&lt;div class&#x3D;&quot;title_bess&quot;&gt;</span><br><span class="line">		&lt;h1 class&#x3D;&quot;h1_bess&quot;&gt;&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;www.zhuimeng.online&#x2F;blog&quot;&gt;Bess&#39;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;	</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br><span class="line">	</span><br><span class="line">&lt;!--社交图标--&gt;</span><br><span class="line">		&lt;!--博客--&gt;</span><br><span class="line">	&lt;div class&#x3D;&quot;go_bess_blog&quot;&gt;</span><br><span class="line">		&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;www.zhuimeng.online&#x2F;blog&quot;&gt;&lt;img src&#x3D;&quot;images&#x2F;blogger.png&quot; alt&#x3D;&quot;Blog&quot; &#x2F;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="最痛苦的步骤"><a href="#最痛苦的步骤" class="headerlink" title="最痛苦的步骤"></a>最痛苦的步骤</h2><p>你以为这样就结束了？你难道没发现访问自己的博客，一大堆的报错？</p>
-<div class="note warning"><p>你需要把hexo调用的每一个资源文件的路径前面加上/blog，否则就会导致无法调用，然后很多效果加载不出来。</p></div>
-
-<p>重点不是这，是你根本不知道是哪些，在哪里。只能跟着报错信息去找，我大部分已经找到了，并改正了路径，但是还是有部分找不到了(懒癌)，反正已经不影响博客体验，我也就不管它了，哈哈哈😂</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git本地文件到GitHub仓库</title>
     <url>/posts/2019/gitgo.html</url>
     <content><![CDATA[<p>这是一个简单使用的教程，如果你刚接触<code>git</code>和<code>GitHub</code>，那么，这篇文章再适合你不过了！首先，没有接触过版本控制概念的同学们也可以轻松入门；其次，通过这篇博文，你将学会本地构建仓库、远程克隆仓库、上传本地仓库等魔法操作(语言上可能组织不太好😅)，值得你一看。</p>
@@ -701,6 +729,32 @@
       <tags>
         <tag>Git</tag>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google sitemap不允许的网址解决办法</title>
+    <url>/posts/2019/googlesitemap.html</url>
+    <content><![CDATA[<p>搭建好自己的博客之后，当然得做收录。要想让别人在Google看到我的文章，就得添加站点地图。但是我在提交到Google的时候就给我报了错，不允许的网址。本文所说的方法只是众多解决方法中的一个，这个问题的原因也是有很多的，可以参考👉<span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vd2VibWFzdGVycy9hbnN3ZXIvNzQ1MTAwMT9obD16aC1IYW5zJnJlZl90b3BpYz03NDQwMDA2">站点地图报告<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在我提交之后，是这样显示的：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google001.png" alt></p>
+<p>所以说，得找到错误。最开始我根本没意识到错误在哪里，也就是选择性眼瞎。。。但是仔细观察图片，发现网址不对，怎么能是http://&lt;yoursite.com&gt;(这里一看就不对)/***.html呢？于是恍然大悟！</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>综上所述，在我的站点文件<code>sitemap.xml</code>里面，也肯定都是错误的网址。可以看到地址都是错的，都是<code>yoursite.com</code>开头，这很明显不是我的网址啊😥所以说肯定是我某个地方没有修改，应该是默认值。然后检查我的<code>_config.yml</code>文件，一看果然是的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;yoursite.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<p>可以看到<code>url</code>这一项是默认值，压根就没改！因为之前不影响使用，我就没管。然后这时候更正它：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;www.zhuimeng.online</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<p>然后<code>hexo g -d</code>更新网站，再在 Google Search Console 重新提交一次 sitemap 就可以了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google002.png" alt></p>
+<p>nice!大功告成啦！😄</p>
+]]></content>
+      <categories>
+        <category>Google Search Console</category>
+      </categories>
+      <tags>
+        <tag>Google Search Console</tag>
       </tags>
   </entry>
   <entry>
@@ -1087,32 +1141,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Google sitemap不允许的网址解决办法</title>
-    <url>/posts/2019/googlesitemap.html</url>
-    <content><![CDATA[<p>搭建好自己的博客之后，当然得做收录。要想让别人在Google看到我的文章，就得添加站点地图。但是我在提交到Google的时候就给我报了错，不允许的网址。本文所说的方法只是众多解决方法中的一个，这个问题的原因也是有很多的，可以参考👉<span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vd2VibWFzdGVycy9hbnN3ZXIvNzQ1MTAwMT9obD16aC1IYW5zJnJlZl90b3BpYz03NDQwMDA2">站点地图报告<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在我提交之后，是这样显示的：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google001.png" alt></p>
-<p>所以说，得找到错误。最开始我根本没意识到错误在哪里，也就是选择性眼瞎。。。但是仔细观察图片，发现网址不对，怎么能是http://&lt;yoursite.com&gt;(这里一看就不对)/***.html呢？于是恍然大悟！</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>综上所述，在我的站点文件<code>sitemap.xml</code>里面，也肯定都是错误的网址。可以看到地址都是错的，都是<code>yoursite.com</code>开头，这很明显不是我的网址啊😥所以说肯定是我某个地方没有修改，应该是默认值。然后检查我的<code>_config.yml</code>文件，一看果然是的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;yoursite.com</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
-
-<p>可以看到<code>url</code>这一项是默认值，压根就没改！因为之前不影响使用，我就没管。然后这时候更正它：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http:&#x2F;&#x2F;www.zhuimeng.online</span><br><span class="line">root: &#x2F;</span><br><span class="line">permalink: :title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
-
-<p>然后<code>hexo g -d</code>更新网站，再在 Google Search Console 重新提交一次 sitemap 就可以了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="googlesitemap/google002.png" alt></p>
-<p>nice!大功告成啦！😄</p>
-]]></content>
-      <categories>
-        <category>Google Search Console</category>
-      </categories>
-      <tags>
-        <tag>Google Search Console</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo多端同步</title>
     <url>/posts/2019/remote.html</url>
     <content><![CDATA[<p>假设你换了一台电脑，或者是把电脑重置了，那么，要怎样才能接着跟原来一样配置好Hexo，然后继续写文章呢？毕竟你不是从头、从零开始配置的，很多文件都已经有了，但是，怎么保证不出问题的继续运行呢?</p>
@@ -1157,31 +1185,124 @@
       </tags>
   </entry>
   <entry>
-    <title>更换为Google Fonts思源宋体！</title>
-    <url>/posts/2019/fonts.html</url>
-    <content><![CDATA[<p>对于中文书籍来说，宋体一直是正文印刷的标准字体，而不是目前电子显示屏上普遍的黑体，因为<strong>宋体的衬线更适合长时间阅读</strong>。</p>
-<p>本文是针对Hexo博客的NexT主题来设置的，不是这个的小伙伴们也可以参照着来看！</p>
+    <title>NexT主题个性定制与深度优化</title>
+    <url>/posts/2019/next.html</url>
+    <content><![CDATA[<blockquote><p>给岁月以文明，而不是给文明以岁月.</p>
+<footer><strong>刘慈欣</strong><cite>三体</cite></footer></blockquote>
+
+<p>“互联网精神”即：开放、平等、协作、快速、分享。感谢我的生命之中有互联网，让我脑海中的开源共享有了实现的可能。能拥有自己的博客，不仅记录自己，还能分享他人！</p>
 <a id="more"></a>
 
-<h3 id="修改字体"><a href="#修改字体" class="headerlink" title="修改字体"></a>修改字体</h3><h4 id="修改配置文件中的参数"><a href="#修改配置文件中的参数" class="headerlink" title="修改配置文件中的参数"></a>修改配置文件中的参数</h4><p>修改配置文件<code>_config.yml</code> ，找到<code>font</code>将下列代码中红色的部分修改成绿色的部分即可。可以根据实际情况稍作修改！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">font:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line"></span><br><span class="line">  # Uri of fonts host, e.g. //fonts.googleapis.com (Default).</span><br><span class="line">  # Uri字体主机，例如//fonts.googleapis.com（默认）。</span><br><span class="line"><span class="addition">+ host: https://fonts.loli.net</span></span><br><span class="line"></span><br><span class="line">  # Font options:字体选项：</span><br><span class="line">  # `external: true` will load this font family from `host` above.</span><br><span class="line">  # `family: Times New Roman`. Without any quotes.</span><br><span class="line">  # `size: xx`. Use `px` as unit.</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  # 用于&lt;body&gt;中所有元素的全局字体设置。</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # 标题的字体设置（H1，H2，H3，H4，H5，H6）。</span><br><span class="line">  # Fallback to `global` font settings.</span><br><span class="line">  # 回退到`global`字体设置。</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.帖子的字体设置</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.LOGO的字体设置。</span><br><span class="line">  # Fallback to `global` font settings.回退到`global`字体设置。</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line"><span class="addition">+   family: Noto Serif SC</span></span><br><span class="line">    size:</span><br></pre></td></tr></table></figure>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="容我先bb几句"><a href="#容我先bb几句" class="headerlink" title="容我先bb几句"></a>容我先bb几句</h3><p>首先肯定是感谢各位大佬的文章，我一个小白，靠着Google搭建了自己的博客……如果你是一个和我一样的小白，而且对我的博客感觉还蛮满意的话，恭喜你！看完这篇文章，你自己也可以拥有一个<del>可能不太</del>漂亮<del>的</del>博客啦！</p>
+<p>这篇文章主要是写给跟我一样的小白们看的，当然也方便自己以后忘记了来查阅。如果各位大佬不慎看到，如有不足之处还欢迎指出来哦，还请见谅！我在搭建博客的时候，看到很多博客，写了一些比较好的文章，但是有时候却忘记收藏了。别告诉我只有我一个人设置的关闭浏览器时自动清理的……许多时候还是挺后悔的，为什么当时没收藏。因为这种文章，肯定是比某度随便一搜索找到的教程要准确的多的，毕竟人家博主可能真的是有在认真的写。</p>
+<h3 id="我的本地环境"><a href="#我的本地环境" class="headerlink" title="我的本地环境"></a>我的本地环境</h3><p>有时候出问题的原因可能会有很多，如果你决定用我的这篇文章来做参考的话，那么我就把我的环境给你参考。因为可能大家一样的操作的话，并不一定实现的结果都是相同的。嗯~ o(<em>￣▽￣</em>)o，没错，我有时候Google按照流程来，结果疯狂报错。。。</p>
+<p>大家都知道，外星人阻断了我们与Google的链接，导致无法访问，不过估计能看到这篇文章的人，应该是具有了访问Google的能力了。如果你是在是无法访问，可以去全球最大的同性交友社区GitHub看看呢，附上大神的开源项目<span class="exturl" data-url="aHR0cHM6Ly9sYW9kLmNuL3dwLWNvbnRlbnQvdGhlbWVzL2JlZ2luL3RvLnBocD91cmw9YUhSMGNITTZMeTluYVhSb2RXSXVZMjl0TDJkdmIyZHNaV2h2YzNSekwyaHZjM1J6">入口<i class="fa fa-external-link-alt"></i></span>👉</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* 调试用的浏览器 *&#x2F;</span><br><span class="line">Google Chrome Version 73.0.3683.75（Official version）（64-bit）</span><br><span class="line">QQ Browser 10.4(3341) Chromium70.0.3538.25\IE11.379.17763.0</span><br><span class="line">Microsoft Edge 44.17763.1.0</span><br><span class="line">Internet Explorer 11.379.17763.0</span><br><span class="line">&#x2F;&#x2F;IE8及以下版本无法正常显示</span><br><span class="line"></span><br><span class="line">&#x2F;* 版本信息 *&#x2F;</span><br><span class="line">$ hexo version</span><br><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17763 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;* 依赖包 *&#x2F;</span><br><span class="line">$ cat package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;3.8.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^3.8.0&quot;,</span><br><span class="line">    &quot;hexo-asset-image&quot;: &quot;0.0.3&quot;, &#x2F;* 图片显示 *&#x2F;</span><br><span class="line">    &quot;hexo-blog-encrypt&quot;: &quot;^2.1.1&quot;,</span><br><span class="line">    &quot;hexo-deployer-git&quot;: &quot;^1.0.0&quot;, &#x2F;* Git 部署工具 *&#x2F;</span><br><span class="line">    &quot;hexo-douban&quot;: &quot;^1.1.3&quot;, &#x2F;* 豆瓣页面生成 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.5&quot;,</span><br><span class="line">    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.6&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-feed&quot;: &quot;^1.2.2&quot;, &#x2F;* RSS *&#x2F;</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^0.2.1&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-sitemap&quot;: &quot;^1.2.0&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.2.0&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-helper-live2d&quot;: &quot;^3.1.1&quot;, &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.3.1&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.3.3&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^0.3.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-symbols-count-time&quot;: &quot;^0.4.4&quot;,</span><br><span class="line">    &quot;hexo-tag-aplayer&quot;: &quot;^3.0.4&quot;, &#x2F;* 音乐播放插件，支持歌词 *&#x2F;</span><br><span class="line">    &quot;hexo-tag-dplayer&quot;: &quot;^0.3.3&quot;, &#x2F;* 视频播放插件，支持弹幕 *&#x2F;</span><br><span class="line">    &quot;hexo-wordcount&quot;: &quot;^6.0.1&quot;, &#x2F;* 字数统计 *&#x2F;</span><br><span class="line">    &quot;live2d-widget-model-koharu&quot;: &quot;^1.0.5&quot; &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 主题NexT版本 *&#x2F;</span><br><span class="line">NexT.Muse v7.1.0</span><br><span class="line"></span><br><span class="line">&#x2F;* 优化主题NexT的设计版式 *&#x2F;</span><br><span class="line">Muse</span><br></pre></td></tr></table></figure>
 
-<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>找到主题的<code>base.styl</code>文件，具体位置为<code>~/blog/themes/next/source/css/_variables/base.styl</code>,然后修改相关数据！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="deletion">-$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = consolas, Menlo, $font-family-base, monospace</span></span><br><span class="line"><span class="deletion">-$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-chinese, monospace if get_font_family('codes')</span></span><br><span class="line"><span class="addition">+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-base, monospace if get_font_family('codes')</span></span><br></pre></td></tr></table></figure>
+<p>样式还是看自己选择吧，我觉得都能设计的挺好看的，主要是看你想呈现出一个怎样的界面出来！</p>
+<h3 id="注意！"><a href="#注意！" class="headerlink" title="注意！"></a>注意！</h3><p>站点配置文件和主题配置文件，名字都叫<code>_config.yml</code>，容易乱，这一点我在其它文章也不止一次的提过了。</p>
+<ul>
+<li>站点配置文件，位于站点文件夹根目录内：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
 
-<h3 id="自定义项目"><a href="#自定义项目" class="headerlink" title="自定义项目"></a>自定义项目</h3><h4 id="设置字体大小"><a href="#设置字体大小" class="headerlink" title="设置字体大小"></a>设置字体大小</h4><p>如果你看不习惯默认(原来)的字体大小的话，你可以尝试修改它！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_variables/base.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = 14px	//改成你想要的即可！</span><br></pre></td></tr></table></figure>
+<ul>
+<li>主题配置文件，位于主题文件夹根目录内：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;themes&#x2F;&lt;你的主题&gt;&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
 
-<h4 id="设置字体颜色"><a href="#设置字体颜色" class="headerlink" title="设置字体颜色"></a>设置字体颜色</h4><p>没错，你甚至可以设置不同的颜色！</p>
-<figure class="highlight diff"><figcaption><span>文件位置:~/blog/themes/next/source/css/_custom/custom.styl</span></figcaption><table><tr><td class="code"><pre><span class="line">//修改字体颜色</span><br><span class="line">body &#123;</span><br><span class="line">    color: &lt;在这里填上你想要的颜色，如：#000&gt;;	//别漏了分号！</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h2><h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><p>进入正题啦！由于我以及写过了，不知道为什么这时候有一种偷完懒之后的感觉，真香~😂</p>
+<p>好吧，附上快速访问链接👉<a href="https://blog.52bess.com/hexo.html">Hexo博客搭建</a></p>
+<p>建议大家一定要看一看官方文档哦，毕竟是👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv">官方文档<i class="fa fa-external-link-alt"></i></span></p>
+<p>当然了，你如果对GitHub提供的Pages服务不太满意的话，也可以选择搭建在自己的(Linux)服务器上，只不过会增加些开销！！！</p>
+<h3 id="What-is-GiyHub-Pages"><a href="#What-is-GiyHub-Pages" class="headerlink" title="What is GiyHub Pages?"></a>What is GiyHub Pages?</h3><p>GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。这里附上GitHub Pages的网址👉<span class="exturl" data-url="aHR0cHM6Ly9wYWdlcy5naXRodWIuY29tLw==">你好，世界<i class="fa fa-external-link-alt"></i></span></p>
+<table>
+<thead>
+<tr>
+<th><strong>问题</strong></th>
+<th>解答</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Why is GitHub Pages?</td>
+<td>首先免费，其次省心，最后可以学习使用 GitHub。</td>
+</tr>
+<tr>
+<td>GitHub Pages有使用限制吗？</td>
+<td>GitHub Pages源存储库的建议限制为1GB，每月100G流量，每小时大约能更新10次版本。超出配额后，可能会收到礼貌的邮件</td>
+</tr>
+<tr>
+<td>超出限制的容量、或者是流量怎么办？</td>
+<td>建议平常就使用国内各大云服务提供商，如<span class="exturl" data-url="aHR0cHM6Ly93d3cucWluaXUuY29tL3Byb2R1Y3RzL2tvZG8=">七牛云KODO<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuYWxpeXVuLmNvbS9wcm9kdWN0L29zcw==">阿里云OSS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2Nvcw==">腾讯云COS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vcHJvZHVjdC9ib3MuaHRtbA==">百度云BOS<i class="fa fa-external-link-alt"></i></span>等提供的对象存储上。甚至还可以设置<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vd29yZHBvd2VyLzQ1MjQ3Ni0xLmh0bWw=">镜像回源<i class="fa fa-external-link-alt"></i></span>。</td>
+</tr>
+<tr>
+<td>国内访问速度不行，有必要同时部署在 <span class="exturl" data-url="aHR0cHM6Ly9jb2RpbmcubmV0Lw==">Coding<i class="fa fa-external-link-alt"></i></span>上吗？</td>
+<td>可以，但没必要。我原来是同时部署的，但是经常502，说来也巧，放弃Coding后，再也不502了。但是，Coding是部署在香港的服务器的哦！但是Coding经常被上有服务上暂停服务。。。</td>
+</tr>
+<tr>
+<td>我可以用自己的域名吗？</td>
+<td>可以，并且支持https。</td>
+</tr>
+<tr>
+<td>可以用作商业用途吗？</td>
+<td>GitHub Pages不适用于或不允许用作免费的网络托管服务来运行您的在线业务，电子商务网站或任何其他主要针对促进商业交易或提供商业软件即服务的网站（SaaS）</td>
+</tr>
+</tbody></table>
+<p>如果你要去七牛云使用对象存储服务的话，不妨使用我的👉<span class="exturl" data-url="aHR0cHM6Ly9wb3J0YWwucWluaXUuY29tL3NpZ251cD9jb2RlPTNsY3FweXJjNGR5NnE=">邀请链接<i class="fa fa-external-link-alt"></i></span>，那样我就会获得5 GB/月 CDN 免费下载流量等奖励👌</p>
+<h3 id="可能遇到的错误"><a href="#可能遇到的错误" class="headerlink" title="可能遇到的错误"></a>可能遇到的错误</h3><p>强制执行GitHub Pages的https，可能会遇到一些混合内容的问题。</p>
+<p>如果您为自己的网站启用了HTTPS，并且您网站的HTML仍然通过HTTP引用了图片，CSS或JavaScript，那么您的网站就会提供混合内容，并且您可能无法加载资源。提供混合内容也会降低您网站的安全性。</p>
+<p>要删除网站的混合内容，提高网站的安全性，并解决与加载混合内容相关的问题，修改网站的HTML文件并进行更改<code>http://</code>，<code>https://</code>以便通过HTTPS提供所有资源。</p>
+<p>更多详情👉<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vYXJ0aWNsZXMvc2VjdXJpbmcteW91ci1naXRodWItcGFnZXMtc2l0ZS13aXRoLWh0dHBzI3Jlc29sdmluZy1wcm9ibGVtcy13aXRoLW1peGVkLWNvbnRlbnQ=">入口<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>默认的主题感觉不是很好看的样子，但是别的主题就不一样啦！😁我选的是<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lpc3NuYW4vaGV4by10aGVtZS1uZXh0">NexT主题<i class="fa fa-external-link-alt"></i></span>，简洁美观、功能也算完善。这里附上官方的👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">主题库链接<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="站点文件配置"><a href="#站点文件配置" class="headerlink" title="站点文件配置"></a>站点文件配置</h3><p>可以先去看看👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbi5odG1s">官方文档<i class="fa fa-external-link-alt"></i></span>是怎么介绍的，然后可以参考参考我的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuNTJiZXNzLmNvbS96aGFuZGlhbi5odG1s">站点文件基本配置<i class="fa fa-external-link-alt"></i></span>，需要更多的操作，可以自己去Google看看呢！</p>
+<h3 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h3><p>没错，还是建议你先看NexT主题的👉<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tLw==">官方文档<i class="fa fa-external-link-alt"></i></span>，一定要养成这个好习惯！啥都不说了，把我的贴出来大家参考吧！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Theme Core Configuration Settings</span><br><span class="line"># See: https:&#x2F;&#x2F;theme-next.org&#x2F;docs&#x2F;theme-settings&#x2F;</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># 更新相关，参考：</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&#x2F;issues&#x2F;328</span><br><span class="line">override: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Site Information Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 站点图标直接去 https:&#x2F;&#x2F;realfavicongenerator.net 下载</span><br><span class="line"># 建议放在 hexo-site&#x2F;source&#x2F;images&#x2F; 里（没有自己建）</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon-16x16-dog.png</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon-32x32-dog.png</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;logo.svg</span><br><span class="line"># 修改图片名字保持一致即可！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rss: &#x2F;atom.xml</span><br><span class="line"></span><br><span class="line">footer:		# 页脚配置</span><br><span class="line">  since: 2018   # 这里填入你的建站年份</span><br><span class="line"></span><br><span class="line">  icon:</span><br><span class="line">    # 年份后面的图标，为 Font Awesome 图标</span><br><span class="line">	# 去挑一个吧！ https:&#x2F;&#x2F;fontawesome.com&#x2F;v4.7.0&#x2F;</span><br><span class="line">    name: fas fa-heartbeat	  # 图标名字</span><br><span class="line">    animated: true		  # 让你的图标跳动起来！</span><br><span class="line">    color: &quot;#ff0000&quot;      #看到我博客页脚的跳动着的红色爱心了吗？</span><br><span class="line">  copyright:</span><br><span class="line">  # -------------------------------------------------------------</span><br><span class="line">  powered:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 你不想页脚显示 由 Hexo 强力驱动 v3.8.0，可以关闭！</span><br><span class="line">  theme:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 同理，你不想页脚显示 主题 – NexT.Muse v7.1.0，可以关闭！</span><br><span class="line">    </span><br><span class="line">    beian:</span><br><span class="line">    enable: false</span><br><span class="line">    icp: </span><br><span class="line">    # 同理，如果你有备案信息，也可以放在这里</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># SEO Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">canonical: true</span><br><span class="line"></span><br><span class="line">seo: false</span><br><span class="line"></span><br><span class="line"># If true, will add site-subtitle to index page, added in main hexo config.</span><br><span class="line"># subtitle: Subtitle</span><br><span class="line">index_with_subtitle: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Menu Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 菜单设置 || 菜单图标设置（图标上面说了，不重复）</span><br><span class="line"># 项目换行可以更改显示顺序</span><br><span class="line"># 如果这个项前会显示 .menu</span><br><span class="line"># 解决方法：编辑 ~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;languages 下的相应文件</span><br><span class="line"># 比如添加一个「留言」菜单，站点配置文件的 language 是 zh-CN</span><br><span class="line"># 则编辑 zh-CN.yml，在 menu: 项内添加一行 留言: 留言</span><br><span class="line"># 注意空格，且符号 : 为英文字符！</span><br><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  books: &#x2F;books&#x2F; || book  </span><br><span class="line">  movies: &#x2F;movies&#x2F; || video-camera  </span><br><span class="line">  games: &#x2F;games&#x2F; || gamepad</span><br><span class="line"></span><br><span class="line"># Enable&#x2F;Disable menu icons.</span><br><span class="line"># 是否开启菜单图标</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 设计板式，都长啥样，去 README 里面的链接里看看</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next#live-preview</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">site_state: true</span><br><span class="line"></span><br><span class="line"># 侧栏社交链接设置，与上面菜单差不多，要生效记得把前面的 # 去掉</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;besscroft || github</span><br><span class="line">  E-Mail: mailto:631908942@gmail.com || envelope</span><br><span class="line">  </span><br><span class="line"># 侧栏社交链接图标设置</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  icons_only: false</span><br><span class="line">  transition: false</span><br><span class="line">  </span><br><span class="line"># 侧栏友链设置</span><br><span class="line">links_icon: globe</span><br><span class="line">links_title: 友♂链</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">  关于此博客: https:&#x2F;&#x2F;blog.52bess.com&#x2F;about&#x2F;</span><br><span class="line">  </span><br><span class="line">avatar:</span><br><span class="line"> # 侧栏头像设置</span><br><span class="line">  url: https:&#x2F;&#x2F;*****.com&#x2F;avatar.png</span><br><span class="line">  rounded: false</span><br><span class="line">  opacity: 1</span><br><span class="line">  rotated: false</span><br><span class="line">  </span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  number: true</span><br><span class="line"></span><br><span class="line">  wrap: false</span><br><span class="line"># 开启后可能要在 custom.styl 里加代码</span><br><span class="line">  max_depth: 6</span><br><span class="line">  </span><br><span class="line">sidebar:</span><br><span class="line">  # 侧栏的位置，left或right</span><br><span class="line">  position: left</span><br><span class="line">  </span><br><span class="line">  display: post   # 样式我的是默认的post</span><br><span class="line">  # 只对 Pisces 和 Gemini 设计版式有效！</span><br><span class="line">  offset: 12</span><br><span class="line">  # 只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  onmobile: false</span><br><span class="line">  # 移动端显示侧栏，只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  dimmer: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Post Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 点击 [Read More]，页面自动滚动到 &lt;!-- more --&gt; 标记处</span><br><span class="line">scroll_to_more: false</span><br><span class="line"></span><br><span class="line"># 用 cookies 保存浏览的位置信息，意味着重新打开这个页面后</span><br><span class="line"># 页面就会自动滚动到上次的位置，除非读者清理浏览器 cookies</span><br><span class="line">save_scroll: false</span><br><span class="line"></span><br><span class="line"># 将每篇文章 Front-matter 里 description 的文字作为页面显示的文章摘要</span><br><span class="line">excerpt_description: false</span><br><span class="line"></span><br><span class="line"># 按字数自动加入 [Read More]，不建议！</span><br><span class="line"># 建议在文章中加入 &lt;!-- more --&gt;</span><br><span class="line"># 自定义 [Read More] 按钮之前要显示的内容！</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line"># 文章顶部显示的文章元数据设置</span><br><span class="line">post_meta:</span><br><span class="line">  item_text: true # 显示文字说明</span><br><span class="line">  created_at: true # 显示文章创建时间</span><br><span class="line">  updated_at:</span><br><span class="line">    enable: true # 隐藏文章修改时间</span><br><span class="line">    another_day: true # 只有当修改时间和创建时间不是同一天的时候才显示</span><br><span class="line">  categories: true # 隐藏分类信息</span><br><span class="line"></span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;willin&#x2F;hexo-wordcount</span><br><span class="line"># 显示统计字数和估计阅读时长</span><br><span class="line"># 注意：这个要安装插件，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-wordcount --save</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line"></span><br><span class="line"># Wechat Subscriber</span><br><span class="line">wechat_subscriber:</span><br><span class="line">  enable: true</span><br><span class="line">  qcode: &#x2F;uploads&#x2F;wechat-qcode.jpg</span><br><span class="line">  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</span><br><span class="line">  </span><br><span class="line"># Reward</span><br><span class="line">reward:</span><br><span class="line">  wechatpay: &#x2F;images&#x2F;wechatpay.jpg</span><br><span class="line">  </span><br><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  # enable: false</span><br><span class="line">  # license: CC BY-NC-SA 3.0</span><br><span class="line">  # license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br><span class="line">  # 版权信息</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Misc Theme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 移动端把页面两边留白去除</span><br><span class="line"># Reduce padding &#x2F; margin indents on devices with narrow width.</span><br><span class="line">mobile_layout_economy: false</span><br><span class="line"></span><br><span class="line"># Android 上 Chrome 浏览器顶部颜色设置</span><br><span class="line">android_chrome_color: &quot;#222&quot;</span><br><span class="line"># Android 端 QQ浏览器，很多配置都无法显示出来。。。</span><br><span class="line"></span><br><span class="line"># Custom Logo</span><br><span class="line"># Do not support Scheme Mist currently.</span><br><span class="line">custom_logo:</span><br><span class="line">  enable: false</span><br><span class="line">  image: #&#x2F;uploads&#x2F;custom-logo.jpg</span><br><span class="line">  </span><br><span class="line"># Available value:</span><br><span class="line">#    normal | night | night eighties | night blue | night bright</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;chriskempson&#x2F;tomorrow-theme</span><br><span class="line"># 代码高亮主题设置</span><br><span class="line"># 都长啥样自己点开上面的链接查看</span><br><span class="line">highlight_theme: normal</span><br><span class="line"></span><br><span class="line"># 字体设置</span><br><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # 外链字体库地址，例如 &#x2F;&#x2F;fonts.googleapis.com (默认值)</span><br><span class="line">  host: https:&#x2F;&#x2F;fonts.loli.net</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for &lt;code&gt; and code blocks.</span><br><span class="line">  codes:</span><br><span class="line">    external: true</span><br><span class="line">    family:</span><br><span class="line">    size:</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Third Party Services Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Math Equations Render Support</span><br><span class="line">math:</span><br><span class="line">  enable: false</span><br><span class="line">  per_page: true</span><br><span class="line"></span><br><span class="line">  engine: mathjax</span><br><span class="line">  #engine: katex</span><br><span class="line"></span><br><span class="line">  mathjax:</span><br><span class="line">    cdn: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@2.7.1&#x2F;MathJax.js?config&#x3D;TeX-AMS-MML_HTMLorMML</span><br><span class="line"> # 这一大串都是默认的，还有一些不列举了，感觉会水贴</span><br><span class="line"> </span><br><span class="line"># Han Support docs: https:&#x2F;&#x2F;hanzi.pro&#x2F;</span><br><span class="line"># 汉字标准格式，没用过暂时不了解</span><br><span class="line">han: false</span><br><span class="line"></span><br><span class="line"># 评论系统，当然id和key我就不提供了，这个可以自己去注册</span><br><span class="line"># leancloud网址：https:&#x2F;&#x2F;leancloud.cn&#x2F;dashboard&#x2F;login.html#&#x2F;signup</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否开启</span><br><span class="line">  appid:  # 你的leancloud应用appid</span><br><span class="line">  appkey:  # 你的leancloud应用appkey</span><br><span class="line">  notify: false # mail notifier, See: https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: true </span><br><span class="line">  placeholder: 说点儿什么吧o(*￣▽￣*)o </span><br><span class="line">  avatar: mm </span><br><span class="line">  guest_info: nick,mail,link r</span><br><span class="line">  pageSize: 10 </span><br><span class="line">  visitor: false </span><br><span class="line">  comment_count: true </span><br><span class="line"></span><br><span class="line"># 不蒜子统计，用于在页脚显示总访客数和总浏览量，将 false 改为 true 就能直接使用</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br><span class="line"></span><br><span class="line"># 要安装插件才能使用，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-generator-searchdb --save</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Tags Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 主题的标签样式，有 simple、note、label、tabs 四种</span><br><span class="line">note:</span><br><span class="line">  style: simple</span><br><span class="line">  icons: false</span><br><span class="line">  border_radius: 3</span><br><span class="line">  light_bg_offset: 0</span><br><span class="line">  </span><br><span class="line"># 标签</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: false</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br><span class="line">  </span><br><span class="line"># Use velocity to animate everything.</span><br><span class="line">motion:</span><br><span class="line">  enable: true</span><br><span class="line">  async: false</span><br><span class="line">  transition:</span><br><span class="line">    post_block: fadeIn</span><br><span class="line">    post_header: slideDownIn</span><br><span class="line">    post_body: slideDownIn</span><br><span class="line">    coll_header: slideLeftIn</span><br><span class="line">    sidebar: slideUpIn</span><br><span class="line"></span><br><span class="line"># 动态背景，但是我觉得放一张好看的图片更好</span><br><span class="line">canvas_nest:</span><br><span class="line">  enable: false</span><br><span class="line">  onmobile: true # display on mobile or not</span><br><span class="line">  color: &#39;0,0,255&#39; # RGB values, use &#39;,&#39; to separate</span><br><span class="line">  opacity: 0.5 # the opacity of line: 0~1</span><br><span class="line">  zIndex: -1 # z-index property of the background</span><br><span class="line">  count: 99 # the number of lines</span><br><span class="line"># JavaScript 3D library.</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-three</span><br><span class="line"># three_waves</span><br><span class="line">three_waves: false</span><br><span class="line"># canvas_lines</span><br><span class="line">canvas_lines: false</span><br><span class="line"># canvas_sphere</span><br><span class="line">canvas_sphere: false</span><br><span class="line"></span><br><span class="line">vendors:</span><br><span class="line">  # Internal path prefix. Please do not edit it.</span><br><span class="line">  _internal: lib</span><br><span class="line">  # 这个下面的东西就不贴出来了，建议大家按需使用，同时找一个好一点的CDN，不然速度感人啊！！！</span><br><span class="line">  </span><br><span class="line"># Assets</span><br><span class="line">css: css</span><br><span class="line">js: js</span><br><span class="line">images: images</span><br><span class="line"></span><br><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: </span><br><span class="line"></span><br><span class="line">nav:</span><br><span class="line">  home: &#x2F;</span><br><span class="line">  about: &#x2F;about</span><br><span class="line">  tags: &#x2F;tags</span><br><span class="line">  categories: &#x2F;categories</span><br><span class="line"></span><br><span class="line">cache:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># window woblle</span><br><span class="line">wobble:</span><br><span class="line">  enable: true  # 是否开启边缘波动效果</span><br><span class="line">  radius: 50  # 波动半径</span><br><span class="line">  sidebar: true  # 开启侧边栏边缘摆动</span><br><span class="line">  header: true  # 开启头部边缘摆动</span><br><span class="line">  footer: true  # 开启脚部边缘摆动</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># typing effect</span><br><span class="line">typing_effect:</span><br><span class="line">  colorful: true  # 礼花特效</span><br><span class="line">  shake: false  # 震动特效</span><br><span class="line">  </span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line">  </span><br><span class="line"># Theme version</span><br><span class="line">version: 7.1.0</span><br></pre></td></tr></table></figure>
 
-<div class="note warning"><p>本文参考自reuixiy的<span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS90ZWNoL25vdG8tc2VyaWYtc2MtYWRkZWQtb24tZ29vZ2xlLWZvbnRzLmh0bWwjbWFpbg==">Google Fonts已支持思源宋体！<i class="fa fa-external-link-alt"></i></span>点击即可访问！</p></div>]]></content>
+<h2 id="自定义网页布局"><a href="#自定义网页布局" class="headerlink" title="自定义网页布局"></a>自定义网页布局</h2><p>我觉得这个对于学过前端三🗡客的同学们来说还是比较简单的，不做多解释。但是对于没学的同学，强烈建议去看看这篇大佬的文章👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuY2R1eXpoLmNvbS9oZXhvLXNldHRpbmdzLTMv">这里<i class="fa fa-external-link-alt"></i></span>，看完之后，你基本就明白在哪个文件修改了，一些基本的步骤也能掌握！</p>
+<p>主要是修改<code>/blog/themes/next/source/css/_custom/custom.styl</code>，那么数据去哪里找呢？当然是浏览器按F12进行调试啊。如果是计算机专业，期末做过作品的你，没少受过折磨吧？</p>
+<p><code>hexo s</code>后可以直接本地调试，也就是更改文件保存后，Hexo 后台会自动重新渲染文件，所以只要稍等片刻，浏览器刷新一下就能看到效果。</p>
+<p>我建议你使用Google浏览器进行调试，可以先看看，嗯~ o(<em>￣▽￣</em>)o，没错👉<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy8=">Google 开发者工具<i class="fa fa-external-link-alt"></i></span>，记得给文档5颗星星支持一下下！</p>
+<h2 id="自定义鼠标点击效果"><a href="#自定义鼠标点击效果" class="headerlink" title="自定义鼠标点击效果"></a>自定义鼠标点击效果</h2><h3 id="爱心效果"><a href="#爱心效果" class="headerlink" title="爱心效果"></a>爱心效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>clicklove.js</code>，并添加如下代码</p>
+<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/clicklove.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a>代码过长，在文章里面不太好排版，毕竟不是IDE，所以点击之后复制即可！</p>
+<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小心心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字体效果"><a href="#字体效果" class="headerlink" title="字体效果"></a>字体效果</h3><p>嗯，我们以社会主义核心价值观为例，当然，实际的使用场景，也可以改成别的。</p>
+<p>在<code>/themes/next/source/js/src</code>新建文件<code>click_show_text.js</code>，并添加如下代码</p>
+<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/click_show_text.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
+<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--单击显示文字--&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;click_show_text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="烟花爆炸效果"><a href="#烟花爆炸效果" class="headerlink" title="烟花爆炸效果"></a>烟花爆炸效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>fireworks.js</code>，并添加如下代码</p>
+<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/fireworks.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
+<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">&lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加文章结束语"><a href="#添加文章结束语" class="headerlink" title="添加文章结束语"></a>添加文章结束语</h2><p>在<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件，添加代码至该文件中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class&#x3D;&quot;fa fa-paw&quot;&gt;&lt;&#x2F;i&gt;感谢您的阅读-------------&lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>大小自己看着调整，毕竟每个人喜欢的不一样。</p>
+<p>打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code>后，<code>post-footer</code>前，添加下面内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include &#39;passage-end-tag.swig&#39; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>打开主题配置文件<code>_config.yml</code>,在末尾添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置文章背景"><a href="#设置文章背景" class="headerlink" title="设置文章背景"></a>设置文章背景</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*设置博文背景*&#x2F;</span><br><span class="line">.main-inner &#123;</span><br><span class="line">    background: #fff;</span><br><span class="line">    opacity: 0.9;</span><br></pre></td></tr></table></figure>
+
+<p>background后为rgb颜色代码，百度来一个rgb色值粘贴即可替换博文背景颜色（替换了也很丑）<br>opacity后数值为博文背景透明度，可设置0.0-1.0数值，值越小透明度越高。</p>
+<h2 id="为主页文章添加阴影效果"><a href="#为主页文章添加阴影效果" class="headerlink" title="为主页文章添加阴影效果"></a>为主页文章添加阴影效果</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 主页文章添加阴影效果</span><br><span class="line">.post &#123;</span><br><span class="line">  background: #fff;</span><br><span class="line">  opacity: 1;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>background和上面设置文章背景一样，为文章背景颜色；opacity透明度；margin-top上边距；margin-bottom下边距；padding框间距；webkit-box-shadow和moz-box-shadow为阴影长宽设置。</p>
+<h2 id="后续更新中。。。"><a href="#后续更新中。。。" class="headerlink" title="后续更新中。。。"></a>后续更新中。。。</h2><h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>感谢<code>reuixiy</code>大佬的👉<span class="exturl" data-url="aHR0cHM6Ly9yZXVpeGl5LmdpdGh1Yi5pby90ZWNobm9sb2d5L2NvbXB1dGVyL2NvbXB1dGVyLWFpZGVkLWFydC8yMDE3LzA2LzA5L2hleG8tbmV4dC1vcHRpbWl6YXRpb24uaHRtbA==">这篇文章<i class="fa fa-external-link-alt"></i></span>，在此基础上完善了一些，也删除了一些，毕竟版本也有些许区别了。学习到了很多，同时结合我自己的思路写了这篇文章！</p>
+]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Google Fonts</tag>
+        <tag>个性</tag>
       </tags>
   </entry>
   <entry>
@@ -1537,73 +1658,6 @@
       </tags>
   </entry>
   <entry>
-    <title>愉快的五一假期</title>
-    <url>/posts/2019/wuyi.html</url>
-    <content><![CDATA[<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>这篇文章，是在五一假期结束之后写的，毕竟五一还是有点忙的！抽了2天时间来重构Hexo的代码，解决了很多未知的问题，每天都忙到凌晨，相信有过共同经历的人会明白的🤣总会有些花里胡哨的瑕疵，反正我是忍不了。😅</p>
-<a id="more"></a>
-
-<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>我原先是采取的<code>GitHub</code>+<code>coding</code>方案，后来删掉了<code>coding</code>的仓库，只保留了<code>GitHub Pages</code>。最主要的还是用不习惯，虽然在某些地区访问的话，速度会更快。但是想必大多数用<code>Hexo</code>搭建博客，而且托管在<code>GitHub</code>的同学，是不在意只有少部分人来访博客的。因为需要大量的人访问，或者有这种需求的人，都会买云服务器。</p>
-<p>正好<code>coding</code>的仓库空出来了，我就把<code>GitHub</code>的先放着，在<code>coding</code>上从头开始搭建、调试。等一切准备好了之后，在推送到<code>GitHub</code>上来，这样也不容易出问题。</p>
-<h3 id="煎熬的过程"><a href="#煎熬的过程" class="headerlink" title="煎熬的过程"></a>煎熬的过程</h3><p>环境在电脑上已经有了，于是到<code>G</code>盘创建了一个新文件夹，用于<del>安装</del>初始化<code>Hexo</code>，然后安装推送插件之后直接推送到coding上。确定搭建完成了最基本的之后，就在本地慢慢调试。主题依旧用<code>NexT</code>主题，只不过换成了<code>NexT.Muse</code>，然后照着几个不同的、比较知名的博客的样式，做出了一些修改，也就是你们现在看到的样子。虽然不是很漂亮，但是也够看了😁都说程序猿的审美不行，我觉得程序猿们要大胆的说：不！给他们看看，我们不只有格子衫😎</p>
-<div class="note warning"><p>注意一定要按时备份！</p></div>
-
-<p>设计整个页面的过程，是基于chrome的，一般来说现在的新浏览器都算是支持比较好的。虽然个人比较喜欢后端，但至少前端知识好歹是知道一点的，也不至于无从上手🤣许多CSS样式，都是放在了<code>custom.styl</code>文件中。经过了这次折磨之后，现在可算是知道了以前期末的时候，都是老师留情了的。没有个几百上千行的CSS代码，怎么好意思及格呢。。。</p>
-<p>在快完成的时候，也是遇到了一些小挫折的。。。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi001.png" alt></p>
-<p>嗯~ o(<em>￣▽￣</em>)o，控制台不报错，压根都不知道问题出在哪儿了。去Google查了查，重新安装了所有的相关依赖包也依旧没有解决问题。没错，绝望的我，又重新开始了一遍，但是因为相关文件都已经配置好了，基本上就是复制粘贴了一遍。最后熬了2天夜，终于还是弄完了。</p>
-<p>对于想直接要博客的整份源码的同学，我只能说，没有人会给的啦，原因很简单！这不应该是一个索取和给予的过程，而应该是一个讨论交流的过程。也就是说，你问我博客的任何东西是怎么实现的，我都会告诉你(后面也会抽时间写相关的文章)，但是你直接要我当然不会给啊，毕竟也是自己的心血！</p>
-<p>博客重构前后，源码从原先的200多M变成了40多M(包含了public文件夹)，但是东西一样不少，博客反而更美观，功能更强大。。。这个问题一直没想通，这多出来的100多M到底是啥！</p>
-<h2 id="爱你三千遍"><a href="#爱你三千遍" class="headerlink" title="爱你三千遍"></a>爱你三千遍</h2><p>五一去影院看了<span class="exturl" data-url="aHR0cHM6Ly9tb3ZpZS5kb3ViYW4uY29tL3N1YmplY3QvMjYxMDA5NTgvP2Zyb209c2hvd2luZw==">《复仇者联盟4》<i class="fa fa-external-link-alt"></i></span>，不知道为啥，竟然有点心疼灭霸😥最好笑的镜头</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi002.jpg" alt></p>
-<h2 id="♂friend"><a href="#♂friend" class="headerlink" title="♂friend"></a>♂friend</h2><p>五一还去了同学家吃饭，来了一些初中同学，大家都在聊以前初中时的沙雕欢乐的事情（。＾▽＾）</p>
-<p>嗯~ o(<em>￣▽￣</em>)o至于这个菜嘛，虽然我没参与，但是是大家一起努力弄出来的：</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi003.png" alt></p>
-<p>哈哈，卖相不好，味道倒是还凑合！越长越大，就越是让人怀恋以前读书时的美(sha)好(diao)日子呢！</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>彻底关闭Windows10系统更新！</title>
-    <url>/posts/2019/win10kill.html</url>
-    <content><![CDATA[<p>对于很多Windows10家庭版的朋友们来说，如何彻底关闭系统更新，是一件让人很头痛的问题。今天就来给大家介绍一个<strong>开源程序</strong>，来帮助你关闭系统更新，当然，任何事情都是有两面性的！</p>
-<a id="more"></a>
-
-<div class="note warning"><p>注意：我在实机和虚拟机都测试过，可正常使用，且用火热杀毒检测无毒。毕竟是开源软件，还是可以放心的，没有哪个笨蛋会把自己的病毒暴露在阳光之下的！</p></div>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill001.png" alt></p>
-<h3 id="你需要权衡什么？"><a href="#你需要权衡什么？" class="headerlink" title="你需要权衡什么？"></a>你需要权衡什么？</h3><p>如果您需要SKYPE，MARKET，XBOX APP，WMR或任何其他具有互联网功能的MICROSOFT应用程序，请不要安装DWS！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill002.png" alt></p>
-<h3 id="它能干什么？"><a href="#它能干什么？" class="headerlink" title="它能干什么？"></a>它能干什么？</h3><ul>
-<li>删除所有间谍软件模块</li>
-<li>删除间谍应用程序</li>
-<li>将间谍域添加到主机文件！</li>
-<li>删除间谍服务</li>
-<li>删除Windows 10 Metro Apps</li>
-<li>支持Windows 7/8 / 8.1 / 10和Server 2008-2012 R2 （对于这些平台，请使用2.2.2.2版）</li>
-<li>删除Office 2016遥测</li>
-<li>开源！</li>
-</ul>
-<p>有了它，你甚至可以删除Windows的监控模块(这个程序本身就是为了这个才产生的)。</p>
-<p><strong>由于是开源软件，在这里贴出作者的GitHub：</strong></p>
-<ul>
-<li>原作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL051bW1lci9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Nummer/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
-<li>现作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Wohlstand/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<p>截至目前，最新的发行版本的下载链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5nL3JlbGVhc2VzL2Rvd25sb2FkLzIuMi4yLjIuMjcvRFdTLWJ1aWxkLVdpbjc4ODEtMi4yLjIuMi4yNy56aXA=">https://github.com/Wohlstand/Destroy-Windows-10-Spying/releases/download/2.2.2.2.27/DWS-build-Win7881-2.2.2.2.27.zip<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>Windows10</category>
-      </categories>
-      <tags>
-        <tag>Windows10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu安装记录</title>
     <url>/posts/2019/ubuntu.html</url>
     <content><![CDATA[<p>一直以来，都是在虚拟机里面使用Linux系统，但随着使用需求的增加，于是直接在笔记本中安装Ubuntu。基本上就是Windows 10 + Ubuntu18.04LTS双系统共存模式！</p>
@@ -1738,30 +1792,70 @@
       </tags>
   </entry>
   <entry>
-    <title>站点文件基本配置</title>
-    <url>/posts/2019/zhandian.html</url>
-    <content><![CDATA[<p>刚接触Hexo的你，是不是对站点配置文件<code>_config.yml</code>一脸的问号呢？没事，这篇文章可以帮助你轻松阅览站点配置文件，让你快速上手！</p>
+    <title>彻底关闭Windows10系统更新！</title>
+    <url>/posts/2019/win10kill.html</url>
+    <content><![CDATA[<p>对于很多Windows10家庭版的朋友们来说，如何彻底关闭系统更新，是一件让人很头痛的问题。今天就来给大家介绍一个<strong>开源程序</strong>，来帮助你关闭系统更新，当然，任何事情都是有两面性的！</p>
 <a id="more"></a>
 
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>总所周知，在Hexo静态博客本地配置中，有两个重要的配置文件，分别是：</p>
-<ul>
-<li><p>位于根目录下的<code>站点配置文件</code>：<code>_config.yml</code></p>
-</li>
-<li><p>位于根目录/theme/你的主题下的<code>主题配置文件</code>：<code>/theme/&lt;你的主题名称&gt;/_config.yml</code></p>
-</li>
-</ul>
-<p>当然，基本熟悉的小伙伴是不会弄混的，刚开始的时候可能会弄错。</p>
-<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>下面简单列举了一些站点配置文件的源码，方便快速上手：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Hexo 站点配置文件</span><br><span class="line">## 官方说明文档: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html</span><br><span class="line">## GitHub源码: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F;</span><br><span class="line"></span><br><span class="line"># 网站基础设定</span><br><span class="line">title: 生如夏花               # 网站标题</span><br><span class="line">subtitle: www.zhuimeng.online         # 网站副标题</span><br><span class="line">description: 追逐梦想！                 # 网站描述：建议描述：网站介绍或者座右铭</span><br><span class="line">keywords: 博客,Hexo,黑苹果,Linux        # 关键词</span><br><span class="line">author: Bess Croft                    # 站长信息</span><br><span class="line">language: zh-CN      # 网站语言：查询主题文件下的language文件夹查阅支持语言列表再进行更改   </span><br><span class="line">timezone: Asia&#x2F;Shanghai              # 网站时区</span><br><span class="line"></span><br><span class="line"># 头像</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.jpg</span><br><span class="line"></span><br><span class="line"># 网址信息</span><br><span class="line">## 如果您的网站存放在子目录中，例如 http:&#x2F;&#x2F;yoursite.com&#x2F;blog，则请将您的 url 设为 http:&#x2F;&#x2F;yoursite.com&#x2F;blog 并把 root 设为 &#x2F;blog&#x2F;。</span><br><span class="line">url: https:&#x2F;&#x2F;blog.52bess.com                # 网址</span><br><span class="line">root: &#x2F;                                 # 网站根目录	</span><br><span class="line">permalink: :title.html    # 文章的 永久链接 格式	</span><br><span class="line">permalink_defaults:                     # 永久链接中各部分的默认值	</span><br><span class="line"></span><br><span class="line"># 目录：如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。</span><br><span class="line">source_dir: source              # 资源文件夹，这个文件夹用来存放内容。</span><br><span class="line">public_dir: public              # 公共文件夹，这个文件夹用于存放生成的站点文件。</span><br><span class="line">tag_dir: tags                   # 标签文件夹	</span><br><span class="line">archive_dir: archives           # 归档文件夹</span><br><span class="line">category_dir: categories        # 分类文件夹	</span><br><span class="line">code_dir: downloads&#x2F;code        # Include code 文件夹	</span><br><span class="line">i18n_dir: :lang                 # 国际化（i18n）文件夹	</span><br><span class="line">skip_render: README.md          # 跳过指定文件的渲染，您可使用 [glob 表达式](https:&#x2F;&#x2F;github.com&#x2F;isaacs&#x2F;node-glob)来匹配路径。	</span><br><span class="line"></span><br><span class="line"># 文章</span><br><span class="line">new_post_name: :title.md        # 新文章的文件名称</span><br><span class="line">default_layout: post            # 预设布局	</span><br><span class="line">titlecase: false                # 把标题转换为 title case</span><br><span class="line">external_link: true             # 在新标签中打开链接</span><br><span class="line">filename_case: 0                # 把文件名称转换为 (1) 小写或 (2) 大写</span><br><span class="line">render_drafts: false            # 显示草稿</span><br><span class="line">post_asset_folder: true        # 启动 [Asset](https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;asset-folders) 文件夹</span><br><span class="line">relative_link: false            # 把链接改为与根目录的相对位址</span><br><span class="line">future: true                    # 显示未来的文章</span><br><span class="line">highlight:                      # 代码块的设置</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: true</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"># 主页设置</span><br><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;              # 博客索引页面的根路径。</span><br><span class="line">  per_page: 10          # 每页显示的帖子。（0 &#x3D;禁用分页）</span><br><span class="line">  order_by: -date       # 排序。（默认情况下按日期降序排序）</span><br><span class="line">  </span><br><span class="line"># 分类 &amp; 标签</span><br><span class="line">default_category: uncategorized     # 默认分类</span><br><span class="line">category_map:                       # 分类别名	</span><br><span class="line">tag_map:                            # 标签别名</span><br><span class="line"></span><br><span class="line"># 日期 &#x2F; 时间格式</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http:&#x2F;&#x2F;momentjs.com&#x2F;docs&#x2F;#&#x2F;displaying&#x2F;format&#x2F;</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># 分页</span><br><span class="line">per_page: 10                # 每页显示的文章量（0 &#x3D; 关闭分页功能）</span><br><span class="line">pagination_dir: page        # 分页目录</span><br><span class="line"></span><br><span class="line"># 扩展</span><br><span class="line">## 插件: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## 主题: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next                     #主题选择</span><br><span class="line"></span><br><span class="line"># 部署部分的设置</span><br><span class="line">## 文档: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.github.io.git # 仓库ssh</span><br><span class="line">  branch: master #分支选择</span><br><span class="line">  </span><br><span class="line">post_end_tag:</span><br><span class="line">  enabled: true  # 是否开启文末的本文结束标记</span><br><span class="line">  icon: paw # 结束标记之间的图标</span><br><span class="line"></span><br><span class="line"># 看板娘</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">    hOffset: 0</span><br><span class="line">    vOffset: -20</span><br><span class="line">  mobile:</span><br><span class="line">    show: false</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br><span class="line"></span><br><span class="line"># 豆瓣页面</span><br><span class="line">douban:</span><br><span class="line">  user: 195767035</span><br><span class="line">  builtin: true</span><br><span class="line">  book:</span><br><span class="line">    title: &#39;我的书单&#39;</span><br><span class="line">    quote: &#39;看书很慢，但都是值得的&#39;</span><br><span class="line">  movie:</span><br><span class="line">    title: &#39;我的电影&#39;</span><br><span class="line">    quote: &#39;最佳的娱乐方式&#39;</span><br><span class="line">  game:</span><br><span class="line">    title: &#39;我的游戏&#39;</span><br><span class="line">    quote: &#39;最佳的娱乐方式&#39;</span><br><span class="line">  timeout: 10000</span><br><span class="line">  </span><br><span class="line"># </span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 20</span><br><span class="line">  yearly: true</span><br><span class="line">  monthly: true</span><br><span class="line"></span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 10</span><br><span class="line">  </span><br><span class="line"># Extensions</span><br><span class="line">plugins:</span><br><span class="line">    hexo-generator-feed</span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">    type: atom</span><br><span class="line">    path: atom.xml</span><br><span class="line">    limit: 20</span><br><span class="line">    </span><br><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>注意：我在实机和虚拟机都测试过，可正常使用，且用火热杀毒检测无毒。毕竟是开源软件，还是可以放心的，没有哪个笨蛋会把自己的病毒暴露在阳光之下的！</p></div>
 
-<p>这是目前位置我的博客的一些配置，截至至2019/05/08(一直在更新)</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill001.png" alt></p>
+<h3 id="你需要权衡什么？"><a href="#你需要权衡什么？" class="headerlink" title="你需要权衡什么？"></a>你需要权衡什么？</h3><p>如果您需要SKYPE，MARKET，XBOX APP，WMR或任何其他具有互联网功能的MICROSOFT应用程序，请不要安装DWS！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="win10kill/win10kill002.png" alt></p>
+<h3 id="它能干什么？"><a href="#它能干什么？" class="headerlink" title="它能干什么？"></a>它能干什么？</h3><ul>
+<li>删除所有间谍软件模块</li>
+<li>删除间谍应用程序</li>
+<li>将间谍域添加到主机文件！</li>
+<li>删除间谍服务</li>
+<li>删除Windows 10 Metro Apps</li>
+<li>支持Windows 7/8 / 8.1 / 10和Server 2008-2012 R2 （对于这些平台，请使用2.2.2.2版）</li>
+<li>删除Office 2016遥测</li>
+<li>开源！</li>
+</ul>
+<p>有了它，你甚至可以删除Windows的监控模块(这个程序本身就是为了这个才产生的)。</p>
+<p><strong>由于是开源软件，在这里贴出作者的GitHub：</strong></p>
+<ul>
+<li>原作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL051bW1lci9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Nummer/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
+<li>现作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5n">https://github.com/Wohlstand/Destroy-Windows-10-Spying<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>截至目前，最新的发行版本的下载链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dvaGxzdGFuZC9EZXN0cm95LVdpbmRvd3MtMTAtU3B5aW5nL3JlbGVhc2VzL2Rvd25sb2FkLzIuMi4yLjIuMjcvRFdTLWJ1aWxkLVdpbjc4ODEtMi4yLjIuMi4yNy56aXA=">https://github.com/Wohlstand/Destroy-Windows-10-Spying/releases/download/2.2.2.2.27/DWS-build-Win7881-2.2.2.2.27.zip<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>Windows10</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>站点文件配置</tag>
+        <tag>Windows10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愉快的五一假期</title>
+    <url>/posts/2019/wuyi.html</url>
+    <content><![CDATA[<h2 id="浅谈"><a href="#浅谈" class="headerlink" title="浅谈"></a>浅谈</h2><p>这篇文章，是在五一假期结束之后写的，毕竟五一还是有点忙的！抽了2天时间来重构Hexo的代码，解决了很多未知的问题，每天都忙到凌晨，相信有过共同经历的人会明白的🤣总会有些花里胡哨的瑕疵，反正我是忍不了。😅</p>
+<a id="more"></a>
+
+<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>我原先是采取的<code>GitHub</code>+<code>coding</code>方案，后来删掉了<code>coding</code>的仓库，只保留了<code>GitHub Pages</code>。最主要的还是用不习惯，虽然在某些地区访问的话，速度会更快。但是想必大多数用<code>Hexo</code>搭建博客，而且托管在<code>GitHub</code>的同学，是不在意只有少部分人来访博客的。因为需要大量的人访问，或者有这种需求的人，都会买云服务器。</p>
+<p>正好<code>coding</code>的仓库空出来了，我就把<code>GitHub</code>的先放着，在<code>coding</code>上从头开始搭建、调试。等一切准备好了之后，在推送到<code>GitHub</code>上来，这样也不容易出问题。</p>
+<h3 id="煎熬的过程"><a href="#煎熬的过程" class="headerlink" title="煎熬的过程"></a>煎熬的过程</h3><p>环境在电脑上已经有了，于是到<code>G</code>盘创建了一个新文件夹，用于<del>安装</del>初始化<code>Hexo</code>，然后安装推送插件之后直接推送到coding上。确定搭建完成了最基本的之后，就在本地慢慢调试。主题依旧用<code>NexT</code>主题，只不过换成了<code>NexT.Muse</code>，然后照着几个不同的、比较知名的博客的样式，做出了一些修改，也就是你们现在看到的样子。虽然不是很漂亮，但是也够看了😁都说程序猿的审美不行，我觉得程序猿们要大胆的说：不！给他们看看，我们不只有格子衫😎</p>
+<div class="note warning"><p>注意一定要按时备份！</p></div>
+
+<p>设计整个页面的过程，是基于chrome的，一般来说现在的新浏览器都算是支持比较好的。虽然个人比较喜欢后端，但至少前端知识好歹是知道一点的，也不至于无从上手🤣许多CSS样式，都是放在了<code>custom.styl</code>文件中。经过了这次折磨之后，现在可算是知道了以前期末的时候，都是老师留情了的。没有个几百上千行的CSS代码，怎么好意思及格呢。。。</p>
+<p>在快完成的时候，也是遇到了一些小挫折的。。。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi001.png" alt></p>
+<p>嗯~ o(<em>￣▽￣</em>)o，控制台不报错，压根都不知道问题出在哪儿了。去Google查了查，重新安装了所有的相关依赖包也依旧没有解决问题。没错，绝望的我，又重新开始了一遍，但是因为相关文件都已经配置好了，基本上就是复制粘贴了一遍。最后熬了2天夜，终于还是弄完了。</p>
+<p>对于想直接要博客的整份源码的同学，我只能说，没有人会给的啦，原因很简单！这不应该是一个索取和给予的过程，而应该是一个讨论交流的过程。也就是说，你问我博客的任何东西是怎么实现的，我都会告诉你(后面也会抽时间写相关的文章)，但是你直接要我当然不会给啊，毕竟也是自己的心血！</p>
+<p>博客重构前后，源码从原先的200多M变成了40多M(包含了public文件夹)，但是东西一样不少，博客反而更美观，功能更强大。。。这个问题一直没想通，这多出来的100多M到底是啥！</p>
+<h2 id="爱你三千遍"><a href="#爱你三千遍" class="headerlink" title="爱你三千遍"></a>爱你三千遍</h2><p>五一去影院看了<span class="exturl" data-url="aHR0cHM6Ly9tb3ZpZS5kb3ViYW4uY29tL3N1YmplY3QvMjYxMDA5NTgvP2Zyb209c2hvd2luZw==">《复仇者联盟4》<i class="fa fa-external-link-alt"></i></span>，不知道为啥，竟然有点心疼灭霸😥最好笑的镜头</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi002.jpg" alt></p>
+<h2 id="♂friend"><a href="#♂friend" class="headerlink" title="♂friend"></a>♂friend</h2><p>五一还去了同学家吃饭，来了一些初中同学，大家都在聊以前初中时的沙雕欢乐的事情（。＾▽＾）</p>
+<p>嗯~ o(<em>￣▽￣</em>)o至于这个菜嘛，虽然我没参与，但是是大家一起努力弄出来的：</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="wuyi/wuyi003.png" alt></p>
+<p>哈哈，卖相不好，味道倒是还凑合！越长越大，就越是让人怀恋以前读书时的美(sha)好(diao)日子呢！</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -1909,6 +2003,33 @@
       </tags>
   </entry>
   <entry>
+    <title>站点文件基本配置</title>
+    <url>/posts/2019/zhandian.html</url>
+    <content><![CDATA[<p>刚接触Hexo的你，是不是对站点配置文件<code>_config.yml</code>一脸的问号呢？没事，这篇文章可以帮助你轻松阅览站点配置文件，让你快速上手！</p>
+<a id="more"></a>
+
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>总所周知，在Hexo静态博客本地配置中，有两个重要的配置文件，分别是：</p>
+<ul>
+<li><p>位于根目录下的<code>站点配置文件</code>：<code>_config.yml</code></p>
+</li>
+<li><p>位于根目录/theme/你的主题下的<code>主题配置文件</code>：<code>/theme/&lt;你的主题名称&gt;/_config.yml</code></p>
+</li>
+</ul>
+<p>当然，基本熟悉的小伙伴是不会弄混的，刚开始的时候可能会弄错。</p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>下面简单列举了一些站点配置文件的源码，方便快速上手：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Hexo 站点配置文件</span><br><span class="line">## 官方说明文档: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html</span><br><span class="line">## GitHub源码: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F;</span><br><span class="line"></span><br><span class="line"># 网站基础设定</span><br><span class="line">title: 生如夏花               # 网站标题</span><br><span class="line">subtitle: www.zhuimeng.online         # 网站副标题</span><br><span class="line">description: 追逐梦想！                 # 网站描述：建议描述：网站介绍或者座右铭</span><br><span class="line">keywords: 博客,Hexo,黑苹果,Linux        # 关键词</span><br><span class="line">author: Bess Croft                    # 站长信息</span><br><span class="line">language: zh-CN      # 网站语言：查询主题文件下的language文件夹查阅支持语言列表再进行更改   </span><br><span class="line">timezone: Asia&#x2F;Shanghai              # 网站时区</span><br><span class="line"></span><br><span class="line"># 头像</span><br><span class="line">avatar: &#x2F;uploads&#x2F;avatar.jpg</span><br><span class="line"></span><br><span class="line"># 网址信息</span><br><span class="line">## 如果您的网站存放在子目录中，例如 http:&#x2F;&#x2F;yoursite.com&#x2F;blog，则请将您的 url 设为 http:&#x2F;&#x2F;yoursite.com&#x2F;blog 并把 root 设为 &#x2F;blog&#x2F;。</span><br><span class="line">url: https:&#x2F;&#x2F;blog.52bess.com                # 网址</span><br><span class="line">root: &#x2F;                                 # 网站根目录	</span><br><span class="line">permalink: :title.html    # 文章的 永久链接 格式	</span><br><span class="line">permalink_defaults:                     # 永久链接中各部分的默认值	</span><br><span class="line"></span><br><span class="line"># 目录：如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。</span><br><span class="line">source_dir: source              # 资源文件夹，这个文件夹用来存放内容。</span><br><span class="line">public_dir: public              # 公共文件夹，这个文件夹用于存放生成的站点文件。</span><br><span class="line">tag_dir: tags                   # 标签文件夹	</span><br><span class="line">archive_dir: archives           # 归档文件夹</span><br><span class="line">category_dir: categories        # 分类文件夹	</span><br><span class="line">code_dir: downloads&#x2F;code        # Include code 文件夹	</span><br><span class="line">i18n_dir: :lang                 # 国际化（i18n）文件夹	</span><br><span class="line">skip_render: README.md          # 跳过指定文件的渲染，您可使用 [glob 表达式](https:&#x2F;&#x2F;github.com&#x2F;isaacs&#x2F;node-glob)来匹配路径。	</span><br><span class="line"></span><br><span class="line"># 文章</span><br><span class="line">new_post_name: :title.md        # 新文章的文件名称</span><br><span class="line">default_layout: post            # 预设布局	</span><br><span class="line">titlecase: false                # 把标题转换为 title case</span><br><span class="line">external_link: true             # 在新标签中打开链接</span><br><span class="line">filename_case: 0                # 把文件名称转换为 (1) 小写或 (2) 大写</span><br><span class="line">render_drafts: false            # 显示草稿</span><br><span class="line">post_asset_folder: true        # 启动 [Asset](https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;asset-folders) 文件夹</span><br><span class="line">relative_link: false            # 把链接改为与根目录的相对位址</span><br><span class="line">future: true                    # 显示未来的文章</span><br><span class="line">highlight:                      # 代码块的设置</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: true</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"># 主页设置</span><br><span class="line">index_generator:</span><br><span class="line">  path: &#39;&#39;              # 博客索引页面的根路径。</span><br><span class="line">  per_page: 10          # 每页显示的帖子。（0 &#x3D;禁用分页）</span><br><span class="line">  order_by: -date       # 排序。（默认情况下按日期降序排序）</span><br><span class="line">  </span><br><span class="line"># 分类 &amp; 标签</span><br><span class="line">default_category: uncategorized     # 默认分类</span><br><span class="line">category_map:                       # 分类别名	</span><br><span class="line">tag_map:                            # 标签别名</span><br><span class="line"></span><br><span class="line"># 日期 &#x2F; 时间格式</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http:&#x2F;&#x2F;momentjs.com&#x2F;docs&#x2F;#&#x2F;displaying&#x2F;format&#x2F;</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># 分页</span><br><span class="line">per_page: 10                # 每页显示的文章量（0 &#x3D; 关闭分页功能）</span><br><span class="line">pagination_dir: page        # 分页目录</span><br><span class="line"></span><br><span class="line"># 扩展</span><br><span class="line">## 插件: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## 主题: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next                     #主题选择</span><br><span class="line"></span><br><span class="line"># 部署部分的设置</span><br><span class="line">## 文档: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.github.io.git # 仓库ssh</span><br><span class="line">  branch: master #分支选择</span><br><span class="line">  </span><br><span class="line">post_end_tag:</span><br><span class="line">  enabled: true  # 是否开启文末的本文结束标记</span><br><span class="line">  icon: paw # 结束标记之间的图标</span><br><span class="line"></span><br><span class="line"># 看板娘</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-koharu</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">    hOffset: 0</span><br><span class="line">    vOffset: -20</span><br><span class="line">  mobile:</span><br><span class="line">    show: false</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br><span class="line"></span><br><span class="line"># 豆瓣页面</span><br><span class="line">douban:</span><br><span class="line">  user: 195767035</span><br><span class="line">  builtin: true</span><br><span class="line">  book:</span><br><span class="line">    title: &#39;我的书单&#39;</span><br><span class="line">    quote: &#39;看书很慢，但都是值得的&#39;</span><br><span class="line">  movie:</span><br><span class="line">    title: &#39;我的电影&#39;</span><br><span class="line">    quote: &#39;最佳的娱乐方式&#39;</span><br><span class="line">  game:</span><br><span class="line">    title: &#39;我的游戏&#39;</span><br><span class="line">    quote: &#39;最佳的娱乐方式&#39;</span><br><span class="line">  timeout: 10000</span><br><span class="line">  </span><br><span class="line"># </span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 20</span><br><span class="line">  yearly: true</span><br><span class="line">  monthly: true</span><br><span class="line"></span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 10</span><br><span class="line">  </span><br><span class="line"># Extensions</span><br><span class="line">plugins:</span><br><span class="line">    hexo-generator-feed</span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">    type: atom</span><br><span class="line">    path: atom.xml</span><br><span class="line">    limit: 20</span><br><span class="line">    </span><br><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>这是目前位置我的博客的一些配置，截至至2019/05/08(一直在更新)</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>站点文件配置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GPG与在GitHub上使用GPG</title>
     <url>/posts/2020/gpg.html</url>
     <content><![CDATA[<h2 id="GPG与在GitHub上使用GPG"><a href="#GPG与在GitHub上使用GPG" class="headerlink" title="GPG与在GitHub上使用GPG"></a>GPG与在GitHub上使用GPG</h2><h3 id="基本过程"><a href="#基本过程" class="headerlink" title="基本过程"></a>基本过程</h3><ul>
@@ -1988,215 +2109,6 @@
         <tag>Git</tag>
         <tag>GitHub</tag>
         <tag>GPG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
-    <url>/posts/2020/lighthouse.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
-<a id="more"></a>
-
-<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
-<li>这里是文档上的介绍，让我们先了解下！</li>
-</ul>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
-<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
-<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
-<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
-<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
-<ul>
-<li>更新系统和软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装一些软件包</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装BT面板</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
-<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
-<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
-<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
-<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
-<p>然后等待安装就行了。</p>
-<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
-<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
-<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
-<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
-<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
-<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
-<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
-<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
-<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
-<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
-<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
-<p>点击【现在就开始】，进入下一步！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
-<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
-<p>进行安装！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
-<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
-<p>成功之后，登录就能进到后台啦！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
-<p>然后就自己去探索功能吧！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
-<p>至此，动态网站已经搭建完成！</p>
-<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
-<p>主要的应用场景：</p>
-<ul>
-<li>网站搭建</li>
-<li>Web 应用服务</li>
-<li>快速搭建开发测试环境</li>
-<li>云端学习环境</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>玩转腾讯云</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我和我的博客的过去、现在与未来</title>
-    <url>/posts/2020/newblog.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>博客原来的样式，是去年五一晚上熬夜搞出来的，当时觉得蛮漂亮，但是看久了，就觉得乏了！但这还不是我要重构的原因，博客代码冗余、加载速度慢、载入资源多等等，迫使我对整个博客进行了重构和魔改！</p>
-<a id="more"></a>
-
-<h2 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h2><p>在我第一次使用hexo时，尝试过很多主题，但最终还是回到了<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tLw==">NexT<i class="fa fa-external-link-alt"></i></span>主题。并且一用就是2年多了，期间经历了多次重大的更新和改进，从此也开始了自己的魔改之路。NexT主题，自带的样式虽然在很多人看来并不好看，但是它的功能非常强大，只要你想(不懒)，你几乎可以用它实现静态博客能实现的所有功能，不是说别的主题不行，而是NexT魔改起来对我而言更舒服！</p>
-<p>第一次自己建站写博客，是用的<span class="exturl" data-url="aHR0cHM6Ly93b3JkcHJlc3Mub3JnLw==">WordPress<i class="fa fa-external-link-alt"></i></span>，确实很强大，但是在国内用起来也不是特别舒服。尤其是现在，国内用户的体验大不如以前了，并且已经打不开了。我知道，这些都不是事儿，我放弃wordpress的原因是，它太吃性能了！！！不是所有人都能承担的起这个费用的，因为没有必要。后来上网寻找替代方案，改用静态博客，最后选择了<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuLw==">Hexo<i class="fa fa-external-link-alt"></i></span>。搭建的方式也逐步变得多样化，从单一的部署，变成多线部署、多解析，从原生加载到CDN加速和对象存储，从第三方服务到自建再到第三方等等。在去年，我也尝试了新的动态博客方案——<span class="exturl" data-url="aHR0cHM6Ly90eXBlY2hvLm9yZy8=">Typecho<i class="fa fa-external-link-alt"></i></span>和<span class="exturl" data-url="aHR0cHM6Ly9oYWxvLnJ1bi8=">Halo<i class="fa fa-external-link-alt"></i></span>，而且Halo可是用Java写的呢，这跟我的专业也就一样啦！</p>
-<p>早些年，写日记这种东西，都是日记本。后来就慢慢的尝试在网上写日记，尝试了很多第三方的平台来写日记。然后慢慢的熟知了博客这个东西，也就想有一个自己的博客，也就有了以上一些经历。现在静态博客用的还是Hexo，动态博客用的是Typecho，第三方服务正在用<span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2xvZ2luP3BsYXRmb3JtPXdlY2hhdCZpbnZpdGVUb2tlbj0zNTdkZjY1ZTMwNjE2NzNlM2IwM2EwODBmYWRlMmU0OTlkMDFhYjY1YzAxZGUxY2Q0ZTBmMTFjYzZiOWM5Mzhi">语雀<i class="fa fa-external-link-alt"></i></span>和<span class="exturl" data-url="aHR0cHM6Ly93d3cueWlueGlhbmcuY29tLw==">印象笔记<i class="fa fa-external-link-alt"></i></span>，这里我强烈推荐一波语雀，是真的好用，目前正在逐步从印象笔记迁移到语雀！</p>
-<h2 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h2><p>我一直都有写日记的习惯(别问我为什么没看到，我想没有多少人会把日记放网上给人看的)，偶尔也会写写学习笔记、一些感想等，但是很少放到网上。我觉得，经常用文字记录下自己的学习、成长与生活，其实是非常好的一个习惯。而且用电脑写作，能够有很多手写所没有的好处，比如说用Markdown书写不仅美观、而且排版也更好看，能够在文章中插入流媒体、表格等，分类页更加方便。但最大的缺点就是，原本写字就不好看。。。长时间不握笔，就。。。</p>
-<p>来聊聊这次重构博客吧，我并不是在原来的基础上更改的，而是去下了最新的Hexo和NexT主题，在本地从零开始边预览边魔改的，目前用的是7.8.0版本。用<code>chrome</code> + <code>git bash</code> + <code>VS Code</code>，慢慢的修改，经历了无数次的报错之后，终于搞定，chrome起到的最大的作用还不是预览网页，而是用搜索引擎排错🤣。我基本上删除了主题中所有我很难用的上的代码和插件，最大程度的减少多余的代码带来的文件大小过大的问题。NexT主题长时间不更新的话，它的源码也会改动特别大，需要重新看一遍才行。新版本中，会删掉一些模块，但是其中一些东西自己很喜欢怎么办？直接去GitHub上面的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">NexT的repo<i class="fa fa-external-link-alt"></i></span>，查看commits的提交记录，并对照着自己修改代码即可！因为像这样的开源主题，是需要照顾到很多人的，如果只是自己单一的需求，自己添加代码就好啦！😅然后把博客内的颜色、样式等，全部改成了自己比较喜欢的风格。修改了部分模块的逻辑，以及修改了部分页面的布局等。</p>
-<p>可以简单看下前后的区别，我只截图了首页的头部的一小块部分，如果之前来访过的小伙伴，应该是能看到整站的大改的，后期考虑下做个以前的镜像。如果还留着我发的软件的小伙伴，直接在电脑上打开软件，就能第一时间看到啦！</p>
-<div class="tabs" id="选项卡-1"><ul class="nav-tabs"><li class="tab active"><a href="#选项卡-1-1">重构前</a></li><li class="tab"><a href="#选项卡-1-2">重构后</a></li></ul><div class="tab-content"><div class="tab-pane active" id="选项卡-1-1"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="newblog/newblog01.png"></div><div class="tab-pane" id="选项卡-1-2"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="newblog/newblog02.png"></div></div></div>
-
-<h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p><strong>我为什么要写博客？</strong></p>
-<p>其实也不仅仅只是博客，可以有学习笔记、日记等更多的东西，这里用博客统称。</p>
-<p>说的笼统一点：<strong>用博客的形式来记录下你有价值的思考，会带来很多好处，却没有任何明显的坏处</strong>。这就跟学习时做笔记和思维导图一样，自己总结记录下来，才能够有收获和成长。我平常就是在做笔记和思维导图的时候，能够发现自己还有哪些知识点没有掌握好，这也是一种查漏补缺的方式。试想一下，我们为什么不少刷一下抖音、少看一集电视剧、少打一把游戏，然后去写作呢？它能给你带来的提升是巨大的！每次在写学习笔记的时候，自己总结不出来、或者发现的没学好的地方，我都会去查阅相关资料，久而久之，养成了习惯，所以说：<strong>书写是为了更好的思考</strong>。</p>
-<p>现在我的写作内容，以学习笔记偏多，没办法，这不是快毕业了嘛😝我写博客最开始就是希望，记录自己的成长与生活，提升自己的能力，能够交到一群志同道合的朋♂友。当然，我也有看过 <code>A Declaration of the Independence of Cyberspace</code>，即《赛博空间独立宣言》。</p>
-<p>以后我也会坚持写博客，谁也无法预料以后博客的形态会发生什么样的变化，但是我觉得，博客的中心，永远都是创作者的内容输出，这一点应该是不会变化的，至少很难改变。</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Blog</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>世纪互联OneDrive搭建OneIndex</title>
-    <url>/posts/2020/onedrivecn.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>众所周知，国际版OneDrive在国内的访问速度并不理想(多线程下载除外)，所以我们就需要相对而言速度更快的世纪互联版OneDrive来体验体验了。</p>
-<a id="more"></a>
-
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，得有一个世纪互联版的OneDrive，其次一个域名和一台vps。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="登录Azure-Active-Directory"><a href="#登录Azure-Active-Directory" class="headerlink" title="登录Azure Active Directory"></a>登录Azure Active Directory</h3><p>登录<span class="exturl" data-url="aHR0cHM6Ly9wb3J0YWwuYXp1cmUuY24v">Azure Active Directory<i class="fa fa-external-link-alt"></i></span>注册应用。选择<code>应用注册</code></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn01.png" alt></p>
-<p>然后我们点击<code>新注册</code></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn02.png" alt></p>
-<p>这里的名称可以随便取，然后选择受支持的账户类型为<code>任何组织目录(任何Azure AD 目录- 多租户)中的账户</code>，回调地址填你的网站的地址，然后单击注册。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn03.png" alt></p>
-<p>然后我们能看到<code>应用程序(客户端)ID</code>，这个就是你的应用ID。然后接下来要进行<code>应用机密配置</code>和<code>API权限配置</code>。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn04.png" alt></p>
-<p>先进行<code>应用机密配置</code>，选择<code>新客户端密码</code>，然后自己随意即可！</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn05.png" alt></p>
-<p>然后复制你的<code>应用机密</code>并保存，注意，<strong>只能复制一次！！！</strong></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn06.png" alt></p>
-<p>然后配置<code>API权限</code>，勾选<code>Files.ReadWrite</code>和<code>Files.ReadWrite.All</code>即可。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn07.png" alt></p>
-<h3 id="安装OneIndex"><a href="#安装OneIndex" class="headerlink" title="安装OneIndex"></a>安装OneIndex</h3><p>这一步需要到vps上进行，项目是这个👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x6eDg1ODk1NjEvb25laW5kZXgyLWlu">oneindex2-in<i class="fa fa-external-link-alt"></i></span></p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn08.png" alt></p>
-<blockquote>
-<p>设置config/、config/base.php 、 cache/ 可读写</p>
-<p>复制刚才的<code>应用程序(客户端) ID</code>到<code>应用ID</code>栏中</p>
-<p>复制刚才的<code>应用机密到oneindex</code>的<code>应用机密</code>栏中</p>
-<p>其中配置参数为世纪互联前缀<code>https://**xxx-my**.sharepoint.cn</code>填写加粗部分<code>xxx-my</code></p>
-<p>回调地址填写你的网址，例如<code>https://cdn.baidu.com</code></p>
-</blockquote>
-<h3 id="特殊文件实现功能"><a href="#特殊文件实现功能" class="headerlink" title="特殊文件实现功能"></a>特殊文件实现功能</h3><p><code>README.md</code>、<code>HEAD.md</code> 、 <code>.password</code>特殊文件使用</p>
-<p>可以参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RvbndhL29uZWluZGV4L3RyZWUvZmlsZXM=">https://github.com/donwa/oneindex/tree/files<i class="fa fa-external-link-alt"></i></span></p>
-<p><strong>在文件夹底部添加说明:</strong></p>
-<blockquote>
-<p>在 OneDrive 的文件夹中添加<code>README.md</code>文件，使用 Markdown 语法。</p>
-</blockquote>
-<p><strong>在文件夹头部添加说明:</strong> </p>
-<blockquote>
-<p>在 OneDrive 的文件夹中添加<code>HEAD.md</code> 文件，使用 Markdown 语法。</p>
-</blockquote>
-<p><strong>加密文件夹:</strong> </p>
-<blockquote>
-<p>在 OneDrive 的文件夹中添加<code>.password</code>文件，填入密码，密码不能为空。  </p>
-</blockquote>
-<p><strong>直接输出网页:</strong></p>
-<blockquote>
-<p>在 OneDrive 的文件夹中添加<code>index.html</code> 文件，程序会直接输出网页而不列目录。<br>配合 文件展示设置-直接输出 效果更佳。</p>
-</blockquote>
-<h3 id="Nginx伪静态设置"><a href="#Nginx伪静态设置" class="headerlink" title="Nginx伪静态设置"></a>Nginx伪静态设置</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">if (!-f $request_filename)&#123;</span><br><span class="line">    set $rule_0 1$rule_0;</span><br><span class="line">&#125;</span><br><span class="line">if (!-d $request_filename)&#123;</span><br><span class="line">    set $rule_0 2$rule_0;</span><br><span class="line">&#125;</span><br><span class="line">if ($rule_0 = "21")&#123;</span><br><span class="line">	rewrite ^/(.*)$ /index.php?/$1 last;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="命令行功能"><a href="#命令行功能" class="headerlink" title="命令行功能"></a>命令行功能</h3><p>仅能在<code>php cli</code>模式下运行</p>
-<p><strong>清除缓存:</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php cache:clear</span><br></pre></td></tr></table></figure>
-
-<p><strong>刷新缓存:</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php cache:refresh</span><br></pre></td></tr></table></figure>
-
-<p><strong>刷新令牌:</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php token:refresh</span><br></pre></td></tr></table></figure>
-
-<p><strong>上传文件:</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php upload:file 本地文件 [onedrive文件]</span><br></pre></td></tr></table></figure>
-
-<p><strong>上传文件夹:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">php one.php upload:folder 本地文件夹 [OneDrive文件夹]</span><br></pre></td></tr></table></figure>
-
-<p><strong>例如：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;上传demo.zip 到OneDrive 根目录  </span><br><span class="line">php one.php upload:file demo.zip  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;上传demo.zip 到OneDrive &#x2F;test&#x2F;目录  </span><br><span class="line">php one.php upload:file demo.zip &#x2F;test&#x2F;  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;上传demo.zip 到OneDrive &#x2F;test&#x2F;目录并将其命名为 d.zip  </span><br><span class="line">php one.php upload:file demo.zip &#x2F;test&#x2F;d.zip  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;上传up&#x2F; 到OneDrive &#x2F;test&#x2F; 目录  </span><br><span class="line">php one.php upload:file up&#x2F; &#x2F;test&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Shell计划任务"><a href="#Shell计划任务" class="headerlink" title="Shell计划任务"></a>Shell计划任务</h3><p>设置每小时刷新一次Token ，任务周期选择每小时，0分钟，脚本内容为：<code>php /程序具体路径/one.php token:refresh</code> </p>
-<p>设置每十分钟后台刷新一遍缓存,任务周期改为N分钟-10分钟，脚本内容为：<code>php /程序具体路径/one.php cache:refresh</code></p>
-<blockquote>
-<p>具体路径为你网站根目录路径,PHP后有空格请注意。</p>
-</blockquote>
-<h3 id="其它玩法："><a href="#其它玩法：" class="headerlink" title="其它玩法："></a>其它玩法：</h3><p>推荐看看大佬们怎么玩的吧。</p>
-<p>我习惯用服务器下载电视剧或者电影，然后同步到OneDrive，然后在线观看，非常清晰的呢！！！</p>
-<p>可以访问我的由国际版OneDrive和Google Drive搭建的<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLjUyYmVzcy5jb20=">站点<i class="fa fa-external-link-alt"></i></span>哦！！！</p>
-]]></content>
-      <categories>
-        <category>OneDrive</category>
-        <category>Linux</category>
-        <category>OneIndex</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>OneDrive</tag>
-        <tag>OneIndex</tag>
       </tags>
   </entry>
   <entry>
@@ -2529,6 +2441,126 @@
       </tags>
   </entry>
   <entry>
+    <title>【玩转腾讯云】用轻量应用服务器搭建网站</title>
+    <url>/posts/2020/lighthouse.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不少小伙伴应该知道，腾讯云正在内测轻量应用服务器，而且马上就要公测了！我提前申请到了一台内测机器，那就来告诉大家，在公测后购买腾讯云轻量应用服务器之后如何玩转它吧，比如搭建静态或者动态网站！</p>
+<a id="more"></a>
+
+<h2 id="什么是轻量应用服务器-Lighthouse"><a href="#什么是轻量应用服务器-Lighthouse" class="headerlink" title="什么是轻量应用服务器 Lighthouse"></a>什么是轻量应用服务器 Lighthouse</h2><ul>
+<li>这里是文档上的介绍，让我们先了解下！</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2xpZ2h0aG91c2U=">轻量应用服务器<i class="fa fa-external-link-alt"></i></span>（Lighthouse）是一种易于使用和管理、适合承载轻量级业务负载的云服务器，能帮助个人和企业在云端快速构建网站、博客、电商、论坛等各类应用以及开发测试环境，并提供应用部署、配置和管理的全流程一站式服务，极大提升构建应用的体验，是您使用腾讯云的最佳入门途径。</p>
+<h2 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h2><p>先去<span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2xpZ2h0aG91c2UvaW5zdGFuY2UvaW5kZXg=">控制台<i class="fa fa-external-link-alt"></i></span>找到轻量应用服务器，然后按需求购买。可以选择不同的地域、镜像、套餐、时长和数量等。这里我申请到的内测机型是【上海区域、1核2G、系统盘40G，峰值5Mbps、1000G流量的套餐】。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse001.png" alt></p>
+<p>我们购买成功后，来到轻量应用服务器控制台，打开详情页面后，需要先【重置密码】或者【绑定密钥】。由于是作演示用，所以我就选择了【重置密码】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse002.png" alt></p>
+<p>然后打开XShell 6，新建会话，自定义名称，然后在【主机】里面输入【IP地址】。然后进行连接，并输入用户名和密码，连上去之后如图所示。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse003.png" alt></p>
+<h2 id="搭建网站"><a href="#搭建网站" class="headerlink" title="搭建网站"></a>搭建网站</h2><p>这里我推荐使用BT面板，因为我这台轻量服务器的系统是CentOS，所以就需要自己安装了，当然，你也可以在控制台直接更换成BT面板的应用镜像，非常方便有木有！！！</p>
+<ul>
+<li>更新系统和软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装一些软件包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y curl vim wget unzip git nano</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装BT面板</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse004.png" alt></p>
+<p>中间会弹出一个提示，输入y，并回车，之后等待一会儿就好啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse005.png" alt></p>
+<p>我们可以看到，安装速度真的是很快啊，上面的Bt-Panel、username和password分别对应公网访问地址、用户名和密码。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse006.png" alt></p>
+<p>然后我们需要去控制台的防火墙，开放8888端口。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse007.png" alt></p>
+<p>进入到BT面板之后，就安装推荐的LNMP即可，具体的版本其实可以根据自己的实际情况来看。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse008.png" alt></p>
+<p>然后等待安装就行了。</p>
+<h3 id="搭建静态网站"><a href="#搭建静态网站" class="headerlink" title="搭建静态网站"></a>搭建静态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse009.png" alt></p>
+<p>安装好之后，选择左边的【网站】，然后点击【添加站点】，如上图，在域名这一栏，填上你的域名。当然，得先去把域名解析到当前的ip地址，而且还得先备案哦，在腾讯云备案，还是比较方便的。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse010.png" alt></p>
+<p>然后在最右边，选择刚创建好的网站的【设置】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse011.png" alt></p>
+<p>然后可以一键申请SSL证书，还是比较方便的，其它的就按照自己的需求来。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse012.png" alt></p>
+<p>在【文件】里面，可以管理和上传你自己的代码和静态文件资源。</p>
+<p>到这里，没啥问题的话，网站就已经可以访问了！</p>
+<h3 id="搭建动态网站"><a href="#搭建动态网站" class="headerlink" title="搭建动态网站"></a>搭建动态网站</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse013.png" alt></p>
+<p>BT面板也可以搭建动态网站，你可以按照刚才搭建静态网站的方法，上传自己的安装包，或者去【软件商店】安装【宝塔一键部署源码1.1】。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse014.png" alt></p>
+<p>安装好之后，可以用这个插件一键部署源码，比如说我们要安装wordpress博客系统，找到之后，选择一键部署就行了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse015.png" alt></p>
+<p>然后在相应的空里面填就好了，域名还是一样，要提前解析好，其他的一般默认即可。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse016.png" alt></p>
+<p>部署好之后，访问站点，上面的数据库账号资料后面会用的到。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse017.png" alt></p>
+<p>点击【现在就开始】，进入下一步！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse018.png" alt></p>
+<p>在这一步，需要填好刚才准备的信息，然后点击提交！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse019.png" alt></p>
+<p>进行安装！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse020.png" alt></p>
+<p>然后根据自己的情况，填上相应的信息，注意密码不要用弱密码，我这里只是为了演示！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse021.png" alt></p>
+<p>成功之后，登录就能进到后台啦！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse022.png" alt></p>
+<p>然后就自己去探索功能吧！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="lighthouse/lighthouse023.png" alt></p>
+<p>至此，动态网站已经搭建完成！</p>
+<h2 id="轻量服务器的应用场景"><a href="#轻量服务器的应用场景" class="headerlink" title="轻量服务器的应用场景"></a>轻量服务器的应用场景</h2><p>腾讯云轻量应用服务器，除了可以搭建网站，还可以干很多事情哦！</p>
+<p>主要的应用场景：</p>
+<ul>
+<li>网站搭建</li>
+<li>Web 应用服务</li>
+<li>快速搭建开发测试环境</li>
+<li>云端学习环境</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>玩转腾讯云</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我和我的博客的过去、现在与未来</title>
+    <url>/posts/2020/newblog.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>博客原来的样式，是去年五一晚上熬夜搞出来的，当时觉得蛮漂亮，但是看久了，就觉得乏了！但这还不是我要重构的原因，博客代码冗余、加载速度慢、载入资源多等等，迫使我对整个博客进行了重构和魔改！</p>
+<a id="more"></a>
+
+<h2 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h2><p>在我第一次使用hexo时，尝试过很多主题，但最终还是回到了<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tLw==">NexT<i class="fa fa-external-link-alt"></i></span>主题。并且一用就是2年多了，期间经历了多次重大的更新和改进，从此也开始了自己的魔改之路。NexT主题，自带的样式虽然在很多人看来并不好看，但是它的功能非常强大，只要你想(不懒)，你几乎可以用它实现静态博客能实现的所有功能，不是说别的主题不行，而是NexT魔改起来对我而言更舒服！</p>
+<p>第一次自己建站写博客，是用的<span class="exturl" data-url="aHR0cHM6Ly93b3JkcHJlc3Mub3JnLw==">WordPress<i class="fa fa-external-link-alt"></i></span>，确实很强大，但是在国内用起来也不是特别舒服。尤其是现在，国内用户的体验大不如以前了，并且已经打不开了。我知道，这些都不是事儿，我放弃wordpress的原因是，它太吃性能了！！！不是所有人都能承担的起这个费用的，因为没有必要。后来上网寻找替代方案，改用静态博客，最后选择了<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuLw==">Hexo<i class="fa fa-external-link-alt"></i></span>。搭建的方式也逐步变得多样化，从单一的部署，变成多线部署、多解析，从原生加载到CDN加速和对象存储，从第三方服务到自建再到第三方等等。在去年，我也尝试了新的动态博客方案——<span class="exturl" data-url="aHR0cHM6Ly90eXBlY2hvLm9yZy8=">Typecho<i class="fa fa-external-link-alt"></i></span>和<span class="exturl" data-url="aHR0cHM6Ly9oYWxvLnJ1bi8=">Halo<i class="fa fa-external-link-alt"></i></span>，而且Halo可是用Java写的呢，这跟我的专业也就一样啦！</p>
+<p>早些年，写日记这种东西，都是日记本。后来就慢慢的尝试在网上写日记，尝试了很多第三方的平台来写日记。然后慢慢的熟知了博客这个东西，也就想有一个自己的博客，也就有了以上一些经历。现在静态博客用的还是Hexo，动态博客用的是Typecho，第三方服务正在用<span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2xvZ2luP3BsYXRmb3JtPXdlY2hhdCZpbnZpdGVUb2tlbj0zNTdkZjY1ZTMwNjE2NzNlM2IwM2EwODBmYWRlMmU0OTlkMDFhYjY1YzAxZGUxY2Q0ZTBmMTFjYzZiOWM5Mzhi">语雀<i class="fa fa-external-link-alt"></i></span>和<span class="exturl" data-url="aHR0cHM6Ly93d3cueWlueGlhbmcuY29tLw==">印象笔记<i class="fa fa-external-link-alt"></i></span>，这里我强烈推荐一波语雀，是真的好用，目前正在逐步从印象笔记迁移到语雀！</p>
+<h2 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h2><p>我一直都有写日记的习惯(别问我为什么没看到，我想没有多少人会把日记放网上给人看的)，偶尔也会写写学习笔记、一些感想等，但是很少放到网上。我觉得，经常用文字记录下自己的学习、成长与生活，其实是非常好的一个习惯。而且用电脑写作，能够有很多手写所没有的好处，比如说用Markdown书写不仅美观、而且排版也更好看，能够在文章中插入流媒体、表格等，分类页更加方便。但最大的缺点就是，原本写字就不好看。。。长时间不握笔，就。。。</p>
+<p>来聊聊这次重构博客吧，我并不是在原来的基础上更改的，而是去下了最新的Hexo和NexT主题，在本地从零开始边预览边魔改的，目前用的是7.8.0版本。用<code>chrome</code> + <code>git bash</code> + <code>VS Code</code>，慢慢的修改，经历了无数次的报错之后，终于搞定，chrome起到的最大的作用还不是预览网页，而是用搜索引擎排错🤣。我基本上删除了主题中所有我很难用的上的代码和插件，最大程度的减少多余的代码带来的文件大小过大的问题。NexT主题长时间不更新的话，它的源码也会改动特别大，需要重新看一遍才行。新版本中，会删掉一些模块，但是其中一些东西自己很喜欢怎么办？直接去GitHub上面的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">NexT的repo<i class="fa fa-external-link-alt"></i></span>，查看commits的提交记录，并对照着自己修改代码即可！因为像这样的开源主题，是需要照顾到很多人的，如果只是自己单一的需求，自己添加代码就好啦！😅然后把博客内的颜色、样式等，全部改成了自己比较喜欢的风格。修改了部分模块的逻辑，以及修改了部分页面的布局等。</p>
+<p>可以简单看下前后的区别，我只截图了首页的头部的一小块部分，如果之前来访过的小伙伴，应该是能看到整站的大改的，后期考虑下做个以前的镜像。如果还留着我发的软件的小伙伴，直接在电脑上打开软件，就能第一时间看到啦！</p>
+<div class="tabs" id="选项卡-1"><ul class="nav-tabs"><li class="tab active"><a href="#选项卡-1-1">重构前</a></li><li class="tab"><a href="#选项卡-1-2">重构后</a></li></ul><div class="tab-content"><div class="tab-pane active" id="选项卡-1-1"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="newblog/newblog01.png"></div><div class="tab-pane" id="选项卡-1-2"><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="newblog/newblog02.png"></div></div></div>
+
+<h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p><strong>我为什么要写博客？</strong></p>
+<p>其实也不仅仅只是博客，可以有学习笔记、日记等更多的东西，这里用博客统称。</p>
+<p>说的笼统一点：<strong>用博客的形式来记录下你有价值的思考，会带来很多好处，却没有任何明显的坏处</strong>。这就跟学习时做笔记和思维导图一样，自己总结记录下来，才能够有收获和成长。我平常就是在做笔记和思维导图的时候，能够发现自己还有哪些知识点没有掌握好，这也是一种查漏补缺的方式。试想一下，我们为什么不少刷一下抖音、少看一集电视剧、少打一把游戏，然后去写作呢？它能给你带来的提升是巨大的！每次在写学习笔记的时候，自己总结不出来、或者发现的没学好的地方，我都会去查阅相关资料，久而久之，养成了习惯，所以说：<strong>书写是为了更好的思考</strong>。</p>
+<p>现在我的写作内容，以学习笔记偏多，没办法，这不是快毕业了嘛😝我写博客最开始就是希望，记录自己的成长与生活，提升自己的能力，能够交到一群志同道合的朋♂友。当然，我也有看过 <code>A Declaration of the Independence of Cyberspace</code>，即《赛博空间独立宣言》。</p>
+<p>以后我也会坚持写博客，谁也无法预料以后博客的形态会发生什么样的变化，但是我觉得，博客的中心，永远都是创作者的内容输出，这一点应该是不会变化的，至少很难改变。</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Blog</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>给vue-admin-template添加TagsView</title>
     <url>/posts/2020/vue-add-tagsview.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前规划着做一做自己的比较正式一点的项目，基于SpringBoot开发的前后端分离项目，但是自己本身只是Java后端为主的，所以前端功底并不好。于是就采用了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWVsZW1lbnQtYWRtaW4=">vue-element-admin<i class="fa fa-external-link-alt"></i></span>的基础模板<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhbkppYUNoZW4vdnVlLWFkbWluLXRlbXBsYXRl">vue-admin-template<i class="fa fa-external-link-alt"></i></span>来进行开发。同时也可以基于自己的需要，增加很多组件上去。</p>
@@ -2618,40 +2650,92 @@
       </tags>
   </entry>
   <entry>
-    <title>设计一个简易的订单系统</title>
-    <url>/posts/2021/design-order.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在电商系统中，订单系统往往承载着非常重要的角色。在极光商城项目的准备阶段，最耗费我时长的就是订单系统了（毕竟实力也不咋样😅。这期间我也查阅了大量资料，为这一块的设计做了些准备。只能说第一次设计，还是挺想做出个好东西来，但是这要考虑的东西，可比单纯的写业务代码要多得多了呀。</p>
+    <title>世纪互联OneDrive搭建OneIndex</title>
+    <url>/posts/2020/onedrivecn.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>众所周知，国际版OneDrive在国内的访问速度并不理想(多线程下载除外)，所以我们就需要相对而言速度更快的世纪互联版OneDrive来体验体验了。</p>
 <a id="more"></a>
 
-<h2 id="业务关系"><a href="#业务关系" class="headerlink" title="业务关系"></a>业务关系</h2><h3 id="订单系统"><a href="#订单系统" class="headerlink" title="订单系统"></a>订单系统</h3><p>先来看看订单系统在整个极光商城中扮演的角色，实际上是负责管理平台交易的订单处理系统。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder001.png" alt></p>
-<h3 id="订单管理"><a href="#订单管理" class="headerlink" title="订单管理"></a>订单管理</h3><p>订单管理模块，主要的体现就是在后台的订单管理模块了。主要功能为订单列表、订单详情、订单定时任务、订单操作、订单跟踪、订单售后、订单流水等。</p>
-<h3 id="订单服务"><a href="#订单服务" class="headerlink" title="订单服务"></a>订单服务</h3><p>订单服务模块，为整个商城的业务支撑，负责的业务也是较复杂的。主要有订单创建，订单支付、订单确认、取消订单、发起售后、订单跟踪等流程。其中的规则较为复杂，比如说在用户提交订单时，得根据相应的规则判断订单是否合法，也可以理解为风控吧。然后要计算订单的金额，购买了东西，相应的库存也要变化，还要考虑超卖问题。其中某些步骤可能是需要异步调用的，举个例子：我用12306买票时，付款后，先收到邮件，然后12306APP这边的状态过几秒钟能看到购买成功，这里发邮件的功能，可能就是用的异步调用。</p>
-<h3 id="订单信息"><a href="#订单信息" class="headerlink" title="订单信息"></a>订单信息</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder002.png" alt></p>
-<p>整个订单的设计，是采取的主表和子表。主表主要会存放订单的基本信息、用户信息、订单流水，物流信息、促销信息、等。但是考虑到一个订单可能包含多个商品，所以说子订单就是用来存放这些不同商品的信息的，当然，也可以进行订单拆分业务，但是即使这么设计，也要考虑到用户只应该付一次款的问题。</p>
-<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder003.png" alt></p>
-<p>数据库里面，目前只对订单系统设计了6张表，以目前的业务来看的话，是绰绰有余了，以后业务变更了再修改吧。</p>
-<h2 id="订单流程"><a href="#订单流程" class="headerlink" title="订单流程"></a>订单流程</h2><p>就以正常下单的流程来说吧，售后的订单这里就不过多介绍了。</p>
-<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder004.png" alt></p>
-<h3 id="订单创建"><a href="#订单创建" class="headerlink" title="订单创建"></a>订单创建</h3><p>用户登录商城，挑选想要购买的商品，然后选择地址和促销信息并提交订单。然后生成订单前，我们需要获取用户信息、商品信息、促销信息等。当然，并不是所有的数据都从前端接收的，不然的话用户传个假的价格过来，岂不是0元购了😂。获取完信息后，这时后台的风控系统，可以进行一系列的规则校验。咱们还得判断库存吧，库存不够了也不能卖，这里的业务设计，以提交订单为准进行库存的扣除。最后生成订单信息和支付信息，同步当前订单即创建完成。</p>
-<h3 id="订单支付"><a href="#订单支付" class="headerlink" title="订单支付"></a>订单支付</h3><p>支付的话，肯定就是对接第三方平台做一个支付功能了，具体的可以去看支付宝开放平台的文档做个参考。这里主要阐述下订单拆分问题。根据订单里面的商品的性质等原因，可以进行不同的订单拆分。但是，订单建议设计成同时支付和绑定订单。不然的话，很容易被凑单，从而造成一定的损失。除非你的业务就是想弄成淘宝那种，为了凑单拼到300元，然后付款了秒退凑单商品，从而达到优惠的效果。最后根据订单支付的结果，对订单进行操作，成功了就走订单生产流程，失败了就走失败订单的流程，还原被扣除的库存。</p>
-<h3 id="订单生产"><a href="#订单生产" class="headerlink" title="订单生产"></a>订单生产</h3><p>如果有多个仓库，可根据用户收货地址等因素来调配仓库的货物。并将商品打包寄出，同时更新快递状态实时同步。</p>
-<h3 id="订单完成"><a href="#订单完成" class="headerlink" title="订单完成"></a>订单完成</h3><p>用户收到商品后，确认收货，订单至此完成。</p>
-<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p>在订单的整个生命周期，都可以通过消息队列来异步操作。比如订单状态更新了，可以给用户发邮件或者短信通知，在商城系统的用户中心也可以推送通知等。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>将订单系统进行拆分，也就是订单的管理和订单的处理这两个模块是分开的。主要是考虑到用户下单，和客服进行订单管理的业务区别有点大，前者操作很频繁，后者可能更多的只是看看，做的操作较少。虽然移动端我现在还不会开发，但是得想到一个问题，不同的平台，对应的订单系统的处理逻辑肯定无法保证100%相同的。那么将逻辑拆分，统一管理，我觉得可能是较好的一个方案（目前也只能想到这一步了😅），脚踏实地，一步步来吧，毕竟自己要学的东西也很多。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，得有一个世纪互联版的OneDrive，其次一个域名和一台vps。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="登录Azure-Active-Directory"><a href="#登录Azure-Active-Directory" class="headerlink" title="登录Azure Active Directory"></a>登录Azure Active Directory</h3><p>登录<span class="exturl" data-url="aHR0cHM6Ly9wb3J0YWwuYXp1cmUuY24v">Azure Active Directory<i class="fa fa-external-link-alt"></i></span>注册应用。选择<code>应用注册</code></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn01.png" alt></p>
+<p>然后我们点击<code>新注册</code></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn02.png" alt></p>
+<p>这里的名称可以随便取，然后选择受支持的账户类型为<code>任何组织目录(任何Azure AD 目录- 多租户)中的账户</code>，回调地址填你的网站的地址，然后单击注册。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn03.png" alt></p>
+<p>然后我们能看到<code>应用程序(客户端)ID</code>，这个就是你的应用ID。然后接下来要进行<code>应用机密配置</code>和<code>API权限配置</code>。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn04.png" alt></p>
+<p>先进行<code>应用机密配置</code>，选择<code>新客户端密码</code>，然后自己随意即可！</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn05.png" alt></p>
+<p>然后复制你的<code>应用机密</code>并保存，注意，<strong>只能复制一次！！！</strong></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn06.png" alt></p>
+<p>然后配置<code>API权限</code>，勾选<code>Files.ReadWrite</code>和<code>Files.ReadWrite.All</code>即可。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn07.png" alt></p>
+<h3 id="安装OneIndex"><a href="#安装OneIndex" class="headerlink" title="安装OneIndex"></a>安装OneIndex</h3><p>这一步需要到vps上进行，项目是这个👉<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x6eDg1ODk1NjEvb25laW5kZXgyLWlu">oneindex2-in<i class="fa fa-external-link-alt"></i></span></p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="onedrivecn/onedrivecn08.png" alt></p>
 <blockquote>
-<p>大公司的经验和成功模式固然重要，值得学习借鉴，但如果因此而变得盲从，就失去了坚持自我的勇气，在架构演化的道路上迟早会迷路。    </p>
-<p>​                《大型网站技术架构：核心原理与案例分析》——李智慧</p>
+<p>设置config/、config/base.php 、 cache/ 可读写</p>
+<p>复制刚才的<code>应用程序(客户端) ID</code>到<code>应用ID</code>栏中</p>
+<p>复制刚才的<code>应用机密到oneindex</code>的<code>应用机密</code>栏中</p>
+<p>其中配置参数为世纪互联前缀<code>https://**xxx-my**.sharepoint.cn</code>填写加粗部分<code>xxx-my</code></p>
+<p>回调地址填写你的网址，例如<code>https://cdn.baidu.com</code></p>
 </blockquote>
+<h3 id="特殊文件实现功能"><a href="#特殊文件实现功能" class="headerlink" title="特殊文件实现功能"></a>特殊文件实现功能</h3><p><code>README.md</code>、<code>HEAD.md</code> 、 <code>.password</code>特殊文件使用</p>
+<p>可以参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RvbndhL29uZWluZGV4L3RyZWUvZmlsZXM=">https://github.com/donwa/oneindex/tree/files<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>在文件夹底部添加说明:</strong></p>
+<blockquote>
+<p>在 OneDrive 的文件夹中添加<code>README.md</code>文件，使用 Markdown 语法。</p>
+</blockquote>
+<p><strong>在文件夹头部添加说明:</strong> </p>
+<blockquote>
+<p>在 OneDrive 的文件夹中添加<code>HEAD.md</code> 文件，使用 Markdown 语法。</p>
+</blockquote>
+<p><strong>加密文件夹:</strong> </p>
+<blockquote>
+<p>在 OneDrive 的文件夹中添加<code>.password</code>文件，填入密码，密码不能为空。  </p>
+</blockquote>
+<p><strong>直接输出网页:</strong></p>
+<blockquote>
+<p>在 OneDrive 的文件夹中添加<code>index.html</code> 文件，程序会直接输出网页而不列目录。<br>配合 文件展示设置-直接输出 效果更佳。</p>
+</blockquote>
+<h3 id="Nginx伪静态设置"><a href="#Nginx伪静态设置" class="headerlink" title="Nginx伪静态设置"></a>Nginx伪静态设置</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">if (!-f $request_filename)&#123;</span><br><span class="line">    set $rule_0 1$rule_0;</span><br><span class="line">&#125;</span><br><span class="line">if (!-d $request_filename)&#123;</span><br><span class="line">    set $rule_0 2$rule_0;</span><br><span class="line">&#125;</span><br><span class="line">if ($rule_0 = "21")&#123;</span><br><span class="line">	rewrite ^/(.*)$ /index.php?/$1 last;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="命令行功能"><a href="#命令行功能" class="headerlink" title="命令行功能"></a>命令行功能</h3><p>仅能在<code>php cli</code>模式下运行</p>
+<p><strong>清除缓存:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php cache:clear</span><br></pre></td></tr></table></figure>
+
+<p><strong>刷新缓存:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php cache:refresh</span><br></pre></td></tr></table></figure>
+
+<p><strong>刷新令牌:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php token:refresh</span><br></pre></td></tr></table></figure>
+
+<p><strong>上传文件:</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">php one.php upload:file 本地文件 [onedrive文件]</span><br></pre></td></tr></table></figure>
+
+<p><strong>上传文件夹:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">php one.php upload:folder 本地文件夹 [OneDrive文件夹]</span><br></pre></td></tr></table></figure>
+
+<p><strong>例如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;上传demo.zip 到OneDrive 根目录  </span><br><span class="line">php one.php upload:file demo.zip  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;上传demo.zip 到OneDrive &#x2F;test&#x2F;目录  </span><br><span class="line">php one.php upload:file demo.zip &#x2F;test&#x2F;  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;上传demo.zip 到OneDrive &#x2F;test&#x2F;目录并将其命名为 d.zip  </span><br><span class="line">php one.php upload:file demo.zip &#x2F;test&#x2F;d.zip  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;上传up&#x2F; 到OneDrive &#x2F;test&#x2F; 目录  </span><br><span class="line">php one.php upload:file up&#x2F; &#x2F;test&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Shell计划任务"><a href="#Shell计划任务" class="headerlink" title="Shell计划任务"></a>Shell计划任务</h3><p>设置每小时刷新一次Token ，任务周期选择每小时，0分钟，脚本内容为：<code>php /程序具体路径/one.php token:refresh</code> </p>
+<p>设置每十分钟后台刷新一遍缓存,任务周期改为N分钟-10分钟，脚本内容为：<code>php /程序具体路径/one.php cache:refresh</code></p>
+<blockquote>
+<p>具体路径为你网站根目录路径,PHP后有空格请注意。</p>
+</blockquote>
+<h3 id="其它玩法："><a href="#其它玩法：" class="headerlink" title="其它玩法："></a>其它玩法：</h3><p>推荐看看大佬们怎么玩的吧。</p>
+<p>我习惯用服务器下载电视剧或者电影，然后同步到OneDrive，然后在线观看，非常清晰的呢！！！</p>
+<p>可以访问我的由国际版OneDrive和Google Drive搭建的<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLjUyYmVzcy5jb20=">站点<i class="fa fa-external-link-alt"></i></span>哦！！！</p>
 ]]></content>
       <categories>
-        <category>软件工程</category>
-        <category>极光商城</category>
+        <category>OneDrive</category>
+        <category>Linux</category>
+        <category>OneIndex</category>
       </categories>
       <tags>
-        <tag>软件工程</tag>
-        <tag>极光商城</tag>
-        <tag>数据库设计</tag>
+        <tag>Linux</tag>
+        <tag>OneDrive</tag>
+        <tag>OneIndex</tag>
       </tags>
   </entry>
   <entry>
@@ -2722,6 +2806,43 @@
       </tags>
   </entry>
   <entry>
+    <title>设计一个简易的订单系统</title>
+    <url>/posts/2021/design-order.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在电商系统中，订单系统往往承载着非常重要的角色。在极光商城项目的准备阶段，最耗费我时长的就是订单系统了（毕竟实力也不咋样😅。这期间我也查阅了大量资料，为这一块的设计做了些准备。只能说第一次设计，还是挺想做出个好东西来，但是这要考虑的东西，可比单纯的写业务代码要多得多了呀。</p>
+<a id="more"></a>
+
+<h2 id="业务关系"><a href="#业务关系" class="headerlink" title="业务关系"></a>业务关系</h2><h3 id="订单系统"><a href="#订单系统" class="headerlink" title="订单系统"></a>订单系统</h3><p>先来看看订单系统在整个极光商城中扮演的角色，实际上是负责管理平台交易的订单处理系统。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder001.png" alt></p>
+<h3 id="订单管理"><a href="#订单管理" class="headerlink" title="订单管理"></a>订单管理</h3><p>订单管理模块，主要的体现就是在后台的订单管理模块了。主要功能为订单列表、订单详情、订单定时任务、订单操作、订单跟踪、订单售后、订单流水等。</p>
+<h3 id="订单服务"><a href="#订单服务" class="headerlink" title="订单服务"></a>订单服务</h3><p>订单服务模块，为整个商城的业务支撑，负责的业务也是较复杂的。主要有订单创建，订单支付、订单确认、取消订单、发起售后、订单跟踪等流程。其中的规则较为复杂，比如说在用户提交订单时，得根据相应的规则判断订单是否合法，也可以理解为风控吧。然后要计算订单的金额，购买了东西，相应的库存也要变化，还要考虑超卖问题。其中某些步骤可能是需要异步调用的，举个例子：我用12306买票时，付款后，先收到邮件，然后12306APP这边的状态过几秒钟能看到购买成功，这里发邮件的功能，可能就是用的异步调用。</p>
+<h3 id="订单信息"><a href="#订单信息" class="headerlink" title="订单信息"></a>订单信息</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder002.png" alt></p>
+<p>整个订单的设计，是采取的主表和子表。主表主要会存放订单的基本信息、用户信息、订单流水，物流信息、促销信息、等。但是考虑到一个订单可能包含多个商品，所以说子订单就是用来存放这些不同商品的信息的，当然，也可以进行订单拆分业务，但是即使这么设计，也要考虑到用户只应该付一次款的问题。</p>
+<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder003.png" alt></p>
+<p>数据库里面，目前只对订单系统设计了6张表，以目前的业务来看的话，是绰绰有余了，以后业务变更了再修改吧。</p>
+<h2 id="订单流程"><a href="#订单流程" class="headerlink" title="订单流程"></a>订单流程</h2><p>就以正常下单的流程来说吧，售后的订单这里就不过多介绍了。</p>
+<p><img src="https://sc03.alicdn.com/kf/H5b14df755b3a4d6fb58ad1aa4240a256C.jpg" data-original="design-order/design_oeder004.png" alt></p>
+<h3 id="订单创建"><a href="#订单创建" class="headerlink" title="订单创建"></a>订单创建</h3><p>用户登录商城，挑选想要购买的商品，然后选择地址和促销信息并提交订单。然后生成订单前，我们需要获取用户信息、商品信息、促销信息等。当然，并不是所有的数据都从前端接收的，不然的话用户传个假的价格过来，岂不是0元购了😂。获取完信息后，这时后台的风控系统，可以进行一系列的规则校验。咱们还得判断库存吧，库存不够了也不能卖，这里的业务设计，以提交订单为准进行库存的扣除。最后生成订单信息和支付信息，同步当前订单即创建完成。</p>
+<h3 id="订单支付"><a href="#订单支付" class="headerlink" title="订单支付"></a>订单支付</h3><p>支付的话，肯定就是对接第三方平台做一个支付功能了，具体的可以去看支付宝开放平台的文档做个参考。这里主要阐述下订单拆分问题。根据订单里面的商品的性质等原因，可以进行不同的订单拆分。但是，订单建议设计成同时支付和绑定订单。不然的话，很容易被凑单，从而造成一定的损失。除非你的业务就是想弄成淘宝那种，为了凑单拼到300元，然后付款了秒退凑单商品，从而达到优惠的效果。最后根据订单支付的结果，对订单进行操作，成功了就走订单生产流程，失败了就走失败订单的流程，还原被扣除的库存。</p>
+<h3 id="订单生产"><a href="#订单生产" class="headerlink" title="订单生产"></a>订单生产</h3><p>如果有多个仓库，可根据用户收货地址等因素来调配仓库的货物。并将商品打包寄出，同时更新快递状态实时同步。</p>
+<h3 id="订单完成"><a href="#订单完成" class="headerlink" title="订单完成"></a>订单完成</h3><p>用户收到商品后，确认收货，订单至此完成。</p>
+<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p>在订单的整个生命周期，都可以通过消息队列来异步操作。比如订单状态更新了，可以给用户发邮件或者短信通知，在商城系统的用户中心也可以推送通知等。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>将订单系统进行拆分，也就是订单的管理和订单的处理这两个模块是分开的。主要是考虑到用户下单，和客服进行订单管理的业务区别有点大，前者操作很频繁，后者可能更多的只是看看，做的操作较少。虽然移动端我现在还不会开发，但是得想到一个问题，不同的平台，对应的订单系统的处理逻辑肯定无法保证100%相同的。那么将逻辑拆分，统一管理，我觉得可能是较好的一个方案（目前也只能想到这一步了😅），脚踏实地，一步步来吧，毕竟自己要学的东西也很多。</p>
+<blockquote>
+<p>大公司的经验和成功模式固然重要，值得学习借鉴，但如果因此而变得盲从，就失去了坚持自我的勇气，在架构演化的道路上迟早会迷路。    </p>
+<p>​                《大型网站技术架构：核心原理与案例分析》——李智慧</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>软件工程</category>
+        <category>极光商城</category>
+      </categories>
+      <tags>
+        <tag>软件工程</tag>
+        <tag>极光商城</tag>
+        <tag>数据库设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IOC依赖注入——自动注入的三个注解</title>
     <url>/posts/2021/ioc-auto-injection-annotation.html</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>学过Spring的小伙伴应该知道，只要是能够运行Java程序的平台，就能运行Spring应用程序。而Spring框架也同时为Java应用程序的开发，提供了基础架构支持和丰富的功能。但是这些功能的底层，都会依赖Spring框架的两大核心特性：依赖注入(dependency injection，DI)和面向切面编程(aspect-oriented programming，AOP)。</p>
@@ -2778,127 +2899,6 @@
       <tags>
         <tag>Spring</tag>
         <tag>Spring IOC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NexT主题个性定制与深度优化</title>
-    <url>/posts/2019/next.html</url>
-    <content><![CDATA[<blockquote><p>给岁月以文明，而不是给文明以岁月.</p>
-<footer><strong>刘慈欣</strong><cite>三体</cite></footer></blockquote>
-
-<p>“互联网精神”即：开放、平等、协作、快速、分享。感谢我的生命之中有互联网，让我脑海中的开源共享有了实现的可能。能拥有自己的博客，不仅记录自己，还能分享他人！</p>
-<a id="more"></a>
-
-<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="容我先bb几句"><a href="#容我先bb几句" class="headerlink" title="容我先bb几句"></a>容我先bb几句</h3><p>首先肯定是感谢各位大佬的文章，我一个小白，靠着Google搭建了自己的博客……如果你是一个和我一样的小白，而且对我的博客感觉还蛮满意的话，恭喜你！看完这篇文章，你自己也可以拥有一个<del>可能不太</del>漂亮<del>的</del>博客啦！</p>
-<p>这篇文章主要是写给跟我一样的小白们看的，当然也方便自己以后忘记了来查阅。如果各位大佬不慎看到，如有不足之处还欢迎指出来哦，还请见谅！我在搭建博客的时候，看到很多博客，写了一些比较好的文章，但是有时候却忘记收藏了。别告诉我只有我一个人设置的关闭浏览器时自动清理的……许多时候还是挺后悔的，为什么当时没收藏。因为这种文章，肯定是比某度随便一搜索找到的教程要准确的多的，毕竟人家博主可能真的是有在认真的写。</p>
-<h3 id="我的本地环境"><a href="#我的本地环境" class="headerlink" title="我的本地环境"></a>我的本地环境</h3><p>有时候出问题的原因可能会有很多，如果你决定用我的这篇文章来做参考的话，那么我就把我的环境给你参考。因为可能大家一样的操作的话，并不一定实现的结果都是相同的。嗯~ o(<em>￣▽￣</em>)o，没错，我有时候Google按照流程来，结果疯狂报错。。。</p>
-<p>大家都知道，外星人阻断了我们与Google的链接，导致无法访问，不过估计能看到这篇文章的人，应该是具有了访问Google的能力了。如果你是在是无法访问，可以去全球最大的同性交友社区GitHub看看呢，附上大神的开源项目<span class="exturl" data-url="aHR0cHM6Ly9sYW9kLmNuL3dwLWNvbnRlbnQvdGhlbWVzL2JlZ2luL3RvLnBocD91cmw9YUhSMGNITTZMeTluYVhSb2RXSXVZMjl0TDJkdmIyZHNaV2h2YzNSekwyaHZjM1J6">入口<i class="fa fa-external-link-alt"></i></span>👉</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* 调试用的浏览器 *&#x2F;</span><br><span class="line">Google Chrome Version 73.0.3683.75（Official version）（64-bit）</span><br><span class="line">QQ Browser 10.4(3341) Chromium70.0.3538.25\IE11.379.17763.0</span><br><span class="line">Microsoft Edge 44.17763.1.0</span><br><span class="line">Internet Explorer 11.379.17763.0</span><br><span class="line">&#x2F;&#x2F;IE8及以下版本无法正常显示</span><br><span class="line"></span><br><span class="line">&#x2F;* 版本信息 *&#x2F;</span><br><span class="line">$ hexo version</span><br><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17763 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.15.3</span><br><span class="line">v8: 6.8.275.32-node.51</span><br><span class="line">uv: 1.23.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 3</span><br><span class="line">openssl: 1.1.0j</span><br><span class="line">icu: 62.1</span><br><span class="line">unicode: 11.0</span><br><span class="line">cldr: 33.1</span><br><span class="line">tz: 2018e</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;* 依赖包 *&#x2F;</span><br><span class="line">$ cat package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;3.8.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^3.8.0&quot;,</span><br><span class="line">    &quot;hexo-asset-image&quot;: &quot;0.0.3&quot;, &#x2F;* 图片显示 *&#x2F;</span><br><span class="line">    &quot;hexo-blog-encrypt&quot;: &quot;^2.1.1&quot;,</span><br><span class="line">    &quot;hexo-deployer-git&quot;: &quot;^1.0.0&quot;, &#x2F;* Git 部署工具 *&#x2F;</span><br><span class="line">    &quot;hexo-douban&quot;: &quot;^1.1.3&quot;, &#x2F;* 豆瓣页面生成 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.5&quot;,</span><br><span class="line">    &quot;hexo-generator-baidu-sitemap&quot;: &quot;^0.1.6&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-feed&quot;: &quot;^1.2.2&quot;, &#x2F;* RSS *&#x2F;</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^0.2.1&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-generator-sitemap&quot;: &quot;^1.2.0&quot;, &#x2F;* 生成 sitemap.xml，利于 SEO *&#x2F;</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.2.0&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-helper-live2d&quot;: &quot;^3.1.1&quot;, &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.3.1&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.3.3&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^0.3.3&quot;, &#x2F;* 默认安装 *&#x2F;</span><br><span class="line">    &quot;hexo-symbols-count-time&quot;: &quot;^0.4.4&quot;,</span><br><span class="line">    &quot;hexo-tag-aplayer&quot;: &quot;^3.0.4&quot;, &#x2F;* 音乐播放插件，支持歌词 *&#x2F;</span><br><span class="line">    &quot;hexo-tag-dplayer&quot;: &quot;^0.3.3&quot;, &#x2F;* 视频播放插件，支持弹幕 *&#x2F;</span><br><span class="line">    &quot;hexo-wordcount&quot;: &quot;^6.0.1&quot;, &#x2F;* 字数统计 *&#x2F;</span><br><span class="line">    &quot;live2d-widget-model-koharu&quot;: &quot;^1.0.5&quot; &#x2F;* 看板娘 *&#x2F;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 主题NexT版本 *&#x2F;</span><br><span class="line">NexT.Muse v7.1.0</span><br><span class="line"></span><br><span class="line">&#x2F;* 优化主题NexT的设计版式 *&#x2F;</span><br><span class="line">Muse</span><br></pre></td></tr></table></figure>
-
-<p>样式还是看自己选择吧，我觉得都能设计的挺好看的，主要是看你想呈现出一个怎样的界面出来！</p>
-<h3 id="注意！"><a href="#注意！" class="headerlink" title="注意！"></a>注意！</h3><p>站点配置文件和主题配置文件，名字都叫<code>_config.yml</code>，容易乱，这一点我在其它文章也不止一次的提过了。</p>
-<ul>
-<li>站点配置文件，位于站点文件夹根目录内：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>主题配置文件，位于主题文件夹根目录内：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~&#x2F;blog&#x2F;themes&#x2F;&lt;你的主题&gt;&#x2F;_config.yml</span><br></pre></td></tr></table></figure>
-
-<h2 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h2><h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><p>进入正题啦！由于我以及写过了，不知道为什么这时候有一种偷完懒之后的感觉，真香~😂</p>
-<p>好吧，附上快速访问链接👉<a href="https://blog.52bess.com/hexo.html">Hexo博客搭建</a></p>
-<p>建议大家一定要看一看官方文档哦，毕竟是👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv">官方文档<i class="fa fa-external-link-alt"></i></span></p>
-<p>当然了，你如果对GitHub提供的Pages服务不太满意的话，也可以选择搭建在自己的(Linux)服务器上，只不过会增加些开销！！！</p>
-<h3 id="What-is-GiyHub-Pages"><a href="#What-is-GiyHub-Pages" class="headerlink" title="What is GiyHub Pages?"></a>What is GiyHub Pages?</h3><p>GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。这里附上GitHub Pages的网址👉<span class="exturl" data-url="aHR0cHM6Ly9wYWdlcy5naXRodWIuY29tLw==">你好，世界<i class="fa fa-external-link-alt"></i></span></p>
-<table>
-<thead>
-<tr>
-<th><strong>问题</strong></th>
-<th>解答</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Why is GitHub Pages?</td>
-<td>首先免费，其次省心，最后可以学习使用 GitHub。</td>
-</tr>
-<tr>
-<td>GitHub Pages有使用限制吗？</td>
-<td>GitHub Pages源存储库的建议限制为1GB，每月100G流量，每小时大约能更新10次版本。超出配额后，可能会收到礼貌的邮件</td>
-</tr>
-<tr>
-<td>超出限制的容量、或者是流量怎么办？</td>
-<td>建议平常就使用国内各大云服务提供商，如<span class="exturl" data-url="aHR0cHM6Ly93d3cucWluaXUuY29tL3Byb2R1Y3RzL2tvZG8=">七牛云KODO<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuYWxpeXVuLmNvbS9wcm9kdWN0L29zcw==">阿里云OSS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9wcm9kdWN0L2Nvcw==">腾讯云COS<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vcHJvZHVjdC9ib3MuaHRtbA==">百度云BOS<i class="fa fa-external-link-alt"></i></span>等提供的对象存储上。甚至还可以设置<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vd29yZHBvd2VyLzQ1MjQ3Ni0xLmh0bWw=">镜像回源<i class="fa fa-external-link-alt"></i></span>。</td>
-</tr>
-<tr>
-<td>国内访问速度不行，有必要同时部署在 <span class="exturl" data-url="aHR0cHM6Ly9jb2RpbmcubmV0Lw==">Coding<i class="fa fa-external-link-alt"></i></span>上吗？</td>
-<td>可以，但没必要。我原来是同时部署的，但是经常502，说来也巧，放弃Coding后，再也不502了。但是，Coding是部署在香港的服务器的哦！但是Coding经常被上有服务上暂停服务。。。</td>
-</tr>
-<tr>
-<td>我可以用自己的域名吗？</td>
-<td>可以，并且支持https。</td>
-</tr>
-<tr>
-<td>可以用作商业用途吗？</td>
-<td>GitHub Pages不适用于或不允许用作免费的网络托管服务来运行您的在线业务，电子商务网站或任何其他主要针对促进商业交易或提供商业软件即服务的网站（SaaS）</td>
-</tr>
-</tbody></table>
-<p>如果你要去七牛云使用对象存储服务的话，不妨使用我的👉<span class="exturl" data-url="aHR0cHM6Ly9wb3J0YWwucWluaXUuY29tL3NpZ251cD9jb2RlPTNsY3FweXJjNGR5NnE=">邀请链接<i class="fa fa-external-link-alt"></i></span>，那样我就会获得5 GB/月 CDN 免费下载流量等奖励👌</p>
-<h3 id="可能遇到的错误"><a href="#可能遇到的错误" class="headerlink" title="可能遇到的错误"></a>可能遇到的错误</h3><p>强制执行GitHub Pages的https，可能会遇到一些混合内容的问题。</p>
-<p>如果您为自己的网站启用了HTTPS，并且您网站的HTML仍然通过HTTP引用了图片，CSS或JavaScript，那么您的网站就会提供混合内容，并且您可能无法加载资源。提供混合内容也会降低您网站的安全性。</p>
-<p>要删除网站的混合内容，提高网站的安全性，并解决与加载混合内容相关的问题，修改网站的HTML文件并进行更改<code>http://</code>，<code>https://</code>以便通过HTTPS提供所有资源。</p>
-<p>更多详情👉<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmdpdGh1Yi5jb20vZW4vYXJ0aWNsZXMvc2VjdXJpbmcteW91ci1naXRodWItcGFnZXMtc2l0ZS13aXRoLWh0dHBzI3Jlc29sdmluZy1wcm9ibGVtcy13aXRoLW1peGVkLWNvbnRlbnQ=">入口<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>默认的主题感觉不是很好看的样子，但是别的主题就不一样啦！😁我选的是<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lpc3NuYW4vaGV4by10aGVtZS1uZXh0">NexT主题<i class="fa fa-external-link-alt"></i></span>，简洁美观、功能也算完善。这里附上官方的👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3RoZW1lcy8=">主题库链接<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="站点文件配置"><a href="#站点文件配置" class="headerlink" title="站点文件配置"></a>站点文件配置</h3><p>可以先去看看👉<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbi5odG1s">官方文档<i class="fa fa-external-link-alt"></i></span>是怎么介绍的，然后可以参考参考我的👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuNTJiZXNzLmNvbS96aGFuZGlhbi5odG1s">站点文件基本配置<i class="fa fa-external-link-alt"></i></span>，需要更多的操作，可以自己去Google看看呢！</p>
-<h3 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h3><p>没错，还是建议你先看NexT主题的👉<span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lmlpc3NuYW4uY29tLw==">官方文档<i class="fa fa-external-link-alt"></i></span>，一定要养成这个好习惯！啥都不说了，把我的贴出来大家参考吧！</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Theme Core Configuration Settings</span><br><span class="line"># See: https:&#x2F;&#x2F;theme-next.org&#x2F;docs&#x2F;theme-settings&#x2F;</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># 更新相关，参考：</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&#x2F;issues&#x2F;328</span><br><span class="line">override: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Site Information Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 站点图标直接去 https:&#x2F;&#x2F;realfavicongenerator.net 下载</span><br><span class="line"># 建议放在 hexo-site&#x2F;source&#x2F;images&#x2F; 里（没有自己建）</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon-16x16-dog.png</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon-32x32-dog.png</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;logo.svg</span><br><span class="line"># 修改图片名字保持一致即可！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rss: &#x2F;atom.xml</span><br><span class="line"></span><br><span class="line">footer:		# 页脚配置</span><br><span class="line">  since: 2018   # 这里填入你的建站年份</span><br><span class="line"></span><br><span class="line">  icon:</span><br><span class="line">    # 年份后面的图标，为 Font Awesome 图标</span><br><span class="line">	# 去挑一个吧！ https:&#x2F;&#x2F;fontawesome.com&#x2F;v4.7.0&#x2F;</span><br><span class="line">    name: fas fa-heartbeat	  # 图标名字</span><br><span class="line">    animated: true		  # 让你的图标跳动起来！</span><br><span class="line">    color: &quot;#ff0000&quot;      #看到我博客页脚的跳动着的红色爱心了吗？</span><br><span class="line">  copyright:</span><br><span class="line">  # -------------------------------------------------------------</span><br><span class="line">  powered:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 你不想页脚显示 由 Hexo 强力驱动 v3.8.0，可以关闭！</span><br><span class="line">  theme:</span><br><span class="line">    enable: true</span><br><span class="line">    version: true</span><br><span class="line">    # 同理，你不想页脚显示 主题 – NexT.Muse v7.1.0，可以关闭！</span><br><span class="line">    </span><br><span class="line">    beian:</span><br><span class="line">    enable: false</span><br><span class="line">    icp: </span><br><span class="line">    # 同理，如果你有备案信息，也可以放在这里</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># SEO Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">canonical: true</span><br><span class="line"></span><br><span class="line">seo: false</span><br><span class="line"></span><br><span class="line"># If true, will add site-subtitle to index page, added in main hexo config.</span><br><span class="line"># subtitle: Subtitle</span><br><span class="line">index_with_subtitle: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Menu Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 菜单设置 || 菜单图标设置（图标上面说了，不重复）</span><br><span class="line"># 项目换行可以更改显示顺序</span><br><span class="line"># 如果这个项前会显示 .menu</span><br><span class="line"># 解决方法：编辑 ~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;languages 下的相应文件</span><br><span class="line"># 比如添加一个「留言」菜单，站点配置文件的 language 是 zh-CN</span><br><span class="line"># 则编辑 zh-CN.yml，在 menu: 项内添加一行 留言: 留言</span><br><span class="line"># 注意空格，且符号 : 为英文字符！</span><br><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  books: &#x2F;books&#x2F; || book  </span><br><span class="line">  movies: &#x2F;movies&#x2F; || video-camera  </span><br><span class="line">  games: &#x2F;games&#x2F; || gamepad</span><br><span class="line"></span><br><span class="line"># Enable&#x2F;Disable menu icons.</span><br><span class="line"># 是否开启菜单图标</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 设计板式，都长啥样，去 README 里面的链接里看看</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next#live-preview</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">site_state: true</span><br><span class="line"></span><br><span class="line"># 侧栏社交链接设置，与上面菜单差不多，要生效记得把前面的 # 去掉</span><br><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;besscroft || github</span><br><span class="line">  E-Mail: mailto:631908942@gmail.com || envelope</span><br><span class="line">  </span><br><span class="line"># 侧栏社交链接图标设置</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  icons_only: false</span><br><span class="line">  transition: false</span><br><span class="line">  </span><br><span class="line"># 侧栏友链设置</span><br><span class="line">links_icon: globe</span><br><span class="line">links_title: 友♂链</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">  关于此博客: https:&#x2F;&#x2F;blog.52bess.com&#x2F;about&#x2F;</span><br><span class="line">  </span><br><span class="line">avatar:</span><br><span class="line"> # 侧栏头像设置</span><br><span class="line">  url: https:&#x2F;&#x2F;*****.com&#x2F;avatar.png</span><br><span class="line">  rounded: false</span><br><span class="line">  opacity: 1</span><br><span class="line">  rotated: false</span><br><span class="line">  </span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  number: true</span><br><span class="line"></span><br><span class="line">  wrap: false</span><br><span class="line"># 开启后可能要在 custom.styl 里加代码</span><br><span class="line">  max_depth: 6</span><br><span class="line">  </span><br><span class="line">sidebar:</span><br><span class="line">  # 侧栏的位置，left或right</span><br><span class="line">  position: left</span><br><span class="line">  </span><br><span class="line">  display: post   # 样式我的是默认的post</span><br><span class="line">  # 只对 Pisces 和 Gemini 设计版式有效！</span><br><span class="line">  offset: 12</span><br><span class="line">  # 只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  onmobile: false</span><br><span class="line">  # 移动端显示侧栏，只对 Muse 和 Mist 设计版式有效！</span><br><span class="line">  dimmer: false</span><br><span class="line"></span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Post Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 点击 [Read More]，页面自动滚动到 &lt;!-- more --&gt; 标记处</span><br><span class="line">scroll_to_more: false</span><br><span class="line"></span><br><span class="line"># 用 cookies 保存浏览的位置信息，意味着重新打开这个页面后</span><br><span class="line"># 页面就会自动滚动到上次的位置，除非读者清理浏览器 cookies</span><br><span class="line">save_scroll: false</span><br><span class="line"></span><br><span class="line"># 将每篇文章 Front-matter 里 description 的文字作为页面显示的文章摘要</span><br><span class="line">excerpt_description: false</span><br><span class="line"></span><br><span class="line"># 按字数自动加入 [Read More]，不建议！</span><br><span class="line"># 建议在文章中加入 &lt;!-- more --&gt;</span><br><span class="line"># 自定义 [Read More] 按钮之前要显示的内容！</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line"># 文章顶部显示的文章元数据设置</span><br><span class="line">post_meta:</span><br><span class="line">  item_text: true # 显示文字说明</span><br><span class="line">  created_at: true # 显示文章创建时间</span><br><span class="line">  updated_at:</span><br><span class="line">    enable: true # 隐藏文章修改时间</span><br><span class="line">    another_day: true # 只有当修改时间和创建时间不是同一天的时候才显示</span><br><span class="line">  categories: true # 隐藏分类信息</span><br><span class="line"></span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;willin&#x2F;hexo-wordcount</span><br><span class="line"># 显示统计字数和估计阅读时长</span><br><span class="line"># 注意：这个要安装插件，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-wordcount --save</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line"></span><br><span class="line"># Wechat Subscriber</span><br><span class="line">wechat_subscriber:</span><br><span class="line">  enable: true</span><br><span class="line">  qcode: &#x2F;uploads&#x2F;wechat-qcode.jpg</span><br><span class="line">  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</span><br><span class="line">  </span><br><span class="line"># Reward</span><br><span class="line">reward:</span><br><span class="line">  wechatpay: &#x2F;images&#x2F;wechatpay.jpg</span><br><span class="line">  </span><br><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  # enable: false</span><br><span class="line">  # license: CC BY-NC-SA 3.0</span><br><span class="line">  # license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br><span class="line">  # 版权信息</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Misc Theme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 移动端把页面两边留白去除</span><br><span class="line"># Reduce padding &#x2F; margin indents on devices with narrow width.</span><br><span class="line">mobile_layout_economy: false</span><br><span class="line"></span><br><span class="line"># Android 上 Chrome 浏览器顶部颜色设置</span><br><span class="line">android_chrome_color: &quot;#222&quot;</span><br><span class="line"># Android 端 QQ浏览器，很多配置都无法显示出来。。。</span><br><span class="line"></span><br><span class="line"># Custom Logo</span><br><span class="line"># Do not support Scheme Mist currently.</span><br><span class="line">custom_logo:</span><br><span class="line">  enable: false</span><br><span class="line">  image: #&#x2F;uploads&#x2F;custom-logo.jpg</span><br><span class="line">  </span><br><span class="line"># Available value:</span><br><span class="line">#    normal | night | night eighties | night blue | night bright</span><br><span class="line"># https:&#x2F;&#x2F;github.com&#x2F;chriskempson&#x2F;tomorrow-theme</span><br><span class="line"># 代码高亮主题设置</span><br><span class="line"># 都长啥样自己点开上面的链接查看</span><br><span class="line">highlight_theme: normal</span><br><span class="line"></span><br><span class="line"># 字体设置</span><br><span class="line">font:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # 外链字体库地址，例如 &#x2F;&#x2F;fonts.googleapis.com (默认值)</span><br><span class="line">  host: https:&#x2F;&#x2F;fonts.loli.net</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements in &lt;body&gt;.</span><br><span class="line">  global:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for Headlines (H1, H2, H3, H4, H5, H6).</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  headings:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  posts:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line"></span><br><span class="line">  # Font settings for Logo.</span><br><span class="line">  # Fallback to &#96;global&#96; font settings.</span><br><span class="line">  logo:</span><br><span class="line">    external: true</span><br><span class="line">    family: Noto Serif SC</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for &lt;code&gt; and code blocks.</span><br><span class="line">  codes:</span><br><span class="line">    external: true</span><br><span class="line">    family:</span><br><span class="line">    size:</span><br><span class="line">    </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Third Party Services Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Math Equations Render Support</span><br><span class="line">math:</span><br><span class="line">  enable: false</span><br><span class="line">  per_page: true</span><br><span class="line"></span><br><span class="line">  engine: mathjax</span><br><span class="line">  #engine: katex</span><br><span class="line"></span><br><span class="line">  mathjax:</span><br><span class="line">    cdn: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@2.7.1&#x2F;MathJax.js?config&#x3D;TeX-AMS-MML_HTMLorMML</span><br><span class="line"> # 这一大串都是默认的，还有一些不列举了，感觉会水贴</span><br><span class="line"> </span><br><span class="line"># Han Support docs: https:&#x2F;&#x2F;hanzi.pro&#x2F;</span><br><span class="line"># 汉字标准格式，没用过暂时不了解</span><br><span class="line">han: false</span><br><span class="line"></span><br><span class="line"># 评论系统，当然id和key我就不提供了，这个可以自己去注册</span><br><span class="line"># leancloud网址：https:&#x2F;&#x2F;leancloud.cn&#x2F;dashboard&#x2F;login.html#&#x2F;signup</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否开启</span><br><span class="line">  appid:  # 你的leancloud应用appid</span><br><span class="line">  appkey:  # 你的leancloud应用appkey</span><br><span class="line">  notify: false # mail notifier, See: https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: true </span><br><span class="line">  placeholder: 说点儿什么吧o(*￣▽￣*)o </span><br><span class="line">  avatar: mm </span><br><span class="line">  guest_info: nick,mail,link r</span><br><span class="line">  pageSize: 10 </span><br><span class="line">  visitor: false </span><br><span class="line">  comment_count: true </span><br><span class="line"></span><br><span class="line"># 不蒜子统计，用于在页脚显示总访客数和总浏览量，将 false 改为 true 就能直接使用</span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br><span class="line"></span><br><span class="line"># 要安装插件才能使用，先进入站点文件夹根目录</span><br><span class="line"># 然后：npm install hexo-generator-searchdb --save</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: false</span><br><span class="line">  </span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Tags Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 主题的标签样式，有 simple、note、label、tabs 四种</span><br><span class="line">note:</span><br><span class="line">  style: simple</span><br><span class="line">  icons: false</span><br><span class="line">  border_radius: 3</span><br><span class="line">  light_bg_offset: 0</span><br><span class="line">  </span><br><span class="line"># 标签</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: false</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br><span class="line">  </span><br><span class="line"># Use velocity to animate everything.</span><br><span class="line">motion:</span><br><span class="line">  enable: true</span><br><span class="line">  async: false</span><br><span class="line">  transition:</span><br><span class="line">    post_block: fadeIn</span><br><span class="line">    post_header: slideDownIn</span><br><span class="line">    post_body: slideDownIn</span><br><span class="line">    coll_header: slideLeftIn</span><br><span class="line">    sidebar: slideUpIn</span><br><span class="line"></span><br><span class="line"># 动态背景，但是我觉得放一张好看的图片更好</span><br><span class="line">canvas_nest:</span><br><span class="line">  enable: false</span><br><span class="line">  onmobile: true # display on mobile or not</span><br><span class="line">  color: &#39;0,0,255&#39; # RGB values, use &#39;,&#39; to separate</span><br><span class="line">  opacity: 0.5 # the opacity of line: 0~1</span><br><span class="line">  zIndex: -1 # z-index property of the background</span><br><span class="line">  count: 99 # the number of lines</span><br><span class="line"># JavaScript 3D library.</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-three</span><br><span class="line"># three_waves</span><br><span class="line">three_waves: false</span><br><span class="line"># canvas_lines</span><br><span class="line">canvas_lines: false</span><br><span class="line"># canvas_sphere</span><br><span class="line">canvas_sphere: false</span><br><span class="line"></span><br><span class="line">vendors:</span><br><span class="line">  # Internal path prefix. Please do not edit it.</span><br><span class="line">  _internal: lib</span><br><span class="line">  # 这个下面的东西就不贴出来了，建议大家按需使用，同时找一个好一点的CDN，不然速度感人啊！！！</span><br><span class="line">  </span><br><span class="line"># Assets</span><br><span class="line">css: css</span><br><span class="line">js: js</span><br><span class="line">images: images</span><br><span class="line"></span><br><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: </span><br><span class="line"></span><br><span class="line">nav:</span><br><span class="line">  home: &#x2F;</span><br><span class="line">  about: &#x2F;about</span><br><span class="line">  tags: &#x2F;tags</span><br><span class="line">  categories: &#x2F;categories</span><br><span class="line"></span><br><span class="line">cache:</span><br><span class="line">  enable: true</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># window woblle</span><br><span class="line">wobble:</span><br><span class="line">  enable: true  # 是否开启边缘波动效果</span><br><span class="line">  radius: 50  # 波动半径</span><br><span class="line">  sidebar: true  # 开启侧边栏边缘摆动</span><br><span class="line">  header: true  # 开启头部边缘摆动</span><br><span class="line">  footer: true  # 开启脚部边缘摆动</span><br><span class="line">  </span><br><span class="line">fireworks: true</span><br><span class="line"></span><br><span class="line"># typing effect</span><br><span class="line">typing_effect:</span><br><span class="line">  colorful: true  # 礼花特效</span><br><span class="line">  shake: false  # 震动特效</span><br><span class="line">  </span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: false</span><br><span class="line">  </span><br><span class="line"># Theme version</span><br><span class="line">version: 7.1.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="自定义网页布局"><a href="#自定义网页布局" class="headerlink" title="自定义网页布局"></a>自定义网页布局</h2><p>我觉得这个对于学过前端三🗡客的同学们来说还是比较简单的，不做多解释。但是对于没学的同学，强烈建议去看看这篇大佬的文章👉<span class="exturl" data-url="aHR0cHM6Ly93d3cuY2R1eXpoLmNvbS9oZXhvLXNldHRpbmdzLTMv">这里<i class="fa fa-external-link-alt"></i></span>，看完之后，你基本就明白在哪个文件修改了，一些基本的步骤也能掌握！</p>
-<p>主要是修改<code>/blog/themes/next/source/css/_custom/custom.styl</code>，那么数据去哪里找呢？当然是浏览器按F12进行调试啊。如果是计算机专业，期末做过作品的你，没少受过折磨吧？</p>
-<p><code>hexo s</code>后可以直接本地调试，也就是更改文件保存后，Hexo 后台会自动重新渲染文件，所以只要稍等片刻，浏览器刷新一下就能看到效果。</p>
-<p>我建议你使用Google浏览器进行调试，可以先看看，嗯~ o(<em>￣▽￣</em>)o，没错👉<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy8=">Google 开发者工具<i class="fa fa-external-link-alt"></i></span>，记得给文档5颗星星支持一下下！</p>
-<h2 id="自定义鼠标点击效果"><a href="#自定义鼠标点击效果" class="headerlink" title="自定义鼠标点击效果"></a>自定义鼠标点击效果</h2><h3 id="爱心效果"><a href="#爱心效果" class="headerlink" title="爱心效果"></a>爱心效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>clicklove.js</code>，并添加如下代码</p>
-<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/clicklove.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a>代码过长，在文章里面不太好排版，毕竟不是IDE，所以点击之后复制即可！</p>
-<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小心心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="字体效果"><a href="#字体效果" class="headerlink" title="字体效果"></a>字体效果</h3><p>嗯，我们以社会主义核心价值观为例，当然，实际的使用场景，也可以改成别的。</p>
-<p>在<code>/themes/next/source/js/src</code>新建文件<code>click_show_text.js</code>，并添加如下代码</p>
-<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/click_show_text.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
-<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--单击显示文字--&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;click_show_text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="烟花爆炸效果"><a href="#烟花爆炸效果" class="headerlink" title="烟花爆炸效果"></a>烟花爆炸效果</h3><p>在<code>/themes/next/source/js/src</code>新建文件<code>fireworks.js</code>，并添加如下代码</p>
-<p><a id="download" href="https://cdn.jsdelivr.net/gh/besscroft/cdn/js/fireworks.js" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Download Now</span><br></a></p>
-<p>然后在<code>/themes/next/layout/_layout.swig</code>中添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">&lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加文章结束语"><a href="#添加文章结束语" class="headerlink" title="添加文章结束语"></a>添加文章结束语</h2><p>在<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件，添加代码至该文件中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class&#x3D;&quot;fa fa-paw&quot;&gt;&lt;&#x2F;i&gt;感谢您的阅读-------------&lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>大小自己看着调整，毕竟每个人喜欢的不一样。</p>
-<p>打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code>后，<code>post-footer</code>前，添加下面内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include &#39;passage-end-tag.swig&#39; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>打开主题配置文件<code>_config.yml</code>,在末尾添加：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置文章背景"><a href="#设置文章背景" class="headerlink" title="设置文章背景"></a>设置文章背景</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*设置博文背景*&#x2F;</span><br><span class="line">.main-inner &#123;</span><br><span class="line">    background: #fff;</span><br><span class="line">    opacity: 0.9;</span><br></pre></td></tr></table></figure>
-
-<p>background后为rgb颜色代码，百度来一个rgb色值粘贴即可替换博文背景颜色（替换了也很丑）<br>opacity后数值为博文背景透明度，可设置0.0-1.0数值，值越小透明度越高。</p>
-<h2 id="为主页文章添加阴影效果"><a href="#为主页文章添加阴影效果" class="headerlink" title="为主页文章添加阴影效果"></a>为主页文章添加阴影效果</h2><p>在\themes\next\source\css\_custom\custom.styl文件内增添如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 主页文章添加阴影效果</span><br><span class="line">.post &#123;</span><br><span class="line">  background: #fff;</span><br><span class="line">  opacity: 1;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>background和上面设置文章背景一样，为文章背景颜色；opacity透明度；margin-top上边距；margin-bottom下边距；padding框间距；webkit-box-shadow和moz-box-shadow为阴影长宽设置。</p>
-<h2 id="后续更新中。。。"><a href="#后续更新中。。。" class="headerlink" title="后续更新中。。。"></a>后续更新中。。。</h2><h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>感谢<code>reuixiy</code>大佬的👉<span class="exturl" data-url="aHR0cHM6Ly9yZXVpeGl5LmdpdGh1Yi5pby90ZWNobm9sb2d5L2NvbXB1dGVyL2NvbXB1dGVyLWFpZGVkLWFydC8yMDE3LzA2LzA5L2hleG8tbmV4dC1vcHRpbWl6YXRpb24uaHRtbA==">这篇文章<i class="fa fa-external-link-alt"></i></span>，在此基础上完善了一些，也删除了一些，毕竟版本也有些许区别了。学习到了很多，同时结合我自己的思路写了这篇文章！</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>个性</tag>
       </tags>
   </entry>
 </search>
