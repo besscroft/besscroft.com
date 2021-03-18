@@ -191,9 +191,9 @@
       <category term="Blog" scheme="https://blog.52bess.com/categories/Blog/"/>
     
     
-      <category term="Blog" scheme="https://blog.52bess.com/tags/Blog/"/>
-    
       <category term="Hexo" scheme="https://blog.52bess.com/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="https://blog.52bess.com/tags/Blog/"/>
     
       <category term="NexT" scheme="https://blog.52bess.com/tags/NexT/"/>
     
@@ -280,13 +280,13 @@
       <category term="Linux" scheme="https://blog.52bess.com/categories/Linux/"/>
     
     
+      <category term="Linux" scheme="https://blog.52bess.com/tags/Linux/"/>
+    
       <category term="虚拟机" scheme="https://blog.52bess.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
       <category term="ArchLinux" scheme="https://blog.52bess.com/tags/ArchLinux/"/>
     
       <category term="UEFI启动" scheme="https://blog.52bess.com/tags/UEFI%E5%90%AF%E5%8A%A8/"/>
-    
-      <category term="Linux" scheme="https://blog.52bess.com/tags/Linux/"/>
     
   </entry>
   
@@ -314,11 +314,11 @@
       <category term="GitHub" scheme="https://blog.52bess.com/categories/GitHub/"/>
     
     
-      <category term="GPG" scheme="https://blog.52bess.com/tags/GPG/"/>
+      <category term="Git" scheme="https://blog.52bess.com/tags/Git/"/>
     
       <category term="GitHub" scheme="https://blog.52bess.com/tags/GitHub/"/>
     
-      <category term="Git" scheme="https://blog.52bess.com/tags/Git/"/>
+      <category term="GPG" scheme="https://blog.52bess.com/tags/GPG/"/>
     
   </entry>
   
