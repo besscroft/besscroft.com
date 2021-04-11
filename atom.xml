@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-04-11T17:25:32&#43;08:00</updated>
+    <updated>2021-04-11T17:42:03&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -1114,7 +1114,7 @@ public class Hello{
             <title type="text">我和我的博客的过去、现在与未来</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/life/newblog/" />
             <id>https://blog.besscroft.com/life/newblog/</id>
-            <updated>2021-04-11T13:25:27&#43;08:00</updated>
+            <updated>2021-04-11T17:41:54&#43;08:00</updated>
             <published>2020-04-30T15:17:13&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -1134,9 +1134,9 @@ public class Hello{
 &lt;p&gt;来聊聊这次重构博客吧，我并不是在原来的基础上更改的，而是去下了最新的Hexo和NexT主题，在本地从零开始边预览边魔改的，目前用的是7.8.0版本。用&lt;code&gt;chrome&lt;/code&gt; + &lt;code&gt;git bash&lt;/code&gt; + &lt;code&gt;VS Code&lt;/code&gt;，慢慢的修改，经历了无数次的报错之后，终于搞定，chrome起到的最大的作用还不是预览网页，而是用搜索引擎排错🤣。我基本上删除了主题中所有我很难用的上的代码和插件，最大程度的减少多余的代码带来的文件大小过大的问题。NexT主题长时间不更新的话，它的源码也会改动特别大，需要重新看一遍才行。新版本中，会删掉一些模块，但是其中一些东西自己很喜欢怎么办？直接去GitHub上面的&lt;a href=&#34;https://github.com/theme-next/hexo-theme-next&#34;&gt;NexT的repo&lt;/a&gt;，查看commits的提交记录，并对照着自己修改代码即可！因为像这样的开源主题，是需要照顾到很多人的，如果只是自己单一的需求，自己添加代码就好啦！😅然后把博客内的颜色、样式等，全部改成了自己比较喜欢的风格。修改了部分模块的逻辑，以及修改了部分页面的布局等。&lt;/p&gt;
 &lt;p&gt;可以简单看下前后的区别，我只截图了首页的头部的一小块部分，如果之前来访过的小伙伴，应该是能看到整站的大改的，后期考虑下做个以前的镜像。如果还留着我发的软件的小伙伴，直接在电脑上打开软件，就能第一时间看到啦！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;重构前&lt;/strong&gt;:
-&lt;img src=&#34;https://blog.besscroft.com/images/tech/newblog/newblog01.png&#34; /&gt;
+&lt;img src=&#34;https://blog.besscroft.com/images/life/newblog/newblog01.png&#34; /&gt;
 &lt;strong&gt;重构后:&lt;/strong&gt;
-&lt;img src=&#34;https://blog.besscroft.com/images/tech/newblog/newblog02.png&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.besscroft.com/images/life/newblog/newblog02.png&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;未来&#34;&gt;未来&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;我为什么要写博客？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;其实也不仅仅只是博客，可以有学习笔记、日记等更多的东西，这里用博客统称。&lt;/p&gt;
