@@ -23,10 +23,66 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 12 Apr 2021 10:42:17 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 13 Apr 2021 14:01:24 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
+        
+            <item>
+                <title>第一次加班</title>
+                <link>https://blog.besscroft.com/life/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8A%A0%E7%8F%AD/</link>
+                <guid isPermaLink="true">https://blog.besscroft.com/life/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8A%A0%E7%8F%AD/</guid>
+                <pubDate>Tue, 13 Apr 2021 13:56:13 &#43;0800</pubDate>
+                
+                    <author>besscroft@foxmail.com (Bess Croft)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;4月7号，经历了人生中第一次加班，晚上11点钟才到家。身心疲惫，感触也挺多的。。。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;996工作制&lt;/code&gt;最致命的点在于——剥夺了你的业余时间。因此也就剥夺了你通过业余时间进行自学的机会。如果你难以进行自学，也就难以提升自身能力；如果你无法提升自身能力，你就无法提升自己的&lt;code&gt;议价能力&lt;/code&gt;；在缺乏议价能力的情况下，你就只好默默忍受这种工作制的压榨。
+跳出问题的关键，在于&lt;code&gt;时间突破口&lt;/code&gt;和&lt;code&gt;“坚持&lt;/code&gt;，每天挤出一定量的时间。即使是一点微弱的时间，只要这个习惯长期保持，&lt;code&gt;累积效应&lt;/code&gt;也将非常惊人。当然，如果你的工作不是你的兴趣所在，长时间加班之后，回到家里，你很难再有动力去学习其它新技能。
+最后，最可靠的东西，永远是自己的能力（&lt;code&gt;核心竞争力&lt;/code&gt;）。提高核心竞争力来提升你的议价能力，在获得同等报酬的情况下，降低工作强度，获取更多的学习时间。&lt;/p&gt;
+&lt;p hidden&gt;但愿我的努力能够得到回报，如果我追到你了，我会努力让你过上更好的生活！&lt;/p&gt;</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://blog.besscroft.com/life/">life\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/tags/%E5%8A%A0%E7%8F%AD/">加班</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>网站和服务器速度优化</title>
@@ -1158,7 +1214,7 @@ public class Hello{
                                 
                                 
                                 
-                                    <category domain="https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                    <category domain="https://blog.besscroft.com/categories/%E7%94%9F%E6%B4%BB/">生活</category>
                                 
                             
                         
