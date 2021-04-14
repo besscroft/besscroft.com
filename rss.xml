@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 14 Apr 2021 15:38:39 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 14 Apr 2021 16:24:47 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
@@ -44,7 +44,7 @@
 &lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/newblog/newblog02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;新的Hugo博客&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/%E7%AB%99%E7%82%B9%E8%BF%81%E7%A7%BB/zd001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;首先，不可否认的是，外观上的变化是很大的。主题我采用的是&lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme&#34;&gt;MemE&lt;/a&gt;，并在此基础上进行了一点点魔改，加入了我自己需要的功能，同时调整了一些样式。原先用Hexo，至少有2年了吧，说实话，有不少让人头疼的事情。比如说一个好好的插件，可能哪天就突然不兼容了，要么就是天天炸依赖，每次build的时间，也是越来越长，一度到达一分钟（虽然跟博客的东西太多离不开B😅&lt;/p&gt;
+&lt;p&gt;首先，不可否认的是，外观上的变化是很大的。主题我采用的是&lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme&#34;&gt;MemE&lt;/a&gt;，并在此基础上进行了一点点魔改，加入了我自己需要的功能，同时调整了一些样式。原先用Hexo，至少有2年了吧，说实话，有不少让人头疼的事情。比如说一个好好的插件，可能哪天就突然不兼容了，要么就是天天炸依赖，每次build的时间，也是越来越长，一度到达一分钟（虽然跟博客的东西太多离不开😅&lt;/p&gt;
 &lt;p&gt;当我把所有的内容全部迁移到Hugo之后，每次构建的时间不到一秒钟，当时就想着，再也不用Hexo了，虽然Hexo的生态挺好的。如果你在这之前来过我的博客，你可能会发现差别还是比较大的。比如视频播放替换成了资源占用更少的原生，取消了网站实时客服，甚至取消了看板娘，，，（有空还是会加个好看的看板娘上来的，在不影响整体阅读的情况下。&lt;/p&gt;
 &lt;p&gt;博客的友链页面对比之前做了修改，相册页面也是，然后取消了豆瓣的三个页面（感觉没什么用）。字体依旧沿用适合阅读的&lt;code&gt;思源宋体&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;个人云服务升级&#34;&gt;个人云服务升级&lt;/h3&gt;
