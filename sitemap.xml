@@ -3,13 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.besscroft.com/categories/</loc>
-    <lastmod>2021-04-15T17:41:38+08:00</lastmod>
+    <lastmod>2021-04-18T21:27:24+08:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://blog.besscroft.com/life/</loc>
-    <lastmod>2021-04-15T17:41:38+08:00</lastmod>
+    <loc>https://blog.besscroft.com/tags/docker/</loc>
+    <lastmod>2021-04-18T21:27:24+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tags/linux/</loc>
+    <lastmod>2021-04-18T21:27:24+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/</loc>
+    <lastmod>2021-04-18T21:27:24+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tech/</loc>
+    <lastmod>2021-04-18T21:27:24+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tech/docker%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-04-18T21:27:24+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-04-18T21:27:24+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/</loc>
+    <lastmod>2021-04-18T21:34:18+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/life/</loc>
     <lastmod>2021-04-15T17:41:38+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/%E6%97%B6%E9%97%B4%E4%B8%8E%E4%BA%BA%E7%94%9F/</loc>
@@ -21,22 +39,13 @@
     <loc>https://blog.besscroft.com/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2021-04-15T17:41:38+08:00</lastmod>
   </url><url>
-    <loc>https://blog.besscroft.com/</loc>
-    <lastmod>2021-04-15T17:41:38+08:00</lastmod>
-  </url><url>
     <loc>https://blog.besscroft.com/tags/hugo/</loc>
-    <lastmod>2021-04-14T16:24:38+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/tech/</loc>
     <lastmod>2021-04-14T16:24:38+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tech/%E7%AB%99%E7%82%B9%E8%BF%81%E7%A7%BB/</loc>
     <lastmod>2021-04-14T16:24:38+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-04-14T16:24:38+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-04-14T16:24:38+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/%E5%8A%A0%E7%8F%AD/</loc>
@@ -46,7 +55,7 @@
     <lastmod>2021-04-13T14:01:10+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/photos/</loc>
-    <lastmod>2021-04-11T16:40:28+08:00</lastmod>
+    <lastmod>2021-04-18T21:34:18+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/friend/</loc>
     <lastmod>2021-04-11T14:49:19+08:00</lastmod>
@@ -101,9 +110,6 @@
   </url><url>
     <loc>https://blog.besscroft.com/tech/vue-add-tagsview/</loc>
     <lastmod>2021-04-11T13:22:57+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/tags/linux/</loc>
-    <lastmod>2021-04-11T13:22:27+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tech/lighthouse/</loc>
     <lastmod>2021-04-11T13:20:57+08:00</lastmod>
