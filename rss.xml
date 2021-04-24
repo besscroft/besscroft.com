@@ -23,10 +23,133 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 24 Apr 2021 12:40:30 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 24 Apr 2021 18:45:49 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
+        
+            <item>
+                <title>学习与人生——利用GitHub学习</title>
+                <link>https://blog.besscroft.com/life/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F%E5%88%A9%E7%94%A8github%E5%AD%A6%E4%B9%A0/</link>
+                <guid isPermaLink="true">https://blog.besscroft.com/life/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F%E5%88%A9%E7%94%A8github%E5%AD%A6%E4%B9%A0/</guid>
+                <pubDate>Sat, 24 Apr 2021 16:20:52 &#43;0800</pubDate>
+                
+                    <author>besscroft@foxmail.com (Bess Croft)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;blockquote class=&#34;quote-center&#34;&gt;
+        &lt;p&gt;判断一个人是否具备“换位思考”的能力有一个好方法，那就是看他怎样向没有技术背景的人解释技术问题。
+——《黑客与画家》保罗·格雷厄姆&lt;/p&gt;&lt;/blockquote&gt; 
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;从第一次注册 GitHub 账号开始使用，到写下这篇文章，应该有4年了吧。从最开始的查阅资料，慢慢也用的多了起来，现在 GitHub 几乎是我每天必去的网站之一。当然，它也可以帮你完成很多事，不仅仅是功能强大。&lt;/p&gt;
+&lt;h2 id=&#34;学习思路&#34;&gt;学习思路&lt;/h2&gt;
+&lt;p&gt;先来看看我画的一个简易的思维导图，列举了8个简单的模块，当然，像什么利用技术作恶、白嫖等，我自然是不会说的，咱们只讲利用 GitHub 进行&lt;code&gt;学习和提升&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F1/xxyrs1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;找demo练手&#34;&gt;找Demo练手&lt;/h3&gt;
+&lt;p&gt;找 Demo 练手，我想这是大多数人最开始接触 GitHub 的原因之一吧。举个简单的例子，比如说我刚学 SpringBoot ，在B站看了几个视频，然后买了几本书速览了一遍，现在想找个东西实践一下怎么办呢？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F1/xxyrs2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这时候我们就可以通过在 GitHub 上搜索，达到我们的目的了。有很多程序员前辈，为我们提供了高质量的 Demo 来练手。你想要什么东西的 Demo ，就搜什么就行了。&lt;/p&gt;
+&lt;h3 id=&#34;搜索技术架构解决方案&#34;&gt;搜索技术架构（解决方案）&lt;/h3&gt;
+&lt;p&gt;这也是一大用途之一，比如说我现在有个需求，需要生成分布式 id 的系统，但是考虑到自己水平设计出的架构肯定不够好，那这种情况下，咱也可以上 GitHub。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F1/xxyrs3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当我们在工作中，碰到了新的需求，我建议你不要一开始就百度，因为这是一个不好的习惯，它反而可能会害了你、误导你。你应当拆分需求，在脑海中自己设计/构建架构，并着手实现它。当然，在有些时候，我们自己并不能完美的解决，毕竟术业有专攻嘛，每个人擅长的和掌握的都不同。这时我们就可以在 GitHub 上找找，有没有合适的解决方案了。至于为什么没有让你一开始就直接去找，因为这个思考的过程对你来说是无价的。&lt;/p&gt;
+&lt;h3 id=&#34;寻找顺手的脚本或工具&#34;&gt;寻找顺手的脚本或工具&lt;/h3&gt;
+&lt;p&gt;虽然不能教白嫖，但是利用脚本帮我们抢东西，还是能说说的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F1/xxyrs4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;比如大伙最熟悉的 12306，不少小伙伴过年过节回家的时候，应该深有体会吧，几乎是一票难求。我的朋友圈，基本上放假前一段时间，几乎每天都会有发朋友圈让帮忙“加速的”。有的时候，真的不如靠自己，就算是抢票平台，也是有优先级的，花了钱的，肯定排在你前面。&lt;/p&gt;
+&lt;p&gt;一些好用的脚本或工具，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;京东茅台秒杀脚本（这个真得魔改，因为太多人用一样的脚本，你没了优势）&lt;/li&gt;
+&lt;li&gt;包括京东之类的各种签到脚本（每天100多京豆，挂着不管就行，挺香的）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/peterq/pan-light&#34;&gt;百度网盘不限速客户端&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist&#34;&gt;我终于能用谷歌搜中文了……&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;至于好用的工具，嗯~ o(&lt;em&gt;￣▽￣&lt;/em&gt;)o，开源的真的一大堆。我个人习惯就是，除非无法替代，否则有开源的，我就一定不会考虑商业软件。&lt;/p&gt;
+&lt;h3 id=&#34;寻找学习资源&#34;&gt;寻找学习资源&lt;/h3&gt;
+&lt;p&gt;这点确实不得不说，挺方便的，有很多资源类仓库和博客类仓库，各种面经、XX天学会XX、计算机电子书仓库，都是不少的。但是我最喜欢看的就是，很多大佬在学完某项技术之后，写的“小册”，因为它不想普通的技术文章那样，“小册”有完整的大纲，思路清晰，甚至还会有周刊。&lt;/p&gt;
+&lt;p&gt;说到这里，还是推荐几个吧：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ascoders/weekly&#34;&gt;前端精读周刊&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/byoungd/English-level-up-tips-for-Chinese&#34;&gt;可能是让你受益匪浅的英语进阶指南&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/unknwon/the-way-to-go_ZH_CN&#34;&gt;Go 入门指南&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/qiurunze123/miaosha&#34;&gt;秒杀系统设计与实现.互联网工程师进阶与分析&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/fuzhengwei/itstack-demo-design&#34;&gt;重学Java设计模式&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/doocs/advanced-java&#34;&gt;互联网 Java 工程师进阶知识完全扫盲&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;查找数据或者爬虫&#34;&gt;查找数据或者爬虫&lt;/h3&gt;
+&lt;p&gt;你甚至能在 GitHub 上，找到几乎所有你听过的平台的爬虫，甚至还有大量的代理池。但是你如果要使用的话，还是要慎重，稍有不慎就要喝茶了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你甚至能在 GitHub 找到各种社工库和网络攻击脚本，但是，我希望你明白什么是违法行为。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;各种练手框架&#34;&gt;各种练手框架&lt;/h3&gt;
+&lt;p&gt;其实准确的说，叫练手项目更好。抱歉，推荐一波自己的项目，虽然还在边学边写：https://github.com/besscroft/aurora-mall&lt;/p&gt;
+&lt;h3 id=&#34;万能的awesome系列&#34;&gt;万能的awesome系列&lt;/h3&gt;
+&lt;p&gt;也就是我们常说的“真棒”系列，但凡任何一门语言，和一些比较好的项目，都会有&lt;code&gt;awesome&lt;/code&gt;系列，直接在 GitHub 搜索框搜索 &lt;code&gt;awesome&lt;/code&gt;即可，也可以搜&lt;code&gt;awesome + 关键字&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;搜索语法&#34;&gt;搜索语法&lt;/h3&gt;
+&lt;p&gt;这个跟搜索引擎语法一样，真的是非常重要的必学内容之一，掌握搜索语法，可以让你在找任何东西时都事半功倍！！！&lt;/p&gt;
+&lt;p&gt;贴上官方文档：&lt;a href=&#34;https://docs.github.com/cn/github/searching-for-information-on-github/understanding-the-search-syntax&#34;&gt;了解搜索语法&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;举个简单的例子：&lt;code&gt;java stars:&amp;gt;1000&lt;/code&gt;，搜索关键字 java ，star数量大于1000的所有仓库。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可选条件：&lt;code&gt;&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;gt;=&lt;/code&gt;、&lt;code&gt;&amp;lt;&lt;/code&gt;、&lt;code&gt;&amp;lt;=&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;可选值：&lt;code&gt;stars&lt;/code&gt;仓库、&lt;code&gt;topics&lt;/code&gt;主题、&lt;code&gt;size&lt;/code&gt;文件大小&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;如果你仅仅认为 GitHub 就只有这些，那就图样图森破了。上面其实也充斥着大量的黑灰产业相关的东西，各种zz内容、色情暴力相关的其实也不少。怎么说呢，&lt;code&gt;科技是一把双刃剑&lt;/code&gt;，但是怎么挥舞这把剑的人却是你自己，切勿在里面迷失了自己。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://blog.besscroft.com/life/">life\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/tags/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F/">学习与人生</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>向着未来而生</title>
