@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-04-23T22:44:01&#43;08:00</updated>
+    <updated>2021-04-24T12:37:53&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -5362,7 +5362,7 @@ permalink_defaults:
             <title type="text">Playing CSO2 on your computer！</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/cso2/" />
             <id>https://blog.besscroft.com/tech/cso2/</id>
-            <updated>2021-04-11T12:09:53&#43;08:00</updated>
+            <updated>2021-04-24T12:37:43&#43;08:00</updated>
             <published>2019-04-03T21:55:50&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -5473,7 +5473,7 @@ npm run start ＃启动新服务器构建
 &lt;p&gt;Counter-Strike Online2的👉&lt;a href=&#34;https://csonline2.net/forum/&#34;&gt;论坛&lt;/a&gt;，感谢！&lt;/p&gt;
 &lt;p&gt;感谢&lt;del&gt;你们&lt;/del&gt;国外大神所做出的努力！&lt;/p&gt;
 &lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
-&lt;iframe width=&#34;680&#34; height=&#34;360&#34; src=&#34;https://www.youtube-nocookie.com/embed/4qsRxFNMuL0&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;680&#34; height=&#34;360&#34; src=&#34;https://www.youtube-nocookie.com/embed/djEXG4_IwCY&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;视频链接👉https://youtu.be/4qsRxFNMuL0&lt;/p&gt;
 &lt;p&gt;有什么问题或建议，欢迎留言或者发邮箱。~~这里没有商业合作，每一个团队需要宣传都欢迎联系我！~~~~感谢无私帮助玩家们的开发者们，你们辛苦了！~~感谢国外的几个大神！&lt;/p&gt;
 </content>
