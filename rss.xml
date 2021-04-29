@@ -23,10 +23,81 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 27 Apr 2021 17:40:50 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 29 Apr 2021 12:30:31 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
+        
+            <item>
+                <title>我的第一个“正式”开源项目</title>
+                <link>https://blog.besscroft.com/tech/first-open-source/</link>
+                <guid isPermaLink="true">https://blog.besscroft.com/tech/first-open-source/</guid>
+                <pubDate>Tue, 27 Apr 2021 13:42:24 &#43;0800</pubDate>
+                
+                    <author>besscroft@foxmail.com (Bess Croft)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;接触编程和开源也有好几年了，不论是自己、和朋友一起写，还是在公司写项目，都积累了不少的经验了。但是我为什么把这个项目叫做&lt;code&gt;我的第一个正式开源项目&lt;/code&gt;呢，因为只有这个项目，才真的是我自己从0开始一步步规划，设计，要一步一步把它做完的。里面有很多概念，新的技术我以前只是听说过，但是都没有深入的学习，正好可以跟着这个项目，边学边做，一步步地提升自己！&lt;/p&gt;
+&lt;h2 id=&#34;项目介绍&#34;&gt;项目介绍&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/besscroft/aurora-mall&#34;&gt;aurora-mall&lt;/a&gt; 是一个基于 Spring Cloud Alibaba + Vue + Element-UI 开发的开源商城项目。&lt;/p&gt;
+&lt;p&gt;文档地址：&lt;a href=&#34;https://mall.doc.besscroft.com/&#34;&gt;https://mall.doc.besscroft.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;预览地址：&lt;a href=&#34;https://mall.aurora.besscroft.com/&#34;&gt;https://mall.aurora.besscroft.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中也用到了一些现在主流的框架/架构：&lt;/p&gt;
+&lt;p&gt;比如说服务注册与发现用到了 &lt;code&gt;nacos&lt;/code&gt; ，声明式服务调用采用的是 &lt;code&gt;OpenFeign&lt;/code&gt; 和 &lt;code&gt;okhttp&lt;/code&gt; 。服务多了，彼此之间调用进行交互，出现了异常我们肯定得想办法快速定位吧？于是也用到了 &lt;code&gt;Spring Boot Actuator&lt;/code&gt; ，可以查看应用配置的详细信息（这个我也是在《Spring Boot 实战》这本书上面学的）。服务间的交互，没有人能保证不出问题，虽然 &lt;code&gt;Ribbon&lt;/code&gt; 可以设置超时，来触发重试机制，但毕竟是和 &lt;code&gt;Hystrix&lt;/code&gt; 有区别的，而 Hystrix 能对延迟和故障提供更强大的容错能力。配置中心，也可以用 nacos 实现。网关则采用了 &lt;code&gt;Spring Cloud Gateway&lt;/code&gt;，我同时也用它来结合 &lt;code&gt;Oauth2&lt;/code&gt; 来处理认证和授权，也实现了白名单机制（以后可能会把白名单改成中间件的形式在系统中启用）。数据库中间件，则是采用了 &lt;code&gt;Redis&lt;/code&gt; ，并且分布式锁也打算交给 redis 来处理。搜索引擎的话，肯定就是 &lt;code&gt;ElasticSearch&lt;/code&gt; 了，消息队列就考虑 &lt;code&gt;rabbitmq&lt;/code&gt; 或者 &lt;code&gt;rocketmq&lt;/code&gt; 。分布式事务暂时考虑的是 &lt;code&gt;Seata&lt;/code&gt; ，&lt;code&gt;Hmily&lt;/code&gt; 等解决方案还不了解，所以学习难度未知。 链路追踪的话，&lt;code&gt;Zipkin&lt;/code&gt; 老熟人了，就你了。分布式id解决方案，尤其是订单id这个玩意儿，最近了解了推特的 &lt;code&gt;Snowflake&lt;/code&gt; 和索尼的 &lt;code&gt;Sonyflake&lt;/code&gt;，很受启发啊！&lt;/p&gt;
+&lt;h2 id=&#34;我的想法&#34;&gt;我的想法&lt;/h2&gt;
+&lt;p&gt;目前项目的第一阶段的设计，我已经全部处理完了。因为是第一次，在一些地方可能设计的不是很好，你通过 commit 其实就能发现，结构和数据库设计，有时候都会做出调整。李智慧前辈，在他的《大型网站技术架构》这本书里面，有句话说的很好：“这个世界没用哪个网站从诞生起就是大型网站；也没有哪个网站第一次发布就拥有庞大的用户，高并发的访问，海量的数据；大型网站都是从小型网站发展而来。网站的价值在于它能为用户提供什么价值，在于网站能做什么，而不在于它是怎么做的，所以在网站还很小的时候就去追求网站的架构是舍本逐末，得不偿失的。小型网站最需要做的就是为用户提供好的服务来创造价值，得到用户的认可，活下去，野蛮生长。”&lt;/p&gt;
+&lt;p&gt;这句话，放到我这里，我其实可以理解成：我做开源本意是为了热爱与学习，做的本就是我喜欢的事情，也能为我自己带来成长与提升，同时能够帮助到他人。所以我在项目一开始设计的时候，也是不可能考虑的特别深入的，但是会随着一个个 commit 慢慢的发展迭代，变成一个好的开源项目。也正是因为如此，在项目中碰到任何问题，我都不是想着别人这样写能跑，我拿过来用就行了。而是要更多地考虑，为什么要这样写？我怎么就没想到？还有没有更好的解决方案？它的原理是什么？也就是这样，我的收获才能够更多吧😄&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;希望我能在编程这条路上一直走下去，虽然工作生活中都会有很多困难，但是这些都无法抵挡我对编程的热爱。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://blog.besscroft.com/tech/">tech\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/tags/%E5%BC%80%E6%BA%90/">开源</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/tags/spring-cloud-alibaba/">Spring Cloud Alibaba</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>学习与人生——利用GitHub学习</title>
