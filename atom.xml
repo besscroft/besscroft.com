@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-05-02T20:47:36&#43;08:00</updated>
+    <updated>2021-05-06T16:13:25&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -16,6 +16,232 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.82.0">Hugo</generator>
+        <entry>
+            <title type="text">超卖和分布式锁解决方案</title>
+            <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/redis-distributed-lock-solution/" />
+            <id>https://blog.besscroft.com/tech/redis-distributed-lock-solution/</id>
+            <updated>2021-05-06T16:12:16&#43;08:00</updated>
+            <published>2021-05-06T16:08:03&#43;08:00</published>
+            <author>
+                    <name>Bess Croft</name>
+                    <uri>https://blog.besscroft.com/</uri>
+                    <email>besscroft@foxmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">超卖和分布式锁解决方案 背景 要说现在在高并发场景中，哪个概念最火，那当属“秒杀”了。那……</summary>
+            
+                <content type="html">&lt;h1 id=&#34;超卖和分布式锁解决方案&#34;&gt;超卖和分布式锁解决方案&lt;/h1&gt;
+&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
+&lt;p&gt;要说现在在高并发场景中，哪个概念最火，那当属“秒杀”了。那么秒杀也是有自己的一些特点的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大量用户同一时间访问，造成瞬时访问量激增。&lt;/li&gt;
+&lt;li&gt;数据库的并发读写激增，导致负载非常高。&lt;/li&gt;
+&lt;li&gt;请求数远大于库存数，只有部分人才能秒杀成功。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然，这篇文章不具体讲秒杀系统的设计了，主要讲一讲在秒杀系统中的一环——Redis分布式锁。虽然商家都希望自己的东西卖的越多越好，但是大多数场景下，秒杀的库存并不是特别多，这时候我们就得避免“超卖”问题的发生了。&lt;/p&gt;
+&lt;h2 id=&#34;下单的流程&#34;&gt;下单的流程&lt;/h2&gt;
+&lt;h3 id=&#34;正常下单的流程&#34;&gt;正常下单的流程&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/redis-distributed-lock-solution/r001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当用户的下单请求到达服务端时，为了防止恶意下单，首先系统中肯定要做风控的。如果说有大量的请求过来，可能需要接口限流。然后创建订单、创建成功后扣除库存。这种方案，算是最常见的解决方案了。而且也能够保证订单不会超卖，因为创建订单之后就减库存，已经封装成了一个原子操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;但是这样也有很明显的缺点：并发高了，操作数据库的次数会增加，对数据库的压力不用想都知道很高。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;预扣库存&#34;&gt;预扣库存&lt;/h3&gt;
+&lt;p&gt;为了避免数据库负载增加太多，我们就可以从减少操作数据库 IO 入手。比如说扣库存这一操作，我们就没必要直接去数据库了，对吗？我们可以把库存缓存到 redis 进行预扣库存。然后通过消息队列来异步生成订单，这样用户等待的速度就会快很多，同时也给数据库减压了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/redis-distributed-lock-solution/r002.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;订单的生成是异步的，咱们一般都会放到 MQ、kafka 这样的即时消费队列中处理，订单量比较少的情况下，生成订单非常快，用户几乎不用排队。而且在电商平台买，订单都会有个超时时间的，时间到了未支付，会自动退单。&lt;/p&gt;
+&lt;h3 id=&#34;单机下扣库存的处理&#34;&gt;单机下扣库存的处理&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/redis-distributed-lock-solution/r003.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上面我们说到了，下单的流程中，是需要保证扣库存和创建订单的原子性的，那么在单机的情况下，就需要用事务来进行处理了。&lt;/p&gt;
+&lt;h3 id=&#34;分布式锁&#34;&gt;分布式锁&lt;/h3&gt;
+&lt;p&gt;秒杀的场景，往往伴随着高并发，但是单机的承载能力并不算很好，而且要考虑到服务的可用性，所以我们可能要上集群。在分布式场景中，我们为了实现不同客户端的线程对代码和资源的同步访问，保证在多线程下处理共享数据的安全性，就需要用到分布式锁技术。本篇文章的主角就来了——Redis分布式锁。&lt;/p&gt;
+&lt;p&gt;记得刚学到Java的锁概念的时候，一个通俗易懂的例子就是：一个进程进入了叫redis的厕所，但是发现坑满了（上锁了），然后就只能放弃上厕所（加锁）或者等一下再看看（重试）🤣&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Redis 分布式锁的三大核心要素就是：加锁、解锁、锁超时。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先，redis 单机和多机实现的锁，是不同的。一些人将单机 Redis 排除了分布式锁的范畴，为了避免争议，这里我也不站边了。就我所了解的，有以下一些方案：&lt;/p&gt;
+&lt;h4 id=&#34;setnx-命令&#34;&gt;SETNX 命令&lt;/h4&gt;
+&lt;p&gt;直接使用 Redis 的 &lt;code&gt;SETNX&lt;/code&gt; 命令，该指令只在 key 不存在的情况下，将 key 的值设置为 value，若 key 已经存在，则 SETNX 命令不做任何动作。key 是锁的唯一标识，可以按照业务需要锁定的资源来命名。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方式比较简单，但也存在弊端，三大核心要素的锁超时给漏了。一旦业务在释放锁之前，出现了问题，就可能导致锁无法释放，从而导致死锁。你可以理解为上厕所时纸掉坑里了，，，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;expire-命令&#34;&gt;EXPIRE 命令&lt;/h4&gt;
+&lt;p&gt;为了防止死锁，我们可以在拿到锁之后，用 &lt;code&gt;EXPIRE&lt;/code&gt; 对 key 设置一个过期时间。这样就能保证在没有显式释放的情况下，防止长时间被独占，因为时间到了锁会自动释放。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没错，即使实现了三大核心要素，依旧存在着一些问题。很明显的，加锁命令和设置超时时间的命令，是非原子性的。也就是说，如果在执行 SETNX 和 EXPIRE 之间发生异常，仍然可能会导致锁的超时。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;使用-set-指令扩展&#34;&gt;使用 SET 指令扩展&lt;/h4&gt;
+&lt;p&gt;为了解决前面出现的原子性问题，我们可以使用 &lt;code&gt;SET&lt;/code&gt; 指令的扩展参数来解决。但是同时引来了一个新的问题：&lt;strong&gt;锁可能被提前释放了&lt;/strong&gt;。我举个例子，线程 A 加锁后，设定的超时时间是 5s ，但是处于某些意外，执行时间为 6s。但是这时候锁已经早就自动释放了，同时被线程 B 给抢占了。但是线程 A 依旧释放了锁，也就导致了&lt;strong&gt;错误释放了锁&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;但是也不是无法解决的，我们可以给每个锁设置一个唯一的标记。别忘了 redis 是 key-value 形式的。我们加锁，是加到 key 上面去了，但是我们同样的可以在 value 上面，设置唯一的标识。然后在释放锁之前验证一下，如果当前锁的 value 和我加上去的 value 一样，那我们就释放。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;又双叒叕新问题了（逐渐暴躁），判断 value 和删除 key 是两个独立的操作，所以肯定无法保证原子性。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;使用-lua-脚本&#34;&gt;使用 lua 脚本&lt;/h4&gt;
+&lt;p&gt;为了保证判断 value 和删除 key 的原子性，我们就需要用到 lua 脚本进行处理了，lua 脚本可以保证连续多个指令的原子性执行。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;redis.call&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;get&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KEYS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ARGV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;redis.call&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;del&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;KEYS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;span class=&#34;kr&#34;&gt;else&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;lua 脚本解决了错误释放锁的问题，但是却依旧没解决提前释放锁的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;redlock&#34;&gt;Redlock&lt;/h4&gt;
+&lt;p&gt;Redlock 本质上是使用 Redis 实现分布式锁的规范算法，它有很多实现，我们常见的 Redisson 就是其中一个。但是 Redlock 争议也是有的，贴几个链接大家自己去看吧：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html&#34;&gt;https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://antirez.com/news/101&#34;&gt;http://antirez.com/news/101&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://redis.io/topics/distlock&#34;&gt;https://redis.io/topics/distlock&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://carlosbecker.com/posts/distributed-locks-redis/&#34;&gt;https://carlosbecker.com/posts/distributed-locks-redis/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主要是关于安全性方面的一些争议，不过对于大多数场景来说，其实是完全够用了。&lt;/p&gt;
+&lt;h4 id=&#34;基于java-实现的-redisson&#34;&gt;基于Java 实现的 Redisson&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/redis-distributed-lock-solution/r004.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是一张网图，基本上可以看出工作机制。&lt;/p&gt;
+&lt;p&gt;Redisson 是一个在Redis的基础上实现的Java驻内存数据网格（In-Memory Data Grid）。它不仅提供了一系列的分布式的Java常用对象，还提供了许多分布式服务。&lt;/p&gt;
+&lt;p&gt;官方文档地址：https://github.com/redisson/redisson/wiki/%E7%9B%AE%E5%BD%95&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://blog.besscroft.com/tech/" term="tech\" label="tech\" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/" term="分布式锁" label="分布式锁" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/redisson/" term="Redisson" label="Redisson" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B/" term="下单流程" label="下单流程" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">极光商城服务架构设计</title>
+            <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/service-architecture-design/" />
+            <id>https://blog.besscroft.com/tech/service-architecture-design/</id>
+            <updated>2021-05-06T16:07:45&#43;08:00</updated>
+            <published>2021-05-06T16:07:38&#43;08:00</published>
+            <author>
+                    <name>Bess Croft</name>
+                    <uri>https://blog.besscroft.com/</uri>
+                    <email>besscroft@foxmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">服务架构设计 高并发支撑思考 我们先来看看这张图，首先我们可以思考一下，这个架构中，哪些……</summary>
+            
+                <content type="html">&lt;h1 id=&#34;服务架构设计&#34;&gt;服务架构设计&lt;/h1&gt;
+&lt;h3 id=&#34;高并发支撑思考&#34;&gt;高并发支撑思考&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://ae05.alicdn.com/kf/H3a8dcaf6409549e0a94a0b7a4a8507199.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我们先来看看这张图，首先我们可以思考一下，这个架构中，哪些地方可以做负载均衡，来承载更高的 &lt;code&gt;QPS&lt;/code&gt; 呢？&lt;/p&gt;
+&lt;p&gt;首先，我们可以在 &lt;code&gt;Nginx&lt;/code&gt; 外层，做负载均衡。举个例子，如果产品部署在阿里云，那么可以用阿里云的 NAT 网关，结合 &lt;code&gt;ALB&lt;/code&gt; 来对 &lt;code&gt;Nginx&lt;/code&gt; 做负载均衡。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ae04.alicdn.com/kf/H6687fa8c2f524bbf961ffd816d5e87b9x.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我们可以看到，在 &lt;code&gt;NAT网关&lt;/code&gt; 的最外层，是 &lt;code&gt;EIP&lt;/code&gt; ，也就是阿里云的弹性公网ip，它最大的优点，我觉得就是“灵活”。然后在整个 &lt;code&gt;VPC&lt;/code&gt; 外面，做 &lt;code&gt;ALB&lt;/code&gt; 负载均衡。最后，请求来到了我们部署在 &lt;code&gt;ECS&lt;/code&gt; 上的 &lt;code&gt;Nginx&lt;/code&gt; ，这里的 &lt;code&gt;Nginx&lt;/code&gt; ，到底是一台还是多台，肯定是根据当前业务的 QPS 来了，如果产品刚上线，每天的用户并不多，其实可以只放单台。然后我们的 &lt;code&gt;Nginx&lt;/code&gt; ，将后端请求转发给 &lt;code&gt;Gateway&lt;/code&gt; 网关，好了，这时候请求已经到了网关了，后面的也不用多解释了吧？&lt;/p&gt;
+&lt;p&gt;也就是说，从请求到服务器经历了三层负载均衡：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用型负载均衡ALB：支持加权轮询和最小连接数调度算法，可根据自身需求选择相应算法来分配用户流量。支持根据不同的域名和URL进行流量调度，提升应用系统灵活性。支持包含TCP协议和UDP协议的四层负载均衡；支持HTTP协议和HTTPS协议的七层负载均衡。由于本身是支持弹性伸缩的，所以单实例支持100万 &lt;code&gt;QPS&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;NAT网关：是一款企业级的公网网关，提供NAT代理（SNAT和DNAT）功能，具有10 Gbps级别的转发能力和跨可用区的容灾能力。跟我们理解的不太一样，但是也可以做一定的负载均衡，毕竟它拥有灵活易用的转发能力，还可以充当防火墙。NAT网关会将所有访问EIP的请求都转发到目标ECS实例上，同时会将以指定协议和端口访问EIP的请求转发到目标ECS实例的指定协议和端口上。&lt;/li&gt;
+&lt;li&gt;Nginx 负载均衡：&lt;code&gt;Nginx&lt;/code&gt; 应该没有小伙伴不熟悉的吧？一块高性能的 http 代理/反向代理服务器，一般在 Java 开发中，也经常用来做“负载均衡”。Nginx实现负载均衡的方式主要有三种:轮询、加权轮询、ip hash轮询。详细的我们在后面的文章中介绍。&lt;/li&gt;
+&lt;li&gt;Gateway 网关负载均衡：这个应该是接触过 Spring Cloud 的小伙伴们都知道是啥了。在 Gateway 中，以 &lt;code&gt;lb://&lt;/code&gt; 开头的请求, 会被全局过滤器 RetryLoadBalancerClientFilter 拦截并进行负载均衡处理, 所有的动态路由都会自动负载均衡。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;业务架构设计&#34;&gt;业务架构设计&lt;/h3&gt;
+&lt;p&gt;回到最上面的那张图片，用户最先访问网站的时候，加载的静态资源通过 &lt;code&gt;CDN&lt;/code&gt; 进行分发，这里当然也包括图片了。然后在未命中缓存等一些情况下，肯定需要回源到 &lt;code&gt;Nginx&lt;/code&gt; 来，所以专门的静态资源服务器是必须的，也可以用诸如阿里云OSS、腾讯云COS、AWS S3等来托管，设置回源地址。&lt;/p&gt;
+&lt;p&gt;然后发往后端的请求，通过上面我们介绍的方式，最终请求到我们后端的服务，进行处理。 &lt;code&gt;MySQL&lt;/code&gt; 则是我们的数据仓库， &lt;code&gt;redis&lt;/code&gt; 和 &lt;code&gt;elasticsearch&lt;/code&gt; 则用来做数据中间件。同时也可以用 &lt;code&gt;ELK&lt;/code&gt; 来进行日志分析处理。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Nacos&lt;/code&gt; 作为系统中的服务注册于发现中心和配置中心，在必要情况下也是可以做集群的。mq就是最基本的消息队列了，然后部署的话，自然得化自动起来，结合 &lt;code&gt;DevOps&lt;/code&gt; ，易于交付和维护。&lt;/p&gt;
+&lt;p&gt;最后，服务集群也可以做进一步的优化。比如说网关的黑/白名单、非入侵监控设计、数据库路由组件、服务治理、调用限流等等，都可以抽出来做中间件，这样能一定程度的解耦，而且便于以后的维护。&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://blog.besscroft.com/tech/" term="tech\" label="tech\" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" term="架构设计" label="架构设计" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" term="负载均衡" label="负载均衡" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">我的第一个“正式”开源项目</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/first-open-source/" />
@@ -733,7 +959,7 @@ registry.cn-hangzhou.aliyuncs.com/supermanito/jd
             <title type="text">第一次加班</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/life/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8A%A0%E7%8F%AD/" />
             <id>https://blog.besscroft.com/life/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8A%A0%E7%8F%AD/</id>
-            <updated>2021-04-13T14:01:10&#43;08:00</updated>
+            <updated>2021-05-06T16:13:11&#43;08:00</updated>
             <published>2021-04-13T13:56:13&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -746,7 +972,7 @@ registry.cn-hangzhou.aliyuncs.com/supermanito/jd
 &lt;p&gt;&lt;code&gt;996工作制&lt;/code&gt;最致命的点在于——剥夺了你的业余时间。因此也就剥夺了你通过业余时间进行自学的机会。如果你难以进行自学，也就难以提升自身能力；如果你无法提升自身能力，你就无法提升自己的&lt;code&gt;议价能力&lt;/code&gt;；在缺乏议价能力的情况下，你就只好默默忍受这种工作制的压榨。
 跳出问题的关键，在于&lt;code&gt;时间突破口&lt;/code&gt;和&lt;code&gt;“坚持&lt;/code&gt;，每天挤出一定量的时间。即使是一点微弱的时间，只要这个习惯长期保持，&lt;code&gt;累积效应&lt;/code&gt;也将非常惊人。当然，如果你的工作不是你的兴趣所在，长时间加班之后，回到家里，你很难再有动力去学习其它新技能。
 最后，最可靠的东西，永远是自己的能力（&lt;code&gt;核心竞争力&lt;/code&gt;）。提高核心竞争力来提升你的议价能力，在获得同等报酬的情况下，降低工作强度，获取更多的学习时间。&lt;/p&gt;
-&lt;p hidden&gt;但愿我的努力能够得到回报，如果我追到你了，我会努力让你过上更好的生活！&lt;/p&gt;</content>
+</content>
             
             
             
