@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 11 May 2021 18:37:37 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 11 May 2021 21:50:04 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
@@ -3120,7 +3120,7 @@ $ sysctl net.ipv4.tcp_available_congestion_control
 &lt;span class=&#34;c1&#34;&gt;# See hosts(5) for details.&lt;/span&gt;
 127.0.0.1   localhost
 ::1         localhost
-127.0.0.1   arch.localdomain arch
+127.0.1.1   arch.localdomain arch
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;如果你上面修改了&lt;code&gt;arch&lt;/code&gt;，这里的也得改哦，主机名可以自定义，但要保持一致！&lt;/p&gt;
