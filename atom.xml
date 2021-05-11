@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-05-11T21:50:04&#43;08:00</updated>
+    <updated>2021-05-11T22:29:34&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -2775,7 +2775,7 @@ $ sysctl net.ipv4.tcp_available_congestion_control
             <title type="text">在虚拟机中安装ArchLinux(UEFI)</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/helloarchlinux/" />
             <id>https://blog.besscroft.com/tech/helloarchlinux/</id>
-            <updated>2021-05-11T21:49:55&#43;08:00</updated>
+            <updated>2021-05-11T22:29:26&#43;08:00</updated>
             <published>2020-01-31T11:25:13&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -3341,7 +3341,7 @@ options &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#3
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@arch ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# passwd archie&lt;/span&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@arch ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# passwd 你取的用户名&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id=&#34;vmware-相关软件包和服务&#34;&gt;VMware 相关软件包和服务&lt;/h4&gt;
