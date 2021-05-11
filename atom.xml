@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-05-07T12:46:32&#43;08:00</updated>
+    <updated>2021-05-11T18:37:37&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -2775,7 +2775,7 @@ $ sysctl net.ipv4.tcp_available_congestion_control
             <title type="text">在虚拟机中安装ArchLinux(UEFI)</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/helloarchlinux/" />
             <id>https://blog.besscroft.com/tech/helloarchlinux/</id>
-            <updated>2021-04-11T13:19:32&#43;08:00</updated>
+            <updated>2021-05-11T18:37:23&#43;08:00</updated>
             <published>2020-01-31T11:25:13&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -3165,7 +3165,7 @@ $ sysctl net.ipv4.tcp_available_congestion_control
 &lt;span class=&#34;c1&#34;&gt;# See hosts(5) for details.&lt;/span&gt;
 127.0.0.1   localhost
 ::1         localhost
-127.0.1.1   arch.localdomain arch
+127.0.0.1   arch.localdomain arch
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;如果你上面修改了&lt;code&gt;arch&lt;/code&gt;，这里的也得改哦，主机名可以自定义，但要保持一致！&lt;/p&gt;
