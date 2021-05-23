@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 22 May 2021 17:59:56 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 23 May 2021 21:03:23 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
@@ -2988,7 +2988,7 @@ $ sysctl net.ipv4.tcp_available_congestion_control
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pacstrap /mnt base linux linux-firmware&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;注意，这里的&lt;code&gt;fiemware&lt;/code&gt;，不要输成&lt;code&gt;fireware&lt;/code&gt;了😂&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;注意，这里的&lt;code&gt;firmware&lt;/code&gt;，不要输成&lt;code&gt;fireware&lt;/code&gt;了😂&lt;/p&gt;
 &lt;p&gt;安装网络管理器：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
