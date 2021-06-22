@@ -10,7 +10,7 @@
         <title>贝丝的博客</title>
         <link>https://blog.besscroft.com/</link>
         <description>这里是 BessCroft 的生活与技术博客！非常高兴认识你！</description>
-        <generator>Hugo 0.83.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.84.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 10 Jun 2021 18:19:09 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 20 Jun 2021 19:39:54 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
