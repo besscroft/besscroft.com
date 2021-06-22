@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-06-20T19:39:54&#43;08:00</updated>
+    <updated>2021-06-22T17:36:05&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -7044,7 +7044,7 @@ baidusitemap:
             <title type="text">Git本地文件到GitHub仓库</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/gitgo/" />
             <id>https://blog.besscroft.com/tech/gitgo/</id>
-            <updated>2021-04-11T11:50:01&#43;08:00</updated>
+            <updated>2021-06-22T17:35:29&#43;08:00</updated>
             <published>2019-03-18T17:01:55&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -7074,7 +7074,7 @@ $ git config --global user.email &amp;quot;631908942@qq.com&amp;quot;
 &lt;pre&gt;&lt;code&gt;ssh-keygen -t rsa -C &amp;quot;github注册时的邮箱&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后可能要按下几次回车，具体几次我也没数，默认就行了，如果你觉得有必要，可以自己设置密码。如果一切顺利的话，你可以在你的系统用户主目录里找到&lt;code&gt;.ssh&lt;/code&gt;目录，一般路径为：&lt;code&gt;C:\Users\这里是你的计算机用户名啦\.ssh&lt;/code&gt;，然后里面会有&lt;code&gt;id_rsa&lt;/code&gt;和&lt;code&gt;id_rsa.pub&lt;/code&gt;两个文件，这两个就是SSH Key的秘钥对，&lt;code&gt;id_rsa&lt;/code&gt;是私钥，不能泄露出去，&lt;code&gt;id_rsa.pub&lt;/code&gt;是公钥，你告诉别人也没事儿。&lt;/p&gt;
 &lt;p&gt;你甚至能自己检查一下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ cd ~/,ssh
+&lt;pre&gt;&lt;code&gt;$ cd ~/.ssh
 $ ls    //这个s前面的是lmn的l，不同字体下显示很容易看错成i的大写或者数字1
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;添加shh-key&#34;&gt;添加SHH Key&lt;/h4&gt;
 &lt;p&gt;然后我们需要去GitHub添加&lt;a href=&#34;https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsettings%2Fkeys&#34;&gt;SSH Key&lt;/a&gt;，如果左边的链接挂掉了，直接去你自己的GitHub页面打开设置，找到&lt;code&gt;SSH and GPG keys&lt;/code&gt;,然后&lt;code&gt;New SSH key&lt;/code&gt;,然后将&lt;code&gt;id_rsa.pub&lt;/code&gt;文件的所有内容拷贝到&lt;code&gt;Add key&lt;/code&gt;的框框里面。&lt;/p&gt;
