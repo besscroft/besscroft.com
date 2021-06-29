@@ -3,17 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.besscroft.com/categories/</loc>
-    <lastmod>2021-06-22T17:35:29+08:00</lastmod>
+    <lastmod>2021-06-29T16:27:34+08:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://blog.besscroft.com/tags/</loc>
+    <lastmod>2021-06-29T16:27:34+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tech/</loc>
+    <lastmod>2021-06-29T16:27:34+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F/</loc>
+    <lastmod>2021-06-29T16:27:34+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tech/wechatmp/</loc>
+    <lastmod>2021-06-29T16:27:34+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/</loc>
+    <lastmod>2021-06-29T16:27:34+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/</loc>
+    <lastmod>2021-06-29T16:27:34+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/redisson/</loc>
     <lastmod>2021-05-06T16:12:16+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/tags/</loc>
-    <lastmod>2021-06-22T17:35:29+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/tech/</loc>
-    <lastmod>2021-06-22T17:35:29+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/%E4%B8%8B%E5%8D%95%E6%B5%81%E7%A8%8B/</loc>
     <lastmod>2021-05-06T16:12:16+08:00</lastmod>
@@ -23,9 +35,6 @@
   </url><url>
     <loc>https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-06-22T17:35:29+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/</loc>
-    <lastmod>2021-06-27T20:43:07+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tech/redis-distributed-lock-solution/</loc>
     <lastmod>2021-05-06T16:12:16+08:00</lastmod>

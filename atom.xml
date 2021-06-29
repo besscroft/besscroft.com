@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-06-27T20:55:25&#43;08:00</updated>
+    <updated>2021-06-29T16:44:28&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -16,6 +16,84 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.84.0">Hugo</generator>
+        <entry>
+            <title type="text">学习与人生——聊聊我的第一个微信公众号</title>
+            <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/wechatmp/" />
+            <id>https://blog.besscroft.com/tech/wechatmp/</id>
+            <updated>2021-06-29T16:27:34&#43;08:00</updated>
+            <published>2021-06-29T16:12:53&#43;08:00</published>
+            <author>
+                    <name>Bess Croft</name>
+                    <uri>https://blog.besscroft.com/</uri>
+                    <email>besscroft@foxmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">缘起 大概18年的年初，我创建了自己的第一个微信公众号。 刚才去后台看了眼，第一篇群发文……</summary>
+            
+                <content type="html">&lt;h3 id=&#34;缘起&#34;&gt;缘起&lt;/h3&gt;
+&lt;p&gt;大概18年的年初，我创建了自己的第一个微信公众号。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/wechatmp/wechatmp001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;刚才去后台看了眼，第一篇群发文章是在2018年01月21日，最后一篇文章更新于2021年04月23日。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/wechatmp/wechatmp002.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;想不到自己还维护了3年多，历史单篇文章阅读量最高为2346次，3年多公众号总收入未超过1000。现在的总用户数还剩1094位，不知是不是太长时间没更新，以至于没人记得这个公众号，就没什么人取关了。。。&lt;/p&gt;
+&lt;p&gt;上大学之前是寄读学校，而且严查手机，所以算是和互联网半脱轨状态。上大学之后，又重新开始上网冲浪，上课时就喜欢在下面刷公众号文章看，索性自己也就开了一个。主要用来记录自己的学习与成长过程。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当时写文章，给他人分享自己收获的那种反馈（喜悦），确实挺鼓励人的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;放弃更新&#34;&gt;放弃更新&lt;/h3&gt;
+&lt;p&gt;放弃微信公众号的原因嘛，可以看看我这篇文章：&lt;a href=&#34;https://blog.besscroft.com/life/%E5%90%91%E7%9D%80%E6%9C%AA%E6%9D%A5%E8%80%8C%E7%94%9F/&#34;&gt;向着未来而生&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;背后的故事&#34;&gt;背后的故事&lt;/h3&gt;
+&lt;p&gt;为什么我要把这件事单独拿出来说呢？因为我在互联网上进行“创作”，算是从这里开始的吧，不论任何形式。&lt;/p&gt;
+&lt;p&gt;从写微信公众号开始，到写博客和技术笔记，再到成立自己的圈子（社区），以及后面的邮件订阅，我也是这么一步步走过来的。在这个过程中，学会了如何写作与思考，并养成了写作的这个习惯。同时我的“能力曲线”也是在这个阶段实现增长的。自己曾经的学习成绩并不算好，也偏科，索性后面用各种方式向自己证明了智商不算太低。在坚持写作的这几年，阅读了各种高质量的文章和书籍，算是让自己领悟到了学习的方法（开窍了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;笔者在学生时代最害怕写作文，那800字对当时的我来说，是极大的挑战！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;最后&#34;&gt;最后&lt;/h3&gt;
+&lt;p&gt;这个微信公众号我以后肯定也不会再去维护了，重心暂时放在博客和邮件订阅。后面有时间，跟大家聊聊“子弹笔记”，是如何改变我的人生的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实没这么夸张，但是子弹笔记法，确实让我养成了很多良好的习惯，我也用它来进行管理和规划。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://blog.besscroft.com/tech/" term="tech\" label="tech\" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F/" term="学习与人生" label="学习与人生" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" term="微信公众号" label="微信公众号" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">超卖和分布式锁解决方案</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/redis-distributed-lock-solution/" />
