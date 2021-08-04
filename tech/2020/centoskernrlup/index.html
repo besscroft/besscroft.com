@@ -54,7 +54,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-03-30T14:59:49+08:00",
-        "dateModified": "2021-08-03T17:31:21+08:00",
+        "dateModified": "2021-08-04T14:53:25+08:00",
         "url": "https://blog.besscroft.com/tech/2020/centoskernrlup/",
         "headline": "Linux系统手动更换内核",
         "description": "从所有人的角度来看，当今的Internet并未如其所愿地移动数据。 前言 一般而言，在云……",
@@ -105,7 +105,7 @@
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://blog.besscroft.com/images/tech/2020/centoskernrlup/centoskernrlup01.png" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-03-30T14:59:49&#43;08:00" />
-    <meta property="article:modified_time" content="2021-08-03T17:31:21&#43;08:00" />
+    <meta property="article:modified_time" content="2021-08-04T14:53:25&#43;08:00" />
     
     <meta property="article:section" content="tech" />
 
@@ -244,7 +244,7 @@
     
     
         
-        <time datetime="2021-08-03T17:31:21&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.8.3</time>
+        <time datetime="2021-08-04T14:53:25&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.8.4</time>
     
     
     
@@ -305,7 +305,7 @@
 <p>一般而言，在云计算商那里“租”了一台服务器之后，我一般会选择<code>CentOS 7</code> 系统，所以这篇文章，就以CentOS为例(似乎有一点标题党的嫌疑？</p>
 </blockquote>
 <p><strong>基本不会介绍BBR的原理，需要详细了解，<a href="https://research.google/pubs/pub45646/" target="_blank" rel="noopener">可以访问research</a>，我技术并不够优秀，很难解释清楚，还请见谅！</strong></p>
-<p>先讲讲BBR吧！<a href="https://en.wikipedia.org/wiki/TCP_congestion_control#TCP_BBR" target="_blank" rel="noopener">Wiki百科</a>给出的解释是<code>Bottleneck Bandwidth and Round-trip propagation time (BBR)</code> ，是Google在2016年开发的TCP拥塞控制算法(开源了)。TCP拥塞控制算法有很多，BBR是其中一种，但是由于它出色的效果，被很多人采用。至于linux内核什么时候开始原生支持的，网上的说法真的是五花八门，很多人文章感觉就是互相抄，连<code>2.6.*</code> 的说法都能蹦出来(我怀疑是一些采集站)。相对而言，很多大佬的博客文章，就比较严谨一些，基本上都是<code>4.9</code>。抱着不懂就差的态度，我去Google稍微搜了一下，不敢确定是不是一定是对的。<a href="https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8#4.x.y%E7%89%88%E6%9C%AC%E7%B3%BB%E5%88%97" target="_blank" rel="noopener">Wiki百科</a>的详细说明，可以找到如下一条说明：</p>
+<p>先讲讲BBR吧！<a href="https://en.wikipedia.org/wiki/TCP_congestion_control#TCP_BBR" target="_blank" rel="noopener">Wiki百科</a>给出的解释是<code>Bottleneck Bandwidth and Round-trip propagation time (BBR)</code> ，是Google在2016年开发的TCP拥塞控制算法(开源了)。TCP拥塞控制算法有很多，BBR是其中一种，但是由于它出色的效果，被很多人采用。至于linux内核什么时候开始原生支持的，网上的说法真的是五花八门，很多人文章感觉就是互相抄，连<code>2.6.*</code> 的说法都能蹦出来(我怀疑是一些采集站)。相对而言，很多大佬的博客文章，就比较严谨一些，基本上都是<code>4.9</code>。抱着不懂就查的态度，我去Google稍微搜了一下，不敢确定是不是一定是对的。<a href="https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8#4.x.y%E7%89%88%E6%9C%AC%E7%B3%BB%E5%88%97" target="_blank" rel="noopener">Wiki百科</a>的详细说明，可以找到如下一条说明：</p>
 <div class="table-container"><table>
 <thead>
 <tr>
@@ -632,9 +632,9 @@ $ sysctl net.ipv4.tcp_available_congestion_control
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2021-08-03 17:31:21 CST" style="cursor:help">
+        <span title="Updated @ 2021-08-04 14:53:25 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-08-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-08-03</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-08-04</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-08-04</text></g></svg>
         </span></div>
 
 

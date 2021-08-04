@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">贝丝的博客</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-08-03T17:37:21&#43;08:00</updated>
+    <updated>2021-08-04T14:53:35&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -2633,7 +2633,7 @@ php one.php upload:file up/ /test/
             <title type="text">Linux系统手动更换内核</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/2020/centoskernrlup/" />
             <id>https://blog.besscroft.com/tech/2020/centoskernrlup/</id>
-            <updated>2021-08-03T17:31:21&#43;08:00</updated>
+            <updated>2021-08-04T14:53:25&#43;08:00</updated>
             <published>2020-03-30T14:59:49&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -2648,7 +2648,7 @@ php one.php upload:file up/ /test/
 &lt;p&gt;一般而言，在云计算商那里“租”了一台服务器之后，我一般会选择&lt;code&gt;CentOS 7&lt;/code&gt; 系统，所以这篇文章，就以CentOS为例(似乎有一点标题党的嫌疑？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;基本不会介绍BBR的原理，需要详细了解，&lt;a href=&#34;https://research.google/pubs/pub45646/&#34;&gt;可以访问research&lt;/a&gt;，我技术并不够优秀，很难解释清楚，还请见谅！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;先讲讲BBR吧！&lt;a href=&#34;https://en.wikipedia.org/wiki/TCP_congestion_control#TCP_BBR&#34;&gt;Wiki百科&lt;/a&gt;给出的解释是&lt;code&gt;Bottleneck Bandwidth and Round-trip propagation time (BBR)&lt;/code&gt; ，是Google在2016年开发的TCP拥塞控制算法(开源了)。TCP拥塞控制算法有很多，BBR是其中一种，但是由于它出色的效果，被很多人采用。至于linux内核什么时候开始原生支持的，网上的说法真的是五花八门，很多人文章感觉就是互相抄，连&lt;code&gt;2.6.*&lt;/code&gt; 的说法都能蹦出来(我怀疑是一些采集站)。相对而言，很多大佬的博客文章，就比较严谨一些，基本上都是&lt;code&gt;4.9&lt;/code&gt;。抱着不懂就差的态度，我去Google稍微搜了一下，不敢确定是不是一定是对的。&lt;a href=&#34;https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8#4.x.y%E7%89%88%E6%9C%AC%E7%B3%BB%E5%88%97&#34;&gt;Wiki百科&lt;/a&gt;的详细说明，可以找到如下一条说明：&lt;/p&gt;
+&lt;p&gt;先讲讲BBR吧！&lt;a href=&#34;https://en.wikipedia.org/wiki/TCP_congestion_control#TCP_BBR&#34;&gt;Wiki百科&lt;/a&gt;给出的解释是&lt;code&gt;Bottleneck Bandwidth and Round-trip propagation time (BBR)&lt;/code&gt; ，是Google在2016年开发的TCP拥塞控制算法(开源了)。TCP拥塞控制算法有很多，BBR是其中一种，但是由于它出色的效果，被很多人采用。至于linux内核什么时候开始原生支持的，网上的说法真的是五花八门，很多人文章感觉就是互相抄，连&lt;code&gt;2.6.*&lt;/code&gt; 的说法都能蹦出来(我怀疑是一些采集站)。相对而言，很多大佬的博客文章，就比较严谨一些，基本上都是&lt;code&gt;4.9&lt;/code&gt;。抱着不懂就查的态度，我去Google稍微搜了一下，不敢确定是不是一定是对的。&lt;a href=&#34;https://zh.wikipedia.org/wiki/Linux%E5%86%85%E6%A0%B8#4.x.y%E7%89%88%E6%9C%AC%E7%B3%BB%E5%88%97&#34;&gt;Wiki百科&lt;/a&gt;的详细说明，可以找到如下一条说明：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
