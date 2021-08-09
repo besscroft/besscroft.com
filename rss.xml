@@ -7,7 +7,7 @@
 
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>贝丝的博客</title>
+        <title>尼采为谁哭泣</title>
         <link>https://blog.besscroft.com/</link>
         <description>这里是 BessCroft 的生活与技术博客！非常高兴认识你！</description>
         <generator>Hugo 0.84.0 https://gohugo.io/</generator>
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 04 Aug 2021 14:53:35 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 09 Aug 2021 10:09:20 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
