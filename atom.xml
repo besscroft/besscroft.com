@@ -2,9 +2,9 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-    <title type="text">尼采为谁哭泣</title>
+    <title type="text">逍遥</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-10-09T16:57:45&#43;08:00</updated>
+    <updated>2021-10-09T17:03:47&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -16,6 +16,160 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.84.0">Hugo</generator>
+        <entry>
+            <title type="text">高效上网与系统性学习</title>
+            <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/2021/internet_surfing/" />
+            <id>https://blog.besscroft.com/tech/2021/internet_surfing/</id>
+            <updated>2021-10-09T17:01:28&#43;08:00</updated>
+            <published>2021-10-09T17:01:51&#43;08:00</published>
+            <author>
+                    <name>Bess Croft</name>
+                    <uri>https://blog.besscroft.com/</uri>
+                    <email>besscroft@foxmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 我接触互联网的十几年，整个世界似乎发生了天翻地覆的变化。过去的人们，喜欢贴吧，论……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;我接触互联网的十几年，整个世界似乎发生了天翻地覆的变化。过去的人们，喜欢贴吧，论坛。而现在，不知道为什么，就拿起了手机，仿佛离手之后就好像失去了什么。打开抖音或者B乎，一个接一个的滑动，能够看到大半夜不睡觉。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;手里握着手机时，我们好像变成了幽灵，在现实和虚拟两个世界间摇摆。——《玻璃笼子》尼古拉斯·卡尔&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;英文搜索&#34;&gt;英文搜索&lt;/h2&gt;
+&lt;h3 id=&#34;为什么我们需要英文搜索&#34;&gt;为什么我们需要英文搜索？&lt;/h3&gt;
+&lt;p&gt;我不知道大家有没有跟我一样的经历。比如说在程序开发过程中，遇到问题，我可能会去搜索引擎搜索。但是我们必须明白的事情是，中文互联网的内容农场实在是太多了。几乎全是采集站，不仅对你毫无帮助，还会影响你的心情。&lt;/p&gt;
+&lt;p&gt;可能你会疑问，高质量的中文内容也是有的呀？这点我并不反对，但是采集站的 seo，往往做的比独立博客好，这点我相信你也明白。甚至有的搜索引擎，一直在做劣化中文搜索的事情，我不说大家也知道吧？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当然，不谈场景，就是在耍流氓！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是我相信，每位读者应该都知道何时用中文搜索，何时用英文搜索，以及如何选择搜索引擎吧😁&lt;/p&gt;
+&lt;p&gt;那如果你要问，我用英文搜索，也有很多内容农场呀，有时候也搜不到东西。别急，咱们接着往下看！&lt;/p&gt;
+&lt;h3 id=&#34;基本的英文搜索技巧&#34;&gt;基本的英文搜索技巧&lt;/h3&gt;
+&lt;p&gt;最简单的，能立即想到的，绝对是：&lt;strong&gt;关键词&lt;/strong&gt;+&lt;strong&gt;引导词&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;比如我们可以搜索：&lt;code&gt;Java Tutorial&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;给大伙儿列举一些常用的引导词：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;概述（Overview，Introduction，Getting Started）&lt;/li&gt;
+&lt;li&gt;指南（Tutorial，Guide，Howto）&lt;/li&gt;
+&lt;li&gt;功能参考（Reference，Index）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可能用到的逻辑关系：&lt;/p&gt;
+&lt;p&gt;与（一般空白即可）、或（OR）、非（-）&lt;/p&gt;
+&lt;p&gt;举个例子：&lt;code&gt;Java -csdn&lt;/code&gt; 🤣&lt;/p&gt;
+&lt;h2 id=&#34;科学上网&#34;&gt;科学上网&lt;/h2&gt;
+&lt;h3 id=&#34;为什么我们需要科学上网&#34;&gt;为什么我们需要科学上网？&lt;/h3&gt;
+&lt;p&gt;这里就不讨论敏感的因素了，单纯的从学术以及上网的舒适度来考虑。&lt;/p&gt;
+&lt;p&gt;上面刚提到了，国内的搜索引擎，体验确实有点差，尤其是竞价排名和采集站，导致第一页基本上都不是你想要找到的内容。而诸如 Google 之类的搜索引擎，是可以一定程度上避免的。然后就是一些学习资料、影视资料之类的，也得借助科学上网才能有良好的搜索和使用体验。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这一点在开发程序时，查找资料是深有体会！没有坚挺的工具，只有愿意学习的人！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;获取和筛选信息&#34;&gt;获取和筛选信息&lt;/h2&gt;
+&lt;h3 id=&#34;了解媒介形态&#34;&gt;了解“媒介形态”&lt;/h3&gt;
+&lt;p&gt;媒介形态即媒介的生存状态（包括媒介的外部形态和作为内部结构的传播符号）、生存依据、媒介的传播方式方法（包括受众接受媒介信息的形式和途径）以及由此展示的媒介功能与特征。&lt;/p&gt;
+&lt;p&gt;比如说当我们要学习 Java 时，可以去B站看视频、也可以看书、看官方文档，还可以去看各种博客，这些都属于“媒介”。&lt;/p&gt;
+&lt;p&gt;当然，媒介不同的形式，给你带来的“信息”，也是不同的。举个例子，学习 Java 而看视频，确实能让你迅速上手，但是这种被动式的媒介形式，也会不可避免的“抑制”你的思考。视频容易让你的大脑停留在“心里舒适区”，你对事物的思考程度，是远比不上读书的。&lt;/p&gt;
+&lt;p&gt;书籍这种媒介形式，具有主动性、系统性以及深刻性的优势。像编程这种复制的领域，书籍在“系统性”的方面，优势绝对不亚于其它任何一种媒介。&lt;/p&gt;
+&lt;h3 id=&#34;信息获取渠道&#34;&gt;信息获取渠道&lt;/h3&gt;
+&lt;p&gt;个人信息源在社会信息交流系统中具有重要的作用。人是社会性的物种，一个社会人对信息是有强烈需求的，而信息源会影响你的行动决策。一个低效低质量的信息渠道可能会让你做出很多错误的决策，以至于会让你形成错误的认知。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后面可以聊聊，我是如何构建自己的“信息源”的~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;dikw-模型&#34;&gt;DIKW 模型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/2021/internet_surfing/internet_surfing001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;DIKW 模型是一个可以很好的帮助我们理解数据（Data）、信息（Information）、知识（Knowledge）和智慧（Wisdom）之间的关系的模型，这个模型还向我们展现了数据是如何一步步转化为信息、知识、乃至智慧的方式。——来源：智库百科&lt;/p&gt;
+&lt;p&gt;为了更好地理解这个模型，咱们得知道，模型的每一层是干什么的，以及相邻层次之间的差异。下面我就拿大伙儿日常生活中，最不起眼的事来举例子吧，没错，就是——“花钱”。&lt;/p&gt;
+&lt;h4 id=&#34;数据data-与信息information-的区别&#34;&gt;数据(Data) 与信息(Information) 的区别&lt;/h4&gt;
+&lt;p&gt;你每天都会花钱吧，对不对？你花的每一笔钱，都可以被记录下来，从某种角度来讲，每一条记录，都只是一条数据而已，并没有什么意义。因为这时的数据，还是属于“原始资料”的形态。但是，我们可以把每一天，每个月，每年的数据汇总，然后我们进行相应的处理，是不是就能得到一些信息？&lt;/p&gt;
+&lt;p&gt;比如说一年的总收入和总支出、哪个月花钱最多，钱都花到哪里去了？这些都是“信息”。我们通过分析原始资料，获得了信息。这些信息分为显性和隐性的，比如：谁？什么（内容）？哪里？什么时间？为什么这样？&lt;/p&gt;
+&lt;p&gt;单个的数据，其实是没啥意义的，但是当我们将它转化为信息之后，它的意义自然就显现了！&lt;/p&gt;
+&lt;h4 id=&#34;信息information-与知识knowledge-的区别&#34;&gt;信息(Information) 与知识(Knowledge) 的区别&lt;/h4&gt;
+&lt;p&gt;信息的生命周期太短，以至于你不去主动的消化它，它也会失去意义。比如说，你可以反思下过去一年，有哪些东西，是你买了但没必要买的，而且很贵的东西。对过去一年的消费记录（信息）进行归纳、比较、复盘，使信息中有价值的部分沉淀下来，并和自己本身已经存在的知识体系相结合，那么这部分信息就转变成知识了。&lt;/p&gt;
+&lt;p&gt;想想读书的时候，老师在讲台上讲解题目时，你突然想到做过的另一个类似的题目，然后进行了比较，这也是信息转化为知识的过程。&lt;/p&gt;
+&lt;h4 id=&#34;知识knowledge-与智慧wisdom-的区别&#34;&gt;知识(Knowledge) 与智慧(Wisdom) 的区别&lt;/h4&gt;
+&lt;p&gt;知识和智慧，我个人的理解就是：知识关注的是过去，智慧关心的是未来。&lt;/p&gt;
+&lt;p&gt;引用一下专业点的解释：人类基于已有的知识，针对物质世界中运动过程中产生的问题根据获得的信息进行分析、对比、演绎找出解决方案的能力。这种能力运用的结果是将信息的有价值部分挖掘出来并使之成为知识架构的一部分。&lt;/p&gt;
+&lt;h3 id=&#34;结合搜索引擎挖掘网络资源&#34;&gt;结合搜索引擎挖掘网络资源&lt;/h3&gt;
+&lt;p&gt;咱们上面有聊到，为什么要使用英文搜索和科学上网。&lt;/p&gt;
+&lt;p&gt;但是搜索引擎层面，尽量还是要选择 Google 之类的搜索引擎。并且我建议大家使用 google.com/ncr ，这样就能用国际版（禁用国别重定向），经常逛开源社区的小伙伴应该能见到不少人这么推荐。&lt;/p&gt;
+&lt;h4 id=&#34;网页快照&#34;&gt;网页快照&lt;/h4&gt;
+&lt;p&gt;基本上很多人都碰到过 &lt;code&gt;404&lt;/code&gt; 和 &lt;code&gt;重定向&lt;/code&gt;，这会给我们造成不好的上网体验。我们可以在地址前面加上 &lt;code&gt;cache:&lt;/code&gt; ，比如 &lt;code&gt;baidu.com&lt;/code&gt; 变成 &lt;code&gt;cache:baidu.com&lt;/code&gt;。或者可以使用互联网档案馆（Internet Archive）进行搜索，查看纯文字版的快照，还可以过滤掉 JavaScript 脚本，也会更安全！&lt;/p&gt;
+&lt;h4 id=&#34;过滤搜索&#34;&gt;过滤搜索&lt;/h4&gt;
+&lt;p&gt;可以结合搜索引擎语法，进行过滤搜索。比如只查看某网站的相关内容，或者搜索特定的文件。&lt;/p&gt;
+&lt;h3 id=&#34;搜索引擎也搜不到该怎么办&#34;&gt;搜索引擎也搜不到该怎么办？&lt;/h3&gt;
+&lt;p&gt;一般有这么几种情况，可能会搜不到想要的信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对应的内容提供商，打算“圈地”，禁止了搜索引擎爬虫爬取。&lt;/li&gt;
+&lt;li&gt;还没搜录。&lt;/li&gt;
+&lt;li&gt;你打开方式不对。&lt;/li&gt;
+&lt;li&gt;内容农场太多，导致你找不到正常的内容，从而丧失耐心！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我这里也给出几种对应的解决方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;看看别人是怎么搜的（是的没错，你可以搜索相关内容，学习下别人怎么搜索你想搜的这个内容的）。&lt;/li&gt;
+&lt;li&gt;花时间学一下搜索引擎语法吧。&lt;/li&gt;
+&lt;li&gt;专业的事，交给专业的工具去做。比如说你想找一本书，有时候搜索引擎并不是最好的解决方案，不妨试试 &lt;code&gt;z-library&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" term="科学上网" label="科学上网" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E8%8B%B1%E6%96%87%E6%90%9C%E7%B4%A2/" term="英文搜索" label="英文搜索" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E5%AD%A6%E4%B9%A0/" term="学习" label="学习" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E7%B3%BB%E7%BB%9F%E6%80%A7%E5%AD%A6%E4%B9%A0/" term="系统性学习" label="系统性学习" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/dikw-%E6%A8%A1%E5%9E%8B/" term="DIKW 模型" label="DIKW 模型" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">数字时代如何管理你的数字隐私</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/2021/manage-digital-privacy/" />
