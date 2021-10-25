@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">逍遥</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-10-25T19:45:33&#43;08:00</updated>
+    <updated>2021-10-25T20:13:39&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -16,6 +16,117 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.84.0">Hugo</generator>
+        <entry>
+            <title type="text">学习与人生——聊聊我的学习方法</title>
+            <link rel="alternate" type="text/html" href="https://blog.besscroft.com/life/2021/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F%E8%81%8A%E8%81%8A%E6%88%91%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" />
+            <id>https://blog.besscroft.com/life/2021/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F%E8%81%8A%E8%81%8A%E6%88%91%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</id>
+            <updated>2021-10-25T19:45:08&#43;08:00</updated>
+            <published>2021-10-25T19:45:52&#43;08:00</published>
+            <author>
+                    <name>Bess Croft</name>
+                    <uri>https://blog.besscroft.com/</uri>
+                    <email>besscroft@foxmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">2 次“网络视频研讨会” 在 8 月份的时候，当时的工作还不算特别的忙，于是便组织了 2 次“网……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;2-次网络视频研讨会&#34;&gt;2 次“网络视频研讨会”&lt;/h2&gt;
+&lt;p&gt;在 8 月份的时候，当时的工作还不算特别的忙，于是便组织了 2 次“网络视频研讨会”。当时的初衷就是抱着与他人能够在网上面对面的交流和思想碰撞。&lt;/p&gt;
+&lt;p&gt;所以，我以问卷调查的方式，汇集了一些有想法的朋友，在 2 个美好的周末，组织了 2 次。至于为什么没有第 3 场了，一方面是因为我的工作越来越忙，没有时间准备且需要休息；另一方面则是，参与的人数还是太少，多少有些提不起劲来了。这种形式并不像提笔写字，把想法写下来就行。当你倾诉时，没有人倾听，实际上是难以坚持下去的！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/2021/study-method/study001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第一次交流时，可能是图个新鲜，大家交流都比较积极。自我介绍、闲聊环节、分享近期状况以及对未来规划的交流，基本上是大家都发言。而扩展话题，主要就是由我来主讲。第一期主要的环节——互相认识、围绕每个人自身进行总结、个人规划、以及对后续会议有无建议。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/2021/study-method/study002.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二次交流，实际上新增了一个流程——嘉宾发言。主要是让第一次之后参与进来的同学，进行发言，当然，你想分享也是可以的。第二期主要的环节——嘉宾发言、系统性学习（在任何环境下如何学习）、作为一名开发人员你需要完善自己的基础设施。&lt;/p&gt;
+&lt;h2 id=&#34;我平常是如何学习的&#34;&gt;我平常是如何学习的？&lt;/h2&gt;
+&lt;h3 id=&#34;学习前期的准备&#34;&gt;学习前期的准备&lt;/h3&gt;
+&lt;h4 id=&#34;目标规划&#34;&gt;目标规划&lt;/h4&gt;
+&lt;p&gt;不知道是否已经养成了习惯，还是怕自己经常会迷茫，不知道该干啥。以至于我经常会给自己指定目标和规划。常用的软件比如：Trello、Notion、JIRA等。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/2021/study-method/study003.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上大学那会儿，还只会用 Trello，写文章时打开了以前的看板，截了个图。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/2021/study-method/study004.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/2021/study-method/study005.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;毕业之后，就开始以 Notion 为主了，相比而言，功能更强大，但是也有一些不足。&lt;/p&gt;
+&lt;p&gt;回到正题，做目标规划的意义是什么呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;清空大脑，把大脑从「要做什么」和「怎么做」的混乱当中拯救出来。&lt;/li&gt;
+&lt;li&gt;随时随地都明确地知道，下一步应该做什么。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;估计可能有读者朋友已经发现了，这2句话，其实是 GTD 的目的。GTD（Getting Things Done） 时间管理法则，我的理解就是，把事情处理完！这里俺就不详细说 GTD 了，因为我目前也在实践阶段，等自己“完全掌握”或者有所心得了，再跟大伙儿聊聊！&lt;/p&gt;
+&lt;h4 id=&#34;学习如何正确的开始&#34;&gt;学习如何正确的开始？&lt;/h4&gt;
+&lt;p&gt;如果你要开始学习一个新东西，却不知道如何正确的开始，那么不妨参考下我的方法——“从思维导图开始，从思维导图结束。”&lt;/p&gt;
+&lt;p&gt;拿 Golang 学习为例吧，在我在最开始学习前，肯定不能再像我高中刚入门 Java 时那样买本书就开始盲目地学习了。我先去网上找到了 Golang 学习路径图，这个对我学习的方向有极大的帮助。&lt;/p&gt;
+&lt;p&gt;👉&lt;a href=&#34;https://github.com/Alikhll/golang-developer-roadmap/blob/master/i18n/zh-CN/ReadMe-zh-CN.md&#34;&gt;Go 开发者路线图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后，我自己又讲里面的内容，整理到了自己的思维导图里面。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/life/2021/study-method/study006.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后，根据路线图来学（学习不要一步登天、也不要心浮气躁），我怕自己学的太枯燥，又不想在找书上面浪费太多的时间，于是就选择了——《Head First Go语言程序设计》。这真的是一本极佳的入门书，里面在恰当的位置，总是能出现有趣的插图。想当初我在高中买的第一本书时，体验就远不如这本。当时冲着名字买——《Java 从入门到精通》，看上去很震撼，实则不然，前往精通的路上，竟然是我一步步用笔注解书中的错误过来的。直到高二时，买了一本 Oracle 官方的《Java 8 编程入门官方教程》，才对 Java 这门语言有了不一样的了解，后来才一步步纠正了学习的方法，逐渐熟练起来。&lt;/p&gt;
+&lt;h3 id=&#34;学习动机&#34;&gt;学习动机&lt;/h3&gt;
+&lt;p&gt;我们都知道，学习可以分为两类：主动学习和被动学习。对于我来说，上学时，我喜欢的科目，叫主动学习；我不喜欢的科目，叫被动学习（这可能也是我偏科的原因之一吧）。而现在，学习编程，就完完全全的是主动学习了。&lt;/p&gt;
+&lt;h4 id=&#34;找到自己的兴趣点&#34;&gt;找到自己的兴趣点&lt;/h4&gt;
+&lt;p&gt;为什么我学习编程属于主动学习呢？因为编程属于我的兴趣点。也就是咱们常说的，对某种事物感兴趣。每当我开发出一个新东西、解决一个新 bug、学习一个新的技术点，都会让我获得满足感与成就感。&lt;/p&gt;
+&lt;p&gt;这里其实我父亲的作用也挺大的，在我小时候，只是对计算机和编程“充满好奇”，算不上感兴趣。小孩子好奇的时候，总喜欢问各种奇怪的问题。但是我父亲有意的“引导”我，强化了对计算机和编程的好奇心。也许是为了让我少打游戏这么干的吧，我也没有找他本人确认过，但是有一点可以肯定的是，不善的引导、甚至用小孩子认为的更粗暴的方式对对待他这种行为的话，很容易讲好奇心扼杀在摇篮中的！&lt;/p&gt;
+&lt;h4 id=&#34;成隐性和快感&#34;&gt;成隐性和快感&lt;/h4&gt;
+&lt;p&gt;不知道大家有没有这样的感受，就拿我自己来说吧。当我在家“折腾”项目时，或者写开源项目时，总是乐在其中（当然，音乐也是得放的）。在这个过程中，就会让人产生快感——过程性快感。而当我 commit 代码时，也会感到快乐——结果性快感。当你经常性的出现这些快感的话，就会产生“成隐性”。以至于只要周末一有空，我就会写写代码。&lt;/p&gt;
+&lt;p&gt;我想，玩游戏可能也是这样吧，一玩就停不下来。但如果你 LOL 跟人一起五黑，然后连输10把，大概率你最近都不想打了。🤣&lt;/p&gt;
+&lt;h3 id=&#34;学习媒介很重要&#34;&gt;学习媒介很重要&lt;/h3&gt;
+&lt;h4 id=&#34;我最常用哪些媒介学习&#34;&gt;我最常用哪些媒介学习？&lt;/h4&gt;
+&lt;p&gt;我在大学时，不像现在这么喜欢看书自学，而是更倾向与看视频学习。但是却从来没有一个视频是看完了的，往往看了几个视频后，就看不进去了。最重要的一点，不知道大家有没有体会过，看完之后，你感觉自己什么都没学会，是不是？以至于后来，我学习编程就剩下3种主要方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;看书&lt;/li&gt;
+&lt;li&gt;看官方文档&lt;/li&gt;
+&lt;li&gt;看别人的开源项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;为什么我更喜欢看书而非视频&#34;&gt;为什么我更喜欢看书而非视频？&lt;/h4&gt;
+&lt;p&gt;一句话总结：看视频会导致你的思考变少，而看书不会！&lt;/p&gt;
+&lt;p&gt;看视频学习的时候，往往难以深入思考。而视频本身的质量，我们是不确定的，更别说为了吸引流量而特地设计的视频了。如果你想看质量更高的视频，我推荐你去 YouTube 看公开课，当然，有时候你也能在 B站找到中译版的公开课视频。&lt;/p&gt;
+&lt;p&gt;从时间的角度来讲，更不应该看视频。一句话，用眼睛看完的时间，肯定是会小于用嘴巴念完的时间。并且，视频是有很多“空白时间”的，空白时间你真的用来思考了吗？别人一个方法，敲了多久你就要等多久再看，但是文字版你能直接阅读。而且视频版切来切去的，都容易打断思维。所以，我个人是更青睐与看书的，看书能够让我更多地独立思考！&lt;/p&gt;
+&lt;h3 id=&#34;学习结果的产生&#34;&gt;学习结果的产生&lt;/h3&gt;
+&lt;p&gt;咱们不能光学不练呀，是吧？在看编程书的时候，一定要照着书上的代码示例，手动敲一敲。你可以预先在脑海中演练一遍，然后再去手动敲出来，看是否符合你的预期。炉火纯青之后，再省略这一步，节约时间。&lt;/p&gt;
+&lt;p&gt;如果是学习新的知识，一定要做好笔记和总结，同时要画思维导图，这样你才能把知识消化掉！&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/categories/%E7%94%9F%E6%B4%BB/" term="生活" label="生活" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F/" term="学习与人生" label="学习与人生" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.besscroft.com/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" term="学习方法" label="学习方法" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">高效上网与系统性学习</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/tech/2021/internet_surfing/" />
