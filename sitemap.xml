@@ -3,8 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.besscroft.com/categories/</loc>
-    <lastmod>2021-11-26T16:19:48+08:00</lastmod>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://blog.besscroft.com/tags/prometheus/</loc>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tags/</loc>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tech/</loc>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/</loc>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/tech/2021/prometheus-boot/</loc>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.besscroft.com/</loc>
+    <lastmod>2021-12-01T18:28:12+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/github-copilot/</loc>
     <lastmod>2021-11-26T16:19:48+08:00</lastmod>
@@ -13,9 +34,6 @@
     <lastmod>2021-11-26T16:19:48+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/openai/</loc>
-    <lastmod>2021-11-26T16:19:48+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/tags/</loc>
     <lastmod>2021-11-26T16:19:48+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/%E5%8F%8D%E6%80%9D/</loc>
@@ -28,9 +46,6 @@
     <lastmod>2021-11-26T16:19:48+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2021-11-26T16:19:48+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/</loc>
     <lastmod>2021-11-26T16:19:48+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/categories/%E7%94%9F%E6%B4%BB/</loc>
@@ -48,16 +63,10 @@
     <loc>https://blog.besscroft.com/tags/swagger/</loc>
     <lastmod>2021-11-17T09:52:05+08:00</lastmod>
   </url><url>
-    <loc>https://blog.besscroft.com/tech/</loc>
-    <lastmod>2021-11-17T09:52:05+08:00</lastmod>
-  </url><url>
     <loc>https://blog.besscroft.com/tech/2021/introduce-knife4j-into-the-project/</loc>
     <lastmod>2021-11-17T09:52:05+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</loc>
-    <lastmod>2021-11-17T09:52:05+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-11-17T09:52:05+08:00</lastmod>
   </url><url>
     <loc>https://blog.besscroft.com/about/</loc>

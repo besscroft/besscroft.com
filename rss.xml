@@ -23,10 +23,275 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 01 Dec 2021 18:28:36 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 01 Dec 2021 18:31:55 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
+        
+            <item>
+                <title>普罗米修斯の初体験</title>
+                <link>https://blog.besscroft.com/tech/2021/prometheus-boot/</link>
+                <guid isPermaLink="true">https://blog.besscroft.com/tech/2021/prometheus-boot/</guid>
+                <pubDate>Wed, 01 Dec 2021 18:30:16 &#43;0800</pubDate>
+                
+                    <author>besscroft@foxmail.com (Bess Croft)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;为什么我会选择普罗米修斯(Prometheus)？Prometheus 是按照 Google SRE 运维之道的理念构建的，具有实用性和前瞻性。同时也是基于 Go 语言开发的，性能好，安装部署也简单，甚至跨平台（包括 arm 平台）。作为对服务基础和业务监控，Prometheus 是一个非常好的选择。&lt;/p&gt;
+&lt;h2 id=&#34;什么是普罗米修斯&#34;&gt;什么是普罗米修斯？&lt;/h2&gt;
+&lt;p&gt;咱们这里引用官方的术语：
+Prometheus 是一个开源系统监控和警报工具包，它可以收集系统信息，并将其发送到一个或多个监控中心。Prometheus 将其指标收集并存储为时间序列数据，即指标信息与记录它的时间戳一起存储，以及称为标签的可选键值对。&lt;/p&gt;
+&lt;p&gt;这里引入官网的图，说明 Prometheus 的架构及其一些生态系统组件：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/2021/prometheus-boot/prometheus001.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;安装方式有很多，二进制包或者 Docker 都可以，这里我们选择二进制包。&lt;/p&gt;
+&lt;h3 id=&#34;安装环境&#34;&gt;安装环境&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/2021/prometheus-boot/prometheus002.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里俺用的是 Ubuntu 20.04，别问我为啥，主要是我内存最大的机器就是这台了（24G 内存），只不过，它是 arm64 架构的，所以下面的教程是运行在 arm64 架构的服务器上面的，当然，你也可以用本教程在 amd64 架构下安装，只有一些细微的区别，咱们下面会讲到。&lt;/p&gt;
+&lt;h3 id=&#34;安装-prometheus&#34;&gt;安装 Prometheus&lt;/h3&gt;
+&lt;h4 id=&#34;下载-prometheus&#34;&gt;下载 Prometheus&lt;/h4&gt;
+&lt;p&gt;你可以去官网，或者 GitHub 的&lt;a href=&#34;https://github.com/prometheus/prometheus/releases&#34;&gt;发布页面&lt;/a&gt;下载安装包，这里我下载的是 GitHub 仓库的包。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你是 amd64 架构的服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.linux-amd64.tar.gz
+tar xfz prometheus-2.31.0.linux-amd64.tar.gz
+sudo cp prometheus-2.31.0.linux-amd64/prometheus /usr/local/bin/
+sudo cp prometheus-2.31.0.linux-amd64/promtool /usr/local/bin/
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;如果你是 arm64 架构的服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.linux-arm64.tar.gz
+tar xfz prometheus-2.31.0.linux-arm64.tar.gz
+sudo cp prometheus-2.31.0.linux-arm64/prometheus /usr/local/bin/
+sudo cp prometheus-2.31.0.linux-arm64/promtool /usr/local/bin/
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;最主要的差异，就是要下载不同的包，后面的配置几乎相同&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;配置-prometheus&#34;&gt;配置 Prometheus&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;检查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;prometheus --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;执行命令，出现如下图所示，就成功了！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/2021/prometheus-boot/prometheus003.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我们在刚才解压后的文件夹下面，可以找到一个子目录 &lt;code&gt;prometheus&lt;/code&gt; ，然后可以找到一个配置文件 &lt;code&gt;prometheus.yml&lt;/code&gt; 。咱们现在需要把 &lt;code&gt;prometheus.yml&lt;/code&gt; 这个初始配置文件复制到 &lt;code&gt;/etc/prometheus&lt;/code&gt; 目录下，然后简单配置就可以启动啦。当然，你也可以按照自己的需求来配置，具体可以参考官方的&lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/configuration/configuration/&#34;&gt;配置文档&lt;/a&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mkdir -p /etc/prometheus
+sudo cp prometheus.yml /etc/prometheus/
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;默认的部分配置如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;scrape_configs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;job_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;prometheus&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;static_configs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;targets&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;localhost:9090&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们可以看到端口是 &lt;code&gt;9090&lt;/code&gt; ，你可以按需求改为其它的。&lt;/p&gt;
+&lt;h4 id=&#34;启动-prometheus&#34;&gt;启动 Prometheus&lt;/h4&gt;
+&lt;p&gt;接下来咱们启动看看&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;prometheus --config.file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/prometheus/prometheus.yml&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;如果发生了异常，则可以使用 &lt;code&gt;prometool&lt;/code&gt; 工具来检查你的配置文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;promtool check config &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/prometheus/prometheus.yml&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果输出如下提示，说明没问题了！&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Checking /etc/prometheus/prometheus.yml
+  SUCCESS: 0 rule files found
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;配置-service-方式运行-prometheus&#34;&gt;配置 service 方式运行 Prometheus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;新建一个 &lt;code&gt;service&lt;/code&gt; 文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo vim /etc/systemd/system/prometheus.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;编辑如下内容保存即可！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Unit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;prometheus
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Service&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root
+&lt;span class=&#34;nv&#34;&gt;ExecStart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;prometheus --config.file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/prometheus/prometheus.yml&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;Restart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;on-abort
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Install&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;WantedBy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;multi-user.target
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;设置开机启动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; prometheus
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;启动 Prometheus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo systemctl start prometheus
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样便大功告成啦！&lt;/p&gt;
+&lt;h3 id=&#34;配置-https-和反向代理&#34;&gt;配置 HTTPS 和反向代理&lt;/h3&gt;
+&lt;p&gt;如果你的服务器是 HTTPS 的，那么需要配置 HTTPS 的证书和私钥，这里俺使用的是 Let&#39;s Encrypt 的证书，可以去官网下载。具体如何操作就不说了，如果你不会，应该去学习如何使用 Nginx，并学会配置 HTTPS 证书。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置 Nginx 反向代理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里我放出我的配置吧，你可以根据你的需求，参考使用：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;location /
+{
+    proxy_pass http://127.0.0.1:9090;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header REMOTE-HOST $remote_addr;
+    
+    add_header X-Cache $upstream_cache_status;
+    
+    #Set Nginx Cache
+    add_header Cache-Control no-cache;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Prometheus 启动监听在本地回环地址 localhost:9090 ，所以公网是无法直接访问的，我也不太建议你开放防火墙，这样能带来一定的安全保护。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;预览&#34;&gt;预览&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.besscroft.com/images/tech/2021/prometheus-boot/prometheus004.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这时候咱们访问域名，就能看到页面啦！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里提示，我这不是生产环境，只是拿来练手学习，所以无所谓，生产环境不建议这么做！可以通过 ssh 端口转发方式实现远程访问。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/tags/prometheus/">Prometheus</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.besscroft.com/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/">普罗米修斯</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>学习与人生——使用 GitHub Copilot 后的思考</title>
