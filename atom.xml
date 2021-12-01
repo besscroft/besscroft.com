@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">桃花岛</title>
     <subtitle type="html">这里是 BessCroft 的生活与技术博客！非常高兴认识你！</subtitle>
-    <updated>2021-11-26T15:03:08&#43;08:00</updated>
+    <updated>2021-12-01T18:28:36&#43;08:00</updated>
     <id>https://blog.besscroft.com/</id>
     <link rel="alternate" type="text/html" href="https://blog.besscroft.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.besscroft.com/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">学习与人生——使用 GitHub Copilot 后的思考</title>
             <link rel="alternate" type="text/html" href="https://blog.besscroft.com/life/2021/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F%E4%BD%BF%E7%94%A8github-copilot%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83/" />
             <id>https://blog.besscroft.com/life/2021/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E7%94%9F%E4%BD%BF%E7%94%A8github-copilot%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83/</id>
-            <updated>2021-11-26T15:02:57&#43;08:00</updated>
+            <updated>2021-11-26T16:19:48&#43;08:00</updated>
             <published>2021-11-26T15:00:52&#43;08:00</published>
             <author>
                     <name>Bess Croft</name>
@@ -105,7 +105,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;你的雇主可能不会这么想，他们可能会认为，好的工具节省了你的编程开销，甚至会成为压你工资的借口之一。他们会把你当成机器上的“可替换零件”，觉得随时可以替代掉。其实这样往往会适得其反，节省人力开销最好的办法，就是聘用优秀的程序员，给他们足够的尊重，良好的待遇、让他们开心的工作和生活，就能让他们做出更好地软件。那些名词满天飞，光说不做的管理者，才是真正浪费公司资源的人，降低软件开发效率和软件质量的祸根。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;最好的发展方向是什么？我觉得人的【智慧】+机器的【智能】相结合，才应该是未来人工智能发展的方向。&lt;/p&gt;
+&lt;p&gt;最好的发展方向是什么？我觉得人的【智慧】+ 机器的【智能】相结合，才应该是未来人工智能发展的方向。&lt;/p&gt;
 &lt;p&gt;最后给列举一些建议吧：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;使用 AI 辅助编程时，注意隐私和法律风险，切记不要随意在公司使用。&lt;/li&gt;
