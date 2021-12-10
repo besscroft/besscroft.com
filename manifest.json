@@ -1,13 +1,11 @@
 {
-    "name": "Hugo Theme MemE",
+    "name": "桃花岛",
     "short_name": "MemE",
-    "icons": [
-        {
-            "src": "./icons/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
+    "icons": [{
+        "src": "./icons/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
     "theme_color": "#fff",
     "background_color": "#fff",
     "display": "standalone",
