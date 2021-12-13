@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -352,14 +352,14 @@
 <p>为了保证判断 value 和删除 key 的原子性，我们就需要用到 lua 脚本进行处理了，lua 脚本可以保证连续多个指令的原子性执行。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-lua" data-lang="lua"><span class="kr">if</span> <span class="n">redis.call</span><span class="p">(</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="n">KEYS</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="n">ARGV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="kr">then</span>
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="kr">if</span> <span class="n">redis.call</span><span class="p">(</span><span class="s2">&#34;get&#34;</span><span class="p">,</span><span class="n">KEYS</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="n">ARGV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="kr">then</span>
     <span class="kr">return</span> <span class="n">redis.call</span><span class="p">(</span><span class="s2">&#34;del&#34;</span><span class="p">,</span><span class="n">KEYS</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="kr">else</span>
     <span class="kr">return</span> <span class="mi">0</span>

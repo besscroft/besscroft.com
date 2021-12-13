@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -302,7 +302,7 @@
 <p>修改配置文件<code>_config.yml</code> ，找到<code>font</code>将下列代码中红色的部分修改成绿色的部分即可。可以根据实际情况稍作修改！</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -345,7 +345,7 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">font:
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">font:
 <span class="gd">- enable: false
 </span><span class="gd"></span><span class="gi">+ enable: true
 </span><span class="gi"></span>
@@ -392,13 +392,13 @@
 <p>找到主题的<code>base.styl</code>文件，具体位置为<code>~/blog/themes/next/source/css/_variables/base.styl</code>,然后修改相关数据！</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff"><span class="gd">-$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="gd">-$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace
 </span><span class="gd"></span><span class="gi">+$font-family-monospace    = consolas, Menlo, $font-family-base, monospace
 </span><span class="gi"></span><span class="gd">-$font-family-monospace    = get_font_family(&#39;codes&#39;), consolas, Menlo, $font-family-chinese, monospace if get_font_family(&#39;codes&#39;)
 </span><span class="gd"></span><span class="gi">+$font-family-monospace    = get_font_family(&#39;codes&#39;), consolas, Menlo, $font-family-base, monospace if get_font_family(&#39;codes&#39;)
@@ -409,11 +409,11 @@
 <p>如果你看不习惯默认(原来)的字体大小的话，你可以尝试修改它！</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">// Font size
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">// Font size
 $font-size-base           = 14px	//改成你想要的即可！
 </code></pre></td></tr></table></div>
 </div>
@@ -421,13 +421,13 @@ $font-size-base           = 14px	//改成你想要的即可！
 <p>没错，你甚至可以设置不同的颜色！</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">//修改字体颜色
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">//修改字体颜色
 body {
     color: &lt;在这里填上你想要的颜色，如：#000&gt;;	//别漏了分号！
 }

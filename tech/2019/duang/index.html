@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -295,7 +295,7 @@
 <p>在文末添加自定义的结束标记，效果如下：</p>
 <p><img src="/images/tech/2019/duang/duang01.png" alt=""></p>
 <p>新建布局模板文件 post-end-tag.swig，添加如下代码：</p>
-<pre><code class="language-[]" data-lang="[]">&lt;div&gt;
+<pre tabindex="0"><code class="language-[]" data-lang="[]">&lt;div&gt;
   {% if not is_index %}
     &lt;div style=&quot;text-align:center;color:#bfbfbf;font-size:16px;&quot;&gt;
       &lt;span&gt;-------- 本文结束 &lt;/span&gt;
@@ -307,7 +307,7 @@
 </code></pre><p>在文章布局模板中添加如下代码：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -322,7 +322,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">{#####################}
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">{#####################}
 {### END POST BODY ###}
 {#####################}
 
@@ -338,7 +338,7 @@
 </code></pre></td></tr></table></div>
 </div>
 </div><p>在站点配置文件末尾添加如下代码：</p>
-<pre><code class="language-[]" data-lang="[]">post_end_tag:
+<pre tabindex="0"><code class="language-[]" data-lang="[]">post_end_tag:
   enabled: true  # 是否开启文末的本文结束标记
   icon: paw # 结束标记之间的图标
 </code></pre><p>重新推送后即可在文末看到结束标记。</p>
@@ -348,7 +348,7 @@
 <p>在文章布局模板中找到文末标签相关代码段，将 <code>#</code> 换成 <code>&lt;i class=&quot;fa fa-tags&quot;&gt;&lt;/i&gt;</code> 即可：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -361,7 +361,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">  &lt;footer class=&#34;post-footer&#34;&gt;
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">  &lt;footer class=&#34;post-footer&#34;&gt;
     {% if post.tags and post.tags.length and not is_index %}
       &lt;div class=&#34;post-tags&#34;&gt;
         {% for tag in post.tags %}
@@ -377,7 +377,7 @@
 </div><h3 id="侧边栏放左边"><a href="#侧边栏放左边" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:侧边栏放左边" class="headings">侧边栏放左边</a></h3>
 <p>侧边栏默认是在右边的，我怎么都看不习惯，总感觉有点别扭。那么，给整到左边就完事儿啦！</p>
 <p>在自定义样式文件中添加如下规则：</p>
-<pre><code class="language-[]" data-lang="[]">//侧边栏放在左边
+<pre tabindex="0"><code class="language-[]" data-lang="[]">//侧边栏放在左边
 .sidebar-toggle {
   left: 30px;
 }
@@ -388,7 +388,7 @@
 </code></pre><p>修改动效脚本代码：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -412,7 +412,7 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">$(document)
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">$(document)
   .on(&#39;sidebar.isShowing&#39;, function() {
     NexT.utils.isDesktop() &amp;&amp; $(&#39;body&#39;).velocity(&#39;stop&#39;).velocity(
 <span class="gd">-     {paddingRight: SIDEBAR_WIDTH},
@@ -439,7 +439,7 @@
 </div><p>这样的话就可以将侧边栏放置在左边了，但是当窗口宽度缩小到 991px 之后会出现样式错误，侧边栏收缩消失但是页面左侧仍有留白间距，此时修改如下代码即可：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -452,7 +452,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">body {
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">body {
   position: relative; // Required by scrollspy
   font-family: $font-family-base;
   font-size: $font-size-base;
@@ -472,7 +472,7 @@
 <p><a id="download" href="https://mirrors.52bess.com/blog/js/wobblewindow.js"><i class="fa fa-download"></i><span> Download Now</span>
 </a></p>
 <p>在主题自定义布局文件中添加以下代码：</p>
-<pre><code class="language-[]" data-lang="[]">{# wobble窗口摆动特效 #}
+<pre tabindex="0"><code class="language-[]" data-lang="[]">{# wobble窗口摆动特效 #}
 {% if theme.wobble.enable %}
   &lt;script src=&quot;/js/wobblewindow.js&quot;&gt;&lt;/script&gt;
   &lt;script&gt;
@@ -515,7 +515,7 @@
   &lt;/script&gt;
 {% endif %}
 </code></pre><p>在自定义样式文件中添加以下样式：</p>
-<pre><code>//窗口波动效果相关样式
+<pre tabindex="0"><code>//窗口波动效果相关样式
 if hexo-config('wobble')  {
   .sidebar {
     box-shadow: none;
@@ -546,7 +546,7 @@ if hexo-config('wobble')  {
 }
 </code></pre><div class="note warning"><p>Next.Muse 主题方案中 Header 和 Footer 是没有背景色的，所以需要添加背景色后才能看出边缘摆动效果。另外，实现边缘摆动效果所需的 z-index 属性可能会导致元素堆叠异常，需要添加以上样式来矫正。</p></div>
 <p>在主题配置文件中添加以下代码：</p>
-<pre><code class="language-[]" data-lang="[]"># window woblle
+<pre tabindex="0"><code class="language-[]" data-lang="[]"># window woblle
 wobble:
   enable: true  # 是否开启边缘波动效果
   radius: 50  # 波动半径
@@ -559,7 +559,7 @@ wobble:
 <p>首先，找到自己喜欢的图片素材放到 source\images\ 目录下：</p>
 <p>或者：链接：https://pan.baidu.com/s/1J0dJOa2oWFwNR8pvG6vBFQ 提取码：lstv</p>
 <p>然后在自定义样式文件中添加如下代码：</p>
-<pre><code class="language-[]" data-lang="[]">//自定义回到顶部样式
+<pre tabindex="0"><code class="language-[]" data-lang="[]">//自定义回到顶部样式
 .back-to-top {
   right: 60px;
   width: 70px;  //图片素材宽度
@@ -584,9 +584,9 @@ wobble:
 <p>为站点添加豆瓣阅读 / 电影 / 游戏页面，效果参考博客中的豆瓣页面！</p>
 <div class="note primary"><p>具体是怎么实现的，可以参考GitHub上的一个开源项目，这个项目的创意是真的很不错！<a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">Hexo—Douban</a></p></div>
 <p>首先，在根目录下执行以下命令安装相关依赖：</p>
-<pre><code>npm install hexo-douban --save
+<pre tabindex="0"><code>npm install hexo-douban --save
 </code></pre><p>然后，在站点配置文件中添加以下内容：</p>
-<pre><code class="language-[]" data-lang="[]">douban:
+<pre tabindex="0"><code class="language-[]" data-lang="[]">douban:
   user:  # 个人豆瓣ID
   builtin: false
   book:
@@ -606,7 +606,7 @@ wobble:
 </ul>
 <div class="note warning"><p>如果只想生成某一个页面（比如只生成读书页面），把其他的配置项注释掉即可。</p></div>
 <p>在主题配置文件中新增菜单入口：</p>
-<pre><code class="language-[]" data-lang="[]">menu:
+<pre tabindex="0"><code class="language-[]" data-lang="[]">menu:
   home: / || home
   tags: /tags/ || tags
   categories: /categories/ || th
@@ -618,7 +618,7 @@ wobble:
 </code></pre><p>在语言包中新增菜单中文：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -628,7 +628,7 @@ wobble:
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">  menu:
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">  menu:
     home: 首页
     archives: 归档
     categories: 分类
@@ -639,7 +639,7 @@ wobble:
 </span></code></pre></td></tr></table></div>
 </div>
 </div><p>然后在根目录下执行以下命令生成豆瓣阅读 / 电影 / 游戏页面：</p>
-<pre><code>$ hexo douban
+<pre tabindex="0"><code>$ hexo douban
 </code></pre><p>可选参数:</p>
 <ul>
 <li>-b | --books: 只生成豆瓣读书页面</li>

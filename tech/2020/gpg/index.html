@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -301,14 +301,14 @@
 <p>使用<code>GitHub</code>的话，当然得用<code>Git</code>了。我主要<code>在Windows10</code>系统中使用<code>GitHub</code>，而在<code>openSUSE</code>中，很少使用。而在<code>Windows</code>平台的<code>Git</code>发行版中，自带了<code>GPG</code>。打开<code>Git Bash</code>，在终端输入<code>pgp --version</code>，就可以看到一些版本信息了：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ gpg --version
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ gpg --version
 
 gpg <span class="o">(</span>GnuPG<span class="o">)</span> 2.2.19-unknown
 libgcrypt 1.8.5
@@ -322,10 +322,10 @@ Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">2019
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ gpg --full-generate-key
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ gpg --full-generate-key
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -364,12 +364,12 @@ Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">2019
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">Real name: 这里填个人信息<span class="o">(</span>随便填
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">Real name: 这里填个人信息<span class="o">(</span>随便填
 Email address: 这里必须填 GitHub 帐户的经过验证的电子邮件地址
 Comment: 随便填，如：mygpg
 </code></pre></td></tr></table></div>
@@ -384,10 +384,10 @@ Comment: 随便填，如：mygpg
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ gpg --list-secret-keys --keyid-format LONG
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ gpg --list-secret-keys --keyid-format LONG
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -395,7 +395,7 @@ Comment: 随便填，如：mygpg
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -403,7 +403,7 @@ Comment: 随便填，如：mygpg
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ gpg --list-secret-keys --keyid-format LONG
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ gpg --list-secret-keys --keyid-format LONG
 /Users/hubot/.gnupg/secring.gpg
 ------------------------------------
 sec   4096R/3AA5C34371567BD2 2016-03-10 <span class="o">[</span>expires: 2017-03-10<span class="o">]</span>
@@ -416,11 +416,11 @@ ssb   4096R/42B317FD4BA89E7A 2016-03-10
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ gpg --armor --export 3AA5C34371567BD2
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ gpg --armor --export 3AA5C34371567BD2
 <span class="c1"># 以 ASCII 封装格式打印 GPG 密钥 ID</span>
 </code></pre></td></tr></table></div>
 </div>
@@ -435,11 +435,11 @@ ssb   4096R/42B317FD4BA89E7A 2016-03-10
 <p>然后就大功告成啦！</p>
 <h3 id="利用gpg私钥对git-commit进行签名"><a href="#利用gpg私钥对git-commit进行签名" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:利用gpg私钥对git-commit进行签名" class="headings">利用GPG私钥对Git commit进行签名</a></h3>
 <p>首先，需要让Git知道签名所用的GPG密钥ID：</p>
-<pre><code>git config --global user.signingkey {key_id}
+<pre tabindex="0"><code>git config --global user.signingkey {key_id}
 </code></pre><p>然后，在每次commit的时候，加上-S参数，表示这次提交需要用GPG密钥进行签名：</p>
-<pre><code>git commit -S -m &quot;...&quot;
+<pre tabindex="0"><code>git commit -S -m &quot;...&quot;
 </code></pre><p>如果你觉得每次都需要手动加上-S有些麻烦，可以设置Git为每次commit自动要求签名：</p>
-<pre><code>git config --global commit.gpgsign true
+<pre tabindex="0"><code>git config --global commit.gpgsign true
 </code></pre><p>但不论是否需要手动加上-S，commit时都会弹出对话框，需要你输入该密钥的密码，以判断是否为本人操作。
 至于其它的进阶玩法，自行Google去吧！</p>
 

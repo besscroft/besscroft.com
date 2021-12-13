@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -311,7 +311,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -331,7 +331,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;properties&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;properties&gt;</span>
     <span class="nt">&lt;knife4j.version&gt;</span>2.0.4<span class="nt">&lt;/knife4j.version&gt;</span>
 <span class="nt">&lt;/properties&gt;</span>
 
@@ -356,13 +356,13 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.github.xiaoymin<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>knife4j-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
@@ -373,13 +373,13 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.github.xiaoymin<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>knife4j-micro-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
@@ -432,14 +432,14 @@
 <p>如果使用 SpringBoot 框架,只需在 <code>application.properties</code> 或者 <code>application.yml</code> 配置文件中配置</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">knife4j</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">knife4j</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="c"># 开启增强配置 </span><span class="w">
 </span><span class="w">  </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="w">　</span><span class="c"># 开启生产环境屏蔽</span><span class="w">
@@ -453,7 +453,7 @@
 <p>咱们一般会放在 common 包里面。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -539,7 +539,7 @@
 </span><span class="lnt">84
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.common.config</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.common.config</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">com.besscroft.aurora.mall.common.domain.SwaggerProperties</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
@@ -630,7 +630,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -688,7 +688,7 @@
 </span><span class="lnt">56
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Data</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Data</span>
 <span class="nd">@Builder</span>
 <span class="nd">@EqualsAndHashCode</span><span class="o">(</span><span class="n">callSuper</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">SwaggerProperties</span> <span class="o">{</span>
@@ -751,7 +751,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -811,7 +811,7 @@
 </span><span class="lnt">58
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.gateway.config</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.gateway.config</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.extern.slf4j.Slf4j</span><span class="o">;</span>
@@ -876,7 +876,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -939,7 +939,7 @@
 </span><span class="lnt">61
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.gateway.config</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.gateway.config</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.http.HttpStatus</span><span class="o">;</span>
@@ -1007,7 +1007,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1045,7 +1045,7 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.admin.config</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.besscroft.aurora.mall.admin.config</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">com.besscroft.aurora.mall.common.config.BaseSwaggerConfig</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.besscroft.aurora.mall.common.domain.SwaggerProperties</span><span class="o">;</span>
@@ -1096,13 +1096,13 @@
 <p>访问分组接口地址：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-plain" data-lang="plain">http://localhost:8000/swagger-resources
+<pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain">http://localhost:8000/swagger-resources
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code class="language-jaon" data-lang="jaon">[
+</div><pre tabindex="0"><code class="language-jaon" data-lang="jaon">[
     {
         &quot;name&quot;: &quot;mall-auth&quot;,
         &quot;url&quot;: &quot;/mall-auth/v2/api-docs&quot;,
@@ -1134,10 +1134,10 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-plain" data-lang="plain">http://localhost:8000/doc.html#/home
+<pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain">http://localhost:8000/doc.html#/home
 </code></pre></td></tr></table></div>
 </div>
 </div><p>注意，实例中的 8000，指的是网关的端口号！</p>
@@ -1164,7 +1164,7 @@
 <p>最后，放上一些可能需要放行的白名单地址：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1173,7 +1173,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="s2">&#34;/doc.html&#34;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="s2">&#34;/doc.html&#34;</span><span class="w">
 </span><span class="w"></span><span class="s2">&#34;/v2/api-docs-ext&#34;</span><span class="w">
 </span><span class="w"></span><span class="s2">&#34;/swagger-resources&#34;</span><span class="w">
 </span><span class="w"></span><span class="s2">&#34;/v2/api-docs&#34;</span><span class="w">

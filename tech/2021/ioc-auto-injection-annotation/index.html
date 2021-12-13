@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -310,7 +310,7 @@
 <p>我们可以对一个Bean的<code>构造器</code> 、<code>属性</code>、<code>Setter方法</code>上面标注<code>@Autowired</code>注解，无论采用构造器还是Setter方法，Spring都会尝试满足方法参数上所声明的依赖。标注在属性上，Spring也会按照属性对应的类型，从容器中找到对应的Bean赋值到对应的属性上。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -334,7 +334,7 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">personsystem</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">personsystem</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
 
@@ -361,7 +361,7 @@
 </div><p>上面的例子，不出意外的话，Spring会注入一个girl给boy😅</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -371,7 +371,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
 </span><span class="cm"> * Setter方法注入
 </span><span class="cm"> */</span>
 <span class="nd">@Autowired</span><span class="o">(</span><span class="n">required</span><span class="o">=</span><span class="kc">false</span><span class="o">)</span>
@@ -405,7 +405,7 @@
 </table></div>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -414,7 +414,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Component</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Component</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Boy</span> <span class="kd">implements</span> <span class="n">Person</span> <span class="o">{</span>
 	
     <span class="nd">@Resource</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#34;beautifulGirl&#34;</span><span class="o">)</span>
@@ -428,7 +428,7 @@
 <p><code>@Inject</code>注解依赖JSR330规范：https://jcp.org/en/jsr/detail?id=330 ，但是我们在用这个注解之前，是需要导入一个依赖的：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -436,7 +436,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- https://mvnrepository.com/artifact/javax.inject/javax.inject --&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- https://mvnrepository.com/artifact/javax.inject/javax.inject --&gt;</span>
 <span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>javax.inject<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>javax.inject<span class="nt">&lt;/artifactId&gt;</span>
@@ -447,7 +447,7 @@
 </div><p><code>@Inject</code>注解虽然来源于Java依赖注入规范，但是只和<code>@Autowired</code>有着一点点差别，在绝大多数场景下，都是可以相互替换的。该规范还提供了一个<code>@Named</code>注解，作用是等同于<code>@Qualifier</code>注解的。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -457,7 +457,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Component</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Component</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Boy</span> <span class="kd">implements</span> <span class="n">Person</span> <span class="o">{</span>
 	
     <span class="nd">@Inject</span>

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -317,13 +317,13 @@ Prometheus 是一个开源系统监控和警报工具包，它可以收集系统
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">wget https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.linux-amd64.tar.gz
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.linux-amd64.tar.gz
 tar xfz prometheus-2.31.0.linux-amd64.tar.gz
 sudo cp prometheus-2.31.0.linux-amd64/prometheus /usr/local/bin/
 sudo cp prometheus-2.31.0.linux-amd64/promtool /usr/local/bin/
@@ -334,13 +334,13 @@ sudo cp prometheus-2.31.0.linux-amd64/promtool /usr/local/bin/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">wget https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.linux-arm64.tar.gz
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.linux-arm64.tar.gz
 tar xfz prometheus-2.31.0.linux-arm64.tar.gz
 sudo cp prometheus-2.31.0.linux-arm64/prometheus /usr/local/bin/
 sudo cp prometheus-2.31.0.linux-arm64/promtool /usr/local/bin/
@@ -355,10 +355,10 @@ sudo cp prometheus-2.31.0.linux-arm64/promtool /usr/local/bin/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">prometheus --version
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">prometheus --version
 </code></pre></td></tr></table></div>
 </div>
 </div><p>执行命令，出现如下图所示，就成功了！</p>
@@ -366,11 +366,11 @@ sudo cp prometheus-2.31.0.linux-arm64/promtool /usr/local/bin/
 <p>我们在刚才解压后的文件夹下面，可以找到一个子目录 <code>prometheus</code> ，然后可以找到一个配置文件 <code>prometheus.yml</code> 。咱们现在需要把 <code>prometheus.yml</code> 这个初始配置文件复制到 <code>/etc/prometheus</code> 目录下，然后简单配置就可以启动啦。当然，你也可以按照自己的需求来配置，具体可以参考官方的<a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/" target="_blank" rel="noopener">配置文档</a>。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir -p /etc/prometheus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir -p /etc/prometheus
 sudo cp prometheus.yml /etc/prometheus/
 </code></pre></td></tr></table></div>
 </div>
@@ -379,13 +379,13 @@ sudo cp prometheus.yml /etc/prometheus/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">scrape_configs</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">scrape_configs</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span>- <span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;prometheus&#34;</span><span class="w">
 </span><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;localhost:9090&#34;</span><span class="p">]</span><span class="w">
@@ -396,10 +396,10 @@ sudo cp prometheus.yml /etc/prometheus/
 <p>接下来咱们启动看看</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">prometheus --config.file <span class="s2">&#34;/etc/prometheus/prometheus.yml&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">prometheus --config.file <span class="s2">&#34;/etc/prometheus/prometheus.yml&#34;</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -407,14 +407,14 @@ sudo cp prometheus.yml /etc/prometheus/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">promtool check config <span class="s2">&#34;/etc/prometheus/prometheus.yml&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">promtool check config <span class="s2">&#34;/etc/prometheus/prometheus.yml&#34;</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p>如果输出如下提示，说明没问题了！</p>
-<pre><code>Checking /etc/prometheus/prometheus.yml
+<pre tabindex="0"><code>Checking /etc/prometheus/prometheus.yml
   SUCCESS: 0 rule files found
 </code></pre><h3 id="配置-service-方式运行-prometheus"><a href="#配置-service-方式运行-prometheus" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:配置-service-方式运行-prometheus" class="headings">配置 service 方式运行 Prometheus</a></h3>
 <ul>
@@ -422,10 +422,10 @@ sudo cp prometheus.yml /etc/prometheus/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo vim /etc/systemd/system/prometheus.service
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo vim /etc/systemd/system/prometheus.service
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -433,7 +433,7 @@ sudo cp prometheus.yml /etc/prometheus/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -445,7 +445,7 @@ sudo cp prometheus.yml /etc/prometheus/
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Unit<span class="o">]</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Unit<span class="o">]</span>
 <span class="nv">Description</span><span class="o">=</span>prometheus
 
 <span class="o">[</span>Service<span class="o">]</span>
@@ -462,10 +462,10 @@ sudo cp prometheus.yml /etc/prometheus/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo systemctl <span class="nb">enable</span> prometheus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo systemctl <span class="nb">enable</span> prometheus
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -473,10 +473,10 @@ sudo cp prometheus.yml /etc/prometheus/
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo systemctl start prometheus
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo systemctl start prometheus
 </code></pre></td></tr></table></div>
 </div>
 </div><p>这样便大功告成啦！</p>
@@ -486,7 +486,7 @@ sudo cp prometheus.yml /etc/prometheus/
 <li>配置 Nginx 反向代理</li>
 </ul>
 <p>这里我放出我的配置吧，你可以根据你的需求，参考使用：</p>
-<pre><code>location /
+<pre tabindex="0"><code>location /
 {
     proxy_pass http://127.0.0.1:9090;
     proxy_set_header Host $host;
