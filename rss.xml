@@ -7,7 +7,7 @@
 
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>桃花岛</title>
+        <title>Snow Mountain</title>
         <link>https://blog.besscroft.com/</link>
         <description>这里是 BessCroft 的生活与技术博客！非常高兴认识你！</description>
         <generator>Hugo 0.90.1 https://gohugo.io/</generator>
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 14 Dec 2021 09:23:25 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 18 Dec 2021 21:36:37 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.besscroft.com/rss.xml" />
         
