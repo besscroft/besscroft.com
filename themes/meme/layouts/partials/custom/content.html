@@ -1,0 +1,11 @@
+{{- $ := index . "$" -}}
+{{- $Content := .Content -}}
+
+<!-- Video Helper -->
+{{- if $.Site.Params.enableVideoHelper -}}
+    {{- $regex := `(<video[^>]+)` -}}
+    {{- $replacement := `$1 type="video/mp4" controls` -}}
+    {{- $Content = $Content | replaceRE $regex $replacement -}}
+{{- end -}}
+
+{{- return $Content -}}
