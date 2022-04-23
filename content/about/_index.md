@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "关于我"
 date: 2021-12-18T21:30:22+08:00
 draft: false
 comments: false
@@ -11,17 +11,16 @@ comments: false
 
 {{< /quote-center >}}
 
-I'm BessCroft , a full-time full-stack developer 👨‍💻 I do a lot of different things.
+I'm BessCroft , a full-time full-stack developer 👨‍💻 
 
-The language that Java works for me. Python is my favourite language, whose simplicity and powerfulness fascinates me. The same to JavaScript.
+你好，我是来自湖北荆州的，一个普通的男生。
 
-### About Blog
+我在浙江杭州工作，是一名 Java 开发工程师。
 
-This blog is a [PWA](https://developers.google.com/web/progressive-web-apps/) site, you can add this blog to your mobile phone home screen or computer desktop through the browser, anytime, anywhere to view this blog.If you want to subscribe to this blog, [Atom](https://blog.besscroft.com/atom.xml)╱[RSS](https://blog.besscroft.com/rss.xml) is recommended.Of course, you can also visit this blog frequently to keep up with the latest articles.
+我喜欢编程，这是我的兴趣爱好之一，我希望能够通过编程，创造一些有意思的东西。
 
-### How to reach me
+### 联系我
 
 - Email：besscroft#foxmail.com
-- QQGroup：821557332
 - GitHub：[@besscroft](https://github.com/besscroft)
 - Twitter：[@besscroft](https://twitter.com/besscroft)
