@@ -34,10 +34,10 @@ comments: false
 
 ​	{{< figure src="/photos/2021/IMG_2950.JPG" link="/photos/2021/IMG_2950.JPG" caption="Google Devfest 2021 HangZhou" caption-position="bottom" caption-effect="fade" >}}
 
-​	{{< figure src="/photos/2022/IMG_2950.JPG" link="IMG_3115.jpeg" caption="团圆饭" caption-position="bottom" caption-effect="fade" >}}
+​	{{< figure src="/photos/2022/IMG_3115.jpeg" link="IMG_3115.jpeg" caption="团圆饭" caption-position="bottom" caption-effect="fade" >}}
 
-​	{{< figure src="/photos/2022/IMG_2950.JPG" link="IMG_3130.jpeg" caption="丰盛的一桌" caption-position="bottom" caption-effect="fade" >}}
+​	{{< figure src="/photos/2022/IMG_3130.jpeg" link="IMG_3130.jpeg" caption="丰盛的一桌" caption-position="bottom" caption-effect="fade" >}}
 
-​	{{< figure src="/photos/2022/IMG_2950.JPG" link="IMG_3405.jpeg" caption="换新皮肤啦" caption-position="bottom" caption-effect="fade" >}}
+​	{{< figure src="/photos/2022/IMG_3405.jpeg" link="IMG_3405.jpeg" caption="换新皮肤啦" caption-position="bottom" caption-effect="fade" >}}
 
 {{< /gallery >}}
