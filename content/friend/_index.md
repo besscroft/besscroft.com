@@ -7,7 +7,7 @@ comments: false
 
 <div class="flink" id="article-container">
 <div class="friend-list-div" >
-{{< friend name="月小水长" url="https://inspurer.github.io/" logo="https://inspurer.github.io/images/avatar.jpg" word="微信公众号@月小水长" >}}
+{{< friend name="BuyiXiao's Blog" url="https://buyixiao.github.io/" logo="https://buyixiao.github.io/img/avatar.png" word="青山依旧在，几度夕阳红" >}}
 {{< friend name="Yremp" url="https://yremp.live/" logo="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/head.jpg" word="流年，谁给过的倾城" >}}
 {{< friend name="猿宵" url="https://werty.cn/" logo="https://img.icons8.com/color/2x/ninja-head.png" word="喜欢技术，享受Coding" >}}
 {{< friend name="WUMOER" url="https://wumoer.com" logo="https://cdn.jsdelivr.net/gh/wyz741525741/CND/img/20210114180113.jpg" word="每个人都在与人生苦战" >}}
@@ -28,7 +28,7 @@ comments: false
 
 <h3>友链格式</h3>
 
-> - 名称：尼采为谁哭泣
+> - 名称：风与牧歌
 > - 地址：https://blog.besscroft.com
 > - 描述：书中自有颜如玉
 > - Logo：[https://blog.besscroft.com/avatar.png](https://blog.besscroft.com/avatar.png)
