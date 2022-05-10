@@ -23,6 +23,7 @@ comments: false
 {{< friend name="Davinci的红茶馆" url="https://davincievans.top/" logo="https://cdn.jsdelivr.net/gh/DavinciEvans/Imgs-bed@master/gallery/avatar.jpg" word="You are all stardust." >}}
 {{< friend name="CodeCheng" url="https://www.codecheng.com/" logo="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210501222811.webp" word="抬头仰望满天繁星，为你绽放闪烁不息" >}}
 {{< friend name="瑾年MckinleyLu" url="https://www.mckinleylu.com" logo="https://www.mckinleylu.com/favicon.ico" word="桃李不言,下自成蹊" >}}
+{{< friend name="胡涂说" url="https://hutusi.com/" logo="https://pic.rmb.bdstatic.com/bjh/05e9a1cd38085a32a76cdf7df69438c2.jpeg" word="任抛星汉归园圃，留取乾坤盛酒囊" >}}
 </div>
 </div>
 
@@ -30,7 +31,7 @@ comments: false
 
 > - 名称：风与牧歌
 > - 地址：https://blog.besscroft.com
-> - 描述：书中自有颜如玉
+> - 描述：旅行终将迎来终点。
 > - Logo：[https://blog.besscroft.com/avatar.png](https://blog.besscroft.com/avatar.png)
 
 > **注意: 确保主页地址和头像的地址有效，申请友链前，请先将本站添加到友链中**！😊需要更换友链的小伙伴们，发邮件联系我即可，看到后将第一时间更新！😋
