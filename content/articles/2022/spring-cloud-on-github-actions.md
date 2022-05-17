@@ -121,7 +121,7 @@ jobs:
 
 工作流程中，有使用到环境变量的地方，也就是用户名和 token，这个不可能直接放在文件中的，不然就泄露了。一般我们存放在 `Actions secrets` 中，使用环境变量配置进行读取，如下图所示。
 
-![](/images/articles/2022/spring-cloud-on-github-actions/actions01.png)
+![](/images/articles/2022/spring-cloud-on-github-actions/actions02.png)
 
 ## Spring Cloud
 
