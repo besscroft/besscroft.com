@@ -2,7 +2,7 @@
 # Site Settings
 
 baseURL = "https://blog.besscroft.com/"
-title = "风与牧歌"
+title = "旅行者的随想"
 languageCode = "en"
 hasCJKLanguage = false
 # Copyright information (Markdown supported)

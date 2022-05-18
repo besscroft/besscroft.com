@@ -29,7 +29,7 @@ comments: false
 
 <h3>友链格式</h3>
 
-> - 名称：风与牧歌
+> - 名称：旅行者的随想
 > - 地址：https://blog.besscroft.com
 > - 描述：旅行终将迎来终点。
 > - Logo：[https://blog.besscroft.com/avatar.png](https://blog.besscroft.com/avatar.png)

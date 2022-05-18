@@ -2,7 +2,7 @@
 # 站點配置
 
 baseURL = "https://blog.besscroft.com/"
-title = "风与牧歌"
+title = "旅行者的随想"
 languageCode = "zh-TW"
 hasCJKLanguage = true
 # 版權資訊（支援 Markdown）
