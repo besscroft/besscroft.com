@@ -13,9 +13,7 @@ categories: ["技术"]
 
 [aurora-mall](https://github.com/besscroft/aurora-mall) 是一个基于 Spring Cloud Alibaba + Vue + Element-UI 开发的开源商城项目。
 
-文档地址：[https://mall.doc.besscroft.com/](https://mall.doc.besscroft.com/)
-
-预览地址：[https://mall.aurora.besscroft.com/](https://mall.aurora.besscroft.com/)
+文档地址：[https://developer.besscroft.com/aurora-mall/](https://developer.besscroft.com/aurora-mall/)
 
 其中也用到了一些现在主流的框架/架构：
 
@@ -30,3 +28,5 @@ categories: ["技术"]
 ## 最后
 
 希望我能在编程这条路上一直走下去，虽然工作生活中都会有很多困难，但是这些都无法抵挡我对编程的热爱。
+
+> 注：该项目已归档，并未完成开发，目前在做其它事情！
