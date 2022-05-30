@@ -19,6 +19,8 @@ I'm BessCroft , a full-time full-stack developer 👨‍💻
 
 我喜欢编程，这是我的兴趣爱好之一，我希望能够通过编程，创造一些有意思的东西。
 
+我的书单：https://book.besscroft.com
+
 ### 联系我
 
 - Email：besscroft#foxmail.com
