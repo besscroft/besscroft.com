@@ -11,9 +11,9 @@ comments: false
 
 {{< /quote-center >}}
 
-I'm BessCroft , a full-time full-stack developer 👨‍💻 
+Java Developer、野生 Gopher、Pythonista，TypeScript 真香！
 
-你好，我是来自湖北荆州的，一个普通的男生。
+I'm BessCroft , a full-time full-stack developer 👨‍💻 
 
 我在浙江杭州工作，是一名 Java 开发工程师。
 
