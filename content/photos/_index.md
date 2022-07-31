@@ -40,4 +40,10 @@ comments: false
 
 ​	{{< figure src="/photos/2022/IMG_3405.jpeg" link="/photos/2022/IMG_3405.jpeg" caption="换新皮肤啦" caption-position="bottom" caption-effect="fade" >}}
 
+​	{{< figure src="/photos/2022/IMG_4208.jpeg" link="/photos/2022/IMG_4208.jpeg" caption="断桥" caption-position="bottom" caption-effect="fade" >}}
+
+​	{{< figure src="/photos/2022/IMG_4209.jpeg" link="/photos/2022/IMG_4209.jpeg" caption="荷花池" caption-position="bottom" caption-effect="fade" >}}
+
+​	{{< figure src="/photos/2022/IMG_4210.jpeg" link="/photos/2022/IMG_4210.jpeg" caption="楼外楼" caption-position="bottom" caption-effect="fade" >}}
+
 {{< /gallery >}}
