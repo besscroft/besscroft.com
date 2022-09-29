@@ -45,6 +45,14 @@ k8s 里面，有多种方式可以向外暴露进行访问，比如 hostNetWork�
 
 Reflare 有个实验性的功能，叫“Dynamic Route”，也就是动态路由。实际上是将路由基于 Worker KV 存取。这样的话，是不是可以对集群进行监控，然后触发制定的规则后（比如30秒一次，失败5次以上），通过 Cloudflare API 修改路由呢？（这个项目的仪表板正在开发中）这里直接用 Redis 替代 Worker KV 也是可以的。
 
+### 使用 cloudflared 将 Kubernetes 应用程序公开到 Internet
+
+这里是推友提供的思路，原本只知道能搞内网穿透，没想到竟然也能干这个活。
+
+具体思路应该是这样：把 [cloudflared](https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/#deploy-cloudflared) 部署到 k8s 中，那么就能用 Tunnel 创建连接了。注意文档上说“同一个 Tunnel 可以从 的多个实例运行 `cloudflared`，使您能够运行多个 `cloudflared` 副本以在传入流量发生变化时扩展您的系统。”。假设这时 k8s 集群挂了，那么上面运行的 cloudflared 实例也就无法和 Tunnel 通信了，反过来 Tunnel 也就无法将流量代理到这个 k8s 集群了。比我上面说的基于 Workers 的要容易实现一些，毕竟可以直接将流量路由到 Cloudflare 的[负载均衡器](https://www.cloudflare.com/zh-cn/load-balancing/)了。
+
+果然还是大家骚点子多啊，正好国庆放假在家把这个折腾好🙃
+
 ## 最后
 
 文章可能有点水了🙃不过这里主要还是提供一种思路，看到这篇文章的你，在生产环境千万别这么玩......如果你像看具体的操作的话，这个项目的文档里面，我后面会抽时间写完这部分。不过比较熟悉 k8s 的小伙伴，其实看完就大致明白了。
