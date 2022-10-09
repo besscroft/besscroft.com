@@ -24,6 +24,7 @@ comments: false
 {{< friend name="CodeCheng" url="https://www.codecheng.com/" logo="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210501222811.webp" word="抬头仰望满天繁星，为你绽放闪烁不息" >}}
 {{< friend name="瑾年MckinleyLu" url="https://www.mckinleylu.com" logo="https://www.mckinleylu.com/favicon.ico" word="桃李不言,下自成蹊" >}}
 {{< friend name="胡涂说" url="https://hutusi.com/" logo="https://pic.rmb.bdstatic.com/bjh/05e9a1cd38085a32a76cdf7df69438c2.jpeg" word="任抛星汉归园圃，留取乾坤盛酒囊" >}}
+{{< friend name="violet" url="https://www.beyondhorizon.top/" logo="https://www.beyondhorizon.top/favicon.ico" word="violet的摸鱼日志。" >}}
 </div>
 </div>
 
