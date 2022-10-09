@@ -18,7 +18,7 @@ comments: false
 {{< friend name="过客~励む" url="https://yafine-blog.cn" logo="https://cdn.jsdelivr.net/gh/Yafine/cdn@1.7/source/medias/avatar.jpg" word="有志者事竟成" >}}
 {{< friend name="Dreamy.WJY" url="https://wjy.me" logo="https://q1.qlogo.cn/g?b=qq&nk=1104195224&s=0" word="一条有着远大理想的咸鱼" >}}
 {{< friend name="imByteCat" url="https://www.imbytecat.com/" logo="https://cdn.lililili.net/images/2020/02/16/46908197727968f3.jpg" word="imByteCat" >}}
-{{< friend name="林祈'blog" url="https://dnslin.com/" logo="https://pan.dnslin.com/Cloud/%E5%9B%BE%E7%89%87/TIM%E5%9B%BE%E7%89%8720200520124825.png" word="零落成泥碾作尘" >}}
+{{< friend name="林祈'blog" url="https://dnslin.com/" logo="https://img.dnslv.com/images/2022/05/16/logospng1ded5ce6fcf2fb04.png" word="零落成泥碾作尘" >}}
 {{< friend name="云游君的小站" url="https://www.yunyoujun.cn" logo="https://cdn.jsdelivr.net/gh/YunYouJun/yunyoujun.github.io/images/avatar.jpg" word="希望能成为一个有趣的人。" >}}
 {{< friend name="Davinci的红茶馆" url="https://davincievans.top/" logo="https://cdn.jsdelivr.net/gh/DavinciEvans/Imgs-bed@master/gallery/avatar.jpg" word="You are all stardust." >}}
 {{< friend name="CodeCheng" url="https://www.codecheng.com/" logo="https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210501222811.webp" word="抬头仰望满天繁星，为你绽放闪烁不息" >}}
