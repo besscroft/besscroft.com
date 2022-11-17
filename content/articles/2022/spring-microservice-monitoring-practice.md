@@ -9,7 +9,7 @@ tags: ["Spring Cloud","Kubernetes","Spring 微服务","SkyWalking","Spring 微�
 
 最近在哔哩哔哩做了一期直播技术分享，算是人生中第一次吧🙂内容是基于 Kubernetes 和 Skywalking 的 Spring 微服务监控实践，实现 Spring 云原生可观测性。自己排练的时候，准备了一个多小时的内容，结果直播时太紧张，半个多小时就讲完了😂
 
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1xP411c719&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1xP411c719&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" style="width: 100%; height: 500px;" allowfullscreen="true"> </iframe>
 
 本来打算用 PPT 整理一些概念和注意点来讲，然后结合项目讲解项目怎么配置、怎么部署，以及请求进来了，怎么通过 Skywalking“观测”请求走过的调用栈，以及查看日志等。由于时间问题，部署这一块就省略掉了，只展示了最终的效果，毕竟部署特别费时间。后面也打算从 0 开始，搭建 K8S，然后部署 nacos、redis、数据库之类的，再把项目和 skywalking 给部署上去。直播录屏正好可以拿来做项目的视频部署教程，也锻炼锻炼自己临场实践能力，以及出问题了怎么查资料去解决。
 
