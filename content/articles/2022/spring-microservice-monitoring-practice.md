@@ -94,12 +94,12 @@ SkyWalking Probes 可以分为四种不同的类别：
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="10 seconds">
     
-    <!-- gRPC reporter 在这一层级 -->
+	<!-- gRPC reporter 在这一层级 -->
     
-    <root level="info">
-       <!-- 就是下面这一行 -->
-    	<appender-ref ref="grpc-log"/>
-    </root>
+	<root level="info">
+		<!-- 就是下面这一行 -->
+		<appender-ref ref="grpc-log"/>
+	</root>
 </configuration>
 ```
 
@@ -318,4 +318,4 @@ public static String generate() {
 
 ## 最后
 
-这是第一次做直播技术分享，也非常感谢大家的支持！虽然第一次看的人不多，但是也留下了录屏，而且依旧可以写博客发出来，算是一次不错的经历，以后也打算继续做直播技术了，偶尔直播技术分享。
+这是第一次做直播技术分享，也非常感谢大家的支持！虽然第一次看的人不多，但是也留下了录屏，而且依旧可以写博客发出来，算是一次不错的经历，以后也打算继续做直播技术了，偶尔直播技术分享，同时也欢迎大家多多跟我交流技术呀！
