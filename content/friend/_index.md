@@ -25,6 +25,7 @@ comments: false
 {{< friend name="瑾年MckinleyLu" url="https://www.mckinleylu.com" logo="https://www.mckinleylu.com/favicon.ico" word="桃李不言,下自成蹊" >}}
 {{< friend name="胡涂说" url="https://hutusi.com/" logo="https://pic.rmb.bdstatic.com/bjh/05e9a1cd38085a32a76cdf7df69438c2.jpeg" word="任抛星汉归园圃，留取乾坤盛酒囊" >}}
 {{< friend name="violet" url="https://www.beyondhorizon.top/" logo="https://www.beyondhorizon.top/favicon.ico" word="violet的摸鱼日志。" >}}
+{{< friend name="Pseudoyu" url="https://www.pseudoyu.com" logo="https://www.pseudoyu.com/images/author.webp" word="区块链开发工程师，喜欢探索新技术" >}}
 </div>
 </div>
 
