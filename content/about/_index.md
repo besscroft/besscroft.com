@@ -7,7 +7,7 @@ comments: false
 
 {{< quote-center >}}
 
-世界上任何书籍都不能带给你好运，但是它们能让你悄悄成为你自己。—— 赫尔曼·黑塞
+認識自己需要花一生的時間。——《李小龍：生活的藝術家》
 
 {{< /quote-center >}}
 
@@ -15,7 +15,7 @@ Java Developer、野生 Gopher、Pythonista，TypeScript 真香！
 
 I'm BessCroft , a full-time full-stack developer 👨‍💻 
 
-我在浙江杭州工作，是一名 Java 开发工程师。
+我在湖北武汉工作，是一名 Java 开发工程师。
 
 我喜欢编程，这是我的兴趣爱好之一，我希望能够通过编程，创造一些有意思的东西。
 
@@ -25,4 +25,3 @@ I'm BessCroft , a full-time full-stack developer 👨‍💻
 
 - Email：besscroft#foxmail.com
 - GitHub：[@besscroft](https://github.com/besscroft)
-- Twitter：[@besscroft](https://twitter.com/besscroft)
