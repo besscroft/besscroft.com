@@ -7,12 +7,6 @@ comments: false
 
 <div class="flink" id="article-container">
 <div class="friend-list-div" >
-{{< friend name="Yremp" url="https://yremp.live/" logo="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/head.jpg" word="流年，谁给过的倾城" >}}
-{{< friend name="WUMOER" url="https://wumoer.com" logo="https://cdn.jsdelivr.net/gh/wyz741525741/CND/img/20210114180113.jpg" word="每个人都在与人生苦战" >}}
-{{< friend name="hojun" url="https://www.hojun.cn" logo="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" word="一个好奇的人" >}}
-{{< friend name="My blog" url="https://qvchuang.top" logo="https://qvchuang.top/medias/logo.png" word="Test Engineer" >}}
-{{< friend name="辣椒の酱" url="https://removeif.github.io" logo="https://removeif.github.io/images/tuzi.jpg" word="尚未执佩剑，转眼即江湖" >}}
-{{< friend name="Dreamy.WJY" url="https://wjy.me" logo="https://q1.qlogo.cn/g?b=qq&nk=1104195224&s=0" word="一条有着远大理想的咸鱼" >}}
 {{< friend name="imByteCat" url="https://www.imbytecat.com/" logo="https://cdn.lililili.net/images/2020/02/16/46908197727968f3.jpg" word="imByteCat" >}}
 {{< friend name="林祈'blog" url="https://dnslin.com/" logo="https://img.dnsl.in/images/2022/05/16/logospng1ded5ce6fcf2fb04.png" word="零落成泥碾作尘" >}}
 {{< friend name="云游君的小站" url="https://www.yunyoujun.cn" logo="https://www.yunyoujun.cn/images/avatar.jpg" word="希望能成为一个有趣的人。" >}}
