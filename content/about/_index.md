@@ -7,7 +7,7 @@ comments: false
 
 {{< quote-center >}}
 
-認識自己需要花一生的時間。——《李小龍：生活的藝術家》
+上学时看《神话》，有 50 集；毕业后看《神话》，只有 8 集。—— Bess Croft
 
 {{< /quote-center >}}
 
