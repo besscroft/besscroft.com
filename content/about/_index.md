@@ -7,7 +7,7 @@ comments: false
 
 {{< quote-center >}}
 
-上学时看《神话》，有 50 集；毕业后看《神话》，只有 8 集。—— Bess Croft
+我们的批评者是我们的朋友，因为他们指出我们的缺点。—— 本杰明·富兰克林
 
 {{< /quote-center >}}
 
