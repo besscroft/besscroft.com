@@ -11,7 +11,7 @@ comments: false
 
 {{< /quote-center >}}
 
-Java Developer、野生 Gopher、Pythonista，TypeScript 真香！
+Java Developer、野生 Rustaceans、Pythonista，TypeScript 真香！
 
 I'm BessCroft , a full-time full-stack developer 👨‍💻 
 
