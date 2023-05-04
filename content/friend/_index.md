@@ -8,7 +8,6 @@ comments: false
 <div class="flink" id="article-container">
 <div class="friend-list-div" >
 {{< friend name="imByteCat" url="https://www.imbytecat.com/" logo="https://cdn.lililili.net/images/2020/02/16/46908197727968f3.jpg" word="imByteCat" >}}
-{{< friend name="林祈'blog" url="https://dnslin.com/" logo="https://img.dnsl.in/images/2022/05/16/logospng1ded5ce6fcf2fb04.png" word="零落成泥碾作尘" >}}
 {{< friend name="云游君的小站" url="https://www.yunyoujun.cn" logo="https://www.yunyoujun.cn/images/avatar.jpg" word="希望能成为一个有趣的人。" >}}
 {{< friend name="胡涂说" url="https://hutusi.com/" logo="https://pic.rmb.bdstatic.com/bjh/05e9a1cd38085a32a76cdf7df69438c2.jpeg" word="任抛星汉归园圃，留取乾坤盛酒囊" >}}
 {{< friend name="violet" url="https://www.beyondhorizon.top/" logo="https://www.beyondhorizon.top/favicon.ico" word="violet的摸鱼日志。" >}}
