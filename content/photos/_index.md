@@ -46,4 +46,16 @@ comments: false
 
 ​	{{< figure src="/photos/2022/IMG_4210.jpeg" link="/photos/2022/IMG_4210.jpeg" caption="楼外楼" caption-position="bottom" caption-effect="fade" >}}
 
+​	{{< figure src="/photos/2023/IMG_5412.jpeg" link="/photos/2023/IMG_5412.jpeg" caption="过年时拍的" caption-position="bottom" caption-effect="fade" >}}
+
+​	{{< figure src="/photos/2023/IMG_5746.jpeg" link="/photos/2023/IMG_5746.jpeg" caption="光谷广场喷泉" caption-position="bottom" caption-effect="fade" >}}
+
+​	{{< figure src="/photos/2023/IMG_5888.jpeg" link="/photos/2023/IMG_5888.jpeg" caption="重游东湖1" caption-position="bottom" caption-effect="fade" >}}
+
+​	{{< figure src="/photos/2023/IMG_5889.jpeg" link="/photos/2023/IMG_5889.jpeg" caption="重游东湖2" caption-position="bottom" caption-effect="fade" >}}
+
+​	{{< figure src="/photos/2023/IMG_5890.jpeg" link="/photos/2023/IMG_5890.jpeg" caption="重游东湖3" caption-position="bottom" caption-effect="fade" >}}
+
+​	{{< figure src="/photos/2023/IMG_5895.jpeg" link="/photos/2023/IMG_5895.jpeg" caption="重游东湖4" caption-position="bottom" caption-effect="fade" >}}
+
 {{< /gallery >}}
