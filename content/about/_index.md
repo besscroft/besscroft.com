@@ -15,11 +15,13 @@ Java Developer、野生 Rustaceans、Pythonista，TypeScript 真香！
 
 I'm BessCroft , a full-time full-stack developer 👨‍💻 
 
-我在湖北武汉工作，是一名 Java 开发工程师。
+我是云淑，在湖北武汉工作，是一名~~提瓦特区~~全栈开发工程师。
 
 我喜欢编程，这是我的兴趣爱好之一，我希望能够通过编程，创造一些有意思的东西。
 
 我的书单：https://book.besscroft.com
+
+我的哔哩哔哩：https://space.bilibili.com/278038021
 
 ### 联系我
 
