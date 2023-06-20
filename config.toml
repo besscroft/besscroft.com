@@ -92,7 +92,7 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "Bess Croft"
+    name = "云淑"
     # 邮箱
     email = "besscroft@foxmail.com"
     # 座右铭或简介
@@ -102,7 +102,7 @@ uglyURLs = false
     # 网站（默认值：baseURL）
     website = "https://blog.besscroft.com/"
     # 推特
-    twitter = "besscroft"
+    twitter = ""
 
 # 相关文章
 [related]
@@ -362,7 +362,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "这里是 BessCroft 的生活与技术博客！非常高兴认识你！"
+    siteDescription = "这里是云淑的生活与技术博客！非常高兴认识你！"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
@@ -371,7 +371,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "besscroft"
+    siteTwitter = ""
     # 说明：用于 Twitter Cards
 
 

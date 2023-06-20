@@ -13,7 +13,7 @@ comments: false
 
 Java Developer、野生 Rustaceans、Pythonista，TypeScript 真香！
 
-I'm BessCroft , a full-time full-stack developer 👨‍💻 
+I'm Bess Croft , a full-time full-stack developer 👨‍💻 
 
 我是云淑，在湖北武汉工作，是一名~~提瓦特区~~全栈开发工程师。
 
