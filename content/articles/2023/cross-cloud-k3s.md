@@ -1,6 +1,6 @@
 ---
 title: "基于 K3s + Kilo 的跨云 Kubernetes 集群"
-date: 2023-12-19T21:35:00+08:00
+date: 2023-12-19T23:55:00+08:00
 tags: ["Kubernetes","技术","K3s","Kilo","跨云 Kubernetes 集群"]
 categories: ["技术"]
 ---
