@@ -299,6 +299,8 @@ kubectl -n kubesphere-system \
 
 然后我们就可以在 Cloudflare 的控制台看到对应的隧道里面多了一条 `Public Hostname` 数据，说明已经成功了，现在可以直接通过域名访问了。
 
+![](/images/articles/2023/cross-cloud-k3s/006.png)
+
 > 通过 Cloudflare-tunnel 来访问网站，可以搭配 Zero Trust 来实现网关配置（DNS、防火墙策略、流量出口策略等），配置身份提供商组、IP、设备、证书或服务令牌访问，以及监控等功能。
 
 ## 最后
