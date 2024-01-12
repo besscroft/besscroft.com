@@ -34,7 +34,7 @@ footnoteReturnLinkContents = "↩"
 enableGitInfo = false
 
 # 是否生成 robots.txt 文件
-enableRobotsTXT = false
+enableRobotsTXT = true
 
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
 paginate = 10
@@ -89,10 +89,14 @@ uglyURLs = false
         endLevel = 6
         ordered = true
 
+# 压缩 HTML
+[minify.tdewolff.html]
+    keepWhitespace = false
+
 # 作者信息
 [author]
     # 名字
-    name = "云淑"
+    name = "besscroft"
     # 邮箱
     email = "besscroft@foxmail.com"
     # 座右铭或简介
@@ -135,14 +139,21 @@ uglyURLs = false
     baseName = "rss"
 
 # lunr.js 的搜索索引
-# [outputFormats.SearchIndex]
-#     mediaType = "application/json"
-#     baseName = "search"
+[outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "search"
+
+# Algolia 的搜索索引
+[outputFormats.Algolia]
+    mediaType = "application/json"
+    baseName = "algolia"
+    isPlainText = true
+    notAlternative = true
 
 # Hugo 的输出控制
 [outputs]
     page = ["HTML"]
-    # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
+    # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
     home = ["HTML", "SectionsAtom", "SectionsRSS"]
     section = ["HTML"]
     taxonomy = ["HTML"]
@@ -166,7 +177,7 @@ uglyURLs = false
 # 4. links      链接栏（关于页面的极简页脚）
 
 # 菜单内的配置说明如下：
-# url           链接地址
+# pageref/url   内链地址/外链地址
 # name          文本（留空（""）则无）
 # weight        位置
 # pre           内链（internal）或外链（external）
@@ -178,36 +189,30 @@ uglyURLs = false
 
 [menu]
     ## 菜单栏
-    # [[menu.main]]
-    #     url = "/"
-    #     name = "首页"
-    #     weight = 1
-    #     pre = "internal"
-    #     post = "home"
-#    [[menu.main]]
-#        url = "/posts/"
-#        name = "文章"
-#        weight = 2
-#        pre = "internal"
-#        post = "archive"
-#    [[menu.main]]
-#        url = "/categories/"
-#        name = "分类"
-#        weight = 3
-#        pre = "internal"
-#        post = "th"
-#    [[menu.main]]
-#        url = "/tags/"
-#        name = "标签"
-#        weight = 4
-#        pre = "internal"
-#        post = "tags"
-#    [[menu.main]]
-#        url = "/about/"
-#        name = "关于"
-#        weight = 5
-#        pre = "internal"
-#        post = "user-circle"
+     [[menu.main]]
+         pageref = "/articles/"
+         name = "归档"
+         weight = 1
+         pre = "internal"
+         post = "wpexplorer"
+    [[menu.main]]
+        url = "https://kamera.heming.dev/"
+        name = "相册"
+        weight = 2
+        pre = "external"
+        post = "heart"
+    [[menu.main]]
+        pageref = "/friend/"
+        name = "友链"
+        weight = 3
+        pre = "internal"
+        post = "link"
+    [[menu.main]]
+        pageref = "/about/"
+        name = "关于"
+        weight = 4
+        pre = "internal"
+        post = "user-circle"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
@@ -218,41 +223,6 @@ uglyURLs = false
     #     weight = 8
     #     identifier = "search"
     #     post = "search"
-	[[menu.main]]
-        url = "/articles/"
-        name = "articles"
-        weight = 1
-        pre = "internal"
-        post = "wpexplorer"
-        identifier = "articles"
-#    [[menu.main]]
-#        url = "/tech/"
-#        name = "tech"
-#        weight = 2
-#        pre = "internal"
-#        post = "wpexplorer"
-#        identifier = "tech"
-    [[menu.main]]
-        url = "https://kamera.heming.dev/"
-        name = "photos"
-        weight = 2
-        pre = "external"
-        post = "heart"
-        identifier = "photos"
-    [[menu.main]]
-        url = "/friend/"
-        name = "friend"
-        weight = 3
-        pre = "internal"
-        post = "link"
-        identifier = "friend"
-    [[menu.main]]
-        url = "/about/"
-        name = "about"
-        weight = 4
-        pre = "internal"
-        post = "user-circle"
-        identifier = "about"
 
 
 
@@ -333,11 +303,11 @@ uglyURLs = false
     # 3. posts     文章摘要
     # 4. page      普通页面
 
-    homeLayout = "poetry"
+    homeLayout = "posts"
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["谁也没有见过风", "更别说我和你了", "谁也没有见过爱情", "直到有花束抛向自己"]
+    homePoetry = []
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -352,6 +322,11 @@ uglyURLs = false
     homeDescription = ""
     homeKeywords = ""
     homeLinksDelimiter = ""
+
+    ## 「文章摘要」
+    enableHideInHomepage = false
+    # 说明：激活 `hideInHomepage` front matter
+    #      的支持（性能原因默认关闭）
 
 
     ######################################
@@ -577,7 +552,7 @@ uglyURLs = false
 
     # 说明：仅在生产环境（production）下渲染
 
-    enableServiceWorker = true
+    enableServiceWorker = false
 
 
     ######################################
@@ -623,17 +598,20 @@ uglyURLs = false
     # 说明：文章的 Front Matter 中的 `comments`
     #      的优先级高于此处
 
+    # 直接加载评论，不需要手动点击按钮加载
+    autoLoadComments = false
+
     ## Disqus
     enableDisqus = false
     disqusShortname = ""
 
     ## Valine
     enableValine = false
-    valineAppId = "8KlzF0MboQlKEzt4KSJwctxP-MdYXbMMI"
-    valineAppKey = "INEDtnanPzSONydIXuT0pCDa"
-    valinePlaceholder = "说点什么喵(●'◡'●)"
+    valineAppId = ""
+    valineAppKey = ""
+    valinePlaceholder = "Just go go"
     valinePath = ""
-    valineAvatar = "monsterid"
+    valineAvatar = "mm"
     valineMeta = ["nick", "mail", "link"]
     valinePageSize = 10
     valineLang = "zh-cn"
@@ -657,25 +635,67 @@ uglyURLs = false
     utterancesLabel = ""
     # 说明：https://utteranc.es/
 
+    ## Gitalk
+    enableGitalk = false
+    gitalkClientID = "your_client_id"
+    gitalkClientSecret = "your_client_secret"
+    gitalkRepo = "your_repository"
+    gitalkOwner = "your_gitalk_owner"
+    gitalkAdmin = ["your_gitalk_admin"]
+
+    # 1. default (`location.href`)
+    # 2. pathname (`location.pathname`)
+    # 3. hash (hash_filepath)
+    # 4. custom:your_gitalk_id ("your_gitalk_id")
+    gitalkID = "pathname"
+
+    gitalkNumber = -1
+    gitalkLables = ["Gitalk"]
+
+    # 1. default (`document.title`)
+    # 2. custom:your_gitalk_title ("your_gitalk_title")
+    gitalkTitle = "default"
+
+    # 1. default (`location.href` + header.meta[description])
+    # 2. href (`location.href`)
+    # 3. custom:your_gitalk_body ("your_gitalk_body")
+    gitalkBody = "default"
+
+    # 1. default (`navigator.language || navigator.userLanguage`)
+    # 2. Support [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa, ja]
+    gitalkLanguage = "zh-CN"
+
+    gitalkDistractionFreeMode = false
+    gitalkPerPage = 10
+    gitalkPagerDirection = "last"
+    gitalkCreateIssueManually = false
+    gitalkProxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"
+    gitalkStaggerDelayBy = 150
+    gitalkAppearAnimation = "accordionVertical"
+    gitalkEnterAnimation = "accordionVertical"
+    gitalkLeaveAnimation = "accordionVertical"
+    gitalkEnableHotKey = true
+    # 说明：https://github.com/gitalk/gitalk
+
 
     ######################################
     # Google Analytics
 
     # 说明：仅在生产环境（production）下渲染
 
-    enableGoogleAnalytics = true
+    enableGoogleAnalytics = false
 
     # 跟踪代码的类型
     trackingCodeType = "gtag"
     # 说明：gtag 或 analytics
 
-    trackingID = "G-BVPDQ6FCG8"
+    trackingID = ""
 
 
     ######################################
     # Google Site Verification
 
-    googleSiteVerification = "googled2c79c68fe2ff3f0"
+    googleSiteVerification = ""
 
 
     ######################################
@@ -691,6 +711,17 @@ uglyURLs = false
     ## 广告单元
     enableGoogleAdUnits = false
     googleAdSlot = ""
+    googleAdSlotInArticle = ""
+    googleAdSlotAutoRelaxed = ""
+
+
+    ######################################
+    # Yandex.Metrika
+    # https://metrika.yandex.ru/
+
+    # 说明：仅在生产环境（production）下渲染
+
+    yandexMetrikaId = ""
 
 
     ######################################
@@ -733,7 +764,7 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 是否在首页开启
-    enablePostMetaInHome = false
+    enablePostMetaInHome = true
     # 说明：仅对「文章摘要」和「普通页面」
     #      首页布局有效
 
@@ -882,7 +913,7 @@ uglyURLs = false
     enableVideoHost = false
 
     # 视频外链地址
-    videoHostURL = ""
+    videoHostURL = "https://example.com/"
 
 
     ######################################
@@ -903,6 +934,11 @@ uglyURLs = false
     #      如果你喜欢在 Markdown 中手动插入
     #      `---` 以将文章的正文内容与脚注内容
     #      分隔开来，那么这项设置将会非常有用。
+
+
+    ######################################
+    # 滚动条
+    customizeScrollbar = true
 
 
     ######################################
@@ -1073,6 +1109,7 @@ uglyURLs = false
     repoURL = ""
     # 编辑地址
     repoEditURL = ""
+    repoEditURLSuffix = ""
 
     # Git 的图标
     gitIcon = "code-branch"
@@ -1112,16 +1149,13 @@ uglyURLs = false
 
     displayShareOnText = false
 
-    shareOnTwitter = true
-    shareOnFacebook = true
-    shareOnLinkedIn = true
-    shareOnTelegram = true
-    shareOnWeibo = true
-    shareOnDouban = true
-    shareOnQQ = true
-    shareOnQzone = true
+    postShareItems = ["facebook", "mastodon", "fediverse", "twitter", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
 
-    shareViaQRCode = true
+    # 从网络获取 Fediverse 实例列表用于输入建议
+    fetchFediverseInstances = false
+    # 说明：当开启 mastodon 或 fediverse 分享项
+    #      时建议开启。开启后构建时，数据需要从网
+    #      络下载，会带来额外的构建时间。
 
 
     ######################################
@@ -1193,7 +1227,7 @@ uglyURLs = false
     enableBackToTopAutoHide = true
 
     # 是否在首页显示
-    displayBackToTopInHome = false
+    displayBackToTopInHome = true
 
     # 是否在移动端显示
     displayBackToTopOnMobile = false
@@ -1214,6 +1248,7 @@ uglyURLs = false
     # 是否在首页显示
     displayFooterInHome = true
 
+    displayCopyleftSymbol = false
     # 是否显示版权符号（©）
     displayCopyrightSymbol = true
 
@@ -1227,8 +1262,11 @@ uglyURLs = false
     # 是否开启图标的跳动效果
     iconAnimation = true
 
+    # 是否显示站点的作者名称
+    displaySiteAuthorName = true
+
     # 是否显示 Hugo 和 MemE 的链接
-    displayPoweredBy = false
+    displayPoweredBy = true
 
     # 是否显示站点的版权信息
     displaySiteCopyright = true
@@ -1272,7 +1310,7 @@ uglyURLs = false
     enableHighlight = true
 
     # 是否开启竖直滚动
-    enableOverflowY = false
+    enableOverflowY = true
     # 最大高度
     maxHeight = 20
     # 单位：em
@@ -1289,7 +1327,7 @@ uglyURLs = false
     # 说明：仅对 MemE 生成的 CSS 和 JS 有效
 
     # 是否开启文件指纹
-    enableFingerprint = false
+    enableFingerprint = true
 
     # 是否开启子资源完整性验证
     enableSRI = false
@@ -1345,6 +1383,21 @@ uglyURLs = false
 
 
     ######################################
+    # Algolia search
+
+    # 说明：需要开启 `Algolia` 的输出，且需要每
+    #      次将生成的 algolia.json 文件上传到
+    #      Algolia
+
+    enableAlgoliaSearch = false
+
+    algoliaAppId = ""
+    algoliaApiKey = ""
+    algoliaIndexName = ""
+    # 说明：https://www.algolia.com/
+
+
+    ######################################
     # 404 页面
 
     # 视频封面
@@ -1354,3 +1407,36 @@ uglyURLs = false
     fofVideoWebm = ""
     fofVideoMp4 = ""
     # 说明：视频地址可留空（""）
+
+
+    ######################################
+    # 定制第三方库的地址
+
+    [params.lib]
+        host = "https://cdn.jsdelivr.net"
+        # 说明：设置为根（"/"）且将下方对应 path
+        #      设置，如果你想要直接从「本地」
+        #      加载某个库的话。比如：
+        #      将 path 设置为 "js/lib.min.js"，
+        #      并将文件放到你的 /static/js/lib.min.js
+    [params.lib.path]
+        clipboard = "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js"
+        instantsearch = "/npm/instantsearch.js@2/dist/instantsearch.min.js"
+        gitalk = "/npm/gitalk@1/dist/gitalk.min.js"
+        gitalk_css = "/npm/gitalk@1/dist/gitalk.css"
+        instantpage = "/npm/instant.page@5.1.0/instantpage.min.js"
+        katex = "/npm/katex@0.13.0/dist/katex.min.js"
+        katex_css = "/npm/katex@0.13.0/dist/katex.min.css"
+        katex_mhchem = "/npm/katex@0.13.0/dist/contrib/mhchem.min.js"
+        katex_auto_render = "/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+        lunr = "/npm/lunr@2.3.9/lunr.min.js"
+        lunr_tinyseg = "/npm/lunr-languages@1.4.0/tinyseg.js"
+        lunr_stemmer = "/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js"
+        lunr_lang = "/npm/lunr-languages@1.4.0/min/lunr.de.min.js"
+        mathjax = "/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"
+        medium_zoom = "/npm/medium-zoom@latest/dist/medium-zoom.min.js"
+        mermaid = "/npm/mermaid@8.8.3/dist/mermaid.min.js"
+        qrcode = "/npm/qrcode-generator@1.4.4/qrcode.min.js"
+        valine = "/npm/valine@1.4.14/dist/Valine.min.js"
+        busuanzi = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+        utterances = "https://utteranc.es/client.js"

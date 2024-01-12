@@ -1,15 +1,5 @@
 {{ define "main" }}
     <!-- Layout Poetry -->
-    <style>
-body{
-	//background:url(https://ae01.alicdn.com/kf/Ufdd33b14ea8d495d9cd596d13b716d0cU.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:center;
-	line-height:2;
-}
-</style>
     {{ if eq .Site.Params.homeLayout "poetry" }}
         {{ partial "pages/home-poetry.html" . }}
     {{ end }}

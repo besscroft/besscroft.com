@@ -4,12 +4,12 @@
 <text class="poem_sentence"></text>
 <text class="poem_info"></text>
 <script type="text/javascript">
-  jinrishici.load(function(result) {
-    var sentence = document.querySelector(".poem_sentence")
-    var info = document.querySelector(".poem_info")
-    sentence.innerHTML = result.data.content
-    info.innerHTML = '——' + result.data.origin.author
-  });
+    jinrishici.load(function(result) {
+        var sentence = document.querySelector(".poem_sentence")
+        var info = document.querySelector(".poem_info")
+        sentence.innerHTML = result.data.content
+        info.innerHTML = '——' + result.data.origin.author
+    });
 </script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "451e213ff4e14d1c8d1ac152fdc5403a"}'></script><!-- End Cloudflare Web Analytics -->

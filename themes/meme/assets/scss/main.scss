@@ -75,7 +75,7 @@
     $enableSmoothScroll: false;
 {{ end }}
 
-$baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
+$baseRelURL: "{{ "" | relURL | strings.TrimSuffix "/" }}";
 
 
 // Utilities
@@ -87,6 +87,10 @@ $baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
 // Base
 
 @import "base/base";
+
+{{ if .Site.Params.customizeScrollbar }}
+    @import "base/scrollbar";
+{{ end }}
 
 
 // Typography
@@ -321,7 +325,13 @@ $baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
         $displayShareOnText: false;
     {{ end }}
 
-    {{ if and .Site.Params.shareViaQRCode }}
+    {{ if or (in .Site.Params.postShareItems "mastodon") (in .Site.Params.postShareItems "fediverse") }}
+        $shareOnFediverse: true;
+    {{ else }}
+        $shareOnFediverse: false;
+    {{ end }}
+
+    {{ if in .Site.Params.postShareItems "qrcode" }}
         $shareViaQRCode: true;
     {{ else }}
         $shareViaQRCode: false;
@@ -449,11 +459,11 @@ $fofPoster: url({{ $fofPoster }});
 
 // Lunr search
 
-{{ if and (eq .Site.Params.headerLayout "flex") .Site.Params.enableLunrSearch }}
-    $enableLunrSearch: true;
+{{ if and (eq .Site.Params.headerLayout "flex") (or .Site.Params.enableLunrSearch .Site.Params.enableAlgoliaSearch) }}
+    $enableSearch: true;
     @import "components/search";
 {{ else }}
-    $enableLunrSearch: false;
+    $enableSearch: false;
 {{ end }}
 
 

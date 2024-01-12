@@ -23,6 +23,7 @@
             .header-inner {
                 display: block;
                 margin: 0;
+                max-width: none;
             }
             .nav-toggle {
                 display: block;
@@ -128,7 +129,7 @@
             #langs li {
                 width: auto;
             }
-            @if ($enableLunrSearch) {
+            @if ($enableSearch) {
                 .search-item {
                     grid-column: 1 / -1;
                 }

@@ -14,28 +14,28 @@
 
 [[socials]]
     id = "email"
-    url = "mailto:besscroft@foxmail.com"
+    url = "mailto:reuixiy@gmail.com"
     icon = "envelope"
     title = "Email"
     weight = 2
 
 [[socials]]
     id = "github"
-    url = "https://github.com/besscroft"
+    url = "https://github.com/reuixiy"
     icon = "github"
     title = "GitHub"
     weight = 3
 
-#[[socials]]
-#    id = "twitter"
-#    url = "https://twitter.com/user"
-#    icon = "twitter"
-#    title = "Twitter"
-#    weight = 4
+[[socials]]
+    id = "twitter"
+    url = "https://twitter.com/reuixiy"
+    icon = "twitter"
+    title = "Twitter"
+    weight = 4
 
-#[[socials]]
-#    id = "telegram"
-#    url = "https://t.me/user"
-#    icon = "telegram"
-#    title = "Telegram"
-#    weight = 5
+[[socials]]
+    id = "telegram"
+    url = "https://t.me/yixiuer"
+    icon = "telegram"
+    title = "Telegram"
+    weight = 5
