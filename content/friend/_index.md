@@ -20,7 +20,7 @@ comments: false
 > - 名称：旅行者的随想
 > - 地址：https://blog.besscroft.com
 > - 描述：旅行终将迎来终点。
-> - Logo：[https://blog.besscroft.com/avatar.png](https://blog.besscroft.com/avatar.png)
+> - Logo：[https://besscroft.com/avatar.jpg](https://besscroft.com/avatar.jpg)
 
 
 > 会定期清理不符合要求的友链(长达几个月甚至一年无法访问、你把我移除了、需要更新怎么都联系不上你)，不再另行通知。
