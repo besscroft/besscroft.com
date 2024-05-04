@@ -174,7 +174,7 @@ export async function Page() {
   try {
     const findAll = await db.$queryRaw`
     SELECT 
-       *,
+       *
     FROM 
        "public"."Images"
   `
